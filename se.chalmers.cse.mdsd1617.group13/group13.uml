@@ -124,4 +124,18 @@
       </packagedElement>
     </packagedElement>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-up7AKRiEea8PtubJ9Elkw" name="UseCasePackage">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Jna0UKRjEea8PtubJ9Elkw" name="HotelBookingSystem">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_i2nnsKRjEea8PtubJ9Elkw" name="Check out booking"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_5qck0KRjEea8PtubJ9Elkw" name="Unblock room"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_8byEAKRjEea8PtubJ9Elkw" name="Add room"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_WrZA8KRjEea8PtubJ9Elkw" name="Administrator"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_ZBZ2EKRjEea8PtubJ9Elkw" name="Receptionist"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_a7e9IKRjEea8PtubJ9Elkw" name="External Supplier System"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_xzhr4KRjEea8PtubJ9Elkw" client="_a7e9IKRjEea8PtubJ9Elkw" supplier="_i2nnsKRjEea8PtubJ9Elkw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_z-wNUKRjEea8PtubJ9Elkw" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_i2nnsKRjEea8PtubJ9Elkw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="__gIl0KRjEea8PtubJ9Elkw" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_5qck0KRjEea8PtubJ9Elkw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_CWjZUKRkEea8PtubJ9Elkw" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_8byEAKRjEea8PtubJ9Elkw"/>
+  </packagedElement>
 </uml:Model>
