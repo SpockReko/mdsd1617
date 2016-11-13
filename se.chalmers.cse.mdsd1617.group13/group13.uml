@@ -126,9 +126,27 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_-up7AKRiEea8PtubJ9Elkw" name="UseCasePackage">
     <packagedElement xmi:type="uml:Package" xmi:id="_Jna0UKRjEea8PtubJ9Elkw" name="HotelBookingSystem">
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_i2nnsKRjEea8PtubJ9Elkw" name="Check out booking"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_i2nnsKRjEea8PtubJ9Elkw" name="Check out booking">
+        <ownedUseCase xmi:type="uml:UseCase" xmi:id="_y39cwKnnEeaQybBEkhcp9w" name="Check out booking"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_5qck0KRjEea8PtubJ9Elkw" name="Unblock room"/>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_8byEAKRjEea8PtubJ9Elkw" name="Add room"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_0lkOEKnnEeaQybBEkhcp9w" name="Make a booking"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_9tteUKnnEeaQybBEkhcp9w" name="Search for free rooms"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Jk0PMKnoEeaQybBEkhcp9w" name="Edit a booking"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Wh-CIKnoEeaQybBEkhcp9w" name="Check in booking"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_cTjmQKnoEeaQybBEkhcp9w" name="Cancel a booking"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_eTgEwKnoEeaQybBEkhcp9w" name="List bookings"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_gW2ckKnoEeaQybBEkhcp9w" name="List occupied rooms for specified day"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_twv14KnoEeaQybBEkhcp9w" name="List check ins for specified days"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_x-Oi8KnoEeaQybBEkhcp9w" name="List check outs for specified days"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_N1_UAKnpEeaQybBEkhcp9w" name="Add room type"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_PQs-gKnpEeaQybBEkhcp9w" name="Update room type"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Z04H4KnpEeaQybBEkhcp9w" name="Remove room type"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_bjwrkKnpEeaQybBEkhcp9w" name="Change room type of room"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_dvkb0KnpEeaQybBEkhcp9w" name="Remove room"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_fBvOUKnpEeaQybBEkhcp9w" name="Block room"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_gu7v8KnpEeaQybBEkhcp9w" name="Startup hotel system"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Actor" xmi:id="_WrZA8KRjEea8PtubJ9Elkw" name="Administrator"/>
     <packagedElement xmi:type="uml:Actor" xmi:id="_ZBZ2EKRjEea8PtubJ9Elkw" name="Receptionist"/>
@@ -137,5 +155,23 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_z-wNUKRjEea8PtubJ9Elkw" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_i2nnsKRjEea8PtubJ9Elkw"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="__gIl0KRjEea8PtubJ9Elkw" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_5qck0KRjEea8PtubJ9Elkw"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_CWjZUKRkEea8PtubJ9Elkw" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_8byEAKRjEea8PtubJ9Elkw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_5PpXkKnnEeaQybBEkhcp9w" client="_a7e9IKRjEea8PtubJ9Elkw" supplier="_0lkOEKnnEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_7F2rQKnnEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_0lkOEKnnEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_DMOVcKnoEeaQybBEkhcp9w" client="_a7e9IKRjEea8PtubJ9Elkw" supplier="_9tteUKnnEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Gdl_kKnoEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_9tteUKnnEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_NEVDAKnoEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_Jk0PMKnoEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_YSb6MKnoEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_Wh-CIKnoEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_otMccKnoEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_gW2ckKnoEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_CPRIgKnpEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_cTjmQKnoEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_EPO1IKnpEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_twv14KnoEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Ft6ZoKnpEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_x-Oi8KnoEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_HQyhoKnpEeaQybBEkhcp9w" client="_ZBZ2EKRjEea8PtubJ9Elkw" supplier="_eTgEwKnoEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_VN9nIKnpEeaQybBEkhcp9w" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_PQs-gKnpEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_W9o1AKnpEeaQybBEkhcp9w" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_N1_UAKnpEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_m0D7IKnpEeaQybBEkhcp9w" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_Z04H4KnpEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_nf8JsKnpEeaQybBEkhcp9w" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_fBvOUKnpEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_oaiwwKnpEeaQybBEkhcp9w" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_dvkb0KnpEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_pFz7UKnpEeaQybBEkhcp9w" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_gu7v8KnpEeaQybBEkhcp9w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_px7acKnpEeaQybBEkhcp9w" client="_WrZA8KRjEea8PtubJ9Elkw" supplier="_bjwrkKnpEeaQybBEkhcp9w"/>
   </packagedElement>
 </uml:Model>
