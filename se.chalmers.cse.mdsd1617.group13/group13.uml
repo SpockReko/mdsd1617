@@ -192,11 +192,11 @@
               </packagedElement>
             </packagedElement>
             <packagedElement xmi:type="uml:Component" xmi:id="_AXL2cKnyEeaqs-4dkG4NMQ" name="Administrator">
-              <packagedElement xmi:type="uml:Usage" xmi:id="_etAv8KnzEeaqs-4dkG4NMQ" client="_AXL2cKnyEeaqs-4dkG4NMQ" supplier="_T5_HsKnyEeaqs-4dkG4NMQ"/>
-              <packagedElement xmi:type="uml:Usage" xmi:id="_pIbl8KnzEeaqs-4dkG4NMQ" client="_AXL2cKnyEeaqs-4dkG4NMQ" supplier="_uUO4AI--EeaYFcjrTNGrQw"/>
               <packagedElement xmi:type="uml:Usage" xmi:id="_WXfZYKpJEeaqs-4dkG4NMQ" client="_AXL2cKnyEeaqs-4dkG4NMQ">
                 <supplier xmi:type="uml:Interface" href="BankingModel.uml#_FzYmUXO_EeSgC_3iHN4p8A"/>
               </packagedElement>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_L5HKcKpTEeaqs-4dkG4NMQ" client="_AXL2cKnyEeaqs-4dkG4NMQ" supplier="_T5_HsKnyEeaqs-4dkG4NMQ"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_MYdY4KpTEeaqs-4dkG4NMQ" client="_AXL2cKnyEeaqs-4dkG4NMQ" supplier="_uUO4AI--EeaYFcjrTNGrQw"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_Ef28AKnyEeaqs-4dkG4NMQ" name="IReceptionistProviedes">
               <ownedOperation xmi:type="uml:Operation" xmi:id="_R2D2MKn0Eeaqs-4dkG4NMQ" name="editReservation" visibility="public" concurrency="concurrent">
@@ -401,9 +401,7 @@
                 </ownedParameter>
               </ownedOperation>
             </packagedElement>
-            <packagedElement xmi:type="uml:Usage" xmi:id="_J6JH4KpJEeaqs-4dkG4NMQ" client="_T5_HsKnyEeaqs-4dkG4NMQ" supplier="_AXL2cKnyEeaqs-4dkG4NMQ"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Usage" xmi:id="_JBQ_IKpJEeaqs-4dkG4NMQ" client="_uUO4AI--EeaYFcjrTNGrQw" supplier="_AXL2cKnyEeaqs-4dkG4NMQ"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
