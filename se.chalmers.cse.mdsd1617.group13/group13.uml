@@ -127,8 +127,12 @@
               </packagedElement>
               <packagedElement xmi:type="uml:UseCase" xmi:id="_5qck0KRjEea8PtubJ9Elkw" name="Unblock room"/>
               <packagedElement xmi:type="uml:UseCase" xmi:id="_8byEAKRjEea8PtubJ9Elkw" name="Add room"/>
-              <packagedElement xmi:type="uml:UseCase" xmi:id="_0lkOEKnnEeaQybBEkhcp9w" name="Make a booking"/>
-              <packagedElement xmi:type="uml:UseCase" xmi:id="_9tteUKnnEeaQybBEkhcp9w" name="Search for free rooms"/>
+              <packagedElement xmi:type="uml:UseCase" xmi:id="_0lkOEKnnEeaQybBEkhcp9w" name="Make a booking">
+                <extend xmi:type="uml:Extend" xmi:id="_1cTN4KpMEeaqs-4dkG4NMQ" extendedCase="_9tteUKnnEeaQybBEkhcp9w" extensionLocation="_1cVDEKpMEeaqs-4dkG4NMQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:UseCase" xmi:id="_9tteUKnnEeaQybBEkhcp9w" name="Search for free rooms">
+                <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_1cVDEKpMEeaqs-4dkG4NMQ" name="ExtensionPoint1"/>
+              </packagedElement>
               <packagedElement xmi:type="uml:UseCase" xmi:id="_Jk0PMKnoEeaQybBEkhcp9w" name="Edit a booking"/>
               <packagedElement xmi:type="uml:UseCase" xmi:id="_Wh-CIKnoEeaQybBEkhcp9w" name="Check in booking"/>
               <packagedElement xmi:type="uml:UseCase" xmi:id="_cTjmQKnoEeaQybBEkhcp9w" name="Cancel a booking"/>

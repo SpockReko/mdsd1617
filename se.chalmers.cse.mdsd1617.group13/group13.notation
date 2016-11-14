@@ -1128,6 +1128,19 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_py648KnpEeaQybBEkhcp9w" id="(1.0,0.9757062146892644)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_py648anpEeaQybBEkhcp9w" id="(0.32857142857142857,0.016666666666666666)"/>
     </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_1cyWEKpMEeaqs-4dkG4NMQ" type="Extend_Edge" source="_0l92sKnnEeaQybBEkhcp9w" target="_9uF40KnnEeaQybBEkhcp9w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_1cyWE6pMEeaqs-4dkG4NMQ" type="Extend_KeywordLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1cyWFKpMEeaqs-4dkG4NMQ" x="-12" y="-6"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_1cy9IKpMEeaqs-4dkG4NMQ" type="Extend_StereotypeLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1cy9IapMEeaqs-4dkG4NMQ" y="-20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_1cyWEapMEeaqs-4dkG4NMQ"/>
+      <element xmi:type="uml:Extend" href="group13.uml#_1cTN4KpMEeaqs-4dkG4NMQ"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1cyWEqpMEeaqs-4dkG4NMQ" points="[436, 101, -643984, -643984]$[481, 110, -643984, -643984]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1dwmcKpMEeaqs-4dkG4NMQ" id="(0.9214285714285714,0.75)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1dwmcapMEeaqs-4dkG4NMQ" id="(0.11428571428571428,0.16666666666666666)"/>
+    </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_uxanEKpIEeaqs-4dkG4NMQ" type="PapyrusUMLComponentDiagram" name="ComponentDiagram" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_wLEhoKpIEeaqs-4dkG4NMQ" type="Component_PackagedElementShape">
