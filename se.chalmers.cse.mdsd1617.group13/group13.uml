@@ -174,26 +174,16 @@
             <packagedElement xmi:type="uml:Component" xmi:id="_oEAmcKnxEeaqs-4dkG4NMQ" name="Receptionist">
               <packagedElement xmi:type="uml:Usage" xmi:id="_akrBkKnzEeaqs-4dkG4NMQ" client="_oEAmcKnxEeaqs-4dkG4NMQ" supplier="_7QVpcI-7EeaYFcjrTNGrQw"/>
               <packagedElement xmi:type="uml:Usage" xmi:id="_bKNXkKnzEeaqs-4dkG4NMQ" client="_oEAmcKnxEeaqs-4dkG4NMQ" supplier="_Ef28AKnyEeaqs-4dkG4NMQ"/>
-              <packagedElement xmi:type="uml:Usage" xmi:id="_Soq-QKpJEeaqs-4dkG4NMQ" client="_oEAmcKnxEeaqs-4dkG4NMQ" supplier="_7QVpcI-7EeaYFcjrTNGrQw"/>
-              <packagedElement xmi:type="uml:Usage" xmi:id="_TRAJkKpJEeaqs-4dkG4NMQ" client="_oEAmcKnxEeaqs-4dkG4NMQ" supplier="_Ef28AKnyEeaqs-4dkG4NMQ"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Component" xmi:id="_zaaeAKnxEeaqs-4dkG4NMQ" name="ExternalSupplierSystem">
               <packagedElement xmi:type="uml:Usage" xmi:id="_b06hcKnzEeaqs-4dkG4NMQ" client="_zaaeAKnxEeaqs-4dkG4NMQ" supplier="_7QVpcI-7EeaYFcjrTNGrQw"/>
-              <packagedElement xmi:type="uml:Usage" xmi:id="_PDdLEKpJEeaqs-4dkG4NMQ" client="_zaaeAKnxEeaqs-4dkG4NMQ" supplier="_7QVpcI-7EeaYFcjrTNGrQw"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Component" xmi:id="_9hy9sKnxEeaqs-4dkG4NMQ" name="Hotel System">
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FkxqIKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_uUO4AI--EeaYFcjrTNGrQw" contract="_uUO4AI--EeaYFcjrTNGrQw"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_GI1ZcKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_T5_HsKnyEeaqs-4dkG4NMQ" contract="_T5_HsKnyEeaqs-4dkG4NMQ"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_G09foKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_7QVpcI-7EeaYFcjrTNGrQw" contract="_7QVpcI-7EeaYFcjrTNGrQw"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_HUCoUKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_Ef28AKnyEeaqs-4dkG4NMQ" contract="_Ef28AKnyEeaqs-4dkG4NMQ"/>
-              <packagedElement xmi:type="uml:Realization" xmi:id="_-k5kAKnyEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_Ef28AKnyEeaqs-4dkG4NMQ"/>
-              <packagedElement xmi:type="uml:Realization" xmi:id="__7tl8KnyEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_7QVpcI-7EeaYFcjrTNGrQw"/>
-              <packagedElement xmi:type="uml:Realization" xmi:id="_Cj7lYKnzEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_T5_HsKnyEeaqs-4dkG4NMQ"/>
               <packagedElement xmi:type="uml:Usage" xmi:id="_gqaQwKnzEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="BankingModel.uml#_FzZ0cHO_EeSgC_3iHN4p8A"/>
-              </packagedElement>
-              <packagedElement xmi:type="uml:Realization" xmi:id="_p9Y4AKnzEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ" supplier="_uUO4AI--EeaYFcjrTNGrQw"/>
-              <packagedElement xmi:type="uml:Usage" xmi:id="_UshsYKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ">
                 <supplier xmi:type="uml:Interface" href="BankingModel.uml#_FzZ0cHO_EeSgC_3iHN4p8A"/>
               </packagedElement>
             </packagedElement>
