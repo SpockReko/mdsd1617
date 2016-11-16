@@ -15,7 +15,7 @@
         <outgoingTransitions xmi:id="_lTab8KqSEeaJ853FXW6BEw" specification="" target="_hm9YUKqSEeaJ853FXW6BEw"/>
         <regions xmi:id="_PBSdsKqSEeaJ853FXW6BEw" name="r1">
           <vertices xsi:type="sgraph:State" xmi:id="_vR560KqREeaJ853FXW6BEw" name="counter0" incomingTransitions="_ujD30KqREeaJ853FXW6BEw _fzHcIKqSEeaJ853FXW6BEw">
-            <outgoingTransitions xmi:id="_xiFNsKqREeaJ853FXW6BEw" specification="" target="_ljAzoKqREeaJ853FXW6BEw"/>
+            <outgoingTransitions xmi:id="_xiFNsKqREeaJ853FXW6BEw" specification="[display.getCounter() == 0]" target="_ljAzoKqREeaJ853FXW6BEw"/>
           </vertices>
           <vertices xsi:type="sgraph:State" xmi:id="_mTKeMKqREeaJ853FXW6BEw" name="counter4" incomingTransitions="_uKSLcKqREeaJ853FXW6BEw">
             <outgoingTransitions xmi:id="_ujD30KqREeaJ853FXW6BEw" specification="" target="_vR560KqREeaJ853FXW6BEw"/>
@@ -315,7 +315,7 @@
     <edges xmi:id="_xiGb0KqREeaJ853FXW6BEw" type="Transition" element="_xiFNsKqREeaJ853FXW6BEw" source="_vR7wAKqREeaJ853FXW6BEw" target="_ljCBwKqREeaJ853FXW6BEw">
       <children xsi:type="notation:DecorationNode" xmi:id="_xiGb1KqREeaJ853FXW6BEw" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_xiGb1aqREeaJ853FXW6BEw"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_xiHC4KqREeaJ853FXW6BEw" x="29" y="37"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_xiHC4KqREeaJ853FXW6BEw" x="124" y="67"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_xiGb0aqREeaJ853FXW6BEw" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_xiGb06qREeaJ853FXW6BEw" fontName="Verdana"/>
