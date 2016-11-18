@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_L3Al8KgUEeajc9cS_HWa6Q" specification="interface usr:&#xA;&#x9;in event initiateBooking&#xA;&#x9;in event addRoomToBooking&#xA;&#x9;in event confirmBooking&#xA;&#x9;in event checkInBooking&#xA;&#x9;in event initiateCheckout&#xA;&#x9;in event payDuringCheckout&#xA;&#x9;&#xA;&#x9;in event switchBooking&#xA;&#x9;var booking:integer = 0&#xA;&#x9;&#xA;interface booking:&#xA;&#x9;operation initiateBooking():integer&#xA;&#x9;operation addRoomToBooking(bookingId:integer):boolean&#xA;&#x9;operation confirmBooking(bookingId:integer):boolean&#xA;&#x9;operation checkInBooking(bookingId:integer):boolean&#xA;&#x9;operation initiateCheckout(bookingId:integer):boolean&#xA;&#x9;operation payDuringCheckout(bookingId:integer):boolean&#xA;&#x9;&#xA;interface booking1:&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface booking0:&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface reservation:&#xA;&#x9;operation getRoomId():integer&#xA;&#x9;operation getBookingId():integer&#xA;&#x9;operation getCurrentReservationNumber():integer&#xA;&#x9;operation getCurrentBookingNumber():integer&#xA;&#x9;operation bookingConfirmed(bookingId:integer):boolean&#xA;&#x9;operation bookingCheckedin(bookingId:integer):boolean&#xA;&#x9;operation bookingCheckedout(bookingId:integer):boolean&#xA;&#x9;operation checkFreeRoom(roomId:integer):boolean&#xA;&#x9;operation checkAssignedRoom(roomId:integer):boolean&#xA;&#x9;operation checkOccupideRoom(roomId:integer):boolean&#xA;&#x9;operation assignRoom(roomId:integer):boolean&#xA;&#x9;operation occupiRoom(roomId:integer):boolean&#xA;&#x9;operation freeRoom(roomId:integer):boolean&#xA;&#x9;&#xA;&#x9;&#xA;interface reservation0:&#xA;&#x9;var roomId:integer&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface reservation1:&#xA;&#x9;var roomId:integer&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface room:&#xA;&#x9;operation roomAssigned(roomIndex:integer):boolean &#xA;&#x9;operation roomOccupide(roomIndex:integer):boolean&#xA;&#x9;operation roomFree(roomIndex:integer):boolean&#xA;&#x9;&#xA;interface room0:&#xA;&#x9;var roomIndex:integer = 1&#xA;&#x9;&#xA;interface room1:&#xA;&#x9;var roomIndex:integer = 2" name="assignment3_medium">
+  <sgraph:Statechart xmi:id="_L3Al8KgUEeajc9cS_HWa6Q" specification="interface usr:&#xA;&#x9;in event initiateBooking&#xA;&#x9;in event addRoomToBooking&#xA;&#x9;in event confirmBooking&#xA;&#x9;in event checkInBooking&#xA;&#x9;in event initiateCheckout&#xA;&#x9;in event payDuringCheckout&#xA;&#x9;&#xA;&#x9;in event switchBooking&#xA;&#x9;var booking:integer = 0&#xA;&#x9;&#xA;interface booking:&#xA;&#x9;operation initiateBooking():integer&#xA;&#x9;operation addRoomToBooking(bookingId:integer):boolean&#xA;&#x9;operation confirmBooking(bookingId:integer):boolean&#xA;&#x9;operation checkInBooking(bookingId:integer):boolean&#xA;&#x9;operation initiateCheckout(bookingId:integer):boolean&#xA;&#x9;operation payDuringCheckout(bookingId:integer):boolean&#xA;&#x9;&#xA;interface booking1:&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface booking0:&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface reservation:&#xA;&#x9;in event initReservation&#xA;&#x9;operation getRoomId():integer&#xA;&#x9;operation getBookingId():integer&#xA;&#x9;operation getCurrentReservationNumber():integer&#xA;&#x9;operation getCurrentBookingNumber():integer&#xA;&#x9;operation bookingConfirmed(bookingId:integer):boolean&#xA;&#x9;operation bookingCheckedin(bookingId:integer):boolean&#xA;&#x9;operation bookingCheckedout(bookingId:integer):boolean&#xA;&#x9;operation bookingPayed(bookingId:integer):boolean&#xA;&#x9;operation checkFreeRoom(roomId:integer):boolean&#xA;&#x9;operation checkAssignedRoom(roomId:integer):boolean&#xA;&#x9;operation checkOccupideRoom(roomId:integer):boolean&#xA;&#x9;operation assignRoom(roomId:integer):boolean&#xA;&#x9;operation occupiRoom(roomId:integer):boolean&#xA;&#x9;operation freeRoom(roomId:integer):boolean&#xA;&#x9;operation resolvReservation(roomId:integer):boolean&#xA;&#x9;&#xA;&#x9;&#xA;interface reservation0:&#xA;&#x9;var roomId:integer&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface reservation1:&#xA;&#x9;var roomId:integer&#xA;&#x9;var bookingId:integer&#xA;&#x9;&#xA;interface room:&#xA;&#x9;operation roomAssigned(roomIndex:integer):boolean &#xA;&#x9;operation roomOccupide(roomIndex:integer):boolean&#xA;&#x9;operation roomFree(roomIndex:integer):boolean&#xA;&#x9;&#xA;interface room0:&#xA;&#x9;var roomIndex:integer = 1&#xA;&#x9;&#xA;interface room1:&#xA;&#x9;var roomIndex:integer = 2" name="assignment3_medium">
     <regions xmi:id="_RJVPcKpqEea9rP9r4tEs6w" name="bookingChoice">
       <vertices xsi:type="sgraph:Entry" xmi:id="_S-5p8KpqEea9rP9r4tEs6w">
         <outgoingTransitions xmi:id="_ULbHcKpqEea9rP9r4tEs6w" target="_TSla8KpqEea9rP9r4tEs6w"/>
@@ -14,7 +14,7 @@
         <outgoingTransitions xmi:id="_L1smMqpaEea9rP9r4tEs6w" specification="" target="_L1tM8KpaEea9rP9r4tEs6w"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_L1tM8KpaEea9rP9r4tEs6w" name="Created" incomingTransitions="_L1smMqpaEea9rP9r4tEs6w">
-        <outgoingTransitions xmi:id="_L1tM8qpaEea9rP9r4tEs6w" specification="usr.initiateBooking[usr.booking==0]/&#xA;booking0.bookingId = booking.initiateBooking()" target="_L1tNA6paEea9rP9r4tEs6w"/>
+        <outgoingTransitions xmi:id="_L1tM8qpaEea9rP9r4tEs6w" specification="usr.initiateBooking[usr.booking==0]/&#xA;booking0.bookingId = booking.initiateBooking(); &#xA;raise reservation.initReservation" target="_L1tNA6paEea9rP9r4tEs6w"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_L1tNA6paEea9rP9r4tEs6w" name="Initiated" incomingTransitions="_L1tM8qpaEea9rP9r4tEs6w _L1t0E6paEea9rP9r4tEs6w">
         <outgoingTransitions xmi:id="_L1t0AKpaEea9rP9r4tEs6w" specification="usr.confirmBooking [usr.booking==0 &amp;&amp;&#xD;&#xA;&#x9;booking.confirmBooking(booking0.bookingId)]" target="_L1t0JqpaEea9rP9r4tEs6w"/>
@@ -31,9 +31,9 @@
       </vertices>
       <vertices xsi:type="sgraph:FinalState" xmi:id="_KLl2sKppEea9rP9r4tEs6w" incomingTransitions="_L1vCIapaEea9rP9r4tEs6w"/>
     </regions>
-    <regions xmi:id="_3SmskKzbEeazVbadzHEfXA" name="Reservation0">
-      <vertices xsi:type="sgraph:State" xmi:id="_8RC8gKzbEeazVbadzHEfXA" name="Created" incomingTransitions="_9XdyAKzbEeazVbadzHEfXA">
-        <outgoingTransitions xmi:id="_6s--YKz_EeaEd4vC10vvcw" specification="[reservation.getCurrentBookingNumber() == 1]/&#xD;&#xA;reservation0.bookingId = reservation.getBookingId()" target="_5YDLwKz_EeaEd4vC10vvcw"/>
+    <regions xmi:id="_3SmskKzbEeazVbadzHEfXA" name="&amp;">
+      <vertices xsi:type="sgraph:State" xmi:id="_8RC8gKzbEeazVbadzHEfXA" name="Created" incomingTransitions="_9XdyAKzbEeazVbadzHEfXA _Lv6D4K2wEeafM71KTKgPgQ">
+        <outgoingTransitions xmi:id="_lkkeYKz4EeaEd4vC10vvcw" specification="[reservation.getCurrentReservationNumber == 1]/&#xD;&#xA;reservation0.roomId = reservation.getRoomId();&#xD;&#xA;reservation0.bookingId = reservation.getBookingId()" target="_bPjcEKzcEeazVbadzHEfXA"/>
       </vertices>
       <vertices xsi:type="sgraph:Entry" xmi:id="_8xO4cKzbEeazVbadzHEfXA">
         <outgoingTransitions xmi:id="_9XdyAKzbEeazVbadzHEfXA" specification="" target="_8RC8gKzbEeazVbadzHEfXA"/>
@@ -47,10 +47,9 @@
       <vertices xsi:type="sgraph:State" xmi:id="_evj_IKzcEeazVbadzHEfXA" name="Confirmed" incomingTransitions="_zmApkKzcEeazVbadzHEfXA">
         <outgoingTransitions xmi:id="_1rNbgKzcEeazVbadzHEfXA" specification="[reservation.bookingCheckedin(reservation0.bookingId) &amp;&amp;&#xD;&#xA;&#x9;reservation.checkAssignedRoom(reservation0.roomId)]/&#xD;&#xA;reservation.occupiRoom(reservation0.roomId)" target="_cv-F8KzcEeazVbadzHEfXA"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_5YDLwKz_EeaEd4vC10vvcw" name="Init BookingId" incomingTransitions="_6s--YKz_EeaEd4vC10vvcw">
-        <outgoingTransitions xmi:id="_lkkeYKz4EeaEd4vC10vvcw" specification="[reservation.getCurrentReservationNumber == 1]/&#xD;&#xA;reservation0.roomId = reservation.getRoomId() " target="_bPjcEKzcEeazVbadzHEfXA"/>
+      <vertices xsi:type="sgraph:State" xmi:id="_-hYcoK15Eea-WNH0M9FZLA" name="Checkout" incomingTransitions="_3gm24KzcEeazVbadzHEfXA">
+        <outgoingTransitions xmi:id="_Lv6D4K2wEeafM71KTKgPgQ" specification="[reservation.bookingPayed(reservation0.bookingId) &amp;&amp; &#xA;&#x9;reservation.checkFreeRoom(reservation0.roomId)]/&#xA;reservation.resolvReservation(reservation0.roomId)" target="_8RC8gKzbEeazVbadzHEfXA"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_-hYcoK15Eea-WNH0M9FZLA" name="Checkout" incomingTransitions="_3gm24KzcEeazVbadzHEfXA"/>
     </regions>
     <regions xmi:id="_NvIcoKzfEeazVbadzHEfXA" name="room0">
       <vertices xsi:type="sgraph:Entry" xmi:id="_SO_TIKzfEeazVbadzHEfXA">
@@ -67,8 +66,8 @@
       </vertices>
     </regions>
     <regions xmi:id="_aF8hsK12Eea-WNH0M9FZLA" name="Reservation1">
-      <vertices xsi:type="sgraph:State" xmi:id="_aF8hsa12Eea-WNH0M9FZLA" name="Created" incomingTransitions="_aGDPYa12Eea-WNH0M9FZLA">
-        <outgoingTransitions xmi:id="_aGAzIa12Eea-WNH0M9FZLA" specification="[reservation.getCurrentBookingNumber() == 2]/&#xD;&#xA;reservation1.bookingId = reservation.getBookingId()" target="_aGTuEK12Eea-WNH0M9FZLA"/>
+      <vertices xsi:type="sgraph:State" xmi:id="_aF8hsa12Eea-WNH0M9FZLA" name="Created" incomingTransitions="_aGDPYa12Eea-WNH0M9FZLA _K2M0sK2wEeafM71KTKgPgQ">
+        <outgoingTransitions xmi:id="_aGU8Ma12Eea-WNH0M9FZLA" specification="[reservation.getCurrentReservationNumber == 2]/&#xD;&#xA;reservation1.roomId = reservation.getRoomId();&#xD;&#xA;reservation1.bookingId = reservation.getBookingId()" target="_aGD2cK12Eea-WNH0M9FZLA"/>
       </vertices>
       <vertices xsi:type="sgraph:Entry" xmi:id="_aGDPYK12Eea-WNH0M9FZLA">
         <outgoingTransitions xmi:id="_aGDPYa12Eea-WNH0M9FZLA" specification="" target="_aF8hsa12Eea-WNH0M9FZLA"/>
@@ -82,10 +81,9 @@
       <vertices xsi:type="sgraph:State" xmi:id="_aGMZYK12Eea-WNH0M9FZLA" name="Confirmed" incomingTransitions="_aGFroK12Eea-WNH0M9FZLA">
         <outgoingTransitions xmi:id="_aGNnca12Eea-WNH0M9FZLA" specification="[reservation.bookingCheckedin(reservation1.bookingId) &amp;&amp;&#xD;&#xA;&#x9;reservation.checkAssignedRoom(reservation1.roomId)]/&#xD;&#xA;reservation.occupiRoom(reservation1.roomId)" target="_aGIH4K12Eea-WNH0M9FZLA"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_aGTuEK12Eea-WNH0M9FZLA" name="Init BookingId" incomingTransitions="_aGAzIa12Eea-WNH0M9FZLA">
-        <outgoingTransitions xmi:id="_aGU8Ma12Eea-WNH0M9FZLA" specification="[reservation.getCurrentReservationNumber == 2]/&#xD;&#xA;reservation1.roomId = reservation.getRoomId() " target="_aGD2cK12Eea-WNH0M9FZLA"/>
+      <vertices xsi:type="sgraph:State" xmi:id="_ID-0QK16Eea-WNH0M9FZLA" name="Checkout" incomingTransitions="_aGJWAa12Eea-WNH0M9FZLA">
+        <outgoingTransitions xmi:id="_K2M0sK2wEeafM71KTKgPgQ" specification="[reservation.bookingPayed(reservation0.bookingId) &amp;&amp; &#xA;&#x9;reservation.checkFreeRoom(reservation0.roomId)]/&#xA;reservation.resolvReservation(reservation0.roomId)" target="_aF8hsa12Eea-WNH0M9FZLA"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_ID-0QK16Eea-WNH0M9FZLA" name="Checkout" incomingTransitions="_aGJWAa12Eea-WNH0M9FZLA"/>
     </regions>
     <regions xmi:id="_gN6lgK12Eea-WNH0M9FZLA" name="room1">
       <vertices xsi:type="sgraph:Entry" xmi:id="_gN6lga12Eea-WNH0M9FZLA">
@@ -106,7 +104,7 @@
         <outgoingTransitions xmi:id="__5nFwq13Eea-WNH0M9FZLA" specification="" target="__5oT4K13Eea-WNH0M9FZLA"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="__5oT4K13Eea-WNH0M9FZLA" name="Created" incomingTransitions="__5nFwq13Eea-WNH0M9FZLA">
-        <outgoingTransitions xmi:id="__5o68a13Eea-WNH0M9FZLA" specification="usr.initiateBooking[usr.booking==1]/&#xA;booking1.bookingId = booking.initiateBooking()" target="__5qJGq13Eea-WNH0M9FZLA"/>
+        <outgoingTransitions xmi:id="__5o68a13Eea-WNH0M9FZLA" specification="usr.initiateBooking[usr.booking==1]/&#xA;booking1.bookingId = booking.initiateBooking();&#xA;raise reservation.initReservation" target="__5qJGq13Eea-WNH0M9FZLA"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="__5qJGq13Eea-WNH0M9FZLA" name="Initiated" incomingTransitions="__5o68a13Eea-WNH0M9FZLA __5r-QK13Eea-WNH0M9FZLA">
         <outgoingTransitions xmi:id="__5qwIa13Eea-WNH0M9FZLA" specification="usr.confirmBooking [usr.booking==1 &amp;&amp;&#xD;&#xA;&#x9;booking.confirmBooking(booking1.bookingId)]" target="__5tMYK13Eea-WNH0M9FZLA"/>
@@ -119,7 +117,7 @@
         <outgoingTransitions xmi:id="__5vBka13Eea-WNH0M9FZLA" specification="usr.initiateCheckout [usr.booking==1 &amp;&amp;&#xA;&#x9;booking.initiateCheckout(booking1.bookingId)]" target="__5wPsK13Eea-WNH0M9FZLA"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="__5wPsK13Eea-WNH0M9FZLA" specification="" name="CheckingOut" incomingTransitions="__5vBka13Eea-WNH0M9FZLA">
-        <outgoingTransitions xmi:id="__5wPsq13Eea-WNH0M9FZLA" specification="usr.payDuringCheckout [usr.booking==1 &amp;&amp; &#xA;&#x9;booking.payDuringCheckout(booking1.bookingId)&#xA;]" target="__5xd3613Eea-WNH0M9FZLA"/>
+        <outgoingTransitions xmi:id="__5wPsq13Eea-WNH0M9FZLA" specification="usr.payDuringCheckout [usr.booking==1 &amp;&amp; &#xA;&#x9;booking.payDuringCheckout(booking1.bookingId)]" target="__5xd3613Eea-WNH0M9FZLA"/>
       </vertices>
       <vertices xsi:type="sgraph:FinalState" xmi:id="__5xd3613Eea-WNH0M9FZLA" incomingTransitions="__5wPsq13Eea-WNH0M9FZLA"/>
     </regions>
@@ -280,7 +278,7 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_RJWdlKpqEea9rP9r4tEs6w"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_RJV2gapqEea9rP9r4tEs6w" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_RJV2gqpqEea9rP9r4tEs6w" x="1685" y="-4" width="337" height="327"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_RJV2gqpqEea9rP9r4tEs6w" x="2173" y="-4" width="340" height="328"/>
     </children>
     <children xmi:id="_3SwdkKzbEeazVbadzHEfXA" type="Region" element="_3SmskKzbEeazVbadzHEfXA">
       <children xsi:type="notation:DecorationNode" xmi:id="_3Szg4KzbEeazVbadzHEfXA" type="RegionName">
@@ -365,22 +363,6 @@
           <styles xsi:type="notation:BooleanValueStyle" xmi:id="_evoQkazcEeazVbadzHEfXA" name="isHorizontal" booleanValue="true"/>
           <layoutConstraint xsi:type="notation:Bounds" xmi:id="_evmbY6zcEeazVbadzHEfXA" x="916" y="23"/>
         </children>
-        <children xmi:id="_5YFA8Kz_EeaEd4vC10vvcw" type="State" element="_5YDLwKz_EeaEd4vC10vvcw">
-          <children xsi:type="notation:DecorationNode" xmi:id="_5YFA9Kz_EeaEd4vC10vvcw" type="StateName">
-            <styles xsi:type="notation:ShapeStyle" xmi:id="_5YFA9az_EeaEd4vC10vvcw"/>
-            <layoutConstraint xsi:type="notation:Location" xmi:id="_5YFA9qz_EeaEd4vC10vvcw"/>
-          </children>
-          <children xsi:type="notation:Compartment" xmi:id="_5YFoAKz_EeaEd4vC10vvcw" type="StateTextCompartment">
-            <children xsi:type="notation:Shape" xmi:id="_5YFoAaz_EeaEd4vC10vvcw" type="StateTextCompartmentExpression" fontName="Verdana" lineColor="4210752">
-              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_5YFoAqz_EeaEd4vC10vvcw"/>
-            </children>
-          </children>
-          <children xsi:type="notation:Compartment" xmi:id="_5YFoA6z_EeaEd4vC10vvcw" type="StateFigureCompartment"/>
-          <styles xsi:type="notation:ShapeStyle" xmi:id="_5YFA8az_EeaEd4vC10vvcw" fontName="Verdana" fillColor="15981773" lineColor="12632256"/>
-          <styles xsi:type="notation:FontStyle" xmi:id="_5YFA8qz_EeaEd4vC10vvcw"/>
-          <styles xsi:type="notation:BooleanValueStyle" xmi:id="_5YFoBKz_EeaEd4vC10vvcw" name="isHorizontal" booleanValue="true"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_5YFA86z_EeaEd4vC10vvcw" x="324" y="33"/>
-        </children>
         <children xmi:id="_-hgYcK15Eea-WNH0M9FZLA" type="State" element="_-hYcoK15Eea-WNH0M9FZLA">
           <children xsi:type="notation:DecorationNode" xmi:id="_-hiNoK15Eea-WNH0M9FZLA" type="StateName">
             <styles xsi:type="notation:ShapeStyle" xmi:id="_-hiNoa15Eea-WNH0M9FZLA"/>
@@ -395,12 +377,12 @@
           <styles xsi:type="notation:ShapeStyle" xmi:id="_-hgYca15Eea-WNH0M9FZLA" fontName="Verdana" fillColor="15981773" lineColor="12632256"/>
           <styles xsi:type="notation:FontStyle" xmi:id="_-hgYcq15Eea-WNH0M9FZLA"/>
           <styles xsi:type="notation:BooleanValueStyle" xmi:id="_-hlQ8K15Eea-WNH0M9FZLA" name="isHorizontal" booleanValue="true"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_-hgYc615Eea-WNH0M9FZLA" x="109" y="116"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_-hgYc615Eea-WNH0M9FZLA" x="104" y="138"/>
         </children>
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_3S0H8azbEeazVbadzHEfXA"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_3SwdkazbEeazVbadzHEfXA" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_3SwdkqzbEeazVbadzHEfXA" x="448" y="524" width="1224" height="242"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_3SwdkqzbEeazVbadzHEfXA" x="448" y="524" width="1224" height="243"/>
     </children>
     <children xmi:id="_NvJDsKzfEeazVbadzHEfXA" type="Region" element="_NvIcoKzfEeazVbadzHEfXA">
       <children xsi:type="notation:DecorationNode" xmi:id="_NvJqwKzfEeazVbadzHEfXA" type="RegionName">
@@ -472,7 +454,7 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_NvKR0azfEeazVbadzHEfXA"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_NvJDsazfEeazVbadzHEfXA" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_NvJDsqzfEeazVbadzHEfXA" x="1685" y="335" width="724" height="276"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_NvJDsqzfEeazVbadzHEfXA" x="2173" y="333" width="727" height="279"/>
     </children>
     <children xmi:id="_aFmjcK12Eea-WNH0M9FZLA" type="Region" element="_aF8hsK12Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="_aFmjca12Eea-WNH0M9FZLA" type="RegionName">
@@ -557,22 +539,6 @@
           <styles xsi:type="notation:BooleanValueStyle" xmi:id="_aFnxsK12Eea-WNH0M9FZLA" name="isHorizontal" booleanValue="true"/>
           <layoutConstraint xsi:type="notation:Bounds" xmi:id="_aFnxsa12Eea-WNH0M9FZLA" x="916" y="23"/>
         </children>
-        <children xmi:id="_aFnxsq12Eea-WNH0M9FZLA" type="State" element="_aGTuEK12Eea-WNH0M9FZLA">
-          <children xsi:type="notation:DecorationNode" xmi:id="_aFnxs612Eea-WNH0M9FZLA" type="StateName">
-            <styles xsi:type="notation:ShapeStyle" xmi:id="_aFnxtK12Eea-WNH0M9FZLA"/>
-            <layoutConstraint xsi:type="notation:Location" xmi:id="_aFnxta12Eea-WNH0M9FZLA"/>
-          </children>
-          <children xsi:type="notation:Compartment" xmi:id="_aFnxtq12Eea-WNH0M9FZLA" type="StateTextCompartment">
-            <children xsi:type="notation:Shape" xmi:id="_aFnxt612Eea-WNH0M9FZLA" type="StateTextCompartmentExpression" fontName="Verdana" lineColor="4210752">
-              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_aFnxuK12Eea-WNH0M9FZLA"/>
-            </children>
-          </children>
-          <children xsi:type="notation:Compartment" xmi:id="_aFnxua12Eea-WNH0M9FZLA" type="StateFigureCompartment"/>
-          <styles xsi:type="notation:ShapeStyle" xmi:id="_aFnxuq12Eea-WNH0M9FZLA" fontName="Verdana" fillColor="15981773" lineColor="12632256"/>
-          <styles xsi:type="notation:FontStyle" xmi:id="_aFnxu612Eea-WNH0M9FZLA"/>
-          <styles xsi:type="notation:BooleanValueStyle" xmi:id="_aFnxvK12Eea-WNH0M9FZLA" name="isHorizontal" booleanValue="true"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_aFnxva12Eea-WNH0M9FZLA" x="324" y="33"/>
-        </children>
         <children xmi:id="_IEBQgK16Eea-WNH0M9FZLA" type="State" element="_ID-0QK16Eea-WNH0M9FZLA">
           <children xsi:type="notation:DecorationNode" xmi:id="_IEB3kK16Eea-WNH0M9FZLA" type="StateName">
             <styles xsi:type="notation:ShapeStyle" xmi:id="_IEB3ka16Eea-WNH0M9FZLA"/>
@@ -587,12 +553,12 @@
           <styles xsi:type="notation:ShapeStyle" xmi:id="_IEBQga16Eea-WNH0M9FZLA" fontName="Verdana" fillColor="15981773" lineColor="12632256"/>
           <styles xsi:type="notation:FontStyle" xmi:id="_IEBQgq16Eea-WNH0M9FZLA"/>
           <styles xsi:type="notation:BooleanValueStyle" xmi:id="_IECeoa16Eea-WNH0M9FZLA" name="isHorizontal" booleanValue="true"/>
-          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_IEBQg616Eea-WNH0M9FZLA" x="106" y="117"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_IEBQg616Eea-WNH0M9FZLA" x="103" y="142"/>
         </children>
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_aFnxvq12Eea-WNH0M9FZLA"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_aFnxv612Eea-WNH0M9FZLA" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_aFnxwK12Eea-WNH0M9FZLA" x="449" y="780" width="1222" height="240"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_aFnxwK12Eea-WNH0M9FZLA" x="448" y="828" width="1224" height="244"/>
     </children>
     <children xmi:id="_gN5-cK12Eea-WNH0M9FZLA" type="Region" element="_gN6lgK12Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="_gN5-ca12Eea-WNH0M9FZLA" type="RegionName">
@@ -664,7 +630,7 @@
         <layoutConstraint xsi:type="notation:Bounds" xmi:id="_gN5-o612Eea-WNH0M9FZLA"/>
       </children>
       <styles xsi:type="notation:ShapeStyle" xmi:id="_gN5-pK12Eea-WNH0M9FZLA" fontName="Verdana" fillColor="15790320" lineColor="12632256"/>
-      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_gN5-pa12Eea-WNH0M9FZLA" x="1685" y="640" width="724" height="276"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_gN5-pa12Eea-WNH0M9FZLA" x="2173" y="640" width="727" height="276"/>
     </children>
     <children xmi:id="__5l3oK13Eea-WNH0M9FZLA" type="Region" element="__5nFwK13Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="__5l3oa13Eea-WNH0M9FZLA" type="RegionName">
@@ -946,27 +912,16 @@
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_lqkiEqzfEeazVbadzHEfXA" points="[-46, 0, 189, 107]$[-235, 0, 0, 107]$[-235, -83, 0, 24]"/>
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_lqm-UKzfEeazVbadzHEfXA" id="(0.5444444444444444,0.20754716981132076)"/>
     </edges>
-    <edges xmi:id="_lkm6rKz4EeaEd4vC10vvcw" type="Transition" element="_lkkeYKz4EeaEd4vC10vvcw" source="_5YFA8Kz_EeaEd4vC10vvcw" target="_bPl4UKzcEeazVbadzHEfXA">
+    <edges xmi:id="_lkm6rKz4EeaEd4vC10vvcw" type="Transition" element="_lkkeYKz4EeaEd4vC10vvcw" source="_8RFYwKzbEeazVbadzHEfXA" target="_bPl4UKzcEeazVbadzHEfXA">
       <children xsi:type="notation:DecorationNode" xmi:id="_lkm6raz4EeaEd4vC10vvcw" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_lkm6rqz4EeaEd4vC10vvcw"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_lkm6r6z4EeaEd4vC10vvcw" x="5" y="44"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_lkm6r6z4EeaEd4vC10vvcw" x="-10" y="-39"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_lkm6sKz4EeaEd4vC10vvcw" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_lkm6saz4EeaEd4vC10vvcw" fontName="Verdana"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_lkm6sqz4EeaEd4vC10vvcw" points="[0, 1, -88, 3]$[89, 19, 1, 21]"/>
-      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_lkm6s6z4EeaEd4vC10vvcw" id="(0.9014084507042254,0.41509433962264153)"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_lkm6s6z4EeaEd4vC10vvcw" id="(0.9264705882352942,0.5849056603773585)"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_lkm6tKz4EeaEd4vC10vvcw" id="(0.03,0.6037735849056604)"/>
-    </edges>
-    <edges xmi:id="_6tBaoKz_EeaEd4vC10vvcw" type="Transition" element="_6s--YKz_EeaEd4vC10vvcw" source="_8RFYwKzbEeazVbadzHEfXA" target="_5YFA8Kz_EeaEd4vC10vvcw">
-      <children xsi:type="notation:DecorationNode" xmi:id="_6tBapKz_EeaEd4vC10vvcw" type="TransitionExpression">
-        <styles xsi:type="notation:ShapeStyle" xmi:id="_6tBapaz_EeaEd4vC10vvcw"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_6tBapqz_EeaEd4vC10vvcw" x="4" y="-45"/>
-      </children>
-      <styles xsi:type="notation:ConnectorStyle" xmi:id="_6tBaoaz_EeaEd4vC10vvcw" lineColor="4210752"/>
-      <styles xsi:type="notation:FontStyle" xmi:id="_6tBao6z_EeaEd4vC10vvcw" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_6tBaoqz_EeaEd4vC10vvcw" points="[0, 2, -154, 3]$[155, 22, 1, 23]"/>
-      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_6tD24Kz_EeaEd4vC10vvcw" id="(0.9402985074626866,0.32075471698113206)"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_6tD24az_EeaEd4vC10vvcw" id="(0.19718309859154928,0.5283018867924528)"/>
     </edges>
     <edges xmi:id="_aGpsUK12Eea-WNH0M9FZLA" type="Transition" element="_aGDPYa12Eea-WNH0M9FZLA" source="_aFmjga12Eea-WNH0M9FZLA" target="_aFmjda12Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="_aGpsUa12Eea-WNH0M9FZLA" type="TransitionExpression">
@@ -997,7 +952,7 @@
       <styles xsi:type="notation:FontStyle" xmi:id="_aGt9za12Eea-WNH0M9FZLA" fontName="Verdana"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_aGt9zq12Eea-WNH0M9FZLA" points="[0, 10, 289, -59]$[0, 69, 289, 0]$[-269, 69, 20, 0]"/>
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGt9z612Eea-WNH0M9FZLA" id="(0.17647058823529413,0.8113207547169812)"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGt90K12Eea-WNH0M9FZLA" id="(0.7789473684210526,0.660377358490566)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGt90K12Eea-WNH0M9FZLA" id="(0.9647058823529412,0.3584905660377358)"/>
     </edges>
     <edges xmi:id="_aGt90a12Eea-WNH0M9FZLA" type="Transition" element="_aGJWAa12Eea-WNH0M9FZLA" source="_aFnxmq12Eea-WNH0M9FZLA" target="_IEBQgK16Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="_aGt90q12Eea-WNH0M9FZLA" type="TransitionExpression">
@@ -1007,30 +962,19 @@
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_aGt91a12Eea-WNH0M9FZLA" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_aGt91q12Eea-WNH0M9FZLA" fontName="Verdana"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_aGt91612Eea-WNH0M9FZLA" points="[-1, 0, 406, -14]$[-391, 13, 16, -1]"/>
-      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGt92K12Eea-WNH0M9FZLA" id="(0.021052631578947368,0.5660377358490566)"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGt92K12Eea-WNH0M9FZLA" id="(0.0,0.2830188679245283)"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGt92a12Eea-WNH0M9FZLA" id="(0.7638888888888888,0.3018867924528302)"/>
     </edges>
-    <edges xmi:id="_aGvL4K12Eea-WNH0M9FZLA" type="Transition" element="_aGU8Ma12Eea-WNH0M9FZLA" source="_aFnxsq12Eea-WNH0M9FZLA" target="_aFmji612Eea-WNH0M9FZLA">
+    <edges xmi:id="_aGvL4K12Eea-WNH0M9FZLA" type="Transition" element="_aGU8Ma12Eea-WNH0M9FZLA" source="_aFmjda12Eea-WNH0M9FZLA" target="_aFmji612Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="_aGvL4a12Eea-WNH0M9FZLA" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_aGvL4q12Eea-WNH0M9FZLA"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_aGvL4612Eea-WNH0M9FZLA" x="5" y="44"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_aGvL4612Eea-WNH0M9FZLA" x="2" y="-51"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_aGvL5K12Eea-WNH0M9FZLA" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_aGvL5a12Eea-WNH0M9FZLA" fontName="Verdana"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_aGvL5q12Eea-WNH0M9FZLA" points="[0, 1, -88, 3]$[89, 19, 1, 21]"/>
-      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGvL5612Eea-WNH0M9FZLA" id="(0.9014084507042254,0.41509433962264153)"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGvL5612Eea-WNH0M9FZLA" id="(0.8676470588235294,0.6037735849056604)"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGvL6K12Eea-WNH0M9FZLA" id="(0.03,0.6037735849056604)"/>
-    </edges>
-    <edges xmi:id="_aGvy8K12Eea-WNH0M9FZLA" type="Transition" element="_aGAzIa12Eea-WNH0M9FZLA" source="_aFmjda12Eea-WNH0M9FZLA" target="_aFnxsq12Eea-WNH0M9FZLA">
-      <children xsi:type="notation:DecorationNode" xmi:id="_aGvy8a12Eea-WNH0M9FZLA" type="TransitionExpression">
-        <styles xsi:type="notation:ShapeStyle" xmi:id="_aGvy8q12Eea-WNH0M9FZLA"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_aGvy8612Eea-WNH0M9FZLA" x="4" y="-45"/>
-      </children>
-      <styles xsi:type="notation:ConnectorStyle" xmi:id="_aGvy9K12Eea-WNH0M9FZLA" lineColor="4210752"/>
-      <styles xsi:type="notation:FontStyle" xmi:id="_aGvy9a12Eea-WNH0M9FZLA" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_aGvy9q12Eea-WNH0M9FZLA" points="[0, 2, -154, 3]$[155, 22, 1, 23]"/>
-      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGvy9612Eea-WNH0M9FZLA" id="(0.9402985074626866,0.32075471698113206)"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aGvy-K12Eea-WNH0M9FZLA" id="(0.19718309859154928,0.5283018867924528)"/>
     </edges>
     <edges xmi:id="_gOJPAK12Eea-WNH0M9FZLA" type="Transition" element="_gN6lgq12Eea-WNH0M9FZLA" source="_gN5-da12Eea-WNH0M9FZLA" target="_gN5-f612Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="_gOJPAa12Eea-WNH0M9FZLA" type="TransitionExpression">
@@ -1061,7 +1005,7 @@
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_gOPVra12Eea-WNH0M9FZLA" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_gOPVrq12Eea-WNH0M9FZLA" fontName="Verdana"/>
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_gOPVr612Eea-WNH0M9FZLA" points="[0, 24, 151, -105]$[0, 120, 151, -9]$[-145, 120, 6, -9]"/>
-      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_gOPVsK12Eea-WNH0M9FZLA" id="(0.9333333333333333,0.660377358490566)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_gOPVsK12Eea-WNH0M9FZLA" id="(0.9666666666666667,0.4716981132075472)"/>
     </edges>
     <edges xmi:id="_gOPVsa12Eea-WNH0M9FZLA" type="Transition" element="_gN_eAa12Eea-WNH0M9FZLA" source="_gN5-l612Eea-WNH0M9FZLA" target="_gN5-f612Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="_gOPVsq12Eea-WNH0M9FZLA" type="TransitionExpression">
@@ -1095,7 +1039,7 @@
     <edges xmi:id="__59rGK13Eea-WNH0M9FZLA" type="Transition" element="__5o68a13Eea-WNH0M9FZLA" source="__5l3r613Eea-WNH0M9FZLA" target="__5l3u613Eea-WNH0M9FZLA">
       <children xsi:type="notation:DecorationNode" xmi:id="__59rGa13Eea-WNH0M9FZLA" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="__59rGq13Eea-WNH0M9FZLA"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="__59rG613Eea-WNH0M9FZLA" x="-54" y="-44"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="__59rG613Eea-WNH0M9FZLA" x="-46" y="-47"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="__59rHK13Eea-WNH0M9FZLA" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="__59rHa13Eea-WNH0M9FZLA" fontName="Verdana"/>
@@ -1143,6 +1087,25 @@
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="__5-SLq13Eea-WNH0M9FZLA" points="[4, 17, 55, 16]$[4, 88, 55, 87]$[-51, 88, 0, 87]$[-51, 17, 0, 16]"/>
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="__5-SL613Eea-WNH0M9FZLA" id="(0.7912087912087912,0.660377358490566)"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="__5-SMK13Eea-WNH0M9FZLA" id="(0.1978021978021978,0.6792452830188679)"/>
+    </edges>
+    <edges xmi:id="_K2RGIK2wEeafM71KTKgPgQ" type="Transition" element="_K2M0sK2wEeafM71KTKgPgQ" source="_IEBQgK16Eea-WNH0M9FZLA" target="_aFmjda12Eea-WNH0M9FZLA">
+      <children xsi:type="notation:DecorationNode" xmi:id="_K2SUQK2wEeafM71KTKgPgQ" type="TransitionExpression">
+        <styles xsi:type="notation:ShapeStyle" xmi:id="_K2SUQa2wEeafM71KTKgPgQ"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_K2SUQq2wEeafM71KTKgPgQ" x="14" y="218"/>
+      </children>
+      <styles xsi:type="notation:ConnectorStyle" xmi:id="_K2RGIa2wEeafM71KTKgPgQ" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" xmi:id="_K2RtMK2wEeafM71KTKgPgQ" fontName="Verdana"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_K2RGIq2wEeafM71KTKgPgQ" points="[-3, -30, -4, 95]$[-3, -95, -4, 30]"/>
+    </edges>
+    <edges xmi:id="_LwBYoK2wEeafM71KTKgPgQ" type="Transition" element="_Lv6D4K2wEeafM71KTKgPgQ" source="_-hgYcK15Eea-WNH0M9FZLA" target="_8RFYwKzbEeazVbadzHEfXA">
+      <children xsi:type="notation:DecorationNode" xmi:id="_LwB_sa2wEeafM71KTKgPgQ" type="TransitionExpression">
+        <styles xsi:type="notation:ShapeStyle" xmi:id="_LwB_sq2wEeafM71KTKgPgQ"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_LwCmwK2wEeafM71KTKgPgQ" x="12" y="211"/>
+      </children>
+      <styles xsi:type="notation:ConnectorStyle" xmi:id="_LwBYoa2wEeafM71KTKgPgQ" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" xmi:id="_LwB_sK2wEeafM71KTKgPgQ" fontName="Verdana"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_LwBYoq2wEeafM71KTKgPgQ" points="[-4, -12, -4, 90]$[-4, -72, -4, 30]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_LwLwsK2wEeafM71KTKgPgQ" id="(0.5,0.20754716981132076)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

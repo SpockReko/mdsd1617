@@ -23,7 +23,7 @@ public class Assignment3Complete {
 	public boolean addRoomToBooking(long bookingId) {
 		if (bookingId < 1 || bookingId > currentBookingId) {
 			return false;
-		} else if (currentReservationNumber >= MAX_ROOMS) {
+		} else if (currentReservationNumber >= MAX_ROOMS-1) {
 			return false;
 		} else {
 			++currentReservationNumber;
@@ -50,7 +50,7 @@ public class Assignment3Complete {
 		return bookingStatus[(int)bookingId] == Booking.CHECKEDOUT;
 	}
 	
-	public boolean payDurningCheckout(long bookingId){
+	public boolean payDuringCheckout(long bookingId){
 		bookingStatus[(int)bookingId] = Booking.PAYED;
 		return bookingStatus[(int)bookingId] == Booking.PAYED;
 	}
@@ -110,6 +110,11 @@ public class Assignment3Complete {
 		return bookingStatus[index] == Booking.CHECKEDOUT;
 	}
 	
+	public boolean bookingPayed(long bookingId){
+		int index = (int) bookingId;
+		return bookingStatus[index] == Booking.PAYED;
+	}
+	
 	public boolean checkFreeRoom(long roomId){ 
 		int index = (int) roomId;
 		return roomStatus[index] == Room.FREE;	
@@ -124,6 +129,14 @@ public class Assignment3Complete {
 		return roomStatus[index] == Room.OCCUPIDE;	
 	}
 	
+	public boolean resolvReservation( long roomId){
+		if(currentReservationNumber < 0){
+			return false;
+		}else{
+			--currentReservationNumber;
+			return true;
+		}
+	}
 	
 	/***********************/
 	/**** room interface ***/
