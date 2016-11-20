@@ -5,7 +5,9 @@ public class Assignment3Operations {
 	private boolean toggled = false;
 	
 	public void increaseCounter() {
-		counter++;
+		if(!toggled){
+			counter = (++counter) % 5;
+		}
 	}
 	
 	public long getCounter() {
