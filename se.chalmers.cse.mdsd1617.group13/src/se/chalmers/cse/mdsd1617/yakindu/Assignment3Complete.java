@@ -31,8 +31,7 @@ public class Assignment3Complete {
 		}
 	}
 	
-	
-	
+	// The methods from booking that triggers everything in the flow diagram.
 	public boolean confirmBooking(long bookingId){
 		bookingStatus[(int)bookingId] = Booking.CONFIRMED;
 		return bookingStatus[(int)bookingId] == Booking.CONFIRMED;
@@ -59,6 +58,17 @@ public class Assignment3Complete {
 	/*************************/
 	/**reservation interface**/
 	/*************************/
+	// Decrease the active reservation number.
+	public boolean resolvReservation( long roomId){
+		if(currentReservationNumber < 0){
+			return false;
+		}else{
+			--currentReservationNumber;
+			return true;
+		}
+	}
+	
+	
 	// 2 methods that returns the index in the arrays.
 	public long getBookingId(){
 		return currentBookingId;
@@ -67,6 +77,8 @@ public class Assignment3Complete {
 	public long getRoomId(){
 		return currentReservationNumber;
 	}
+	
+	
 	// 2 methods that returns the id's.
 	public long getCurrentReservationNumber(){
 		return currentReservationNumber;
@@ -75,6 +87,7 @@ public class Assignment3Complete {
 	public long getCurrentBookingNumber(){
 		return currentBookingId;
 	}
+	
 	
 	// 3 methods that change the room state
 	public boolean assignRoom(long roomIndex){
@@ -95,6 +108,8 @@ public class Assignment3Complete {
 		return roomStatus[index] == Room.FREE;	
 	}
 	
+	
+	// 4 method that checks if the bookings in the right state
 	public boolean bookingConfirmed(long bookingId){
 		int index = (int) bookingId;
 		return bookingStatus[index] == Booking.CONFIRMED;
@@ -115,6 +130,8 @@ public class Assignment3Complete {
 		return bookingStatus[index] == Booking.PAYED;
 	}
 	
+	
+	// 3 methods that checks if the rooms is in the right state
 	public boolean checkFreeRoom(long roomId){ 
 		int index = (int) roomId;
 		return roomStatus[index] == Room.FREE;	
@@ -129,19 +146,12 @@ public class Assignment3Complete {
 		return roomStatus[index] == Room.OCCUPIDE;	
 	}
 	
-	public boolean resolvReservation( long roomId){
-		if(currentReservationNumber < 0){
-			return false;
-		}else{
-			--currentReservationNumber;
-			return true;
-		}
-	}
 	
 	/***********************/
 	/**** room interface ***/
 	/***********************/
 	
+	// 3 methods that checks the room status.
 	public boolean roomAssigned(long roomIndex){	
 		int index = (int) roomIndex;
 		return roomStatus[index] == Room.ASSIGNED;	
