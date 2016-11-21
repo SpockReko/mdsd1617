@@ -15,7 +15,11 @@ public class Assignment3Operations {
 	}
 	
 	public void toggleCounter() {
-		toggled = !toggled;
+		if(toggled) {
+			toggled = false;
+		} else {
+			toggled = true;
+		}
 	}
 	
 	public boolean isToggled() {
