@@ -52,6 +52,11 @@ public class Assignment3Complete {
 		return true;
 	}
 	
+	public boolean assignRoom(long reservationId) {
+		currentSelectedReservationId = reservationId;
+		return true;
+	}
+	
 	public boolean occupiedRoom(long reservationId) {
 		currentSelectedReservationId = reservationId;
 		return true;
