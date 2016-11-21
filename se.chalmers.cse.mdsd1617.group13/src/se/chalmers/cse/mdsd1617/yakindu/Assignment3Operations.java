@@ -5,7 +5,11 @@ public class Assignment3Operations {
 	private boolean toggled = false;
 	
 	public void increaseCounter() {
-		counter++;
+		if (counter > 4) {
+			counter = 0;
+		} else {
+			counter++;
+		}
 	}
 	
 	public long getCounter() {
@@ -13,7 +17,11 @@ public class Assignment3Operations {
 	}
 	
 	public void toggleCounter() {
-		toggled = !toggled;
+		if(toggled) {
+			toggled = false;
+		} else {
+			toggled = true;
+		}
 	}
 	
 	public boolean isToggled() {
