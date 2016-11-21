@@ -67,7 +67,10 @@ public class Assignment3Complete {
 		return true;
 	}
 	
-	
+	public boolean endReservationRoom(long reservationId) {
+		currentSelectedReservationId = reservationId;
+		return true;
+	}
 	
 	public long getCurrentSelectedBookingId() {
 		return currentSelectedBookingId;
