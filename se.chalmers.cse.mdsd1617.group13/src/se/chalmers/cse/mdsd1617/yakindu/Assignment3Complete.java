@@ -1,108 +1,172 @@
 package se.chalmers.cse.mdsd1617.yakindu;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Assignment3Complete {
 	private long currentBookingId = 0;
-	private long currentReservationNumber = -1;
-	private long currentRoomId = -1;
+	private long currentReservationNumber = 0;
 	
-	private long currentSelectedBookingId = -1;
-	private long currentSelectedReservationId = -1;
-
 	private final int MAX_ROOMS = 2;
-
-	public long initiateBooking() {
-		return ++currentBookingId;
-	}
 	
-	// Add a reservation to the booking.
-	// Returns false if the reservations exceeds the current max rooms
-	public boolean addRoomToBooking(long bookingId) {
-		if (bookingId < 1 || bookingId > currentBookingId) {
-			return false;
-		} else if (currentReservationNumber >= (MAX_ROOMS-1)) {
-			return false;
-		} else {
-			currentSelectedBookingId = bookingId;
-			++currentReservationNumber;
-			return true;
+	private List<Booking> bookings = new ArrayList<>();
+	private Booking currentBooking;
+	
+	private List<Room> rooms = new ArrayList<>();
+	
+	public Assignment3Complete(){
+		long l = 0;
+		for(int i = 0; i <= MAX_ROOMS; i++){
+			rooms.add(new Room(l));
+			l = l+1;
 		}
 	}
 	
-	// Marks what the current reservation is
-	// Helps to connect a reservation to a room
-	public boolean addReservationToRoom(long reservationId) {
-		currentSelectedReservationId = reservationId;
-		++currentRoomId;
+	public long initiateBooking() {
+		bookings.add(new Booking(++currentBookingId));
+		return currentBookingId;
+	}
+	
+	public boolean activateBooking(long bookingId){
+		for(Booking b : bookings){
+			if(b.getBookingId() == bookingId){
+				currentBooking = b;
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean addRoomToBooking(long bookingId) {
+		if (bookingId < 1 || bookingId > currentBookingId) {
+			return false;
+		} else if (currentReservationNumber >= MAX_ROOMS) {
+			return false;
+		} else {
+			for(Booking b : bookings){
+				if(b.getBookingId() == bookingId){
+					currentBooking = b;
+					currentBooking.getReservations().add(new Reservation(currentReservationNumber++));
+					return true;
+				}
+			}
+			return false;
+		}
+	}
+	
+	public boolean initializeReservation(long reservationId){
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.getReservationId() == reservationId){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean confirmReservation(long reservationId){
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.getReservationId() == reservationId){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean checkInBooking(long bookingId){
+		activateBooking(bookingId);
+		Reservation r = currentBooking.getCheckIn();
+		if(r == null){
+			return false;
+		} else if (r.isWaiting()){
+			r.readyToCheckIn();
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean checkInReservation(long reservationId){
+		for(Reservation r : currentBooking.getReservations()){
+			if((r.getReservationId() == reservationId) && r.isReadyToCheckIn()){
+				for(Room rm : rooms){
+					if(rm.isFree()){
+						r.checkedIn();
+						r.occupyRoom(rm);
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
+
+	public boolean checkInRoom(long roomId){
+		for(Reservation r : currentBooking.getReservations()){
+			Room room = r.getRoom();
+			if(room != null && room.getRoomId() == roomId) {
+				return true;
+			} 
+		}
+		return false;
+	}
+	
+	public boolean initiateCheckout(long bookingId){
+		activateBooking(bookingId);
+		Reservation r = currentBooking.getCheckOut();
+		if(r == null){
+			return false;
+		} else if (r.isCheckedIn()){
+			r.readyToCheckOut();
+			return true;
+		} return false;
+	}
+	
+	public boolean checkOutReservation(long reservationId){
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.getReservationId() == reservationId && r.isReadyToCheckOut()){
+				return true;
+			}
+		} return false;
+	}
+	
+	public boolean checkOutRoom(long roomId){
+		for(Reservation r : currentBooking.getReservations()){
+			Room room = r.getRoom();
+			if(room != null && room.getRoomId() == roomId && r.isReadyToCheckOut()){
+				r.freeRoom(room);
+				r.checkedOut();
+				//r = null;
+				return true;
+			}
+		} return false;
+	}
+	
+	public boolean payCheckedOuts(long bookingId){
+		activateBooking(bookingId);
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.isCheckedOut()){
+				r.freeReservation();
+			}
+		}
 		return true;
 	}
 	
-	// Confirms the booking
-	// TO-DO: return false if there is no added room to the booking
-	public boolean confirmBooking(long bookingId) {
-		currentSelectedBookingId = bookingId;
+	public boolean checkInWholeBooking(long bookingId){
+		activateBooking(bookingId);
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.isWaiting()){
+				r.readyToCheckIn();
+			}
+		}
 		return true;
 	}
 	
-	// Checks in the booking
-	public boolean checkInBooking(long bookingId) {
-		currentSelectedBookingId = bookingId;
+	public boolean checkOutWholeBooking(long bookingId){
+		activateBooking(bookingId);
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.isCheckedIn()){
+				r.readyToCheckOut();
+			}
+		}
 		return true;
 	}
-	
-	// Initiate a checkout of the room (booking)
-	public boolean initiateCheckout(long bookingId) {
-		currentSelectedBookingId = bookingId;
-		return true;
-	}
-	
-	// The finish state that end the booking with payment 
-	public boolean payDuringCheckout(long bookingId) {
-		currentSelectedBookingId = bookingId;
-		return true;
-	}
-	
-	// Assign a room to its reservation
-	public boolean assignRoom(long reservationId) {
-		currentSelectedReservationId = reservationId;
-		return true;
-	}
-	
-	// Mark the room as occupied. Happens when you checks in the booking
-	public boolean occupiedRoom(long reservationId) {
-		currentSelectedReservationId = reservationId;
-		return true;
-	}
-	
-	// Mark the room as free. Happens when you check out the booking
-	public boolean freeRoom(long reservationId) {
-		currentSelectedReservationId = reservationId;
-		return true;
-	}
-	
-	// Mark the room as free. Happens when pay during checkout
-	public boolean endReservationRoom(long reservationId) {
-		currentSelectedReservationId = reservationId;
-		return true;
-	}
-	
-	// Get the current selected bookingId
-	public long getCurrentSelectedBookingId() {
-		return currentSelectedBookingId;
-	}
-	
-	// Get the current selected reservationId
-	public long currentSelectedReservationId() {
-		return currentSelectedReservationId;
-	}
-	
-	// Get the up-most reservationId
-	public long getCurrentReservationNumber() {
-		return currentReservationNumber;
-	}
-	
-	// Get the up-most roomId
-	public long getCurrentRoomId() {
-		return currentRoomId;
-	}
-	
 }
