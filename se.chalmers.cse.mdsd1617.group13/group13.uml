@@ -410,6 +410,30 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Usage" xmi:id="_WsoGYJeGEeatRIhPgYoqQg" client="_7QVpcI-7EeaYFcjrTNGrQw" supplier="_0ZOZgJeDEeatRIhPgYoqQg"/>
           </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_nLxvgLJYEeatJIKqphduzg" name="SequenceDiagram">
+            <packagedElement xmi:type="uml:Interaction" xmi:id="_qtgw4LJYEeatJIKqphduzg" name="Task1_Interaction">
+              <lifeline xmi:type="uml:Lifeline" xmi:id="_tnbkULJYEeatJIKqphduzg" name="Receptionist" coveredBy="_yoJsMLJYEeatJIKqphduzg _0_R7oLJYEeatJIKqphduzg"/>
+              <lifeline xmi:type="uml:Lifeline" xmi:id="_vAnk0LJYEeatJIKqphduzg" name="Room0" coveredBy="_yoKTQLJYEeatJIKqphduzg _0_SisLJYEeatJIKqphduzg"/>
+              <lifeline xmi:type="uml:Lifeline" xmi:id="_v-_RkLJYEeatJIKqphduzg" name="Admin" coveredBy="_3COq0LJYEeatJIKqphduzg"/>
+              <lifeline xmi:type="uml:Lifeline" xmi:id="_xV-5sLJYEeatJIKqphduzg" name="Room1" coveredBy="_3CPR4LJYEeatJIKqphduzg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yoJsMLJYEeatJIKqphduzg" name="MessageSend" covered="_tnbkULJYEeatJIKqphduzg" toAfter="_4o7i4LJYEeatJIKqphduzg" message="_yoGB0LJYEeatJIKqphduzg">
+                <generalOrdering xmi:type="uml:GeneralOrdering" xmi:id="_4o7i4LJYEeatJIKqphduzg" name="GeneralOrdering" after="_3COq0LJYEeatJIKqphduzg" before="_yoJsMLJYEeatJIKqphduzg"/>
+              </fragment>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yoKTQLJYEeatJIKqphduzg" name="MessageRecv" covered="_vAnk0LJYEeatJIKqphduzg" message="_yoGB0LJYEeatJIKqphduzg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3COq0LJYEeatJIKqphduzg" name="MessageSend1" covered="_v-_RkLJYEeatJIKqphduzg" toAfter="_5aXm4LJYEeatJIKqphduzg" toBefore="_4o7i4LJYEeatJIKqphduzg" message="_3CODwLJYEeatJIKqphduzg">
+                <generalOrdering xmi:type="uml:GeneralOrdering" xmi:id="_5aXm4LJYEeatJIKqphduzg" name="GeneralOrdering" after="_0_R7oLJYEeatJIKqphduzg" before="_3COq0LJYEeatJIKqphduzg"/>
+              </fragment>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3CPR4LJYEeatJIKqphduzg" name="MessageRecv1" covered="_xV-5sLJYEeatJIKqphduzg" message="_3CODwLJYEeatJIKqphduzg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0_R7oLJYEeatJIKqphduzg" name="MessageSend0" covered="_tnbkULJYEeatJIKqphduzg" toBefore="_5aXm4LJYEeatJIKqphduzg" message="_0_RUkLJYEeatJIKqphduzg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0_SisLJYEeatJIKqphduzg" name="MessageRecv0" covered="_vAnk0LJYEeatJIKqphduzg" message="_0_RUkLJYEeatJIKqphduzg"/>
+              <message xmi:type="uml:Message" xmi:id="_yoGB0LJYEeatJIKqphduzg" name="doCheckIn" receiveEvent="_yoKTQLJYEeatJIKqphduzg" sendEvent="_yoJsMLJYEeatJIKqphduzg"/>
+              <message xmi:type="uml:Message" xmi:id="_0_RUkLJYEeatJIKqphduzg" name="doCheckOut" receiveEvent="_0_SisLJYEeatJIKqphduzg" sendEvent="_0_R7oLJYEeatJIKqphduzg"/>
+              <message xmi:type="uml:Message" xmi:id="_3CODwLJYEeatJIKqphduzg" name="doBlockRoom" receiveEvent="_3CPR4LJYEeatJIKqphduzg" sendEvent="_3COq0LJYEeatJIKqphduzg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interaction" xmi:id="_Iz9AALJZEeatJIKqphduzg" name="Task3_Intercation">
+              <lifeline xmi:type="uml:Lifeline" xmi:id="_P7N9oLJZEeatJIKqphduzg" name="Beta"/>
+            </packagedElement>
+          </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="_UlwsQKspEea_ZvXe8054NA" name="IHotelCustomerProvides">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_UlwsQaspEea_ZvXe8054NA" name="getFreeRooms">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_UlwsQqspEea_ZvXe8054NA" name="numBeds" visibility="public">
