@@ -416,15 +416,11 @@
               <lifeline xmi:type="uml:Lifeline" xmi:id="_vAnk0LJYEeatJIKqphduzg" name="Room0" coveredBy="_yoKTQLJYEeatJIKqphduzg _0_SisLJYEeatJIKqphduzg"/>
               <lifeline xmi:type="uml:Lifeline" xmi:id="_v-_RkLJYEeatJIKqphduzg" name="Admin" coveredBy="_3COq0LJYEeatJIKqphduzg"/>
               <lifeline xmi:type="uml:Lifeline" xmi:id="_xV-5sLJYEeatJIKqphduzg" name="Room1" coveredBy="_3CPR4LJYEeatJIKqphduzg"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yoJsMLJYEeatJIKqphduzg" name="MessageSend" covered="_tnbkULJYEeatJIKqphduzg" toAfter="_4o7i4LJYEeatJIKqphduzg" message="_yoGB0LJYEeatJIKqphduzg">
-                <generalOrdering xmi:type="uml:GeneralOrdering" xmi:id="_4o7i4LJYEeatJIKqphduzg" name="GeneralOrdering" after="_3COq0LJYEeatJIKqphduzg" before="_yoJsMLJYEeatJIKqphduzg"/>
-              </fragment>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yoJsMLJYEeatJIKqphduzg" name="MessageSend" covered="_tnbkULJYEeatJIKqphduzg" message="_yoGB0LJYEeatJIKqphduzg"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yoKTQLJYEeatJIKqphduzg" name="MessageRecv" covered="_vAnk0LJYEeatJIKqphduzg" message="_yoGB0LJYEeatJIKqphduzg"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3COq0LJYEeatJIKqphduzg" name="MessageSend1" covered="_v-_RkLJYEeatJIKqphduzg" toAfter="_5aXm4LJYEeatJIKqphduzg" toBefore="_4o7i4LJYEeatJIKqphduzg" message="_3CODwLJYEeatJIKqphduzg">
-                <generalOrdering xmi:type="uml:GeneralOrdering" xmi:id="_5aXm4LJYEeatJIKqphduzg" name="GeneralOrdering" after="_0_R7oLJYEeatJIKqphduzg" before="_3COq0LJYEeatJIKqphduzg"/>
-              </fragment>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3COq0LJYEeatJIKqphduzg" name="MessageSend1" covered="_v-_RkLJYEeatJIKqphduzg" message="_3CODwLJYEeatJIKqphduzg"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3CPR4LJYEeatJIKqphduzg" name="MessageRecv1" covered="_xV-5sLJYEeatJIKqphduzg" message="_3CODwLJYEeatJIKqphduzg"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0_R7oLJYEeatJIKqphduzg" name="MessageSend0" covered="_tnbkULJYEeatJIKqphduzg" toBefore="_5aXm4LJYEeatJIKqphduzg" message="_0_RUkLJYEeatJIKqphduzg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0_R7oLJYEeatJIKqphduzg" name="MessageSend0" covered="_tnbkULJYEeatJIKqphduzg" message="_0_RUkLJYEeatJIKqphduzg"/>
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0_SisLJYEeatJIKqphduzg" name="MessageRecv0" covered="_vAnk0LJYEeatJIKqphduzg" message="_0_RUkLJYEeatJIKqphduzg"/>
               <message xmi:type="uml:Message" xmi:id="_yoGB0LJYEeatJIKqphduzg" name="doCheckIn" receiveEvent="_yoKTQLJYEeatJIKqphduzg" sendEvent="_yoJsMLJYEeatJIKqphduzg"/>
               <message xmi:type="uml:Message" xmi:id="_0_RUkLJYEeatJIKqphduzg" name="doCheckOut" receiveEvent="_0_SisLJYEeatJIKqphduzg" sendEvent="_0_R7oLJYEeatJIKqphduzg"/>
