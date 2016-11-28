@@ -4,7 +4,7 @@ public class Reservation {
 	
 	private long reservationId;
 	private Room room;
-	private enum ReservationStatus{WAITING, RCHECKIN, CHECKEDIN, RCHECKOUT, CHECKEDOUT};
+	private enum ReservationStatus{WAITING, RCHECKIN, CHECKEDIN, RCHECKOUT, CHECKEDOUT, PAID};
 	ReservationStatus resStatus;
 	
 	public Reservation(long reservationId){
@@ -71,5 +71,13 @@ public class Reservation {
 	
 	public void freeReservation(){
 		resStatus = ReservationStatus.WAITING;
+	}
+	
+	public void payReservation(){
+		resStatus = ReservationStatus.PAID;
+	}
+	
+	public boolean isPaidReservation(){
+		return resStatus == ReservationStatus.PAID;
 	}
 }

@@ -154,12 +154,22 @@ public class Assignment3Complete {
 		activateBooking(bookingId);
 		for(Reservation r : currentBooking.getReservations()){
 			if(r.isCheckedOut()){
-				r.freeReservation();
+				r.payReservation();
 			}
 		}
 		return true;
 	}
-	
+		
+	public boolean payAllCheckedOuts(long bookingId){
+		activateBooking(bookingId);
+		for(Reservation r : currentBooking.getReservations()){
+			if(!r.isPaidReservation()){
+				return false;
+			}
+		}
+		return true;
+	}
+
 	public boolean checkInWholeBooking(long bookingId){
 		activateBooking(bookingId);
 		for(Reservation r : currentBooking.getReservations()){
