@@ -1,10 +1,7 @@
 package se.chalmers.cse.mdsd1617.yakindu;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
-import java.util.Queue;
 
 public class Booking {
 
