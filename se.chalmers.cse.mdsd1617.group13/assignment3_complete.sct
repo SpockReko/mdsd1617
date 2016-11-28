@@ -17,7 +17,7 @@
         <outgoingTransitions xmi:id="_Nr4k8bC8Eeayp7-AR-8oqg" specification="usr.initiateBooking[usr.booking==1]/&#xA;booking1.bookingId = booking.initiateBooking()" target="_Nr7BMLC8Eeayp7-AR-8oqg"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_Nr7BMLC8Eeayp7-AR-8oqg" name="Initiated" incomingTransitions="_Nr4k8bC8Eeayp7-AR-8oqg _Nr9derC8Eeayp7-AR-8oqg">
-        <outgoingTransitions xmi:id="_Nr8PULC8Eeayp7-AR-8oqg" specification="usr.confirmBooking [usr.booking==1]&#xD;&#xA;/booking.activateBooking(booking1.bookingId)&#xD;&#xA;;raise reservation.confirm" target="_Nr-rn7C8Eeayp7-AR-8oqg"/>
+        <outgoingTransitions xmi:id="_Nr8PULC8Eeayp7-AR-8oqg" specification="usr.confirmBooking [usr.booking==1 &amp;&amp; booking.confirmBooking(booking1.bookingId)]&#xD;&#xA;/raise reservation.confirm" target="_Nr-rn7C8Eeayp7-AR-8oqg"/>
         <outgoingTransitions xmi:id="_Nr9derC8Eeayp7-AR-8oqg" specification="usr.addRoomToBooking [usr.booking==1 &amp;&amp; booking.addRoomToBooking(booking1.bookingId)]&#xA;/raise reservation.initialize" target="_Nr7BMLC8Eeayp7-AR-8oqg"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_Nr-rn7C8Eeayp7-AR-8oqg" name="Confirmed" incomingTransitions="_Nr8PULC8Eeayp7-AR-8oqg _E1Vo4LGqEeayp7-AR-8oqg _nKHfcLJUEealWfK7KzAyCw">
@@ -45,7 +45,7 @@
         <outgoingTransitions xmi:id="_QBJMIbC8Eeayp7-AR-8oqg" specification="usr.initiateBooking[usr.booking==0]&#xA;/booking0.bookingId = booking.initiateBooking()" target="_QBJzQLC8Eeayp7-AR-8oqg"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_QBJzQLC8Eeayp7-AR-8oqg" name="Initiated" incomingTransitions="_QBJMIbC8Eeayp7-AR-8oqg _QBLBWrC8Eeayp7-AR-8oqg">
-        <outgoingTransitions xmi:id="_QBKaQbC8Eeayp7-AR-8oqg" specification="usr.confirmBooking [usr.booking==0]&#xD;&#xA;/booking.activateBooking(booking0.bookingId)&#xD;&#xA;;raise reservation.confirm" target="_QBMPf7C8Eeayp7-AR-8oqg"/>
+        <outgoingTransitions xmi:id="_QBKaQbC8Eeayp7-AR-8oqg" specification="usr.confirmBooking [usr.booking==0 &amp;&amp; booking.confirmBooking(booking0.bookingId)]&#xD;&#xA;/raise reservation.confirm" target="_QBMPf7C8Eeayp7-AR-8oqg"/>
         <outgoingTransitions xmi:id="_QBLBWrC8Eeayp7-AR-8oqg" specification="usr.addRoomToBooking [usr.booking==0 &amp;&amp; booking.addRoomToBooking(booking0.bookingId)]&#xA;/raise reservation.initialize" target="_QBJzQLC8Eeayp7-AR-8oqg"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_QBMPf7C8Eeayp7-AR-8oqg" name="Confirmed" incomingTransitions="_QBKaQbC8Eeayp7-AR-8oqg _FZlwALGrEeayp7-AR-8oqg _EM5ecLLfEeaC1If1keB9Yw">
@@ -804,7 +804,7 @@
     <edges xmi:id="_NsMHALC8Eeayp7-AR-8oqg" type="Transition" element="_Nr8PULC8Eeayp7-AR-8oqg" source="_Nr06q7C8Eeayp7-AR-8oqg" target="_Nr06t7C8Eeayp7-AR-8oqg">
       <children xsi:type="notation:DecorationNode" xmi:id="_NsMHAbC8Eeayp7-AR-8oqg" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_NsMHArC8Eeayp7-AR-8oqg"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_NsMHA7C8Eeayp7-AR-8oqg" x="-13" y="-261"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_NsMHA7C8Eeayp7-AR-8oqg" x="-17" y="-426"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_NsMHBLC8Eeayp7-AR-8oqg" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_NsMHBbC8Eeayp7-AR-8oqg" fontName="Verdana"/>
@@ -874,7 +874,7 @@
     <edges xmi:id="_QBS9KrC8Eeayp7-AR-8oqg" type="Transition" element="_QBKaQbC8Eeayp7-AR-8oqg" source="_QBGv_LC8Eeayp7-AR-8oqg" target="_QBHW-LC8Eeayp7-AR-8oqg">
       <children xsi:type="notation:DecorationNode" xmi:id="_QBS9K7C8Eeayp7-AR-8oqg" type="TransitionExpression">
         <styles xsi:type="notation:ShapeStyle" xmi:id="_QBS9LLC8Eeayp7-AR-8oqg"/>
-        <layoutConstraint xsi:type="notation:Location" xmi:id="_QBS9LbC8Eeayp7-AR-8oqg" x="-8" y="-234"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_QBS9LbC8Eeayp7-AR-8oqg" x="-5" y="-422"/>
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_QBS9LrC8Eeayp7-AR-8oqg" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_QBS9L7C8Eeayp7-AR-8oqg" fontName="Verdana"/>

@@ -10,7 +10,6 @@ public class Booking {
 
 	private List<Reservation> reservations = new ArrayList<>();
 	private long bookingId;
-	private ListIterator<Reservation> resIt = reservations.listIterator();
 	private int index = 0;
 	private int checkouts = 0;
 	
@@ -31,19 +30,11 @@ public class Booking {
 	}
 
 	public Reservation getCheckIn(){
-		if(index > reservations.size()){
+		if(index >= reservations.size()){
 			return null;
 		} else {
 			return reservations.get(index++);
 		}
-		/*
-		if(resIt.hasNext()){
-			return resIt.next();
-		}
-		else {
-			return null;
-		}
-		*/
 	}
 	
 	public Reservation getCheckOut(){

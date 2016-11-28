@@ -63,6 +63,16 @@ public class Assignment3Complete {
 		return false;
 	}
 	
+	public boolean confirmBooking(long bookingId){
+		activateBooking(bookingId);
+		try {
+			currentBooking.getReservations().get(0);
+		} catch (Exception e){
+			return false;
+		}
+			return true;
+	}
+	
 	public boolean confirmReservation(long reservationId){
 		for(Reservation r : currentBooking.getReservations()){
 			if(r.getReservationId() == reservationId){
