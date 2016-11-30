@@ -692,28 +692,51 @@
             <packagedElement xmi:type="uml:Class" xmi:id="_Oy0w0Lb8Eea8GrlMZNoswg" name="Reservation">
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_biSQkLb9Eea8GrlMZNoswg" client="_Oy0w0Lb8Eea8GrlMZNoswg" supplier="_Ef28AKnyEeaqs-4dkG4NMQ" contract="_Ef28AKnyEeaqs-4dkG4NMQ"/>
             </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_Qr6ZYLb8Eea8GrlMZNoswg" name="Room">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_twfQ8Lb-Eea8GrlMZNoswg" name="roomroomtypewraper" type="_bQ1ewLb-Eea8GrlMZNoswg" association="_twaYcLb-Eea8GrlMZNoswg"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_SG6XwLb8Eea8GrlMZNoswg" name="RoomType">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_uno7Yrb-Eea8GrlMZNoswg" name="roomroomtypewraper" type="_bQ1ewLb-Eea8GrlMZNoswg" association="_unoUULb-Eea8GrlMZNoswg"/>
-            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Qr6ZYLb8Eea8GrlMZNoswg" name="Room"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_SG6XwLb8Eea8GrlMZNoswg" name="RoomType"/>
             <packagedElement xmi:type="uml:Usage" xmi:id="_cuKN0Lb9Eea8GrlMZNoswg" client="_v2MgkLb7Eea8GrlMZNoswg" supplier="_Ef28AKnyEeaqs-4dkG4NMQ"/>
             <packagedElement xmi:type="uml:Usage" xmi:id="_IQO7oLb-Eea8GrlMZNoswg" client="_tjfeILb7Eea8GrlMZNoswg" supplier="_T5_HsKnyEeaqs-4dkG4NMQ"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="_bQ1ewLb-Eea8GrlMZNoswg" name="RoomRoomTypeWraper"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_bQ1ewLb-Eea8GrlMZNoswg" name="RoomRoomTypeWraper">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_ZKpY4rb_Eea9xvE391MxsQ" name="roomtype" type="_SG6XwLb8Eea8GrlMZNoswg" association="_ZKoKwLb_Eea9xvE391MxsQ">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4ryrcLb_Eea9xvE391MxsQ"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4sLF8Lb_Eea9xvE391MxsQ" value="*"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_eByG8Lb_Eea9xvE391MxsQ" name="room" type="_Qr6ZYLb8Eea8GrlMZNoswg" association="_eBw40Lb_Eea9xvE391MxsQ">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qzfe4Lb_Eea9xvE391MxsQ"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q0OesLb_Eea9xvE391MxsQ" value="*"/>
+              </ownedAttribute>
+            </packagedElement>
             <packagedElement xmi:type="uml:Realization" xmi:id="_mIWa4Lb-Eea8GrlMZNoswg" client="_bQ1ewLb-Eea8GrlMZNoswg" supplier="_T5_HsKnyEeaqs-4dkG4NMQ"/>
-            <packagedElement xmi:type="uml:Association" xmi:id="_twaYcLb-Eea8GrlMZNoswg" memberEnd="_twfQ8Lb-Eea8GrlMZNoswg _twf4ALb-Eea8GrlMZNoswg">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_twdbwLb-Eea8GrlMZNoswg" source="org.eclipse.papyrus">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tweC0Lb-Eea8GrlMZNoswg" key="nature" value="UML_Nature"/>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_QQ9bYLb_Eea9xvE391MxsQ" client="_tjfeILb7Eea8GrlMZNoswg" supplier="_Ul09sKspEea_ZvXe8054NA"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_ZKoKwLb_Eea9xvE391MxsQ" name="Has" memberEnd="_ZKpY4rb_Eea9xvE391MxsQ _ZKp_8Lb_Eea9xvE391MxsQ">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZKpY4Lb_Eea9xvE391MxsQ" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZKpY4bb_Eea9xvE391MxsQ" key="nature" value="UML_Nature"/>
               </eAnnotations>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_twf4ALb-Eea8GrlMZNoswg" name="room" type="_Qr6ZYLb8Eea8GrlMZNoswg" association="_twaYcLb-Eea8GrlMZNoswg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_ZKp_8Lb_Eea9xvE391MxsQ" name="roomroomtypewraper" type="_bQ1ewLb-Eea8GrlMZNoswg" association="_ZKoKwLb_Eea9xvE391MxsQ"/>
             </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="_unoUULb-Eea8GrlMZNoswg" memberEnd="_uno7Yrb-Eea8GrlMZNoswg _unpicLb-Eea8GrlMZNoswg">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uno7YLb-Eea8GrlMZNoswg" source="org.eclipse.papyrus">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uno7Ybb-Eea8GrlMZNoswg" key="nature" value="UML_Nature"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_eBw40Lb_Eea9xvE391MxsQ" name="Has" memberEnd="_eByG8Lb_Eea9xvE391MxsQ _eByG8bb_Eea9xvE391MxsQ">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eBxf4Lb_Eea9xvE391MxsQ" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eBxf4bb_Eea9xvE391MxsQ" key="nature" value="UML_Nature"/>
               </eAnnotations>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_unpicLb-Eea8GrlMZNoswg" name="roomtype" type="_SG6XwLb8Eea8GrlMZNoswg" association="_unoUULb-Eea8GrlMZNoswg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_eByG8bb_Eea9xvE391MxsQ" name="roomroomtypewraper" type="_bQ1ewLb-Eea8GrlMZNoswg" association="_eBw40Lb_Eea9xvE391MxsQ">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWMicLb_Eea9xvE391MxsQ" value="1"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWT3MLb_Eea9xvE391MxsQ" value="1"/>
+              </ownedEnd>
             </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_jjfmkLcAEea9xvE391MxsQ" name="Creates" memberEnd="_jjg0sbcAEea9xvE391MxsQ _jjg0srcAEea9xvE391MxsQ">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jjgNoLcAEea9xvE391MxsQ" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jjg0sLcAEea9xvE391MxsQ" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_jjg0srcAEea9xvE391MxsQ" name="hotelstartupprovides" type="_Ul2L0KspEea_ZvXe8054NA" association="_jjfmkLcAEea9xvE391MxsQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_yqO8MLcAEea9xvE391MxsQ" client="_xk-WkLb7Eea8GrlMZNoswg" supplier="_UlwsQKspEea_ZvXe8054NA"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_CnKS8LcBEea9xvE391MxsQ" name="Interface1"/>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_GpFQQLcBEea9xvE391MxsQ" client="_Oy0w0Lb8Eea8GrlMZNoswg" supplier="_CnKS8LcBEea9xvE391MxsQ"/>
+            <packagedElement xmi:type="uml:Realization" xmi:id="_JRpN8LcBEea9xvE391MxsQ" client="_bQ1ewLb-Eea8GrlMZNoswg" supplier="_CnKS8LcBEea9xvE391MxsQ"/>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_xuvH0LcBEea9xvE391MxsQ" client="_Oy0w0Lb8Eea8GrlMZNoswg">
+              <supplier xmi:type="uml:Interface" href="BankingModel.uml#_FzZ0cHO_EeSgC_3iHN4p8A"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Component" xmi:id="_fVJr8LcCEea9xvE391MxsQ" name="Component1"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="_UlwsQKspEea_ZvXe8054NA" name="IHotelCustomerProvides">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_UlwsQaspEea_ZvXe8054NA" name="getFreeRooms">
@@ -863,6 +886,7 @@
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ul1kwaspEea_ZvXe8054NA" client="_Ul1kwKspEea_ZvXe8054NA" supplier="_UlwsQKspEea_ZvXe8054NA" contract="_UlwsQKspEea_ZvXe8054NA"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Ul2L0KspEea_ZvXe8054NA" name="HotelStartupProvides">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_jjg0sbcAEea9xvE391MxsQ" name="roomroomtypewraper" type="_bQ1ewLb-Eea8GrlMZNoswg" association="_jjfmkLcAEea9xvE391MxsQ"/>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ul2L0aspEea_ZvXe8054NA" client="_Ul2L0KspEea_ZvXe8054NA" supplier="_Ul09sKspEea_ZvXe8054NA" contract="_Ul09sKspEea_ZvXe8054NA"/>
           </packagedElement>
           <packagedElement xmi:type="uml:DataType" xmi:id="_Ul2y4KspEea_ZvXe8054NA" name="FreeRoomTypesDTO">
