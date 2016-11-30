@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oZNqEI_JEeaMDqvmI2HKcg" name="se">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oZNqEI_JEeaMDqvmI2HKcg" name="se">
   <packagedElement xmi:type="uml:Package" xmi:id="_AYrT4I_KEeaMDqvmI2HKcg" name="chalmers">
     <packagedElement xmi:type="uml:Package" xmi:id="_AtYYkI_KEeaMDqvmI2HKcg" name="cse">
       <packagedElement xmi:type="uml:Package" xmi:id="_A7-OMI_KEeaMDqvmI2HKcg" name="mdsd1617">
@@ -675,6 +675,46 @@
               <message xmi:type="uml:Message" xmi:id="_SWsxELVYEeaRj6YLTCHqQw" name="finish" messageSort="asynchSignal" sendEvent="_SWvNULVYEeaRj6YLTCHqQw"/>
             </packagedElement>
           </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_VAlwELb7Eea8GrlMZNoswg" name="Package1">
+            <packagedElement xmi:type="uml:Class" xmi:id="_d-CzQLb7Eea8GrlMZNoswg" name="User">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_jnNbMLb7Eea8GrlMZNoswg" name="Name" visibility="private"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_oGrQILb7Eea8GrlMZNoswg" name="Id" visibility="private"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_tjfeILb7Eea8GrlMZNoswg" name="Admin">
+              <generalization xmi:type="uml:Generalization" xmi:id="_XLkkcLb8Eea8GrlMZNoswg" general="_d-CzQLb7Eea8GrlMZNoswg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_v2MgkLb7Eea8GrlMZNoswg" name="Receptionist">
+              <generalization xmi:type="uml:Generalization" xmi:id="_Ye8Q0Lb8Eea8GrlMZNoswg" general="_d-CzQLb7Eea8GrlMZNoswg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_xk-WkLb7Eea8GrlMZNoswg" name="Customer">
+              <generalization xmi:type="uml:Generalization" xmi:id="_ZFesYLb8Eea8GrlMZNoswg" general="_d-CzQLb7Eea8GrlMZNoswg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Oy0w0Lb8Eea8GrlMZNoswg" name="Reservation">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_biSQkLb9Eea8GrlMZNoswg" client="_Oy0w0Lb8Eea8GrlMZNoswg" supplier="_Ef28AKnyEeaqs-4dkG4NMQ" contract="_Ef28AKnyEeaqs-4dkG4NMQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Qr6ZYLb8Eea8GrlMZNoswg" name="Room">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_twfQ8Lb-Eea8GrlMZNoswg" name="roomroomtypewraper" type="_bQ1ewLb-Eea8GrlMZNoswg" association="_twaYcLb-Eea8GrlMZNoswg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_SG6XwLb8Eea8GrlMZNoswg" name="RoomType">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_uno7Yrb-Eea8GrlMZNoswg" name="roomroomtypewraper" type="_bQ1ewLb-Eea8GrlMZNoswg" association="_unoUULb-Eea8GrlMZNoswg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_cuKN0Lb9Eea8GrlMZNoswg" client="_v2MgkLb7Eea8GrlMZNoswg" supplier="_Ef28AKnyEeaqs-4dkG4NMQ"/>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_IQO7oLb-Eea8GrlMZNoswg" client="_tjfeILb7Eea8GrlMZNoswg" supplier="_T5_HsKnyEeaqs-4dkG4NMQ"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_bQ1ewLb-Eea8GrlMZNoswg" name="RoomRoomTypeWraper"/>
+            <packagedElement xmi:type="uml:Realization" xmi:id="_mIWa4Lb-Eea8GrlMZNoswg" client="_bQ1ewLb-Eea8GrlMZNoswg" supplier="_T5_HsKnyEeaqs-4dkG4NMQ"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_twaYcLb-Eea8GrlMZNoswg" memberEnd="_twfQ8Lb-Eea8GrlMZNoswg _twf4ALb-Eea8GrlMZNoswg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_twdbwLb-Eea8GrlMZNoswg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tweC0Lb-Eea8GrlMZNoswg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_twf4ALb-Eea8GrlMZNoswg" name="room" type="_Qr6ZYLb8Eea8GrlMZNoswg" association="_twaYcLb-Eea8GrlMZNoswg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_unoUULb-Eea8GrlMZNoswg" memberEnd="_uno7Yrb-Eea8GrlMZNoswg _unpicLb-Eea8GrlMZNoswg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uno7YLb-Eea8GrlMZNoswg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uno7Ybb-Eea8GrlMZNoswg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_unpicLb-Eea8GrlMZNoswg" name="roomtype" type="_SG6XwLb8Eea8GrlMZNoswg" association="_unoUULb-Eea8GrlMZNoswg"/>
+            </packagedElement>
+          </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="_UlwsQKspEea_ZvXe8054NA" name="IHotelCustomerProvides">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_UlwsQaspEea_ZvXe8054NA" name="getFreeRooms">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_UlwsQqspEea_ZvXe8054NA" name="numBeds" visibility="public">
@@ -819,6 +859,7 @@
             </ownedOperation>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Ul1kwKspEea_ZvXe8054NA" name="HotelCustomerProvides">
+            <generalization xmi:type="uml:Generalization" xmi:id="_5rWV4Lb9Eea8GrlMZNoswg" general="_Oy0w0Lb8Eea8GrlMZNoswg"/>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ul1kwaspEea_ZvXe8054NA" client="_Ul1kwKspEea_ZvXe8054NA" supplier="_UlwsQKspEea_ZvXe8054NA" contract="_UlwsQKspEea_ZvXe8054NA"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Ul2L0KspEea_ZvXe8054NA" name="HotelStartupProvides">
