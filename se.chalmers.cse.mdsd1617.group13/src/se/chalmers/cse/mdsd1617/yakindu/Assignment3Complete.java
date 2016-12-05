@@ -121,6 +121,11 @@ public class Assignment3Complete {
 	
 	public boolean initiateCheckout(long bookingId){
 		activateBooking(bookingId);
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.isWaiting()){
+				return false;
+			}
+		}
 		Reservation r = currentBooking.getCheckOut();
 		if(r == null){
 			return false;
@@ -182,6 +187,11 @@ public class Assignment3Complete {
 	
 	public boolean checkOutWholeBooking(long bookingId){
 		activateBooking(bookingId);
+		for(Reservation r : currentBooking.getReservations()){
+			if(!r.isCheckedIn()){
+				return false;
+			}
+		}
 		for(Reservation r : currentBooking.getReservations()){
 			if(r.isCheckedIn()){
 				r.readyToCheckOut();
