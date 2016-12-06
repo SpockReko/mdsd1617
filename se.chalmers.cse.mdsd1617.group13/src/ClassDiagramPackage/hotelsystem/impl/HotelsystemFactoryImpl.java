@@ -67,6 +67,7 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 			case HotelsystemPackage.ROOM_HANDLER: return createRoomHandler();
 			case HotelsystemPackage.ROOM: return createRoom();
 			case HotelsystemPackage.FREE_ROOM_TYPES_DTO: return createFreeRoomTypesDTO();
+			case HotelsystemPackage.HOTEL_INITIALIZER: return createHotelInitializer();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -180,6 +181,16 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	public FreeRoomTypesDTO createFreeRoomTypesDTO() {
 		FreeRoomTypesDTOImpl freeRoomTypesDTO = new FreeRoomTypesDTOImpl();
 		return freeRoomTypesDTO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HotelInitializer createHotelInitializer() {
+		HotelInitializerImpl hotelInitializer = new HotelInitializerImpl();
+		return hotelInitializer;
 	}
 
 	/**

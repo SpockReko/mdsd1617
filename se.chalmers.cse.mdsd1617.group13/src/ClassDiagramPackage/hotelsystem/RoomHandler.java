@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface RoomHandler extends IHotelStartupProvides, IRoomHandler {
+public interface RoomHandler extends IRoomHandler {
 	/**
 	 * Returns the value of the '<em><b>Iadminroomtypeprovides</b></em>' reference list.
 	 * The list contents are of type {@link ClassDiagramPackage.hotelsystem.RoomType}.

@@ -130,7 +130,6 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 			case HotelsystemPackage.ROOM_HANDLER: {
 				RoomHandler roomHandler = (RoomHandler)theEObject;
 				T result = caseRoomHandler(roomHandler);
-				if (result == null) result = caseIHotelStartupProvides(roomHandler);
 				if (result == null) result = caseIRoomHandler(roomHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -138,12 +137,6 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 			case HotelsystemPackage.IADMIN_ROOM_PROVIDES: {
 				IAdminRoomProvides iAdminRoomProvides = (IAdminRoomProvides)theEObject;
 				T result = caseIAdminRoomProvides(iAdminRoomProvides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelsystemPackage.IHOTEL_STARTUP_PROVIDES: {
-				IHotelStartupProvides iHotelStartupProvides = (IHotelStartupProvides)theEObject;
-				T result = caseIHotelStartupProvides(iHotelStartupProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -170,6 +163,18 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 			case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES: {
 				IHotelAdministratorProvides iHotelAdministratorProvides = (IHotelAdministratorProvides)theEObject;
 				T result = caseIHotelAdministratorProvides(iHotelAdministratorProvides);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HotelsystemPackage.IHOTEL_STARTUP_PROVIDES: {
+				IHotelStartupProvides iHotelStartupProvides = (IHotelStartupProvides)theEObject;
+				T result = caseIHotelStartupProvides(iHotelStartupProvides);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HotelsystemPackage.HOTEL_INITIALIZER: {
+				HotelInitializer hotelInitializer = (HotelInitializer)theEObject;
+				T result = caseHotelInitializer(hotelInitializer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -375,6 +380,21 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIHotelStartupProvides(IHotelStartupProvides object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Hotel Initializer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Hotel Initializer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHotelInitializer(HotelInitializer object) {
 		return null;
 	}
 

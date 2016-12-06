@@ -121,6 +121,15 @@ public interface HotelsystemFactory extends EFactory {
 	FreeRoomTypesDTO createFreeRoomTypesDTO();
 
 	/**
+	 * Returns a new object of class '<em>Hotel Initializer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Hotel Initializer</em>'.
+	 * @generated
+	 */
+	HotelInitializer createHotelInitializer();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

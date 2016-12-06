@@ -4,7 +4,6 @@ package ClassDiagramPackage.hotelsystem.impl;
 
 import ClassDiagramPackage.hotelsystem.HotelsystemPackage;
 import ClassDiagramPackage.hotelsystem.IAdminRoomProvides;
-import ClassDiagramPackage.hotelsystem.IRoomHandler;
 import ClassDiagramPackage.hotelsystem.RoomHandler;
 import ClassDiagramPackage.hotelsystem.RoomType;
 
@@ -103,17 +102,6 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void startup(int numRooms) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RoomType getAllRoomTypes() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -197,27 +185,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated
 	 */
 	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == IRoomHandler.class) {
-			switch (baseOperationID) {
-				case HotelsystemPackage.IROOM_HANDLER___GET_ALL_ROOM_TYPES: return HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOM_TYPES;
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case HotelsystemPackage.ROOM_HANDLER___STARTUP__INT:
-				startup((Integer)arguments.get(0));
-				return null;
 			case HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOM_TYPES:
 				return getAllRoomTypes();
 		}

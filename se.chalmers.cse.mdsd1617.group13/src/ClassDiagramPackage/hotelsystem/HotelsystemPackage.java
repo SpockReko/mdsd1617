@@ -65,7 +65,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getIReceptionistProvides()
 	 * @generated
 	 */
-	int IRECEPTIONIST_PROVIDES = 17;
+	int IRECEPTIONIST_PROVIDES = 18;
 
 	/**
 	 * The number of structural features of the '<em>IReceptionist Provides</em>' class.
@@ -770,13 +770,22 @@ public interface HotelsystemPackage extends EPackage {
 	int PAYMENT_HANDLER_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Pay If Card Valid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_HANDLER___PAY_IF_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING = 0;
+
+	/**
 	 * The number of operations of the '<em>Payment Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_HANDLER_OPERATION_COUNT = 0;
+	int PAYMENT_HANDLER_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagramPackage.hotelsystem.IRoomHandler <em>IRoom Handler</em>}' class.
@@ -823,34 +832,17 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getIHotelStartupProvides()
 	 * @generated
 	 */
-	int IHOTEL_STARTUP_PROVIDES = 12;
+	int IHOTEL_STARTUP_PROVIDES = 16;
 
 	/**
-	 * The number of structural features of the '<em>IHotel Startup Provides</em>' class.
+	 * The meta object id for the '{@link ClassDiagramPackage.hotelsystem.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see ClassDiagramPackage.hotelsystem.impl.HotelInitializerImpl
+	 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getHotelInitializer()
 	 * @generated
-	 * @ordered
 	 */
-	int IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Startup</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IHOTEL_STARTUP_PROVIDES___STARTUP__INT = 0;
-
-	/**
-	 * The number of operations of the '<em>IHotel Startup Provides</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT = 1;
+	int HOTEL_INITIALIZER = 17;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagramPackage.hotelsystem.impl.RoomHandlerImpl <em>Room Handler</em>}' class.
@@ -869,7 +861,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER__IADMINROOMTYPEPROVIDES = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 0;
+	int ROOM_HANDLER__IADMINROOMTYPEPROVIDES = IROOM_HANDLER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Iadminroomprovides</b></em>' reference list.
@@ -878,7 +870,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER__IADMINROOMPROVIDES = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 1;
+	int ROOM_HANDLER__IADMINROOMPROVIDES = IROOM_HANDLER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Room Handler</em>' class.
@@ -887,16 +879,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER_FEATURE_COUNT = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Startup</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_HANDLER___STARTUP__INT = IHOTEL_STARTUP_PROVIDES___STARTUP__INT;
+	int ROOM_HANDLER_FEATURE_COUNT = IROOM_HANDLER_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get All Room Types</em>' operation.
@@ -905,7 +888,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER___GET_ALL_ROOM_TYPES = IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT + 0;
+	int ROOM_HANDLER___GET_ALL_ROOM_TYPES = IROOM_HANDLER___GET_ALL_ROOM_TYPES;
 
 	/**
 	 * The number of operations of the '<em>Room Handler</em>' class.
@@ -914,7 +897,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER_OPERATION_COUNT = IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT + 1;
+	int ROOM_HANDLER_OPERATION_COUNT = IROOM_HANDLER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ClassDiagramPackage.hotelsystem.IAdminRoomProvides <em>IAdmin Room Provides</em>}' class.
@@ -952,7 +935,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getRoom()
 	 * @generated
 	 */
-	int ROOM = 13;
+	int ROOM = 12;
 
 	/**
 	 * The feature id for the '<em><b>Occupied</b></em>' attribute.
@@ -998,7 +981,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getIHotelCustomerProvides()
 	 * @generated
 	 */
-	int IHOTEL_CUSTOMER_PROVIDES = 14;
+	int IHOTEL_CUSTOMER_PROVIDES = 13;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Customer Provides</em>' class.
@@ -1107,7 +1090,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getFreeRoomTypesDTO()
 	 * @generated
 	 */
-	int FREE_ROOM_TYPES_DTO = 15;
+	int FREE_ROOM_TYPES_DTO = 14;
 
 	/**
 	 * The feature id for the '<em><b>Room Type Description</b></em>' attribute.
@@ -1171,7 +1154,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getIHotelAdministratorProvides()
 	 * @generated
 	 */
-	int IHOTEL_ADMINISTRATOR_PROVIDES = 16;
+	int IHOTEL_ADMINISTRATOR_PROVIDES = 15;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Administrator Provides</em>' class.
@@ -1262,6 +1245,78 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int IHOTEL_ADMINISTRATOR_PROVIDES_OPERATION_COUNT = 8;
+
+	/**
+	 * The number of structural features of the '<em>IHotel Startup Provides</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Startup</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IHOTEL_STARTUP_PROVIDES___STARTUP__INT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Room Handler</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER = 1;
+
+	/**
+	 * The number of operations of the '<em>IHotel Startup Provides</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Roomhandler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_INITIALIZER__ROOMHANDLER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Reservationhandler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_INITIALIZER__RESERVATIONHANDLER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Hotel Initializer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_INITIALIZER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Hotel Initializer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_INITIALIZER_OPERATION_COUNT = 0;
 
 
 	/**
@@ -1626,6 +1681,16 @@ public interface HotelsystemPackage extends EPackage {
 	EReference getPaymentHandler_Icustomerprovides();
 
 	/**
+	 * Returns the meta object for the '{@link ClassDiagramPackage.hotelsystem.PaymentHandler#payIfCardValid(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay If Card Valid</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Pay If Card Valid</em>' operation.
+	 * @see ClassDiagramPackage.hotelsystem.PaymentHandler#payIfCardValid(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getPaymentHandler__PayIfCardValid__String_String_int_int_String_String();
+
+	/**
 	 * Returns the meta object for class '{@link ClassDiagramPackage.hotelsystem.IRoomHandler <em>IRoom Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1706,6 +1771,48 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIHotelStartupProvides__Startup__int();
+
+	/**
+	 * Returns the meta object for the '{@link ClassDiagramPackage.hotelsystem.IHotelStartupProvides#getRoomHandler() <em>Get Room Handler</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Handler</em>' operation.
+	 * @see ClassDiagramPackage.hotelsystem.IHotelStartupProvides#getRoomHandler()
+	 * @generated
+	 */
+	EOperation getIHotelStartupProvides__GetRoomHandler();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagramPackage.hotelsystem.HotelInitializer <em>Hotel Initializer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Hotel Initializer</em>'.
+	 * @see ClassDiagramPackage.hotelsystem.HotelInitializer
+	 * @generated
+	 */
+	EClass getHotelInitializer();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagramPackage.hotelsystem.HotelInitializer#getRoomhandler <em>Roomhandler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Roomhandler</em>'.
+	 * @see ClassDiagramPackage.hotelsystem.HotelInitializer#getRoomhandler()
+	 * @see #getHotelInitializer()
+	 * @generated
+	 */
+	EReference getHotelInitializer_Roomhandler();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagramPackage.hotelsystem.HotelInitializer#getReservationhandler <em>Reservationhandler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reservationhandler</em>'.
+	 * @see ClassDiagramPackage.hotelsystem.HotelInitializer#getReservationhandler()
+	 * @see #getHotelInitializer()
+	 * @generated
+	 */
+	EReference getHotelInitializer_Reservationhandler();
 
 	/**
 	 * Returns the meta object for class '{@link ClassDiagramPackage.hotelsystem.Room <em>Room</em>}'.
@@ -2416,6 +2523,14 @@ public interface HotelsystemPackage extends EPackage {
 		EReference PAYMENT_HANDLER__ICUSTOMERPROVIDES = eINSTANCE.getPaymentHandler_Icustomerprovides();
 
 		/**
+		 * The meta object literal for the '<em><b>Pay If Card Valid</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAYMENT_HANDLER___PAY_IF_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getPaymentHandler__PayIfCardValid__String_String_int_int_String_String();
+
+		/**
 		 * The meta object literal for the '{@link ClassDiagramPackage.hotelsystem.IRoomHandler <em>IRoom Handler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2486,6 +2601,40 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IHOTEL_STARTUP_PROVIDES___STARTUP__INT = eINSTANCE.getIHotelStartupProvides__Startup__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Handler</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER = eINSTANCE.getIHotelStartupProvides__GetRoomHandler();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagramPackage.hotelsystem.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagramPackage.hotelsystem.impl.HotelInitializerImpl
+		 * @see ClassDiagramPackage.hotelsystem.impl.HotelsystemPackageImpl#getHotelInitializer()
+		 * @generated
+		 */
+		EClass HOTEL_INITIALIZER = eINSTANCE.getHotelInitializer();
+
+		/**
+		 * The meta object literal for the '<em><b>Roomhandler</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HOTEL_INITIALIZER__ROOMHANDLER = eINSTANCE.getHotelInitializer_Roomhandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Reservationhandler</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HOTEL_INITIALIZER__RESERVATIONHANDLER = eINSTANCE.getHotelInitializer_Reservationhandler();
 
 		/**
 		 * The meta object literal for the '{@link ClassDiagramPackage.hotelsystem.impl.RoomImpl <em>Room</em>}' class.

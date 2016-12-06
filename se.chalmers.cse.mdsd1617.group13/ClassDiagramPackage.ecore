@@ -89,13 +89,21 @@
           lowerBound="1" eType="#//hotelsystem/RoomReservation"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PaymentHandler">
+      <eOperations name="payIfCardValid" ordered="false" lowerBound="1">
+        <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="icustomerprovides" ordered="false"
           lowerBound="1" eType="#//bankcomponents/ICustomerProvides"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IRoomHandler" abstract="true" interface="true">
       <eOperations name="getAllRoomTypes" ordered="false" lowerBound="1" eType="#//hotelsystem/RoomType"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="RoomHandler" eSuperTypes="#//hotelsystem/IHotelStartupProvides #//hotelsystem/IRoomHandler">
+    <eClassifiers xsi:type="ecore:EClass" name="RoomHandler" eSuperTypes="#//hotelsystem/IRoomHandler">
       <eStructuralFeatures xsi:type="ecore:EReference" name="iadminroomtypeprovides"
           ordered="false" upperBound="-1" eType="#//hotelsystem/RoomType"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="iadminroomprovides" ordered="false"
@@ -103,12 +111,6 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IAdminRoomProvides" abstract="true"
         interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="IHotelStartupProvides" abstract="true"
-        interface="true">
-      <eOperations name="startup" ordered="false" lowerBound="1">
-        <eParameters name="numRooms" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eOperations>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Room" eSuperTypes="#//hotelsystem/IAdminRoomProvides #//hotelsystem/IReceptionistRoomProvides">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="occupied" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -206,6 +208,19 @@
       <eOperations name="unblockRoom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IHotelStartupProvides" abstract="true"
+        interface="true">
+      <eOperations name="startup" ordered="false" lowerBound="1">
+        <eParameters name="numRooms" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getRoomHandler" ordered="false" lowerBound="1" eType="#//hotelsystem/RoomHandler"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HotelInitializer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="roomhandler" ordered="false"
+          lowerBound="1" eType="#//hotelsystem/RoomHandler"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="reservationhandler" ordered="false"
+          lowerBound="1" eType="#//hotelsystem/ReservationHandler"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IReceptionistProvides" abstract="true"
         interface="true">

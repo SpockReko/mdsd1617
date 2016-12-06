@@ -116,10 +116,6 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 				return createIAdminRoomProvidesAdapter();
 			}
 			@Override
-			public Adapter caseIHotelStartupProvides(IHotelStartupProvides object) {
-				return createIHotelStartupProvidesAdapter();
-			}
-			@Override
 			public Adapter caseRoom(Room object) {
 				return createRoomAdapter();
 			}
@@ -134,6 +130,14 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIHotelAdministratorProvides(IHotelAdministratorProvides object) {
 				return createIHotelAdministratorProvidesAdapter();
+			}
+			@Override
+			public Adapter caseIHotelStartupProvides(IHotelStartupProvides object) {
+				return createIHotelStartupProvidesAdapter();
+			}
+			@Override
+			public Adapter caseHotelInitializer(HotelInitializer object) {
+				return createHotelInitializerAdapter();
 			}
 			@Override
 			public Adapter caseIReceptionistProvides(IReceptionistProvides object) {
@@ -338,6 +342,20 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIHotelStartupProvidesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ClassDiagramPackage.hotelsystem.HotelInitializer <em>Hotel Initializer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ClassDiagramPackage.hotelsystem.HotelInitializer
+	 * @generated
+	 */
+	public Adapter createHotelInitializerAdapter() {
 		return null;
 	}
 

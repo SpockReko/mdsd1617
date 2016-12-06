@@ -110,6 +110,14 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/icustomerprovides"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/payIfCardValid">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/payIfCardValid/ccNumber"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/payIfCardValid/ccv"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/payIfCardValid/expiryMonth"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/payIfCardValid/expiryYear"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/payIfCardValid/firstName"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/PaymentHandler/payIfCardValid/lastName"/>
+        </genOperations>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/IRoomHandler">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagramPackage.ecore#//hotelsystem/IRoomHandler/getAllRoomTypes"/>
@@ -121,11 +129,6 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagramPackage.ecore#//hotelsystem/RoomHandler/iadminroomprovides"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/IAdminRoomProvides"/>
-      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/IHotelStartupProvides">
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagramPackage.ecore#//hotelsystem/IHotelStartupProvides/startup">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/IHotelStartupProvides/startup/numRooms"/>
-        </genOperations>
-      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/Room">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute ClassDiagramPackage.ecore#//hotelsystem/Room/occupied"/>
       </genClasses>
@@ -216,6 +219,18 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagramPackage.ecore#//hotelsystem/IHotelAdministratorProvides/unblockRoom">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/IHotelAdministratorProvides/unblockRoom/roomNumber"/>
         </genOperations>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/IHotelStartupProvides">
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagramPackage.ecore#//hotelsystem/IHotelStartupProvides/startup">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="ClassDiagramPackage.ecore#//hotelsystem/IHotelStartupProvides/startup/numRooms"/>
+        </genOperations>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagramPackage.ecore#//hotelsystem/IHotelStartupProvides/getRoomHandler"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/HotelInitializer">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagramPackage.ecore#//hotelsystem/HotelInitializer/roomhandler"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference ClassDiagramPackage.ecore#//hotelsystem/HotelInitializer/reservationhandler"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="ClassDiagramPackage.ecore#//hotelsystem/IReceptionistProvides">
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="ClassDiagramPackage.ecore#//hotelsystem/IReceptionistProvides/editReservation">
