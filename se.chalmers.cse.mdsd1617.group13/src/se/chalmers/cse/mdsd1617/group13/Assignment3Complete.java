@@ -6,7 +6,7 @@ import java.util.List;
 public class Assignment3Complete {
 	private long currentBookingId = 0;
 	private long currentReservationNumber = 0;
-	
+	private long currentReservation = 0;
 	private final int MAX_ROOMS = 2;
 	
 	private List<Booking> bookings = new ArrayList<>();
@@ -126,6 +126,12 @@ public class Assignment3Complete {
 				return false;
 			}
 		}
+		for(Reservation r : currentBooking.getReservations()){
+			if(r.getReservationId() == currentReservation && r.isCheckedIn()){
+				r.readyToCheckOut();
+				return true;
+			}
+		}
 		Reservation r = currentBooking.getCheckOut();
 		if(r == null){
 			return false;
@@ -197,6 +203,11 @@ public class Assignment3Complete {
 				r.readyToCheckOut();
 			}
 		}
+		return true;
+	}
+	
+	public boolean nextRoom(){
+		currentReservation = (currentReservation + 1) % MAX_ROOMS;
 		return true;
 	}
 }
