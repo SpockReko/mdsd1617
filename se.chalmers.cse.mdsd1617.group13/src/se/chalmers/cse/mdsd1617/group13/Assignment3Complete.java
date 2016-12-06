@@ -1,4 +1,4 @@
-package se.chalmers.cse.mdsd1617.yakindu;
+package se.chalmers.cse.mdsd1617.group13;
 
 import java.util.ArrayList;
 import java.util.List;
