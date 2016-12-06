@@ -7,6 +7,15 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: ClassDiagramPackage,
+ ClassDiagramPackage.bankcomponents,
+ ClassDiagramPackage.bankcomponents.impl,
+ ClassDiagramPackage.bankcomponents.util,
+ ClassDiagramPackage.hotelsystem,
+ ClassDiagramPackage.hotelsystem.impl,
+ ClassDiagramPackage.hotelsystem.util,
+ ClassDiagramPackage.impl,
+ ClassDiagramPackage.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

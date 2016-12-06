@@ -11,7 +11,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_n4UmkLhlEeaytfot7Bi3IA" name="Administrator">
     <generalization xmi:type="uml:Generalization" xmi:id="_95skULhrEeaytfot7Bi3IA" general="_iOeCILhlEeaytfot7Bi3IA"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_boeW07hrEeaytfot7Bi3IA" name="iadministratorprovides" type="_GM500LhlEeaytfot7Bi3IA" association="_boeW0LhrEeaytfot7Bi3IA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_iwap4rhrEeaytfot7Bi3IA" name="iadministratorprovides" type="_T5_HsKnyEeaqs-4dkG4NMQ" association="_iwaC0LhrEeaytfot7Bi3IA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_krf2gLhrEeaytfot7Bi3IA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_krhEoLhrEeaytfot7Bi3IA" value="1"/>
@@ -600,11 +599,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_KNLko7hrEeaytfot7Bi3IA" name="reservationhandler" type="_-1bbgLhlEeaytfot7Bi3IA" association="_KNK9kLhrEeaytfot7Bi3IA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_boeW0LhrEeaytfot7Bi3IA" memberEnd="_boeW07hrEeaytfot7Bi3IA _bogMALhrEeaytfot7Bi3IA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_boeW0bhrEeaytfot7Bi3IA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_boeW0rhrEeaytfot7Bi3IA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_iwaC0LhrEeaytfot7Bi3IA" memberEnd="_iwap4rhrEeaytfot7Bi3IA _iwap47hrEeaytfot7Bi3IA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iwap4LhrEeaytfot7Bi3IA" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iwap4bhrEeaytfot7Bi3IA" key="nature" value="UML_Nature"/>
@@ -658,7 +652,6 @@
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_YXQGYLrLEear4uagTC-MRA" client="_y-A_ELrKEear4uagTC-MRA" supplier="_GM500LhlEeaytfot7Bi3IA" contract="_GM500LhlEeaytfot7Bi3IA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_GM500LhlEeaytfot7Bi3IA" name="IAdministratorProvides">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_bogMALhrEeaytfot7Bi3IA" name="administrator" type="_n4UmkLhlEeaytfot7Bi3IA" association="_boeW0LhrEeaytfot7Bi3IA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GM500bhlEeaytfot7Bi3IA" name="makeDeposit">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_GM500rhlEeaytfot7Bi3IA" name="ccNumber">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
