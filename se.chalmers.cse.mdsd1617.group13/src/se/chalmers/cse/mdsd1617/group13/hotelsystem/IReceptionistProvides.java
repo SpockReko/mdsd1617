@@ -76,18 +76,18 @@ public interface IReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	EList listBookings();
+	EList<Booking> listBookings();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" dateRequired="true" dateOrdered="false"
+	 * @model ordered="false" dateRequired="true" dateOrdered="false"
 	 * @generated
 	 */
-	EList listOccupiedRooms(String date);
+	EList<Booking> listOccupiedRooms(String date);
 
 	/**
 	 * <!-- begin-user-doc -->

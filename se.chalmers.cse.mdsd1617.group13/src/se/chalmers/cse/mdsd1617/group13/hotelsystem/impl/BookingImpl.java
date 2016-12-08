@@ -35,6 +35,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getRoomreservation <em>Roomreservation</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#isCanceled <em>Canceled</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +100,26 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @ordered
 	 */
 	protected String endDate = END_DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isCanceled() <em>Canceled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCanceled()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CANCELED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isCanceled() <em>Canceled</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCanceled()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean canceled = CANCELED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,7 +237,28 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Booking Reservation(String firstName, String lastName, String startDate, String endDate, int id) {
+	public boolean isCanceled() {
+		return canceled;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCanceled(boolean newCanceled) {
+		boolean oldCanceled = canceled;
+		canceled = newCanceled;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING__CANCELED, oldCanceled, canceled));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void cancel() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -239,6 +281,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getStartDate();
 			case HotelsystemPackage.BOOKING__END_DATE:
 				return getEndDate();
+			case HotelsystemPackage.BOOKING__CANCELED:
+				return isCanceled();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,6 +309,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__END_DATE:
 				setEndDate((String)newValue);
 				return;
+			case HotelsystemPackage.BOOKING__CANCELED:
+				setCanceled((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -289,6 +336,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__END_DATE:
 				setEndDate(END_DATE_EDEFAULT);
 				return;
+			case HotelsystemPackage.BOOKING__CANCELED:
+				setCanceled(CANCELED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -309,6 +359,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
 			case HotelsystemPackage.BOOKING__END_DATE:
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
+			case HotelsystemPackage.BOOKING__CANCELED:
+				return canceled != CANCELED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -321,8 +373,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case HotelsystemPackage.BOOKING___RESERVATION__STRING_STRING_STRING_STRING_INT:
-				return Reservation((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Integer)arguments.get(4));
+			case HotelsystemPackage.BOOKING___CANCEL:
+				cancel();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -341,6 +394,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(startDate);
 		result.append(", endDate: ");
 		result.append(endDate);
+		result.append(", canceled: ");
+		result.append(canceled);
 		result.append(')');
 		return result.toString();
 	}

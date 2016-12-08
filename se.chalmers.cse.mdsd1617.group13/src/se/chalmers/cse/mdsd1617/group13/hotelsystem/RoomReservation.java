@@ -182,4 +182,12 @@ public interface RoomReservation extends EObject {
 	 */
 	void checkIn();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void checkOut();
+
 } // RoomReservation

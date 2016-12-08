@@ -327,6 +327,17 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void checkOut() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -445,6 +456,9 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case HotelsystemPackage.ROOM_RESERVATION___CHECK_IN:
 				checkIn();
+				return null;
+			case HotelsystemPackage.ROOM_RESERVATION___CHECK_OUT:
+				checkOut();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

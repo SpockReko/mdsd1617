@@ -108,6 +108,14 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 				return createIRoomHandlerAdapter();
 			}
 			@Override
+			public Adapter caseIHotelCustomerProvides(IHotelCustomerProvides object) {
+				return createIHotelCustomerProvidesAdapter();
+			}
+			@Override
+			public Adapter caseFreeRoomTypesDTO(FreeRoomTypesDTO object) {
+				return createFreeRoomTypesDTOAdapter();
+			}
+			@Override
 			public Adapter caseRoomHandler(RoomHandler object) {
 				return createRoomHandlerAdapter();
 			}
@@ -118,14 +126,6 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoom(Room object) {
 				return createRoomAdapter();
-			}
-			@Override
-			public Adapter caseIHotelCustomerProvides(IHotelCustomerProvides object) {
-				return createIHotelCustomerProvidesAdapter();
-			}
-			@Override
-			public Adapter caseFreeRoomTypesDTO(FreeRoomTypesDTO object) {
-				return createFreeRoomTypesDTOAdapter();
 			}
 			@Override
 			public Adapter caseIHotelAdministratorProvides(IHotelAdministratorProvides object) {

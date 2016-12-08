@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface BookingHandler extends IReceptionistProvides {
+public interface BookingHandler extends IReceptionistProvides, IHotelCustomerProvides {
 	/**
 	 * Returns the value of the '<em><b>Reservation</b></em>' reference list.
 	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking}.

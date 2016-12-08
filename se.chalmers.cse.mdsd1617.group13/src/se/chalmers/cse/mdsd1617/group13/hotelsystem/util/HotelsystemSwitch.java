@@ -70,6 +70,7 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				BookingHandler bookingHandler = (BookingHandler)theEObject;
 				T result = caseBookingHandler(bookingHandler);
 				if (result == null) result = caseIReceptionistProvides(bookingHandler);
+				if (result == null) result = caseIHotelCustomerProvides(bookingHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -127,6 +128,18 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HotelsystemPackage.IHOTEL_CUSTOMER_PROVIDES: {
+				IHotelCustomerProvides iHotelCustomerProvides = (IHotelCustomerProvides)theEObject;
+				T result = caseIHotelCustomerProvides(iHotelCustomerProvides);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HotelsystemPackage.FREE_ROOM_TYPES_DTO: {
+				FreeRoomTypesDTO freeRoomTypesDTO = (FreeRoomTypesDTO)theEObject;
+				T result = caseFreeRoomTypesDTO(freeRoomTypesDTO);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HotelsystemPackage.ROOM_HANDLER: {
 				RoomHandler roomHandler = (RoomHandler)theEObject;
 				T result = caseRoomHandler(roomHandler);
@@ -145,18 +158,6 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				T result = caseRoom(room);
 				if (result == null) result = caseIAdminRoomProvides(room);
 				if (result == null) result = caseIReceptionistRoomProvides(room);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelsystemPackage.IHOTEL_CUSTOMER_PROVIDES: {
-				IHotelCustomerProvides iHotelCustomerProvides = (IHotelCustomerProvides)theEObject;
-				T result = caseIHotelCustomerProvides(iHotelCustomerProvides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelsystemPackage.FREE_ROOM_TYPES_DTO: {
-				FreeRoomTypesDTO freeRoomTypesDTO = (FreeRoomTypesDTO)theEObject;
-				T result = caseFreeRoomTypesDTO(freeRoomTypesDTO);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
