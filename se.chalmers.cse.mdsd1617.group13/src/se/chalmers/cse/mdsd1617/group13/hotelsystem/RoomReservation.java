@@ -190,4 +190,12 @@ public interface RoomReservation extends EObject {
 	 */
 	void checkOut();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" dateRequired="true" dateOrdered="false"
+	 * @generated
+	 */
+	Room getRoomIfOccupied(String date);
+
 } // RoomReservation

@@ -24,6 +24,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#isOccupied <em>Occupied</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#isBlocked <em>Blocked</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,6 +59,26 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected RoomType roomtype;
+
+	/**
+	 * The default value of the '{@link #isBlocked() <em>Blocked</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isBlocked()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean BLOCKED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isBlocked() <em>Blocked</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isBlocked()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean blocked = BLOCKED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,6 +163,27 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isBlocked() {
+		return blocked;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBlocked(boolean newBlocked) {
+		boolean oldBlocked = blocked;
+		blocked = newBlocked;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM__BLOCKED, oldBlocked, blocked));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -150,6 +192,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelsystemPackage.ROOM__ROOMTYPE:
 				if (resolve) return getRoomtype();
 				return basicGetRoomtype();
+			case HotelsystemPackage.ROOM__BLOCKED:
+				return isBlocked();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,6 +211,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return;
 			case HotelsystemPackage.ROOM__ROOMTYPE:
 				setRoomtype((RoomType)newValue);
+				return;
+			case HotelsystemPackage.ROOM__BLOCKED:
+				setBlocked((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,6 +233,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelsystemPackage.ROOM__ROOMTYPE:
 				setRoomtype((RoomType)null);
 				return;
+			case HotelsystemPackage.ROOM__BLOCKED:
+				setBlocked(BLOCKED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -202,6 +252,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return occupied != OCCUPIED_EDEFAULT;
 			case HotelsystemPackage.ROOM__ROOMTYPE:
 				return roomtype != null;
+			case HotelsystemPackage.ROOM__BLOCKED:
+				return blocked != BLOCKED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -218,6 +270,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (occupied: ");
 		result.append(occupied);
+		result.append(", blocked: ");
+		result.append(blocked);
 		result.append(')');
 		return result.toString();
 	}

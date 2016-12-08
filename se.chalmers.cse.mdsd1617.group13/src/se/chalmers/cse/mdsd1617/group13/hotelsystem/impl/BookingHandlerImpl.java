@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
@@ -259,17 +260,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean editRoomType(int reservationId, String roomType, int numberOfRoomsForType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Integer> listFreeRooms(int reservationId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -314,7 +304,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Booking> listOccupiedRooms(String date) {
+	public Map listOccupiedRooms(String date) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -583,8 +573,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return addRoomTypeToBooking((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING:
 				return removeRoomTypeFromBooking((Integer)arguments.get(0), (String)arguments.get(1));
-			case HotelsystemPackage.BOOKING_HANDLER___EDIT_ROOM_TYPE__INT_STRING_INT:
-				return editRoomType((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___LIST_FREE_ROOMS__INT:
 				return listFreeRooms((Integer)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___CHECK_IN__INT_INT:

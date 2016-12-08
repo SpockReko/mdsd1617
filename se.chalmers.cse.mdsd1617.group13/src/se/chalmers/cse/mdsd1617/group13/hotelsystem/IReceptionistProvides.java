@@ -2,6 +2,7 @@
  */
 package se.chalmers.cse.mdsd1617.group13.hotelsystem;
 
+import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -44,14 +45,6 @@ public interface IReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" numberOfRoomsForTypeRequired="true" numberOfRoomsForTypeOrdered="false"
-	 * @generated
-	 */
-	boolean editRoomType(int reservationId, String roomType, int numberOfRoomsForType);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
 	 * @generated
 	 */
@@ -84,10 +77,10 @@ public interface IReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model ordered="false" dateRequired="true" dateOrdered="false"
+	 * @model required="true" ordered="false" dateRequired="true" dateOrdered="false"
 	 * @generated
 	 */
-	EList<Booking> listOccupiedRooms(String date);
+	Map listOccupiedRooms(String date);
 
 	/**
 	 * <!-- begin-user-doc -->

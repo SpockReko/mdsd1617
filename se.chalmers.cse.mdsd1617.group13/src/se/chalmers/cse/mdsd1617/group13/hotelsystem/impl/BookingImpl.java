@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 
 /**
@@ -269,6 +270,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Room> getOccupiedRooms(String date) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -376,6 +388,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING___CANCEL:
 				cancel();
 				return null;
+			case HotelsystemPackage.BOOKING___GET_OCCUPIED_ROOMS__STRING:
+				return getOccupiedRooms((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

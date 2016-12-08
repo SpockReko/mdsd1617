@@ -116,6 +116,20 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HotelsystemPackage.ROOM: {
+				Room room = (Room)theEObject;
+				T result = caseRoom(room);
+				if (result == null) result = caseIAdminRoomProvides(room);
+				if (result == null) result = caseIReceptionistRoomProvides(room);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HotelsystemPackage.IADMIN_ROOM_PROVIDES: {
+				IAdminRoomProvides iAdminRoomProvides = (IAdminRoomProvides)theEObject;
+				T result = caseIAdminRoomProvides(iAdminRoomProvides);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HotelsystemPackage.PAYMENT_HANDLER: {
 				PaymentHandler paymentHandler = (PaymentHandler)theEObject;
 				T result = casePaymentHandler(paymentHandler);
@@ -144,20 +158,7 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				RoomHandler roomHandler = (RoomHandler)theEObject;
 				T result = caseRoomHandler(roomHandler);
 				if (result == null) result = caseIRoomHandler(roomHandler);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelsystemPackage.IADMIN_ROOM_PROVIDES: {
-				IAdminRoomProvides iAdminRoomProvides = (IAdminRoomProvides)theEObject;
-				T result = caseIAdminRoomProvides(iAdminRoomProvides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelsystemPackage.ROOM: {
-				Room room = (Room)theEObject;
-				T result = caseRoom(room);
-				if (result == null) result = caseIAdminRoomProvides(room);
-				if (result == null) result = caseIReceptionistRoomProvides(room);
+				if (result == null) result = caseIHotelAdministratorProvides(roomHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

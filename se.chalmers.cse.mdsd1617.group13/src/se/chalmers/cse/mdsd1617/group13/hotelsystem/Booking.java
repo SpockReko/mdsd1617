@@ -155,4 +155,12 @@ public interface Booking extends EObject {
 	 */
 	void cancel();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false" dateRequired="true" dateOrdered="false"
+	 * @generated
+	 */
+	EList<Room> getOccupiedRooms(String date);
+
 } // Booking
