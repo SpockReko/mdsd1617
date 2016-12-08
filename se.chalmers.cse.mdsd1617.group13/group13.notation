@@ -1009,10 +1009,6 @@
           <element xmi:type="uml:Operation" href="se.uml#_KQTvsKpKEeaqs-4dkG4NMQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_f-6qwbJZEeatJIKqphduzg"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_f-7R0LJZEeatJIKqphduzg" type="Operation_InterfaceOperationLabel">
-          <element xmi:type="uml:Operation" href="se.uml#_U4cMAKpKEeaqs-4dkG4NMQ"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_f-7R0bJZEeatJIKqphduzg"/>
-        </children>
         <children xmi:type="notation:Shape" xmi:id="_f-744LJZEeatJIKqphduzg" type="Operation_InterfaceOperationLabel">
           <element xmi:type="uml:Operation" href="se.uml#_zjfvQKn2Eeaqs-4dkG4NMQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_f-744bJZEeatJIKqphduzg"/>
