@@ -7,15 +7,15 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ClassDiagramPackage,
- ClassDiagramPackage.bankcomponents,
- ClassDiagramPackage.bankcomponents.impl,
- ClassDiagramPackage.bankcomponents.util,
- ClassDiagramPackage.hotelsystem,
- ClassDiagramPackage.hotelsystem.impl,
- ClassDiagramPackage.hotelsystem.util,
- ClassDiagramPackage.impl,
- ClassDiagramPackage.util
+Export-Package: se.chalmers.cse.mdsd1617.group13,
+ se.chalmers.cse.mdsd1617.group13.bankcomponents,
+ se.chalmers.cse.mdsd1617.group13.bankcomponents.impl,
+ se.chalmers.cse.mdsd1617.group13.bankcomponents.util,
+ se.chalmers.cse.mdsd1617.group13.hotelsystem,
+ se.chalmers.cse.mdsd1617.group13.hotelsystem.impl,
+ se.chalmers.cse.mdsd1617.group13.hotelsystem.util,
+ se.chalmers.cse.mdsd1617.group13.impl,
+ se.chalmers.cse.mdsd1617.group13.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

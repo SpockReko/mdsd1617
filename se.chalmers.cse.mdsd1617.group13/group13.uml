@@ -69,32 +69,32 @@
           <packagedElement xmi:type="uml:Package" xmi:id="_kUR50KpIEeaqs-4dkG4NMQ" name="ComponentPackage">
             <packagedElement xmi:type="uml:Component" xmi:id="_oEAmcKnxEeaqs-4dkG4NMQ" name="Receptionist">
               <packagedElement xmi:type="uml:Usage" xmi:id="_bKNXkKnzEeaqs-4dkG4NMQ" client="_oEAmcKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_Ef28AKnyEeaqs-4dkG4NMQ"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_Ef28AKnyEeaqs-4dkG4NMQ"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Usage" xmi:id="_EQdFULrNEeaXoYzTbl40Gw" client="_oEAmcKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_UlwsQKspEea_ZvXe8054NA"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_UlwsQKspEea_ZvXe8054NA"/>
               </packagedElement>
             </packagedElement>
             <packagedElement xmi:type="uml:Component" xmi:id="_zaaeAKnxEeaqs-4dkG4NMQ" name="ExternalSupplierSystem">
               <packagedElement xmi:type="uml:Usage" xmi:id="_8ThD8LrMEeaXoYzTbl40Gw" client="_zaaeAKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_UlwsQKspEea_ZvXe8054NA"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_UlwsQKspEea_ZvXe8054NA"/>
               </packagedElement>
             </packagedElement>
             <packagedElement xmi:type="uml:Component" xmi:id="_9hy9sKnxEeaqs-4dkG4NMQ" name="Hotel System">
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FkxqIKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
-                <contract xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
+                <contract xmi:type="uml:Interface" href="se.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
               </interfaceRealization>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_GI1ZcKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_T5_HsKnyEeaqs-4dkG4NMQ"/>
-                <contract xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_T5_HsKnyEeaqs-4dkG4NMQ"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_T5_HsKnyEeaqs-4dkG4NMQ"/>
+                <contract xmi:type="uml:Interface" href="se.uml#_T5_HsKnyEeaqs-4dkG4NMQ"/>
               </interfaceRealization>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_G09foKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_UlwsQKspEea_ZvXe8054NA"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_UlwsQKspEea_ZvXe8054NA"/>
               </interfaceRealization>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_HUCoUKpJEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_Ef28AKnyEeaqs-4dkG4NMQ"/>
-                <contract xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_Ef28AKnyEeaqs-4dkG4NMQ"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_Ef28AKnyEeaqs-4dkG4NMQ"/>
+                <contract xmi:type="uml:Interface" href="se.uml#_Ef28AKnyEeaqs-4dkG4NMQ"/>
               </interfaceRealization>
               <packagedElement xmi:type="uml:Usage" xmi:id="_gqaQwKnzEeaqs-4dkG4NMQ" client="_9hy9sKnxEeaqs-4dkG4NMQ">
                 <supplier xmi:type="uml:Interface" href="BankingModel.uml#_FzZ0cHO_EeSgC_3iHN4p8A"/>
@@ -105,17 +105,17 @@
                 <supplier xmi:type="uml:Interface" href="BankingModel.uml#_FzYmUXO_EeSgC_3iHN4p8A"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Usage" xmi:id="_L5HKcKpTEeaqs-4dkG4NMQ" client="_AXL2cKnyEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_T5_HsKnyEeaqs-4dkG4NMQ"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_T5_HsKnyEeaqs-4dkG4NMQ"/>
               </packagedElement>
               <packagedElement xmi:type="uml:Usage" xmi:id="_MYdY4KpTEeaqs-4dkG4NMQ" client="_AXL2cKnyEeaqs-4dkG4NMQ">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
               </packagedElement>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_p-gz8I_JEeaMDqvmI2HKcg" name="HotelCustomerProvides"/>
             <packagedElement xmi:type="uml:Class" xmi:id="_qZv-cI_JEeaMDqvmI2HKcg" name="HotelStartupProvides">
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_xnQBIJeDEeatRIhPgYoqQg" client="_qZv-cI_JEeaMDqvmI2HKcg">
-                <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
-                <contract xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
+                <supplier xmi:type="uml:Interface" href="se.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
+                <contract xmi:type="uml:Interface" href="se.uml#_uUO4AI--EeaYFcjrTNGrQw"/>
               </interfaceRealization>
             </packagedElement>
             <packagedElement xmi:type="uml:DataType" xmi:id="_0ZOZgJeDEeatRIhPgYoqQg" name="FreeRoomTypesDTO">
@@ -405,7 +405,7 @@
               <message xmi:type="uml:Message" xmi:id="_SWsxELVYEeaRj6YLTCHqQw" name="finish" messageSort="asynchSignal" sendEvent="_SWvNULVYEeaRj6YLTCHqQw"/>
             </packagedElement>
           </packagedElement>
-          <packagedElement xmi:type="uml:Package" href="ClassDiagramPackage.uml#_Q_d08LhkEeaRMuR9Xw0mSA"/>
+          <packagedElement xmi:type="uml:Package" href="se.uml#_Q_d08LhkEeaRMuR9Xw0mSA"/>
           <packagedElement xmi:type="uml:Interface" xmi:id="_Ul09sKspEea_ZvXe8054NA" name="IHotelStartupProvides">
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Ul09saspEea_ZvXe8054NA" name="startup">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ul09sqspEea_ZvXe8054NA" name="numRooms">
@@ -415,16 +415,16 @@
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Ul1kwKspEea_ZvXe8054NA" name="HotelCustomerProvides">
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ul1kwaspEea_ZvXe8054NA" client="_Ul1kwKspEea_ZvXe8054NA">
-              <supplier xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_UlwsQKspEea_ZvXe8054NA"/>
-              <contract xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_UlwsQKspEea_ZvXe8054NA"/>
+              <supplier xmi:type="uml:Interface" href="se.uml#_UlwsQKspEea_ZvXe8054NA"/>
+              <contract xmi:type="uml:Interface" href="se.uml#_UlwsQKspEea_ZvXe8054NA"/>
             </interfaceRealization>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Ul2L0KspEea_ZvXe8054NA" name="HotelStartupProvides">
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Ul2L0aspEea_ZvXe8054NA" client="_Ul2L0KspEea_ZvXe8054NA" supplier="_Ul09sKspEea_ZvXe8054NA" contract="_Ul09sKspEea_ZvXe8054NA"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_Ul2y5aspEea_ZvXe8054NA">
-            <client xmi:type="uml:Interface" href="ClassDiagramPackage.uml#_UlwsQKspEea_ZvXe8054NA"/>
-            <supplier xmi:type="uml:DataType" href="ClassDiagramPackage.uml#_Ul2y4KspEea_ZvXe8054NA"/>
+            <client xmi:type="uml:Interface" href="se.uml#_UlwsQKspEea_ZvXe8054NA"/>
+            <supplier xmi:type="uml:DataType" href="se.uml#_Ul2y4KspEea_ZvXe8054NA"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>
