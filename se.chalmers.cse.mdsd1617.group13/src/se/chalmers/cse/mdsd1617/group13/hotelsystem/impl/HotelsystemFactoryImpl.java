@@ -56,8 +56,8 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case HotelsystemPackage.RESERVATION_HANDLER: return createReservationHandler();
-			case HotelsystemPackage.RESERVATION: return createReservation();
+			case HotelsystemPackage.BOOKING_HANDLER: return createBookingHandler();
+			case HotelsystemPackage.BOOKING: return createBooking();
 			case HotelsystemPackage.CUSTOMER: return createCustomer();
 			case HotelsystemPackage.ROOM_RESERVATION: return createRoomReservation();
 			case HotelsystemPackage.ROOM_TYPE: return createRoomType();
@@ -78,9 +78,9 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ReservationHandler createReservationHandler() {
-		ReservationHandlerImpl reservationHandler = new ReservationHandlerImpl();
-		return reservationHandler;
+	public BookingHandler createBookingHandler() {
+		BookingHandlerImpl bookingHandler = new BookingHandlerImpl();
+		return bookingHandler;
 	}
 
 	/**
@@ -88,9 +88,9 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Reservation createReservation() {
-		ReservationImpl reservation = new ReservationImpl();
-		return reservation;
+	public Booking createBooking() {
+		BookingImpl booking = new BookingImpl();
+		return booking;
 	}
 
 	/**

@@ -6,11 +6,13 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +23,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#isOccupied <em>Occupied</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +48,16 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected boolean occupied = OCCUPIED_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRoomtype() <em>Roomtype</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomtype()
+	 * @generated
+	 * @ordered
+	 */
+	protected RoomType roomtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +104,52 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public RoomType getRoomtype() {
+		if (roomtype != null && roomtype.eIsProxy()) {
+			InternalEObject oldRoomtype = (InternalEObject)roomtype;
+			roomtype = (RoomType)eResolveProxy(oldRoomtype);
+			if (roomtype != oldRoomtype) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.ROOM__ROOMTYPE, oldRoomtype, roomtype));
+			}
+		}
+		return roomtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType basicGetRoomtype() {
+		return roomtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomtype(RoomType newRoomtype) {
+		RoomType oldRoomtype = roomtype;
+		roomtype = newRoomtype;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM__ROOMTYPE, oldRoomtype, roomtype));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				return isOccupied();
+			case HotelsystemPackage.ROOM__ROOMTYPE:
+				if (resolve) return getRoomtype();
+				return basicGetRoomtype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +164,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		switch (featureID) {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				setOccupied((Boolean)newValue);
+				return;
+			case HotelsystemPackage.ROOM__ROOMTYPE:
+				setRoomtype((RoomType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +183,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				setOccupied(OCCUPIED_EDEFAULT);
 				return;
+			case HotelsystemPackage.ROOM__ROOMTYPE:
+				setRoomtype((RoomType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +200,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		switch (featureID) {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				return occupied != OCCUPIED_EDEFAULT;
+			case HotelsystemPackage.ROOM__ROOMTYPE:
+				return roomtype != null;
 		}
 		return super.eIsSet(featureID);
 	}

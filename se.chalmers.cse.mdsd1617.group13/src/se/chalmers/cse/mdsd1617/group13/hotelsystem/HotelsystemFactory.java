@@ -22,22 +22,22 @@ public interface HotelsystemFactory extends EFactory {
 	HotelsystemFactory eINSTANCE = se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Reservation Handler</em>'.
+	 * Returns a new object of class '<em>Booking Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reservation Handler</em>'.
+	 * @return a new object of class '<em>Booking Handler</em>'.
 	 * @generated
 	 */
-	ReservationHandler createReservationHandler();
+	BookingHandler createBookingHandler();
 
 	/**
-	 * Returns a new object of class '<em>Reservation</em>'.
+	 * Returns a new object of class '<em>Booking</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reservation</em>'.
+	 * @return a new object of class '<em>Booking</em>'.
 	 * @generated
 	 */
-	Reservation createReservation();
+	Booking createBooking();
 
 	/**
 	 * Returns a new object of class '<em>Customer</em>'.

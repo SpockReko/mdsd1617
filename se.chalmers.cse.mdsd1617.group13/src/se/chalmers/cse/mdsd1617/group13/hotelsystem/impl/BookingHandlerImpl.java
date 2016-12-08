@@ -18,29 +18,29 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Reservation Handler</b></em>'.
+ * An implementation of the model object '<em><b>Booking Handler</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl#getReservation <em>Reservation</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl#getPaymenthandler <em>Paymenthandler</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl#getRoomhandler <em>Roomhandler</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl#getCurrentReservationId <em>Current Reservation Id</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getReservation <em>Reservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getPaymenthandler <em>Paymenthandler</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getRoomhandler <em>Roomhandler</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getCurrentReservationId <em>Current Reservation Id</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ReservationHandlerImpl extends MinimalEObjectImpl.Container implements ReservationHandler {
+public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements BookingHandler {
 	/**
 	 * The cached value of the '{@link #getReservation() <em>Reservation</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -49,7 +49,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Reservation> reservation;
+	protected EList<Booking> reservation;
 
 	/**
 	 * The cached value of the '{@link #getPaymenthandler() <em>Paymenthandler</em>}' reference.
@@ -96,7 +96,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ReservationHandlerImpl() {
+	protected BookingHandlerImpl() {
 		super();
 	}
 
@@ -107,7 +107,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return HotelsystemPackage.Literals.RESERVATION_HANDLER;
+		return HotelsystemPackage.Literals.BOOKING_HANDLER;
 	}
 
 	/**
@@ -115,9 +115,9 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Reservation> getReservation() {
+	public EList<Booking> getReservation() {
 		if (reservation == null) {
-			reservation = new EObjectResolvingEList<Reservation>(Reservation.class, this, HotelsystemPackage.RESERVATION_HANDLER__RESERVATION);
+			reservation = new EObjectResolvingEList<Booking>(Booking.class, this, HotelsystemPackage.BOOKING_HANDLER__RESERVATION);
 		}
 		return reservation;
 	}
@@ -133,7 +133,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 			paymenthandler = (PaymentHandler)eResolveProxy(oldPaymenthandler);
 			if (paymenthandler != oldPaymenthandler) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.RESERVATION_HANDLER__PAYMENTHANDLER, oldPaymenthandler, paymenthandler));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER, oldPaymenthandler, paymenthandler));
 			}
 		}
 		return paymenthandler;
@@ -157,7 +157,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 		PaymentHandler oldPaymenthandler = paymenthandler;
 		paymenthandler = newPaymenthandler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.RESERVATION_HANDLER__PAYMENTHANDLER, oldPaymenthandler, paymenthandler));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER, oldPaymenthandler, paymenthandler));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 			roomhandler = (IRoomHandler)eResolveProxy(oldRoomhandler);
 			if (roomhandler != oldRoomhandler) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.RESERVATION_HANDLER__ROOMHANDLER, oldRoomhandler, roomhandler));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER, oldRoomhandler, roomhandler));
 			}
 		}
 		return roomhandler;
@@ -195,7 +195,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 		IRoomHandler oldRoomhandler = roomhandler;
 		roomhandler = newRoomhandler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.RESERVATION_HANDLER__ROOMHANDLER, oldRoomhandler, roomhandler));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER, oldRoomhandler, roomhandler));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 		int oldCurrentReservationId = currentReservationId;
 		currentReservationId = newCurrentReservationId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.RESERVATION_HANDLER__CURRENT_RESERVATION_ID, oldCurrentReservationId, currentReservationId));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID, oldCurrentReservationId, currentReservationId));
 	}
 
 	/**
@@ -224,7 +224,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editReservation(int reservationId, String firstName, String lastName, String startDate, String endDate) {
+	public void editBookingTime(int reservationId, String firstName, String endDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -235,7 +235,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean addRoomTypeToReservation(int reservationId, String roomType, int numberOfRoomsForType) {
+	public boolean addRoomTypeToBooking(int reservationId, String roomType, int numberOfRoomsForType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -246,7 +246,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean removeRoomTypeFromReservation(int reservationId, String roomType) {
+	public boolean removeRoomTypeFromBooking(int reservationId, String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -268,7 +268,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void listFreeRooms(int reservationId) {
+	public EList<Integer> listFreeRooms(int reservationId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -279,7 +279,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList checkIn(int reservationId) {
+	public EList checkIn(int reservationId, int roomNumbers) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -290,7 +290,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean cancelReservation(int reservationId) {
+	public boolean cancelBooking(int reservationId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -301,7 +301,7 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList listReservations() {
+	public EList listBookings() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -359,15 +359,15 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION_HANDLER__RESERVATION:
+			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
 				return getReservation();
-			case HotelsystemPackage.RESERVATION_HANDLER__PAYMENTHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				if (resolve) return getPaymenthandler();
 				return basicGetPaymenthandler();
-			case HotelsystemPackage.RESERVATION_HANDLER__ROOMHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				if (resolve) return getRoomhandler();
 				return basicGetRoomhandler();
-			case HotelsystemPackage.RESERVATION_HANDLER__CURRENT_RESERVATION_ID:
+			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
 				return getCurrentReservationId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -382,17 +382,17 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION_HANDLER__RESERVATION:
+			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
 				getReservation().clear();
-				getReservation().addAll((Collection<? extends Reservation>)newValue);
+				getReservation().addAll((Collection<? extends Booking>)newValue);
 				return;
-			case HotelsystemPackage.RESERVATION_HANDLER__PAYMENTHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)newValue);
 				return;
-			case HotelsystemPackage.RESERVATION_HANDLER__ROOMHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				setRoomhandler((IRoomHandler)newValue);
 				return;
-			case HotelsystemPackage.RESERVATION_HANDLER__CURRENT_RESERVATION_ID:
+			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
 				setCurrentReservationId((Integer)newValue);
 				return;
 		}
@@ -407,16 +407,16 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION_HANDLER__RESERVATION:
+			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
 				getReservation().clear();
 				return;
-			case HotelsystemPackage.RESERVATION_HANDLER__PAYMENTHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)null);
 				return;
-			case HotelsystemPackage.RESERVATION_HANDLER__ROOMHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				setRoomhandler((IRoomHandler)null);
 				return;
-			case HotelsystemPackage.RESERVATION_HANDLER__CURRENT_RESERVATION_ID:
+			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
 				setCurrentReservationId(CURRENT_RESERVATION_ID_EDEFAULT);
 				return;
 		}
@@ -431,13 +431,13 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION_HANDLER__RESERVATION:
+			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
 				return reservation != null && !reservation.isEmpty();
-			case HotelsystemPackage.RESERVATION_HANDLER__PAYMENTHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				return paymenthandler != null;
-			case HotelsystemPackage.RESERVATION_HANDLER__ROOMHANDLER:
+			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				return roomhandler != null;
-			case HotelsystemPackage.RESERVATION_HANDLER__CURRENT_RESERVATION_ID:
+			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
 				return currentReservationId != CURRENT_RESERVATION_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -451,31 +451,30 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case HotelsystemPackage.RESERVATION_HANDLER___EDIT_RESERVATION__INT_STRING_STRING_STRING_STRING:
-				editReservation((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
+			case HotelsystemPackage.BOOKING_HANDLER___EDIT_BOOKING_TIME__INT_STRING_STRING:
+				editBookingTime((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case HotelsystemPackage.RESERVATION_HANDLER___ADD_ROOM_TYPE_TO_RESERVATION__INT_STRING_INT:
-				return addRoomTypeToReservation((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-			case HotelsystemPackage.RESERVATION_HANDLER___REMOVE_ROOM_TYPE_FROM_RESERVATION__INT_STRING:
-				return removeRoomTypeFromReservation((Integer)arguments.get(0), (String)arguments.get(1));
-			case HotelsystemPackage.RESERVATION_HANDLER___EDIT_ROOM_TYPE__INT_STRING_INT:
+			case HotelsystemPackage.BOOKING_HANDLER___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT:
+				return addRoomTypeToBooking((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
+			case HotelsystemPackage.BOOKING_HANDLER___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING:
+				return removeRoomTypeFromBooking((Integer)arguments.get(0), (String)arguments.get(1));
+			case HotelsystemPackage.BOOKING_HANDLER___EDIT_ROOM_TYPE__INT_STRING_INT:
 				return editRoomType((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-			case HotelsystemPackage.RESERVATION_HANDLER___LIST_FREE_ROOMS__INT:
-				listFreeRooms((Integer)arguments.get(0));
-				return null;
-			case HotelsystemPackage.RESERVATION_HANDLER___CHECK_IN__INT:
-				return checkIn((Integer)arguments.get(0));
-			case HotelsystemPackage.RESERVATION_HANDLER___CANCEL_RESERVATION__INT:
-				return cancelReservation((Integer)arguments.get(0));
-			case HotelsystemPackage.RESERVATION_HANDLER___LIST_RESERVATIONS:
-				return listReservations();
-			case HotelsystemPackage.RESERVATION_HANDLER___LIST_OCCUPIED_ROOMS__STRING:
+			case HotelsystemPackage.BOOKING_HANDLER___LIST_FREE_ROOMS__INT:
+				return listFreeRooms((Integer)arguments.get(0));
+			case HotelsystemPackage.BOOKING_HANDLER___CHECK_IN__INT_INT:
+				return checkIn((Integer)arguments.get(0), (Integer)arguments.get(1));
+			case HotelsystemPackage.BOOKING_HANDLER___CANCEL_BOOKING__INT:
+				return cancelBooking((Integer)arguments.get(0));
+			case HotelsystemPackage.BOOKING_HANDLER___LIST_BOOKINGS:
+				return listBookings();
+			case HotelsystemPackage.BOOKING_HANDLER___LIST_OCCUPIED_ROOMS__STRING:
 				return listOccupiedRooms((String)arguments.get(0));
-			case HotelsystemPackage.RESERVATION_HANDLER___LIST_CHECKINS__STRING:
+			case HotelsystemPackage.BOOKING_HANDLER___LIST_CHECKINS__STRING:
 				return listCheckins((String)arguments.get(0));
-			case HotelsystemPackage.RESERVATION_HANDLER___LIST_CHECKOUTS__STRING_STRING:
+			case HotelsystemPackage.BOOKING_HANDLER___LIST_CHECKOUTS__STRING_STRING:
 				return listCheckouts((String)arguments.get(0), (String)arguments.get(1));
-			case HotelsystemPackage.RESERVATION_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT:
+			case HotelsystemPackage.BOOKING_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT:
 				return addExtraToRoom((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -497,4 +496,4 @@ public class ReservationHandlerImpl extends MinimalEObjectImpl.Container impleme
 		return result.toString();
 	}
 
-} //ReservationHandlerImpl
+} //BookingHandlerImpl

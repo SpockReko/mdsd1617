@@ -77,31 +77,31 @@ public interface HotelsystemPackage extends EPackage {
 	int IRECEPTIONIST_PROVIDES_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Edit Reservation</em>' operation.
+	 * The operation id for the '<em>Edit Booking Time</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRECEPTIONIST_PROVIDES___EDIT_RESERVATION__INT_STRING_STRING_STRING_STRING = 0;
+	int IRECEPTIONIST_PROVIDES___EDIT_BOOKING_TIME__INT_STRING_STRING = 0;
 
 	/**
-	 * The operation id for the '<em>Add Room Type To Reservation</em>' operation.
+	 * The operation id for the '<em>Add Room Type To Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_RESERVATION__INT_STRING_INT = 1;
+	int IRECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT = 1;
 
 	/**
-	 * The operation id for the '<em>Remove Room Type From Reservation</em>' operation.
+	 * The operation id for the '<em>Remove Room Type From Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_RESERVATION__INT_STRING = 2;
+	int IRECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Edit Room Type</em>' operation.
@@ -128,25 +128,25 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IRECEPTIONIST_PROVIDES___CHECK_IN__INT = 5;
+	int IRECEPTIONIST_PROVIDES___CHECK_IN__INT_INT = 5;
 
 	/**
-	 * The operation id for the '<em>Cancel Reservation</em>' operation.
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRECEPTIONIST_PROVIDES___CANCEL_RESERVATION__INT = 6;
+	int IRECEPTIONIST_PROVIDES___CANCEL_BOOKING__INT = 6;
 
 	/**
-	 * The operation id for the '<em>List Reservations</em>' operation.
+	 * The operation id for the '<em>List Bookings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IRECEPTIONIST_PROVIDES___LIST_RESERVATIONS = 7;
+	int IRECEPTIONIST_PROVIDES___LIST_BOOKINGS = 7;
 
 	/**
 	 * The operation id for the '<em>List Occupied Rooms</em>' operation.
@@ -194,14 +194,14 @@ public interface HotelsystemPackage extends EPackage {
 	int IRECEPTIONIST_PROVIDES_OPERATION_COUNT = 12;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl <em>Reservation Handler</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getReservationHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBookingHandler()
 	 * @generated
 	 */
-	int RESERVATION_HANDLER = 0;
+	int BOOKING_HANDLER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Reservation</b></em>' reference list.
@@ -210,7 +210,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER__RESERVATION = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 0;
+	int BOOKING_HANDLER__RESERVATION = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Paymenthandler</b></em>' reference.
@@ -219,7 +219,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER__PAYMENTHANDLER = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 1;
+	int BOOKING_HANDLER__PAYMENTHANDLER = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Roomhandler</b></em>' reference.
@@ -228,7 +228,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER__ROOMHANDLER = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 2;
+	int BOOKING_HANDLER__ROOMHANDLER = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Current Reservation Id</b></em>' attribute.
@@ -237,43 +237,43 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER__CURRENT_RESERVATION_ID = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 3;
+	int BOOKING_HANDLER__CURRENT_RESERVATION_ID = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Reservation Handler</em>' class.
+	 * The number of structural features of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER_FEATURE_COUNT = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 4;
+	int BOOKING_HANDLER_FEATURE_COUNT = IRECEPTIONIST_PROVIDES_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Edit Reservation</em>' operation.
+	 * The operation id for the '<em>Edit Booking Time</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___EDIT_RESERVATION__INT_STRING_STRING_STRING_STRING = IRECEPTIONIST_PROVIDES___EDIT_RESERVATION__INT_STRING_STRING_STRING_STRING;
+	int BOOKING_HANDLER___EDIT_BOOKING_TIME__INT_STRING_STRING = IRECEPTIONIST_PROVIDES___EDIT_BOOKING_TIME__INT_STRING_STRING;
 
 	/**
-	 * The operation id for the '<em>Add Room Type To Reservation</em>' operation.
+	 * The operation id for the '<em>Add Room Type To Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___ADD_ROOM_TYPE_TO_RESERVATION__INT_STRING_INT = IRECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_RESERVATION__INT_STRING_INT;
+	int BOOKING_HANDLER___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT = IRECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT;
 
 	/**
-	 * The operation id for the '<em>Remove Room Type From Reservation</em>' operation.
+	 * The operation id for the '<em>Remove Room Type From Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___REMOVE_ROOM_TYPE_FROM_RESERVATION__INT_STRING = IRECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_RESERVATION__INT_STRING;
+	int BOOKING_HANDLER___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING = IRECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING;
 
 	/**
 	 * The operation id for the '<em>Edit Room Type</em>' operation.
@@ -282,7 +282,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___EDIT_ROOM_TYPE__INT_STRING_INT = IRECEPTIONIST_PROVIDES___EDIT_ROOM_TYPE__INT_STRING_INT;
+	int BOOKING_HANDLER___EDIT_ROOM_TYPE__INT_STRING_INT = IRECEPTIONIST_PROVIDES___EDIT_ROOM_TYPE__INT_STRING_INT;
 
 	/**
 	 * The operation id for the '<em>List Free Rooms</em>' operation.
@@ -291,7 +291,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___LIST_FREE_ROOMS__INT = IRECEPTIONIST_PROVIDES___LIST_FREE_ROOMS__INT;
+	int BOOKING_HANDLER___LIST_FREE_ROOMS__INT = IRECEPTIONIST_PROVIDES___LIST_FREE_ROOMS__INT;
 
 	/**
 	 * The operation id for the '<em>Check In</em>' operation.
@@ -300,25 +300,25 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___CHECK_IN__INT = IRECEPTIONIST_PROVIDES___CHECK_IN__INT;
+	int BOOKING_HANDLER___CHECK_IN__INT_INT = IRECEPTIONIST_PROVIDES___CHECK_IN__INT_INT;
 
 	/**
-	 * The operation id for the '<em>Cancel Reservation</em>' operation.
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___CANCEL_RESERVATION__INT = IRECEPTIONIST_PROVIDES___CANCEL_RESERVATION__INT;
+	int BOOKING_HANDLER___CANCEL_BOOKING__INT = IRECEPTIONIST_PROVIDES___CANCEL_BOOKING__INT;
 
 	/**
-	 * The operation id for the '<em>List Reservations</em>' operation.
+	 * The operation id for the '<em>List Bookings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___LIST_RESERVATIONS = IRECEPTIONIST_PROVIDES___LIST_RESERVATIONS;
+	int BOOKING_HANDLER___LIST_BOOKINGS = IRECEPTIONIST_PROVIDES___LIST_BOOKINGS;
 
 	/**
 	 * The operation id for the '<em>List Occupied Rooms</em>' operation.
@@ -327,7 +327,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___LIST_OCCUPIED_ROOMS__STRING = IRECEPTIONIST_PROVIDES___LIST_OCCUPIED_ROOMS__STRING;
+	int BOOKING_HANDLER___LIST_OCCUPIED_ROOMS__STRING = IRECEPTIONIST_PROVIDES___LIST_OCCUPIED_ROOMS__STRING;
 
 	/**
 	 * The operation id for the '<em>List Checkins</em>' operation.
@@ -336,7 +336,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___LIST_CHECKINS__STRING = IRECEPTIONIST_PROVIDES___LIST_CHECKINS__STRING;
+	int BOOKING_HANDLER___LIST_CHECKINS__STRING = IRECEPTIONIST_PROVIDES___LIST_CHECKINS__STRING;
 
 	/**
 	 * The operation id for the '<em>List Checkouts</em>' operation.
@@ -345,7 +345,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___LIST_CHECKOUTS__STRING_STRING = IRECEPTIONIST_PROVIDES___LIST_CHECKOUTS__STRING_STRING;
+	int BOOKING_HANDLER___LIST_CHECKOUTS__STRING_STRING = IRECEPTIONIST_PROVIDES___LIST_CHECKOUTS__STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Add Extra To Room</em>' operation.
@@ -354,26 +354,26 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT = IRECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT;
+	int BOOKING_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT = IRECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT;
 
 	/**
-	 * The number of operations of the '<em>Reservation Handler</em>' class.
+	 * The number of operations of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_HANDLER_OPERATION_COUNT = IRECEPTIONIST_PROVIDES_OPERATION_COUNT + 0;
+	int BOOKING_HANDLER_OPERATION_COUNT = IRECEPTIONIST_PROVIDES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl <em>Reservation</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getReservation()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBooking()
 	 * @generated
 	 */
-	int RESERVATION = 1;
+	int BOOKING = 1;
 
 	/**
 	 * The feature id for the '<em><b>Customer</b></em>' reference.
@@ -382,7 +382,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION__CUSTOMER = 0;
+	int BOOKING__CUSTOMER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Roomreservation</b></em>' reference list.
@@ -391,7 +391,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION__ROOMRESERVATION = 1;
+	int BOOKING__ROOMRESERVATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
@@ -400,7 +400,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION__START_DATE = 2;
+	int BOOKING__START_DATE = 2;
 
 	/**
 	 * The feature id for the '<em><b>End Date</b></em>' attribute.
@@ -409,16 +409,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION__END_DATE = 3;
+	int BOOKING__END_DATE = 3;
 
 	/**
-	 * The number of structural features of the '<em>Reservation</em>' class.
+	 * The number of structural features of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_FEATURE_COUNT = 4;
+	int BOOKING_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Reservation</em>' operation.
@@ -427,16 +427,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION___RESERVATION__STRING_STRING_STRING_STRING_INT = 0;
+	int BOOKING___RESERVATION__STRING_STRING_STRING_STRING_INT = 0;
 
 	/**
-	 * The number of operations of the '<em>Reservation</em>' class.
+	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESERVATION_OPERATION_COUNT = 1;
+	int BOOKING_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -927,13 +927,22 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM__OCCUPIED = IADMIN_ROOM_PROVIDES_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Roomtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__ROOMTYPE = IADMIN_ROOM_PROVIDES_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_FEATURE_COUNT = IADMIN_ROOM_PROVIDES_FEATURE_COUNT + 1;
+	int ROOM_FEATURE_COUNT = IADMIN_ROOM_PROVIDES_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Set Occupied</em>' operation.
@@ -1289,7 +1298,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_INITIALIZER__ROOMHANDLER = 0;
+	int HOTEL_INITIALIZER__ROOMHANDLER = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Reservationhandler</b></em>' reference.
@@ -1298,7 +1307,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_INITIALIZER__RESERVATIONHANDLER = 1;
+	int HOTEL_INITIALIZER__RESERVATIONHANDLER = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Hotel Initializer</em>' class.
@@ -1307,7 +1316,25 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_INITIALIZER_FEATURE_COUNT = 2;
+	int HOTEL_INITIALIZER_FEATURE_COUNT = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Startup</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_INITIALIZER___STARTUP__INT = IHOTEL_STARTUP_PROVIDES___STARTUP__INT;
+
+	/**
+	 * The operation id for the '<em>Get Room Handler</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOTEL_INITIALIZER___GET_ROOM_HANDLER = IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER;
 
 	/**
 	 * The number of operations of the '<em>Hotel Initializer</em>' class.
@@ -1316,126 +1343,126 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_INITIALIZER_OPERATION_COUNT = 0;
+	int HOTEL_INITIALIZER_OPERATION_COUNT = IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT + 0;
 
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler <em>Reservation Handler</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler <em>Booking Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reservation Handler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler
+	 * @return the meta object for class '<em>Booking Handler</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler
 	 * @generated
 	 */
-	EClass getReservationHandler();
+	EClass getBookingHandler();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getReservation <em>Reservation</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getReservation <em>Reservation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Reservation</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getReservation()
-	 * @see #getReservationHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getReservation()
+	 * @see #getBookingHandler()
 	 * @generated
 	 */
-	EReference getReservationHandler_Reservation();
+	EReference getBookingHandler_Reservation();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getPaymenthandler <em>Paymenthandler</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymenthandler <em>Paymenthandler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Paymenthandler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getPaymenthandler()
-	 * @see #getReservationHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymenthandler()
+	 * @see #getBookingHandler()
 	 * @generated
 	 */
-	EReference getReservationHandler_Paymenthandler();
+	EReference getBookingHandler_Paymenthandler();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getRoomhandler <em>Roomhandler</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler <em>Roomhandler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Roomhandler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getRoomhandler()
-	 * @see #getReservationHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler()
+	 * @see #getBookingHandler()
 	 * @generated
 	 */
-	EReference getReservationHandler_Roomhandler();
+	EReference getBookingHandler_Roomhandler();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getCurrentReservationId <em>Current Reservation Id</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId <em>Current Reservation Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Current Reservation Id</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler#getCurrentReservationId()
-	 * @see #getReservationHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId()
+	 * @see #getBookingHandler()
 	 * @generated
 	 */
-	EAttribute getReservationHandler_CurrentReservationId();
+	EAttribute getBookingHandler_CurrentReservationId();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation <em>Reservation</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking <em>Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reservation</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation
+	 * @return the meta object for class '<em>Booking</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking
 	 * @generated
 	 */
-	EClass getReservation();
+	EClass getBooking();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getCustomer <em>Customer</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Customer</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getCustomer()
-	 * @see #getReservation()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer()
+	 * @see #getBooking()
 	 * @generated
 	 */
-	EReference getReservation_Customer();
+	EReference getBooking_Customer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getRoomreservation <em>Roomreservation</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomreservation <em>Roomreservation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Roomreservation</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getRoomreservation()
-	 * @see #getReservation()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomreservation()
+	 * @see #getBooking()
 	 * @generated
 	 */
-	EReference getReservation_Roomreservation();
+	EReference getBooking_Roomreservation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getStartDate <em>Start Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate <em>Start Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Start Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getStartDate()
-	 * @see #getReservation()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate()
+	 * @see #getBooking()
 	 * @generated
 	 */
-	EAttribute getReservation_StartDate();
+	EAttribute getBooking_StartDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getEndDate <em>End Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate <em>End Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>End Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getEndDate()
-	 * @see #getReservation()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate()
+	 * @see #getBooking()
 	 * @generated
 	 */
-	EAttribute getReservation_EndDate();
+	EAttribute getBooking_EndDate();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#Reservation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int) <em>Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#Reservation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int) <em>Reservation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Reservation</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#Reservation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#Reservation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getReservation__Reservation__String_String_String_String_int();
+	EOperation getBooking__Reservation__String_String_String_String_int();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer <em>Customer</em>}'.
@@ -1774,6 +1801,17 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getRoom_Occupied();
 
 	/**
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype <em>Roomtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Roomtype</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype()
+	 * @see #getRoom()
+	 * @generated
+	 */
+	EReference getRoom_Roomtype();
+
+	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides <em>IHotel Customer Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2090,34 +2128,34 @@ public interface HotelsystemPackage extends EPackage {
 	EClass getIReceptionistProvides();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#editReservation(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Edit Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#editBookingTime(int, java.lang.String, java.lang.String) <em>Edit Booking Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Edit Reservation</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#editReservation(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Edit Booking Time</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#editBookingTime(int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIReceptionistProvides__EditReservation__int_String_String_String_String();
+	EOperation getIReceptionistProvides__EditBookingTime__int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#addRoomTypeToReservation(int, java.lang.String, int) <em>Add Room Type To Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#addRoomTypeToBooking(int, java.lang.String, int) <em>Add Room Type To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Room Type To Reservation</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#addRoomTypeToReservation(int, java.lang.String, int)
+	 * @return the meta object for the '<em>Add Room Type To Booking</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#addRoomTypeToBooking(int, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getIReceptionistProvides__AddRoomTypeToReservation__int_String_int();
+	EOperation getIReceptionistProvides__AddRoomTypeToBooking__int_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#removeRoomTypeFromReservation(int, java.lang.String) <em>Remove Room Type From Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#removeRoomTypeFromBooking(int, java.lang.String) <em>Remove Room Type From Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Room Type From Reservation</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#removeRoomTypeFromReservation(int, java.lang.String)
+	 * @return the meta object for the '<em>Remove Room Type From Booking</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#removeRoomTypeFromBooking(int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIReceptionistProvides__RemoveRoomTypeFromReservation__int_String();
+	EOperation getIReceptionistProvides__RemoveRoomTypeFromBooking__int_String();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#editRoomType(int, java.lang.String, int) <em>Edit Room Type</em>}' operation.
@@ -2140,34 +2178,34 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getIReceptionistProvides__ListFreeRooms__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#checkIn(int) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#checkIn(int, int) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#checkIn(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#checkIn(int, int)
 	 * @generated
 	 */
-	EOperation getIReceptionistProvides__CheckIn__int();
+	EOperation getIReceptionistProvides__CheckIn__int_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#cancelReservation(int) <em>Cancel Reservation</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#cancelBooking(int) <em>Cancel Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cancel Reservation</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#cancelReservation(int)
+	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#cancelBooking(int)
 	 * @generated
 	 */
-	EOperation getIReceptionistProvides__CancelReservation__int();
+	EOperation getIReceptionistProvides__CancelBooking__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#listReservations() <em>List Reservations</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#listBookings() <em>List Bookings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>List Reservations</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#listReservations()
+	 * @return the meta object for the '<em>List Bookings</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#listBookings()
 	 * @generated
 	 */
-	EOperation getIReceptionistProvides__ListReservations();
+	EOperation getIReceptionistProvides__ListBookings();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides#listOccupiedRooms(java.lang.String) <em>List Occupied Rooms</em>}' operation.
@@ -2233,14 +2271,14 @@ public interface HotelsystemPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl <em>Reservation Handler</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationHandlerImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getReservationHandler()
+		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBookingHandler()
 		 * @generated
 		 */
-		EClass RESERVATION_HANDLER = eINSTANCE.getReservationHandler();
+		EClass BOOKING_HANDLER = eINSTANCE.getBookingHandler();
 
 		/**
 		 * The meta object literal for the '<em><b>Reservation</b></em>' reference list feature.
@@ -2248,7 +2286,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESERVATION_HANDLER__RESERVATION = eINSTANCE.getReservationHandler_Reservation();
+		EReference BOOKING_HANDLER__RESERVATION = eINSTANCE.getBookingHandler_Reservation();
 
 		/**
 		 * The meta object literal for the '<em><b>Paymenthandler</b></em>' reference feature.
@@ -2256,7 +2294,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESERVATION_HANDLER__PAYMENTHANDLER = eINSTANCE.getReservationHandler_Paymenthandler();
+		EReference BOOKING_HANDLER__PAYMENTHANDLER = eINSTANCE.getBookingHandler_Paymenthandler();
 
 		/**
 		 * The meta object literal for the '<em><b>Roomhandler</b></em>' reference feature.
@@ -2264,7 +2302,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESERVATION_HANDLER__ROOMHANDLER = eINSTANCE.getReservationHandler_Roomhandler();
+		EReference BOOKING_HANDLER__ROOMHANDLER = eINSTANCE.getBookingHandler_Roomhandler();
 
 		/**
 		 * The meta object literal for the '<em><b>Current Reservation Id</b></em>' attribute feature.
@@ -2272,17 +2310,17 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESERVATION_HANDLER__CURRENT_RESERVATION_ID = eINSTANCE.getReservationHandler_CurrentReservationId();
+		EAttribute BOOKING_HANDLER__CURRENT_RESERVATION_ID = eINSTANCE.getBookingHandler_CurrentReservationId();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl <em>Reservation</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getReservation()
+		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBooking()
 		 * @generated
 		 */
-		EClass RESERVATION = eINSTANCE.getReservation();
+		EClass BOOKING = eINSTANCE.getBooking();
 
 		/**
 		 * The meta object literal for the '<em><b>Customer</b></em>' reference feature.
@@ -2290,7 +2328,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESERVATION__CUSTOMER = eINSTANCE.getReservation_Customer();
+		EReference BOOKING__CUSTOMER = eINSTANCE.getBooking_Customer();
 
 		/**
 		 * The meta object literal for the '<em><b>Roomreservation</b></em>' reference list feature.
@@ -2298,7 +2336,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESERVATION__ROOMRESERVATION = eINSTANCE.getReservation_Roomreservation();
+		EReference BOOKING__ROOMRESERVATION = eINSTANCE.getBooking_Roomreservation();
 
 		/**
 		 * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
@@ -2306,7 +2344,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESERVATION__START_DATE = eINSTANCE.getReservation_StartDate();
+		EAttribute BOOKING__START_DATE = eINSTANCE.getBooking_StartDate();
 
 		/**
 		 * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
@@ -2314,7 +2352,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESERVATION__END_DATE = eINSTANCE.getReservation_EndDate();
+		EAttribute BOOKING__END_DATE = eINSTANCE.getBooking_EndDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Reservation</b></em>' operation.
@@ -2322,7 +2360,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation RESERVATION___RESERVATION__STRING_STRING_STRING_STRING_INT = eINSTANCE.getReservation__Reservation__String_String_String_String_int();
+		EOperation BOOKING___RESERVATION__STRING_STRING_STRING_STRING_INT = eINSTANCE.getBooking__Reservation__String_String_String_String_int();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -2603,6 +2641,14 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute ROOM__OCCUPIED = eINSTANCE.getRoom_Occupied();
 
 		/**
+		 * The meta object literal for the '<em><b>Roomtype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM__ROOMTYPE = eINSTANCE.getRoom_Roomtype();
+
+		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides <em>IHotel Customer Provides</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2863,28 +2909,28 @@ public interface HotelsystemPackage extends EPackage {
 		EClass IRECEPTIONIST_PROVIDES = eINSTANCE.getIReceptionistProvides();
 
 		/**
-		 * The meta object literal for the '<em><b>Edit Reservation</b></em>' operation.
+		 * The meta object literal for the '<em><b>Edit Booking Time</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRECEPTIONIST_PROVIDES___EDIT_RESERVATION__INT_STRING_STRING_STRING_STRING = eINSTANCE.getIReceptionistProvides__EditReservation__int_String_String_String_String();
+		EOperation IRECEPTIONIST_PROVIDES___EDIT_BOOKING_TIME__INT_STRING_STRING = eINSTANCE.getIReceptionistProvides__EditBookingTime__int_String_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Room Type To Reservation</b></em>' operation.
+		 * The meta object literal for the '<em><b>Add Room Type To Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_RESERVATION__INT_STRING_INT = eINSTANCE.getIReceptionistProvides__AddRoomTypeToReservation__int_String_int();
+		EOperation IRECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT = eINSTANCE.getIReceptionistProvides__AddRoomTypeToBooking__int_String_int();
 
 		/**
-		 * The meta object literal for the '<em><b>Remove Room Type From Reservation</b></em>' operation.
+		 * The meta object literal for the '<em><b>Remove Room Type From Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_RESERVATION__INT_STRING = eINSTANCE.getIReceptionistProvides__RemoveRoomTypeFromReservation__int_String();
+		EOperation IRECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING = eINSTANCE.getIReceptionistProvides__RemoveRoomTypeFromBooking__int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Room Type</b></em>' operation.
@@ -2908,23 +2954,23 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRECEPTIONIST_PROVIDES___CHECK_IN__INT = eINSTANCE.getIReceptionistProvides__CheckIn__int();
+		EOperation IRECEPTIONIST_PROVIDES___CHECK_IN__INT_INT = eINSTANCE.getIReceptionistProvides__CheckIn__int_int();
 
 		/**
-		 * The meta object literal for the '<em><b>Cancel Reservation</b></em>' operation.
+		 * The meta object literal for the '<em><b>Cancel Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRECEPTIONIST_PROVIDES___CANCEL_RESERVATION__INT = eINSTANCE.getIReceptionistProvides__CancelReservation__int();
+		EOperation IRECEPTIONIST_PROVIDES___CANCEL_BOOKING__INT = eINSTANCE.getIReceptionistProvides__CancelBooking__int();
 
 		/**
-		 * The meta object literal for the '<em><b>List Reservations</b></em>' operation.
+		 * The meta object literal for the '<em><b>List Bookings</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IRECEPTIONIST_PROVIDES___LIST_RESERVATIONS = eINSTANCE.getIReceptionistProvides__ListReservations();
+		EOperation IRECEPTIONIST_PROVIDES___LIST_BOOKINGS = eINSTANCE.getIReceptionistProvides__ListBookings();
 
 		/**
 		 * The meta object literal for the '<em><b>List Occupied Rooms</b></em>' operation.

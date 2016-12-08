@@ -13,6 +13,7 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isOccupied <em>Occupied</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype <em>Roomtype</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoom()
@@ -45,5 +46,31 @@ public interface Room extends IAdminRoomProvides, IReceptionistRoomProvides {
 	 * @generated
 	 */
 	void setOccupied(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Roomtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Roomtype</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Roomtype</em>' reference.
+	 * @see #setRoomtype(RoomType)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoom_Roomtype()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	RoomType getRoomtype();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype <em>Roomtype</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Roomtype</em>' reference.
+	 * @see #getRoomtype()
+	 * @generated
+	 */
+	void setRoomtype(RoomType value);
 
 } // Room

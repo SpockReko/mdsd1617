@@ -18,28 +18,28 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Reservation</b></em>'.
+ * An implementation of the model object '<em><b>Booking</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl#getCustomer <em>Customer</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl#getRoomreservation <em>Roomreservation</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl#getStartDate <em>Start Date</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.ReservationImpl#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getCustomer <em>Customer</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getRoomreservation <em>Roomreservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getEndDate <em>End Date</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ReservationImpl extends MinimalEObjectImpl.Container implements Reservation {
+public class BookingImpl extends MinimalEObjectImpl.Container implements Booking {
 	/**
 	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -105,7 +105,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ReservationImpl() {
+	protected BookingImpl() {
 		super();
 	}
 
@@ -116,7 +116,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return HotelsystemPackage.Literals.RESERVATION;
+		return HotelsystemPackage.Literals.BOOKING;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 			customer = (Customer)eResolveProxy(oldCustomer);
 			if (customer != oldCustomer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.RESERVATION__CUSTOMER, oldCustomer, customer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.BOOKING__CUSTOMER, oldCustomer, customer));
 			}
 		}
 		return customer;
@@ -154,7 +154,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 		Customer oldCustomer = customer;
 		customer = newCustomer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.RESERVATION__CUSTOMER, oldCustomer, customer));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING__CUSTOMER, oldCustomer, customer));
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 */
 	public EList<RoomReservation> getRoomreservation() {
 		if (roomreservation == null) {
-			roomreservation = new EObjectResolvingEList<RoomReservation>(RoomReservation.class, this, HotelsystemPackage.RESERVATION__ROOMRESERVATION);
+			roomreservation = new EObjectResolvingEList<RoomReservation>(RoomReservation.class, this, HotelsystemPackage.BOOKING__ROOMRESERVATION);
 		}
 		return roomreservation;
 	}
@@ -187,7 +187,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 		String oldStartDate = startDate;
 		startDate = newStartDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.RESERVATION__START_DATE, oldStartDate, startDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING__START_DATE, oldStartDate, startDate));
 	}
 
 	/**
@@ -208,7 +208,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 		String oldEndDate = endDate;
 		endDate = newEndDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.RESERVATION__END_DATE, oldEndDate, endDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING__END_DATE, oldEndDate, endDate));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Reservation Reservation(String firstName, String lastName, String startDate, String endDate, int id) {
+	public Booking Reservation(String firstName, String lastName, String startDate, String endDate, int id) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -230,14 +230,14 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION__CUSTOMER:
+			case HotelsystemPackage.BOOKING__CUSTOMER:
 				if (resolve) return getCustomer();
 				return basicGetCustomer();
-			case HotelsystemPackage.RESERVATION__ROOMRESERVATION:
+			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
 				return getRoomreservation();
-			case HotelsystemPackage.RESERVATION__START_DATE:
+			case HotelsystemPackage.BOOKING__START_DATE:
 				return getStartDate();
-			case HotelsystemPackage.RESERVATION__END_DATE:
+			case HotelsystemPackage.BOOKING__END_DATE:
 				return getEndDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -252,17 +252,17 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION__CUSTOMER:
+			case HotelsystemPackage.BOOKING__CUSTOMER:
 				setCustomer((Customer)newValue);
 				return;
-			case HotelsystemPackage.RESERVATION__ROOMRESERVATION:
+			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
 				getRoomreservation().clear();
 				getRoomreservation().addAll((Collection<? extends RoomReservation>)newValue);
 				return;
-			case HotelsystemPackage.RESERVATION__START_DATE:
+			case HotelsystemPackage.BOOKING__START_DATE:
 				setStartDate((String)newValue);
 				return;
-			case HotelsystemPackage.RESERVATION__END_DATE:
+			case HotelsystemPackage.BOOKING__END_DATE:
 				setEndDate((String)newValue);
 				return;
 		}
@@ -277,16 +277,16 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION__CUSTOMER:
+			case HotelsystemPackage.BOOKING__CUSTOMER:
 				setCustomer((Customer)null);
 				return;
-			case HotelsystemPackage.RESERVATION__ROOMRESERVATION:
+			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
 				getRoomreservation().clear();
 				return;
-			case HotelsystemPackage.RESERVATION__START_DATE:
+			case HotelsystemPackage.BOOKING__START_DATE:
 				setStartDate(START_DATE_EDEFAULT);
 				return;
-			case HotelsystemPackage.RESERVATION__END_DATE:
+			case HotelsystemPackage.BOOKING__END_DATE:
 				setEndDate(END_DATE_EDEFAULT);
 				return;
 		}
@@ -301,13 +301,13 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.RESERVATION__CUSTOMER:
+			case HotelsystemPackage.BOOKING__CUSTOMER:
 				return customer != null;
-			case HotelsystemPackage.RESERVATION__ROOMRESERVATION:
+			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
 				return roomreservation != null && !roomreservation.isEmpty();
-			case HotelsystemPackage.RESERVATION__START_DATE:
+			case HotelsystemPackage.BOOKING__START_DATE:
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
-			case HotelsystemPackage.RESERVATION__END_DATE:
+			case HotelsystemPackage.BOOKING__END_DATE:
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
 		}
 		return super.eIsSet(featureID);
@@ -321,7 +321,7 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case HotelsystemPackage.RESERVATION___RESERVATION__STRING_STRING_STRING_STRING_INT:
+			case HotelsystemPackage.BOOKING___RESERVATION__STRING_STRING_STRING_STRING_INT:
 				return Reservation((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Integer)arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -345,4 +345,4 @@ public class ReservationImpl extends MinimalEObjectImpl.Container implements Res
 		return result.toString();
 	}
 
-} //ReservationImpl
+} //BookingImpl

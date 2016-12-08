@@ -68,12 +68,12 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 	protected HotelsystemSwitch<Adapter> modelSwitch =
 		new HotelsystemSwitch<Adapter>() {
 			@Override
-			public Adapter caseReservationHandler(ReservationHandler object) {
-				return createReservationHandlerAdapter();
+			public Adapter caseBookingHandler(BookingHandler object) {
+				return createBookingHandlerAdapter();
 			}
 			@Override
-			public Adapter caseReservation(Reservation object) {
-				return createReservationAdapter();
+			public Adapter caseBooking(Booking object) {
+				return createBookingAdapter();
 			}
 			@Override
 			public Adapter caseCustomer(Customer object) {
@@ -164,30 +164,30 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler <em>Reservation Handler</em>}'.
+	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler <em>Booking Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.ReservationHandler
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler
 	 * @generated
 	 */
-	public Adapter createReservationHandlerAdapter() {
+	public Adapter createBookingHandlerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation <em>Reservation</em>}'.
+	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking <em>Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking
 	 * @generated
 	 */
-	public Adapter createReservationAdapter() {
+	public Adapter createBookingAdapter() {
 		return null;
 	}
 

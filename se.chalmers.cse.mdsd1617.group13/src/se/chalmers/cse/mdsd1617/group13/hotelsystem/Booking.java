@@ -8,24 +8,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Reservation</b></em>'.
+ * A representation of the model object '<em><b>Booking</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getCustomer <em>Customer</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getRoomreservation <em>Roomreservation</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getStartDate <em>Start Date</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer <em>Customer</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomreservation <em>Roomreservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate <em>End Date</em>}</li>
  * </ul>
  *
- * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getReservation()
+ * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking()
  * @model
  * @generated
  */
-public interface Reservation extends EObject {
+public interface Booking extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Customer</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -36,14 +36,14 @@ public interface Reservation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Customer</em>' reference.
 	 * @see #setCustomer(Customer)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getReservation_Customer()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_Customer()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	Customer getCustomer();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getCustomer <em>Customer</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer <em>Customer</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Customer</em>' reference.
@@ -62,7 +62,7 @@ public interface Reservation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Roomreservation</em>' reference list.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getReservation_Roomreservation()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_Roomreservation()
 	 * @model ordered="false"
 	 * @generated
 	 */
@@ -78,14 +78,14 @@ public interface Reservation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start Date</em>' attribute.
 	 * @see #setStartDate(String)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getReservation_StartDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_StartDate()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	String getStartDate();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getStartDate <em>Start Date</em>}' attribute.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate <em>Start Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Start Date</em>' attribute.
@@ -104,14 +104,14 @@ public interface Reservation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Date</em>' attribute.
 	 * @see #setEndDate(String)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getReservation_EndDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_EndDate()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	String getEndDate();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Reservation#getEndDate <em>End Date</em>}' attribute.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate <em>End Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>End Date</em>' attribute.
@@ -126,6 +126,6 @@ public interface Reservation extends EObject {
 	 * @model required="true" ordered="false" firstNameRequired="true" firstNameOrdered="false" lastNameRequired="true" lastNameOrdered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" idRequired="true" idOrdered="false"
 	 * @generated
 	 */
-	Reservation Reservation(String firstName, String lastName, String startDate, String endDate, int id);
+	Booking Reservation(String firstName, String lastName, String startDate, String endDate, int id);
 
-} // Reservation
+} // Booking

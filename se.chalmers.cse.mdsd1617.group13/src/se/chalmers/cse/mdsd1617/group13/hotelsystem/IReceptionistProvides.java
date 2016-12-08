@@ -20,10 +20,10 @@ public interface IReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model reservationIdRequired="true" reservationIdOrdered="false" firstNameRequired="true" firstNameOrdered="false" lastNameRequired="true" lastNameOrdered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
+	 * @model reservationIdRequired="true" reservationIdOrdered="false" firstNameRequired="true" firstNameOrdered="false" endDateRequired="true" endDateOrdered="false"
 	 * @generated
 	 */
-	void editReservation(int reservationId, String firstName, String lastName, String startDate, String endDate);
+	void editBookingTime(int reservationId, String firstName, String endDate);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public interface IReceptionistProvides extends EObject {
 	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" numberOfRoomsForTypeRequired="true" numberOfRoomsForTypeOrdered="false"
 	 * @generated
 	 */
-	boolean addRoomTypeToReservation(int reservationId, String roomType, int numberOfRoomsForType);
+	boolean addRoomTypeToBooking(int reservationId, String roomType, int numberOfRoomsForType);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public interface IReceptionistProvides extends EObject {
 	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
 	 * @generated
 	 */
-	boolean removeRoomTypeFromReservation(int reservationId, String roomType);
+	boolean removeRoomTypeFromBooking(int reservationId, String roomType);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -52,18 +52,18 @@ public interface IReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model reservationIdRequired="true" reservationIdOrdered="false"
+	 * @model ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
 	 * @generated
 	 */
-	void listFreeRooms(int reservationId);
+	EList<Integer> listFreeRooms(int reservationId);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
+	 * @model required="true" many="false" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomNumbersRequired="true" roomNumbersOrdered="false"
 	 * @generated
 	 */
-	EList checkIn(int reservationId);
+	EList checkIn(int reservationId, int roomNumbers);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public interface IReceptionistProvides extends EObject {
 	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
 	 * @generated
 	 */
-	boolean cancelReservation(int reservationId);
+	boolean cancelBooking(int reservationId);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public interface IReceptionistProvides extends EObject {
 	 * @model required="true" many="false" ordered="false"
 	 * @generated
 	 */
-	EList listReservations();
+	EList listBookings();
 
 	/**
 	 * <!-- begin-user-doc -->

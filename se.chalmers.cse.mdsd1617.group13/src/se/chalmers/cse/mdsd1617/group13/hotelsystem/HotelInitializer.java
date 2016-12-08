@@ -2,8 +2,6 @@
  */
 package se.chalmers.cse.mdsd1617.group13.hotelsystem;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Hotel Initializer</b></em>'.
@@ -21,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface HotelInitializer extends EObject {
+public interface HotelInitializer extends IHotelStartupProvides {
 	/**
 	 * Returns the value of the '<em><b>Roomhandler</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -57,12 +55,12 @@ public interface HotelInitializer extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reservationhandler</em>' reference.
-	 * @see #setReservationhandler(ReservationHandler)
+	 * @see #setReservationhandler(BookingHandler)
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer_Reservationhandler()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	ReservationHandler getReservationhandler();
+	BookingHandler getReservationhandler();
 
 	/**
 	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getReservationhandler <em>Reservationhandler</em>}' reference.
@@ -72,6 +70,6 @@ public interface HotelInitializer extends EObject {
 	 * @see #getReservationhandler()
 	 * @generated
 	 */
-	void setReservationhandler(ReservationHandler value);
+	void setReservationhandler(BookingHandler value);
 
 } // HotelInitializer
