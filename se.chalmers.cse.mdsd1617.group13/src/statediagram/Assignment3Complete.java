@@ -46,7 +46,7 @@ public class Assignment3Complete {
 			for(Booking b : bookings){
 				if(b.getBookingId() == bookingId){
 					currentBooking = b;
-					currentBooking.getReservations().add(new Reservation(currentReservationNumber++));
+					currentBooking.getReservations().add(new RoomReservation(currentReservationNumber++));
 					return true;
 				}
 			}
@@ -55,7 +55,7 @@ public class Assignment3Complete {
 	}
 	
 	public boolean initializeReservation(long reservationId){
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.getReservationId() == reservationId){
 				return true;
 			}
@@ -74,7 +74,7 @@ public class Assignment3Complete {
 	}
 	
 	public boolean confirmReservation(long reservationId){
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.getReservationId() == reservationId){
 				return true;
 			}
@@ -84,7 +84,7 @@ public class Assignment3Complete {
 	
 	public boolean checkInBooking(long bookingId){
 		activateBooking(bookingId);
-		Reservation r = currentBooking.getCheckIn();
+		RoomReservation r = currentBooking.getCheckIn();
 		if(r == null){
 			return false;
 		} else if (r.isWaiting()){
@@ -95,7 +95,7 @@ public class Assignment3Complete {
 	}
 	
 	public boolean checkInReservation(long reservationId){
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if((r.getReservationId() == reservationId) && r.isReadyToCheckIn()){
 				for(Room rm : rooms){
 					if(rm.isFree()){
@@ -110,7 +110,7 @@ public class Assignment3Complete {
 	}
 
 	public boolean checkInRoom(long roomId){
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			Room room = r.getRoom();
 			if(room != null && room.getRoomId() == roomId) {
 				return true;
@@ -121,18 +121,18 @@ public class Assignment3Complete {
 	
 	public boolean initiateCheckout(long bookingId){
 		activateBooking(bookingId);
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.isWaiting()){
 				return false;
 			}
 		}
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.getReservationId() == currentReservation && r.isCheckedIn()){
 				r.readyToCheckOut();
 				return true;
 			}
 		}
-		Reservation r = currentBooking.getCheckOut();
+		RoomReservation r = currentBooking.getCheckOut();
 		if(r == null){
 			return false;
 		} else if (r.isCheckedIn()){
@@ -142,7 +142,7 @@ public class Assignment3Complete {
 	}
 	
 	public boolean checkOutReservation(long reservationId){
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.getReservationId() == reservationId && r.isReadyToCheckOut()){
 				return true;
 			}
@@ -150,7 +150,7 @@ public class Assignment3Complete {
 	}
 	
 	public boolean checkOutRoom(long roomId){
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			Room room = r.getRoom();
 			if(room != null && room.getRoomId() == roomId && r.isReadyToCheckOut()){
 				r.freeRoom(room);
@@ -163,7 +163,7 @@ public class Assignment3Complete {
 	
 	public boolean payCheckedOuts(long bookingId){
 		activateBooking(bookingId);
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.isCheckedOut()){
 				r.payReservation();
 			}
@@ -173,7 +173,7 @@ public class Assignment3Complete {
 		
 	public boolean payAllCheckedOuts(long bookingId){
 		activateBooking(bookingId);
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(!r.isPaidReservation()){
 				return false;
 			}
@@ -183,7 +183,7 @@ public class Assignment3Complete {
 
 	public boolean checkInWholeBooking(long bookingId){
 		activateBooking(bookingId);
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.isWaiting()){
 				r.readyToCheckIn();
 			}
@@ -193,12 +193,12 @@ public class Assignment3Complete {
 	
 	public boolean checkOutWholeBooking(long bookingId){
 		activateBooking(bookingId);
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(!r.isCheckedIn()){
 				return false;
 			}
 		}
-		for(Reservation r : currentBooking.getReservations()){
+		for(RoomReservation r : currentBooking.getReservations()){
 			if(r.isCheckedIn()){
 				r.readyToCheckOut();
 			}

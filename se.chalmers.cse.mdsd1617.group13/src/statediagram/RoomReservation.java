@@ -1,13 +1,13 @@
 package statediagram;
 
-public class Reservation {
+public class RoomReservation {
 	
 	private long reservationId;
 	private Room room;
 	private enum ReservationStatus{WAITING, RCHECKIN, CHECKEDIN, RCHECKOUT, CHECKEDOUT, PAID};
 	ReservationStatus resStatus;
 	
-	public Reservation(long reservationId){
+	public RoomReservation(long reservationId){
 		this.reservationId = reservationId;
 		this.resStatus = ReservationStatus.WAITING;
 	}

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Booking {
 
-	private List<Reservation> reservations = new ArrayList<>();
+	private List<RoomReservation> reservations = new ArrayList<>();
 	private long bookingId;
 	private int index = 0;
 	private int checkouts = 0;
@@ -14,7 +14,7 @@ public class Booking {
 		this.bookingId = bookingId;
 	}
 
-	public List<Reservation> getReservations() {
+	public List<RoomReservation> getReservations() {
 		return reservations;
 	}
 
@@ -26,7 +26,7 @@ public class Booking {
 		this.bookingId = bookingId;
 	}
 
-	public Reservation getCheckIn(){
+	public RoomReservation getCheckIn(){
 		if(index >= reservations.size()){
 			return null;
 		} else {
@@ -34,7 +34,7 @@ public class Booking {
 		}
 	}
 	
-	public Reservation getCheckOut(){
+	public RoomReservation getCheckOut(){
 		if(index > reservations.size() || checkouts == index){
 			return null;
 		} else {
