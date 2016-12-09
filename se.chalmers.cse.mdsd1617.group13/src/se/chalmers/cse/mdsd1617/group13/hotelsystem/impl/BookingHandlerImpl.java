@@ -227,7 +227,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editBookingTime(int reservationId, String firstName, String endDate) {
+	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -315,7 +315,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList listCheckins(String startDate) {
+	public EList listCheckins(String startDate, String endDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -447,6 +447,28 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean BookingCheckin(String date) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String addDay(String date) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -567,8 +589,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case HotelsystemPackage.BOOKING_HANDLER___EDIT_BOOKING_TIME__INT_STRING_STRING:
-				editBookingTime((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-				return null;
+				return editBookingTime((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT:
 				return addRoomTypeToBooking((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING:
@@ -583,8 +604,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return listBookings();
 			case HotelsystemPackage.BOOKING_HANDLER___LIST_OCCUPIED_ROOMS__STRING:
 				return listOccupiedRooms((String)arguments.get(0));
-			case HotelsystemPackage.BOOKING_HANDLER___LIST_CHECKINS__STRING:
-				return listCheckins((String)arguments.get(0));
+			case HotelsystemPackage.BOOKING_HANDLER___LIST_CHECKINS__STRING_STRING:
+				return listCheckins((String)arguments.get(0), (String)arguments.get(1));
 			case HotelsystemPackage.BOOKING_HANDLER___LIST_CHECKOUTS__STRING_STRING:
 				return listCheckouts((String)arguments.get(0), (String)arguments.get(1));
 			case HotelsystemPackage.BOOKING_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT:
@@ -607,6 +628,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return payRoomDuringCheckout((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 			case HotelsystemPackage.BOOKING_HANDLER___CHECK_IN_ROOM__STRING_INT:
 				return checkInRoom((String)arguments.get(0), (Integer)arguments.get(1));
+			case HotelsystemPackage.BOOKING_HANDLER___BOOKING_CHECKIN__STRING:
+				return BookingCheckin((String)arguments.get(0));
+			case HotelsystemPackage.BOOKING_HANDLER___ADD_DAY__STRING:
+				return addDay((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

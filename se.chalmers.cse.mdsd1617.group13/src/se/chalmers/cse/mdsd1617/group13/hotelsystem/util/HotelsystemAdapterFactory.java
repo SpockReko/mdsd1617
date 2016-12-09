@@ -140,8 +140,8 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 				return createHotelInitializerAdapter();
 			}
 			@Override
-			public Adapter caseIReceptionistProvides(IReceptionistProvides object) {
-				return createIReceptionistProvidesAdapter();
+			public Adapter caseIHotelReceptionistProvides(IHotelReceptionistProvides object) {
+				return createIHotelReceptionistProvidesAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -416,16 +416,16 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides <em>IReceptionist Provides</em>}'.
+	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides
 	 * @generated
 	 */
-	public Adapter createIReceptionistProvidesAdapter() {
+	public Adapter createIHotelReceptionistProvidesAdapter() {
 		return null;
 	}
 

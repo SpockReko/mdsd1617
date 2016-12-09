@@ -2,6 +2,7 @@
  */
 package se.chalmers.cse.mdsd1617.group13.hotelsystem;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,9 +19,17 @@ public interface IRoomHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
+	 * @model kind="operation" ordered="false"
 	 * @generated
 	 */
-	RoomType getAllRoomTypes();
+	EList<RoomType> getAllRoomTypes();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomtypeRequired="true" roomtypeOrdered="false"
+	 * @generated
+	 */
+	int countFreeRoom(RoomType roomtype);
 
 } // IRoomHandler

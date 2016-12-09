@@ -15,6 +15,7 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isOccupied <em>Occupied</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype <em>Roomtype</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isBlocked <em>Blocked</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomId <em>Room Id</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoom()
@@ -99,5 +100,31 @@ public interface Room extends IAdminRoomProvides, IReceptionistRoomProvides {
 	 * @generated
 	 */
 	void setBlocked(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Room Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Id</em>' attribute.
+	 * @see #setRoomId(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoom_RoomId()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getRoomId();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomId <em>Room Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Id</em>' attribute.
+	 * @see #getRoomId()
+	 * @generated
+	 */
+	void setRoomId(int value);
 
 } // Room

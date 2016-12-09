@@ -69,7 +69,7 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 			case HotelsystemPackage.BOOKING_HANDLER: {
 				BookingHandler bookingHandler = (BookingHandler)theEObject;
 				T result = caseBookingHandler(bookingHandler);
-				if (result == null) result = caseIReceptionistProvides(bookingHandler);
+				if (result == null) result = caseIHotelReceptionistProvides(bookingHandler);
 				if (result == null) result = caseIHotelCustomerProvides(bookingHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -181,9 +181,9 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HotelsystemPackage.IRECEPTIONIST_PROVIDES: {
-				IReceptionistProvides iReceptionistProvides = (IReceptionistProvides)theEObject;
-				T result = caseIReceptionistProvides(iReceptionistProvides);
+			case HotelsystemPackage.IHOTEL_RECEPTIONIST_PROVIDES: {
+				IHotelReceptionistProvides iHotelReceptionistProvides = (IHotelReceptionistProvides)theEObject;
+				T result = caseIHotelReceptionistProvides(iHotelReceptionistProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -462,17 +462,17 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IReceptionist Provides</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>IHotel Receptionist Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IReceptionist Provides</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>IHotel Receptionist Provides</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIReceptionistProvides(IReceptionistProvides object) {
+	public T caseIHotelReceptionistProvides(IHotelReceptionistProvides object) {
 		return null;
 	}
 

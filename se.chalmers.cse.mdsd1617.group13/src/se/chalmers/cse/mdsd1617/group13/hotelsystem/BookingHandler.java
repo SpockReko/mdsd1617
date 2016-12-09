@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface BookingHandler extends IReceptionistProvides, IHotelCustomerProvides {
+public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustomerProvides {
 	/**
 	 * Returns the value of the '<em><b>Reservation</b></em>' reference list.
 	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking}.
@@ -117,5 +117,21 @@ public interface BookingHandler extends IReceptionistProvides, IHotelCustomerPro
 	 * @generated
 	 */
 	void setCurrentReservationId(int value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" dateRequired="true" dateOrdered="false"
+	 * @generated
+	 */
+	boolean BookingCheckin(String date);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" dateRequired="true" dateOrdered="false"
+	 * @generated
+	 */
+	String addDay(String date);
 
 } // BookingHandler

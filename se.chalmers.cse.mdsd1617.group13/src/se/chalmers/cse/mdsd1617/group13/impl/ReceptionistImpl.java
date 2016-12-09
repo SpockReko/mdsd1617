@@ -13,7 +13,7 @@ import se.chalmers.cse.mdsd1617.group13.Group13Package;
 import se.chalmers.cse.mdsd1617.group13.Receptionist;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	 * @generated
 	 * @ordered
 	 */
-	protected IReceptionistProvides ireceptionistprovides;
+	protected IHotelReceptionistProvides ireceptionistprovides;
 
 	/**
 	 * The cached value of the '{@link #getIhotelcustomerprovides() <em>Ihotelcustomerprovides</em>}' reference.
@@ -74,10 +74,10 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IReceptionistProvides getIreceptionistprovides() {
+	public IHotelReceptionistProvides getIreceptionistprovides() {
 		if (ireceptionistprovides != null && ireceptionistprovides.eIsProxy()) {
 			InternalEObject oldIreceptionistprovides = (InternalEObject)ireceptionistprovides;
-			ireceptionistprovides = (IReceptionistProvides)eResolveProxy(oldIreceptionistprovides);
+			ireceptionistprovides = (IHotelReceptionistProvides)eResolveProxy(oldIreceptionistprovides);
 			if (ireceptionistprovides != oldIreceptionistprovides) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES, oldIreceptionistprovides, ireceptionistprovides));
@@ -91,7 +91,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IReceptionistProvides basicGetIreceptionistprovides() {
+	public IHotelReceptionistProvides basicGetIreceptionistprovides() {
 		return ireceptionistprovides;
 	}
 
@@ -100,8 +100,8 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIreceptionistprovides(IReceptionistProvides newIreceptionistprovides) {
-		IReceptionistProvides oldIreceptionistprovides = ireceptionistprovides;
+	public void setIreceptionistprovides(IHotelReceptionistProvides newIreceptionistprovides) {
+		IHotelReceptionistProvides oldIreceptionistprovides = ireceptionistprovides;
 		ireceptionistprovides = newIreceptionistprovides;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES, oldIreceptionistprovides, ireceptionistprovides));
@@ -172,7 +172,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES:
-				setIreceptionistprovides((IReceptionistProvides)newValue);
+				setIreceptionistprovides((IHotelReceptionistProvides)newValue);
 				return;
 			case Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
 				setIhotelcustomerprovides((IHotelCustomerProvides)newValue);
@@ -190,7 +190,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES:
-				setIreceptionistprovides((IReceptionistProvides)null);
+				setIreceptionistprovides((IHotelReceptionistProvides)null);
 				return;
 			case Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
 				setIhotelcustomerprovides((IHotelCustomerProvides)null);

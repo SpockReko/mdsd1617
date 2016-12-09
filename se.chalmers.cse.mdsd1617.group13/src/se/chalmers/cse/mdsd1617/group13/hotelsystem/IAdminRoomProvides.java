@@ -15,4 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IAdminRoomProvides extends EObject {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomRequired="true" roomOrdered="false"
+	 * @generated
+	 */
+	boolean hasRoomType(RoomType room);
 } // IAdminRoomProvides

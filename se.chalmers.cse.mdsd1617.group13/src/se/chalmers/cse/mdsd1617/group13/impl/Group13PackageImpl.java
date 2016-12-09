@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.uml2.types.TypesPackage;
 import se.chalmers.cse.mdsd1617.group13.Administrator;
 import se.chalmers.cse.mdsd1617.group13.Group13Factory;
 import se.chalmers.cse.mdsd1617.group13.Group13Package;
@@ -95,6 +96,9 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 		Group13PackageImpl theGroup13Package = (Group13PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Group13PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Group13PackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		HotelsystemPackageImpl theHotelsystemPackage = (HotelsystemPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI) instanceof HotelsystemPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI) : HotelsystemPackage.eINSTANCE);
@@ -264,7 +268,7 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(receptionistEClass, Receptionist.class, "Receptionist", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReceptionist_Ireceptionistprovides(), theHotelsystemPackage.getIReceptionistProvides(), null, "ireceptionistprovides", null, 1, 1, Receptionist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getReceptionist_Ireceptionistprovides(), theHotelsystemPackage.getIHotelReceptionistProvides(), null, "ireceptionistprovides", null, 1, 1, Receptionist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getReceptionist_Ihotelcustomerprovides(), theHotelsystemPackage.getIHotelCustomerProvides(), null, "ihotelcustomerprovides", null, 1, 1, Receptionist.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(administratorEClass, Administrator.class, "Administrator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

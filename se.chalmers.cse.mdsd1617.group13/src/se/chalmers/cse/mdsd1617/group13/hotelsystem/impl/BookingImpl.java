@@ -37,6 +37,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#isCanceled <em>Canceled</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBookingId <em>Booking Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,6 +122,26 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @ordered
 	 */
 	protected boolean canceled = CANCELED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBookingId() <em>Booking Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBookingId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int BOOKING_ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getBookingId() <em>Booking Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBookingId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int bookingId = BOOKING_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,6 +280,27 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getBookingId() {
+		return bookingId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBookingId(int newBookingId) {
+		int oldBookingId = bookingId;
+		bookingId = newBookingId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING__BOOKING_ID, oldBookingId, bookingId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void cancel() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -295,6 +337,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getEndDate();
 			case HotelsystemPackage.BOOKING__CANCELED:
 				return isCanceled();
+			case HotelsystemPackage.BOOKING__BOOKING_ID:
+				return getBookingId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -324,6 +368,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__CANCELED:
 				setCanceled((Boolean)newValue);
 				return;
+			case HotelsystemPackage.BOOKING__BOOKING_ID:
+				setBookingId((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -351,6 +398,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__CANCELED:
 				setCanceled(CANCELED_EDEFAULT);
 				return;
+			case HotelsystemPackage.BOOKING__BOOKING_ID:
+				setBookingId(BOOKING_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -373,6 +423,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
 			case HotelsystemPackage.BOOKING__CANCELED:
 				return canceled != CANCELED_EDEFAULT;
+			case HotelsystemPackage.BOOKING__BOOKING_ID:
+				return bookingId != BOOKING_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -410,6 +462,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(endDate);
 		result.append(", canceled: ");
 		result.append(canceled);
+		result.append(", BookingId: ");
+		result.append(bookingId);
 		result.append(')');
 		return result.toString();
 	}

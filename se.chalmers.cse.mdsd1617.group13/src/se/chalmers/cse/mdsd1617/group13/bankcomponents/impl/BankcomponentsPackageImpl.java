@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.uml2.types.TypesPackage;
 import se.chalmers.cse.mdsd1617.group13.Group13Package;
 
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankAdministrator;
@@ -95,6 +96,9 @@ public class BankcomponentsPackageImpl extends EPackageImpl implements Bankcompo
 		BankcomponentsPackageImpl theBankcomponentsPackage = (BankcomponentsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof BankcomponentsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new BankcomponentsPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		Group13PackageImpl theGroup13Package = (Group13PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Group13Package.eNS_URI) instanceof Group13PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Group13Package.eNS_URI) : Group13Package.eINSTANCE);

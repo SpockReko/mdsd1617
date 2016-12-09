@@ -34,6 +34,22 @@
               </ownedAttribute>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_02xLQLhrEeaytfot7Bi3IA" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_Ef28AKnyEeaqs-4dkG4NMQ" contract="_Ef28AKnyEeaqs-4dkG4NMQ"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hDDwML1NEea3vq_wXUyZng" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_UlwsQKspEea_ZvXe8054NA" contract="_UlwsQKspEea_ZvXe8054NA"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_u5vSQL30EeaPAbmKLAIXGw" name="BookingCheckin">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_3DeZgL30EeaPAbmKLAIXGw" name="date">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_6bjIkL30EeaPAbmKLAIXGw" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_A6VJ4L31EeaPAbmKLAIXGw" name="addDay">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_IN9vkL31EeaPAbmKLAIXGw" name="date">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_KLGKoL31EeaPAbmKLAIXGw" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+                </ownedParameter>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_A4oCULhmEeaytfot7Bi3IA" name="RoomHandler" visibility="public">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_W7WLQLhpEeaytfot7Bi3IA" name="iadminroomtypeprovides" type="_IpqVsLhmEeaytfot7Bi3IA" association="_W7Sg4LhpEeaytfot7Bi3IA">
@@ -84,6 +100,9 @@
               </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_8OaZIL1LEea3vq_wXUyZng" name="canceled">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_Gbb3cL30EeaPAbmKLAIXGw" name="BookingId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_AYEWIL1MEea3vq_wXUyZng" name="cancel"/>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_eajVgL1QEea3vq_wXUyZng" name="getOccupiedRooms">
@@ -158,13 +177,16 @@
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               </ownedAttribute>
             </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_Q6JlMLhmEeaytfot7Bi3IA" name="Room">
+            <packagedElement xmi:type="uml:Class" xmi:id="_Q6JlMLhmEeaytfot7Bi3IA" name="Room" visibility="protected">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_BxD7kLuaEeaKgqXTYyzHxQ" name="occupied">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
               </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_t3jvsb1IEea3vq_wXUyZng" name="roomtype" type="_IpqVsLhmEeaytfot7Bi3IA" association="_t3h6gL1IEea3vq_wXUyZng"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_pN0VsL1OEea3vq_wXUyZng" name="blocked">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_bExvcL3zEeaPAbmKLAIXGw" name="roomId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_RkTOELhpEeaytfot7Bi3IA" client="_Q6JlMLhmEeaytfot7Bi3IA" supplier="_7b43YLhmEeaytfot7Bi3IA" contract="_7b43YLhmEeaytfot7Bi3IA"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TyNQELhpEeaytfot7Bi3IA" client="_Q6JlMLhmEeaytfot7Bi3IA" supplier="_XI6YELhnEeaytfot7Bi3IA" contract="_XI6YELhnEeaytfot7Bi3IA"/>
@@ -175,7 +197,14 @@
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>
             </packagedElement>
-            <packagedElement xmi:type="uml:Interface" xmi:id="_7b43YLhmEeaytfot7Bi3IA" name="IAdminRoomProvides"/>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_7b43YLhmEeaytfot7Bi3IA" name="IAdminRoomProvides">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_DYcScL3yEeaPAbmKLAIXGw" name="hasRoomType">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_gbMP8L3yEeaPAbmKLAIXGw" name="room" type="_IpqVsLhmEeaytfot7Bi3IA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qX04ML3yEeaPAbmKLAIXGw" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_XI6YELhnEeaytfot7Bi3IA" name="IReceptionistRoomProvides">
               <ownedOperation xmi:type="uml:Operation" xmi:id="_oe3CELuaEeaKgqXTYyzHxQ" name="setOccupied">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_yPxigLuaEeaKgqXTYyzHxQ" name="occupied">
@@ -319,18 +348,20 @@
                 </ownedParameter>
               </ownedOperation>
             </packagedElement>
-            <packagedElement xmi:type="uml:Interface" xmi:id="_Ef28AKnyEeaqs-4dkG4NMQ" name="IReceptionistProvides">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_Ef28AKnyEeaqs-4dkG4NMQ" name="IHotelReceptionistProvides">
               <ownedOperation xmi:type="uml:Operation" xmi:id="_R2D2MKn0Eeaqs-4dkG4NMQ" name="editBookingTime" visibility="public" concurrency="concurrent">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_hj0IgKn0Eeaqs-4dkG4NMQ" name="reservationId">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_t6jmQKn1Eeaqs-4dkG4NMQ" name="firstName">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_t6jmQKn1Eeaqs-4dkG4NMQ" name="startDate">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_w14H4Kn1Eeaqs-4dkG4NMQ" name="endDate">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_uuK_EKn2Eeaqs-4dkG4NMQ" name="verification" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_uuK_EKn2Eeaqs-4dkG4NMQ" name="verification" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+                </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_mb0YoKpJEeaqs-4dkG4NMQ" name="addRoomTypeToBooking">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_sgoawKpJEeaqs-4dkG4NMQ" name="reservationId">
@@ -408,6 +439,9 @@
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_ncLGMKn4Eeaqs-4dkG4NMQ" name="return" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_eAiggL30EeaPAbmKLAIXGw" name="endDate">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_SClu8Kn3Eeaqs-4dkG4NMQ" name="listCheckouts">
@@ -555,7 +589,16 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_OFT1ELuSEeaKgqXTYyzHxQ" name="IRoomHandler">
               <ownedOperation xmi:type="uml:Operation" xmi:id="_LZQIYLubEeaKgqXTYyzHxQ" name="getAllRoomTypes">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_UVcAQLubEeaKgqXTYyzHxQ" name="roomTypes" type="_IpqVsLhmEeaytfot7Bi3IA" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_UVcAQLubEeaKgqXTYyzHxQ" name="roomTypes" type="_IpqVsLhmEeaytfot7Bi3IA" direction="return">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IFVC4L3zEeaPAbmKLAIXGw"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IFVC4b3zEeaPAbmKLAIXGw" value="*"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_3gmsUL3yEeaPAbmKLAIXGw" name="countFreeRoom">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_AAzLwL3zEeaPAbmKLAIXGw" name="roomtype" type="_IpqVsLhmEeaytfot7Bi3IA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_DqsDkL3zEeaPAbmKLAIXGw" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+                </ownedParameter>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_GDYBILuhEeaKgqXTYyzHxQ" name="HotelInitializer">

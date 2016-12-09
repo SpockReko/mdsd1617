@@ -3,7 +3,7 @@
 package se.chalmers.cse.mdsd1617.group13;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,12 +32,12 @@ public interface Receptionist extends User {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ireceptionistprovides</em>' reference.
-	 * @see #setIreceptionistprovides(IReceptionistProvides)
+	 * @see #setIreceptionistprovides(IHotelReceptionistProvides)
 	 * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getReceptionist_Ireceptionistprovides()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	IReceptionistProvides getIreceptionistprovides();
+	IHotelReceptionistProvides getIreceptionistprovides();
 
 	/**
 	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.Receptionist#getIreceptionistprovides <em>Ireceptionistprovides</em>}' reference.
@@ -47,7 +47,7 @@ public interface Receptionist extends User {
 	 * @see #getIreceptionistprovides()
 	 * @generated
 	 */
-	void setIreceptionistprovides(IReceptionistProvides value);
+	void setIreceptionistprovides(IHotelReceptionistProvides value);
 
 	/**
 	 * Returns the value of the '<em><b>Ihotelcustomerprovides</b></em>' reference.
