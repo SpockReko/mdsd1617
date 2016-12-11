@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomprovides <em>Ireceptionistroomprovides</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#get_ <em></em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomExtras <em>Room Extras</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getBill <em>Bill</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}</li>
@@ -81,20 +81,20 @@ public interface RoomReservation extends EObject {
 	void setIreceptionistroomtypeprovides(RoomType value);
 
 	/**
-	 * Returns the value of the '<em><b></b></em>' reference list.
+	 * Returns the value of the '<em><b>Room Extras</b></em>' reference list.
 	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em></em>' reference list isn't clear,
+	 * If the meaning of the '<em>Room Extras</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em></em>' reference list.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation__()
+	 * @return the value of the '<em>Room Extras</em>' reference list.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_RoomExtras()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<RoomExtras> get_();
+	EList<RoomExtras> getRoomExtras();
 
 	/**
 	 * Returns the value of the '<em><b>Bill</b></em>' reference.

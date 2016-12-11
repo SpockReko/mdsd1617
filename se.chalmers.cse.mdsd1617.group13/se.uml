@@ -118,7 +118,7 @@
             <packagedElement xmi:type="uml:Class" xmi:id="_HJOdsLhmEeaytfot7Bi3IA" name="RoomReservation">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_i5xsIrhpEeaytfot7Bi3IA" name="ireceptionistroomprovides" type="_XI6YELhnEeaytfot7Bi3IA" association="_i5xFELhpEeaytfot7Bi3IA"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_06nbYrhpEeaytfot7Bi3IA" name="ireceptionistroomtypeprovides" type="_IpqVsLhmEeaytfot7Bi3IA" association="_06m0ULhpEeaytfot7Bi3IA"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_O4t8IrhqEeaytfot7Bi3IA" type="_LZjDYLhmEeaytfot7Bi3IA" association="_O4suALhqEeaytfot7Bi3IA">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_O4t8IrhqEeaytfot7Bi3IA" name="roomExtras" type="_LZjDYLhmEeaytfot7Bi3IA" association="_O4suALhqEeaytfot7Bi3IA">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SZ_qgLhqEeaytfot7Bi3IA"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SaBfsLhqEeaytfot7Bi3IA" value="*"/>
               </ownedAttribute>

@@ -465,7 +465,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoomReservation__() {
+	public EReference getRoomReservation_RoomExtras() {
 		return (EReference)roomReservationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1207,7 +1207,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		roomReservationEClass = createEClass(ROOM_RESERVATION);
 		createEReference(roomReservationEClass, ROOM_RESERVATION__IRECEPTIONISTROOMPROVIDES);
 		createEReference(roomReservationEClass, ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES);
-		createEReference(roomReservationEClass, ROOM_RESERVATION__);
+		createEReference(roomReservationEClass, ROOM_RESERVATION__ROOM_EXTRAS);
 		createEReference(roomReservationEClass, ROOM_RESERVATION__BILL);
 		createEAttribute(roomReservationEClass, ROOM_RESERVATION__START_DATE);
 		createEAttribute(roomReservationEClass, ROOM_RESERVATION__END_DATE);
@@ -1378,7 +1378,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEClass(roomReservationEClass, RoomReservation.class, "RoomReservation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomReservation_Ireceptionistroomprovides(), this.getIReceptionistRoomProvides(), null, "ireceptionistroomprovides", null, 1, 1, RoomReservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomReservation_Ireceptionistroomtypeprovides(), this.getRoomType(), null, "ireceptionistroomtypeprovides", null, 1, 1, RoomReservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRoomReservation__(), this.getRoomExtras(), null, "_", null, 0, -1, RoomReservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoomReservation_RoomExtras(), this.getRoomExtras(), null, "roomExtras", null, 0, -1, RoomReservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomReservation_Bill(), this.getBill(), null, "bill", null, 1, 1, RoomReservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomReservation_StartDate(), ecorePackage.getEString(), "startDate", null, 1, 1, RoomReservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomReservation_EndDate(), ecorePackage.getEString(), "endDate", null, 1, 1, RoomReservation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

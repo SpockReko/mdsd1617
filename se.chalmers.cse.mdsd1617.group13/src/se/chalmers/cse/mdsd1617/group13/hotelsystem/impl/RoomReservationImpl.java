@@ -36,7 +36,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getIreceptionistroomprovides <em>Ireceptionistroomprovides</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#get_ <em></em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getRoomExtras <em>Room Extras</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getBill <em>Bill</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getEndDate <em>End Date</em>}</li>
@@ -66,14 +66,14 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	protected RoomType ireceptionistroomtypeprovides;
 
 	/**
-	 * The cached value of the '{@link #get_() <em></em>}' reference list.
+	 * The cached value of the '{@link #getRoomExtras() <em>Room Extras</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #get_()
+	 * @see #getRoomExtras()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomExtras> _;
+	protected EList<RoomExtras> roomExtras;
 
 	/**
 	 * The cached value of the '{@link #getBill() <em>Bill</em>}' reference.
@@ -225,11 +225,11 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RoomExtras> get_() {
-		if (_ == null) {
-			_ = new EObjectResolvingEList<RoomExtras>(RoomExtras.class, this, HotelsystemPackage.ROOM_RESERVATION__);
+	public EList<RoomExtras> getRoomExtras() {
+		if (roomExtras == null) {
+			roomExtras = new EObjectResolvingEList<RoomExtras>(RoomExtras.class, this, HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS);
 		}
-		return _;
+		return roomExtras;
 	}
 
 	/**
@@ -359,8 +359,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				if (resolve) return getIreceptionistroomtypeprovides();
 				return basicGetIreceptionistroomtypeprovides();
-			case HotelsystemPackage.ROOM_RESERVATION__:
-				return get_();
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS:
+				return getRoomExtras();
 			case HotelsystemPackage.ROOM_RESERVATION__BILL:
 				if (resolve) return getBill();
 				return basicGetBill();
@@ -387,9 +387,9 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				setIreceptionistroomtypeprovides((RoomType)newValue);
 				return;
-			case HotelsystemPackage.ROOM_RESERVATION__:
-				get_().clear();
-				get_().addAll((Collection<? extends RoomExtras>)newValue);
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS:
+				getRoomExtras().clear();
+				getRoomExtras().addAll((Collection<? extends RoomExtras>)newValue);
 				return;
 			case HotelsystemPackage.ROOM_RESERVATION__BILL:
 				setBill((Bill)newValue);
@@ -418,8 +418,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				setIreceptionistroomtypeprovides((RoomType)null);
 				return;
-			case HotelsystemPackage.ROOM_RESERVATION__:
-				get_().clear();
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS:
+				getRoomExtras().clear();
 				return;
 			case HotelsystemPackage.ROOM_RESERVATION__BILL:
 				setBill((Bill)null);
@@ -446,8 +446,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 				return ireceptionistroomprovides != null;
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				return ireceptionistroomtypeprovides != null;
-			case HotelsystemPackage.ROOM_RESERVATION__:
-				return _ != null && !_.isEmpty();
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS:
+				return roomExtras != null && !roomExtras.isEmpty();
 			case HotelsystemPackage.ROOM_RESERVATION__BILL:
 				return bill != null;
 			case HotelsystemPackage.ROOM_RESERVATION__START_DATE:
