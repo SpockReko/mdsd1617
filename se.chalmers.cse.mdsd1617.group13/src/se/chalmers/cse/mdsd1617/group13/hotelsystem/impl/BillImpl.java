@@ -47,7 +47,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int PRICE_EDEFAULT = 0;
+	protected static final double PRICE_EDEFAULT = 0.0;
 	/**
 	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * @generated
 	 * @ordered
 	 */
-	protected int price = PRICE_EDEFAULT;
+	protected double price = PRICE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +120,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
@@ -129,8 +129,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrice(int newPrice) {
-		int oldPrice = price;
+	public void setPrice(double newPrice) {
+		double oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BILL__PRICE, oldPrice, price));
@@ -165,7 +165,7 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				setRoomreservation((RoomReservation)newValue);
 				return;
 			case HotelsystemPackage.BILL__PRICE:
-				setPrice((Integer)newValue);
+				setPrice((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

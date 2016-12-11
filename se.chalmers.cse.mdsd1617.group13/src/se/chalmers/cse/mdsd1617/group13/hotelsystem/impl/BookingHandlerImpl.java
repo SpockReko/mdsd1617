@@ -35,7 +35,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getReservation <em>Reservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getBooking <em>Booking</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getPaymenthandler <em>Paymenthandler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getRoomhandler <em>Roomhandler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getCurrentReservationId <em>Current Reservation Id</em>}</li>
@@ -45,14 +45,14 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
  */
 public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements BookingHandler {
 	/**
-	 * The cached value of the '{@link #getReservation() <em>Reservation</em>}' reference list.
+	 * The cached value of the '{@link #getBooking() <em>Booking</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReservation()
+	 * @see #getBooking()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Booking> reservation;
+	protected EList<Booking> booking;
 
 	/**
 	 * The cached value of the '{@link #getPaymenthandler() <em>Paymenthandler</em>}' reference.
@@ -118,11 +118,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Booking> getReservation() {
-		if (reservation == null) {
-			reservation = new EObjectResolvingEList<Booking>(Booking.class, this, HotelsystemPackage.BOOKING_HANDLER__RESERVATION);
+	public EList<Booking> getBooking() {
+		if (booking == null) {
+			booking = new EObjectResolvingEList<Booking>(Booking.class, this, HotelsystemPackage.BOOKING_HANDLER__BOOKING);
 		}
-		return reservation;
+		return booking;
 	}
 
 	/**
@@ -390,23 +390,34 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public double initiateCheckout(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking thisBooking = null;
+		for(Booking bookingg : booking) { //TODO: change the names of the list of bookings
+			if(bookingg.getBookingId() == bookingID) {
+				thisBooking = bookingg;
+			}
+		}
+		if(null != thisBooking) {
+			setCurrentReservationId(bookingID);
+			return thisBooking.checkOut();
+		}
+		return -1;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean payDuringCheckout(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Booking book : booking) {
+			if(book.getBookingId() == this.getCurrentReservationId()) {
+				paymenthandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, book.getBill().getPrice());
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -472,8 +483,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
-				return getReservation();
+			case HotelsystemPackage.BOOKING_HANDLER__BOOKING:
+				return getBooking();
 			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				if (resolve) return getPaymenthandler();
 				return basicGetPaymenthandler();
@@ -495,9 +506,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
-				getReservation().clear();
-				getReservation().addAll((Collection<? extends Booking>)newValue);
+			case HotelsystemPackage.BOOKING_HANDLER__BOOKING:
+				getBooking().clear();
+				getBooking().addAll((Collection<? extends Booking>)newValue);
 				return;
 			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)newValue);
@@ -520,8 +531,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
-				getReservation().clear();
+			case HotelsystemPackage.BOOKING_HANDLER__BOOKING:
+				getBooking().clear();
 				return;
 			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				setPaymenthandler((PaymentHandler)null);
@@ -544,8 +555,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.BOOKING_HANDLER__RESERVATION:
-				return reservation != null && !reservation.isEmpty();
+			case HotelsystemPackage.BOOKING_HANDLER__BOOKING:
+				return booking != null && !booking.isEmpty();
 			case HotelsystemPackage.BOOKING_HANDLER__PAYMENTHANDLER:
 				return paymenthandler != null;
 			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:

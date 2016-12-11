@@ -59,7 +59,7 @@
                 ecorePackage="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem">
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler">
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler/reservation"/>
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler/booking"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
                     propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler/paymenthandler"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -76,15 +76,19 @@
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
                     propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/customer"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/roomreservation"/>
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/roomReservations"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/startDate"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/endDate"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/canceled"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/BookingId"/>
+                <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/bill"/>
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/cancel"/>
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/getOccupiedRooms">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/getOccupiedRooms/date"/>
                 </genOperations>
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/checkOut"/>
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking/nrOfNights"/>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Customer">
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Customer/firstName"/>
@@ -96,17 +100,19 @@
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation">
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/ireceptionistroomprovides"/>
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/room"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/ireceptionistroomtypeprovides"/>
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/roomType"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/_"/>
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/extras"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
                     propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/bill"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/startDate"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/endDate"/>
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/checkIn"/>
-                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/checkOut"/>
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/checkOut">
+                  <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/checkOut/nrOfNights"/>
+                </genOperations>
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/getRoomIfOccupied">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation/getRoomIfOccupied/date"/>
                 </genOperations>
@@ -115,6 +121,7 @@
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IReceptionistRoomProvides/setOccupied">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IReceptionistRoomProvides/setOccupied/occupied"/>
                 </genOperations>
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IReceptionistRoomProvides/roomIsOccupied"/>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType">
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType/description"/>
@@ -133,13 +140,17 @@
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Room">
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Room/occupied"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Room/roomtype"/>
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Room/roomType"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Room/blocked"/>
                 <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/Room/roomId"/>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IAdminRoomProvides">
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IAdminRoomProvides/hasRoomType">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IAdminRoomProvides/hasRoomType/room"/>
+                </genOperations>
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IAdminRoomProvides/getRoomId"/>
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IAdminRoomProvides/setBlockedState">
+                  <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IAdminRoomProvides/setBlockedState/state"/>
                 </genOperations>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/PaymentHandler">
@@ -152,6 +163,7 @@
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/PaymentHandler/payIfCardValid/expiryYear"/>
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/PaymentHandler/payIfCardValid/firstName"/>
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/PaymentHandler/payIfCardValid/lastName"/>
+                  <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/PaymentHandler/payIfCardValid/sum"/>
                 </genOperations>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler">
@@ -218,7 +230,7 @@
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
                     propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/iadminroomtypeprovides"/>
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/iadminroomprovides"/>
+                    propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/rooms"/>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelAdministratorProvides">
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelAdministratorProvides/addRoomType">

@@ -23,4 +23,12 @@ public interface IReceptionistRoomProvides extends EObject {
 	 */
 	void setOccupied(boolean occupied);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	boolean roomIsOccupied();
+
 } // IReceptionistRoomProvides

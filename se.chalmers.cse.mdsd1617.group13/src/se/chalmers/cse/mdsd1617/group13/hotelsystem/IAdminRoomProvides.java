@@ -23,4 +23,20 @@ public interface IAdminRoomProvides extends EObject {
 	 * @generated
 	 */
 	boolean hasRoomType(RoomType room);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" required="true" ordered="false"
+	 * @generated
+	 */
+	int getRoomId();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" stateRequired="true" stateOrdered="false"
+	 * @generated
+	 */
+	boolean setBlockedState(boolean state);
 } // IAdminRoomProvides

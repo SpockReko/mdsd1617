@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getReservation <em>Reservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBooking <em>Booking</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymenthandler <em>Paymenthandler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler <em>Roomhandler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId <em>Current Reservation Id</em>}</li>
@@ -25,20 +25,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustomerProvides {
 	/**
-	 * Returns the value of the '<em><b>Reservation</b></em>' reference list.
+	 * Returns the value of the '<em><b>Booking</b></em>' reference list.
 	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reservation</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Booking</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reservation</em>' reference list.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler_Reservation()
+	 * @return the value of the '<em>Booking</em>' reference list.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler_Booking()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Booking> getReservation();
+	EList<Booking> getBooking();
 
 	/**
 	 * Returns the value of the '<em><b>Paymenthandler</b></em>' reference.

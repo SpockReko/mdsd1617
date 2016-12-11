@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomprovides <em>Ireceptionistroomprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#get_ <em></em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType <em>Room Type</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getExtras <em>Extras</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getBill <em>Bill</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}</li>
@@ -29,72 +29,72 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface RoomReservation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Ireceptionistroomprovides</b></em>' reference.
+	 * Returns the value of the '<em><b>Room</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ireceptionistroomprovides</em>' reference isn't clear,
+	 * If the meaning of the '<em>Room</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ireceptionistroomprovides</em>' reference.
-	 * @see #setIreceptionistroomprovides(IReceptionistRoomProvides)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Ireceptionistroomprovides()
+	 * @return the value of the '<em>Room</em>' reference.
+	 * @see #setRoom(IReceptionistRoomProvides)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Room()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	IReceptionistRoomProvides getIreceptionistroomprovides();
+	IReceptionistRoomProvides getRoom();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomprovides <em>Ireceptionistroomprovides</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ireceptionistroomprovides</em>' reference.
-	 * @see #getIreceptionistroomprovides()
+	 * @param value the new value of the '<em>Room</em>' reference.
+	 * @see #getRoom()
 	 * @generated
 	 */
-	void setIreceptionistroomprovides(IReceptionistRoomProvides value);
+	void setRoom(IReceptionistRoomProvides value);
 
 	/**
-	 * Returns the value of the '<em><b>Ireceptionistroomtypeprovides</b></em>' reference.
+	 * Returns the value of the '<em><b>Room Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ireceptionistroomtypeprovides</em>' reference isn't clear,
+	 * If the meaning of the '<em>Room Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ireceptionistroomtypeprovides</em>' reference.
-	 * @see #setIreceptionistroomtypeprovides(RoomType)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Ireceptionistroomtypeprovides()
+	 * @return the value of the '<em>Room Type</em>' reference.
+	 * @see #setRoomType(RoomType)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_RoomType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	RoomType getIreceptionistroomtypeprovides();
+	RoomType getRoomType();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType <em>Room Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ireceptionistroomtypeprovides</em>' reference.
-	 * @see #getIreceptionistroomtypeprovides()
+	 * @param value the new value of the '<em>Room Type</em>' reference.
+	 * @see #getRoomType()
 	 * @generated
 	 */
-	void setIreceptionistroomtypeprovides(RoomType value);
+	void setRoomType(RoomType value);
 
 	/**
-	 * Returns the value of the '<em><b></b></em>' reference list.
+	 * Returns the value of the '<em><b>Extras</b></em>' reference list.
 	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em></em>' reference list isn't clear,
+	 * If the meaning of the '<em>Extras</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em></em>' reference list.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation__()
+	 * @return the value of the '<em>Extras</em>' reference list.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Extras()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<RoomExtras> get_();
+	EList<RoomExtras> getExtras();
 
 	/**
 	 * Returns the value of the '<em><b>Bill</b></em>' reference.
@@ -185,10 +185,10 @@ public interface RoomReservation extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model required="true" ordered="false" nrOfNightsRequired="true" nrOfNightsOrdered="false"
 	 * @generated
 	 */
-	void checkOut();
+	double checkOut(int nrOfNights);
 
 	/**
 	 * <!-- begin-user-doc -->

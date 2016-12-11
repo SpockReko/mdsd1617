@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistRoomProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
 
@@ -25,7 +26,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#isOccupied <em>Occupied</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomType <em>Room Type</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#isBlocked <em>Blocked</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomId <em>Room Id</em>}</li>
  * </ul>
@@ -54,14 +55,14 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected boolean occupied = OCCUPIED_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRoomtype() <em>Roomtype</em>}' reference.
+	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomtype()
+	 * @see #getRoomType()
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomType roomtype;
+	protected RoomType roomType;
 
 	/**
 	 * The default value of the '{@link #isBlocked() <em>Blocked</em>}' attribute.
@@ -148,16 +149,16 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomType getRoomtype() {
-		if (roomtype != null && roomtype.eIsProxy()) {
-			InternalEObject oldRoomtype = (InternalEObject)roomtype;
-			roomtype = (RoomType)eResolveProxy(oldRoomtype);
-			if (roomtype != oldRoomtype) {
+	public RoomType getRoomType() {
+		if (roomType != null && roomType.eIsProxy()) {
+			InternalEObject oldRoomType = (InternalEObject)roomType;
+			roomType = (RoomType)eResolveProxy(oldRoomType);
+			if (roomType != oldRoomType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.ROOM__ROOMTYPE, oldRoomtype, roomtype));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.ROOM__ROOM_TYPE, oldRoomType, roomType));
 			}
 		}
-		return roomtype;
+		return roomType;
 	}
 
 	/**
@@ -165,8 +166,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomType basicGetRoomtype() {
-		return roomtype;
+	public RoomType basicGetRoomType() {
+		return roomType;
 	}
 
 	/**
@@ -174,11 +175,11 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoomtype(RoomType newRoomtype) {
-		RoomType oldRoomtype = roomtype;
-		roomtype = newRoomtype;
+	public void setRoomType(RoomType newRoomType) {
+		RoomType oldRoomType = roomType;
+		roomType = newRoomType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM__ROOMTYPE, oldRoomtype, roomtype));
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM__ROOM_TYPE, oldRoomType, roomType));
 	}
 
 	/**
@@ -237,6 +238,29 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean setBlockedState(boolean state) {
+		if(!occupied) {
+			setBlocked(true);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean roomIsOccupied() {
+		return isOccupied();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -244,9 +268,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		switch (featureID) {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				return isOccupied();
-			case HotelsystemPackage.ROOM__ROOMTYPE:
-				if (resolve) return getRoomtype();
-				return basicGetRoomtype();
+			case HotelsystemPackage.ROOM__ROOM_TYPE:
+				if (resolve) return getRoomType();
+				return basicGetRoomType();
 			case HotelsystemPackage.ROOM__BLOCKED:
 				return isBlocked();
 			case HotelsystemPackage.ROOM__ROOM_ID:
@@ -266,8 +290,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				setOccupied((Boolean)newValue);
 				return;
-			case HotelsystemPackage.ROOM__ROOMTYPE:
-				setRoomtype((RoomType)newValue);
+			case HotelsystemPackage.ROOM__ROOM_TYPE:
+				setRoomType((RoomType)newValue);
 				return;
 			case HotelsystemPackage.ROOM__BLOCKED:
 				setBlocked((Boolean)newValue);
@@ -290,8 +314,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				setOccupied(OCCUPIED_EDEFAULT);
 				return;
-			case HotelsystemPackage.ROOM__ROOMTYPE:
-				setRoomtype((RoomType)null);
+			case HotelsystemPackage.ROOM__ROOM_TYPE:
+				setRoomType((RoomType)null);
 				return;
 			case HotelsystemPackage.ROOM__BLOCKED:
 				setBlocked(BLOCKED_EDEFAULT);
@@ -313,8 +337,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		switch (featureID) {
 			case HotelsystemPackage.ROOM__OCCUPIED:
 				return occupied != OCCUPIED_EDEFAULT;
-			case HotelsystemPackage.ROOM__ROOMTYPE:
-				return roomtype != null;
+			case HotelsystemPackage.ROOM__ROOM_TYPE:
+				return roomType != null;
 			case HotelsystemPackage.ROOM__BLOCKED:
 				return blocked != BLOCKED_EDEFAULT;
 			case HotelsystemPackage.ROOM__ROOM_ID:
@@ -329,10 +353,31 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @generated
 	 */
 	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == IReceptionistRoomProvides.class) {
+			switch (baseOperationID) {
+				case HotelsystemPackage.IRECEPTIONIST_ROOM_PROVIDES___SET_OCCUPIED__BOOLEAN: return HotelsystemPackage.ROOM___SET_OCCUPIED__BOOLEAN;
+				case HotelsystemPackage.IRECEPTIONIST_ROOM_PROVIDES___ROOM_IS_OCCUPIED: return HotelsystemPackage.ROOM___ROOM_IS_OCCUPIED;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case HotelsystemPackage.ROOM___HAS_ROOM_TYPE__ROOMTYPE:
 				return hasRoomType((RoomType)arguments.get(0));
+			case HotelsystemPackage.ROOM___SET_BLOCKED_STATE__BOOLEAN:
+				return setBlockedState((Boolean)arguments.get(0));
+			case HotelsystemPackage.ROOM___ROOM_IS_OCCUPIED:
+				return roomIsOccupied();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
