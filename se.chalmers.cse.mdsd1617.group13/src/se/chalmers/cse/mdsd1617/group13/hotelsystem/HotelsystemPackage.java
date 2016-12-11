@@ -195,13 +195,13 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_HANDLER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Reservation</b></em>' reference list.
+	 * The feature id for the '<em><b>Bookings</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER__RESERVATION = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 0;
+	int BOOKING_HANDLER__BOOKINGS = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Paymenthandler</b></em>' reference.
@@ -1636,15 +1636,15 @@ public interface HotelsystemPackage extends EPackage {
 	EClass getBookingHandler();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getReservation <em>Reservation</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookings <em>Bookings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Reservation</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getReservation()
+	 * @return the meta object for the reference list '<em>Bookings</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookings()
 	 * @see #getBookingHandler()
 	 * @generated
 	 */
-	EReference getBookingHandler_Reservation();
+	EReference getBookingHandler_Bookings();
 
 	/**
 	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymenthandler <em>Paymenthandler</em>}'.
@@ -2697,12 +2697,12 @@ public interface HotelsystemPackage extends EPackage {
 		EClass BOOKING_HANDLER = eINSTANCE.getBookingHandler();
 
 		/**
-		 * The meta object literal for the '<em><b>Reservation</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Bookings</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOOKING_HANDLER__RESERVATION = eINSTANCE.getBookingHandler_Reservation();
+		EReference BOOKING_HANDLER__BOOKINGS = eINSTANCE.getBookingHandler_Bookings();
 
 		/**
 		 * The meta object literal for the '<em><b>Paymenthandler</b></em>' reference feature.

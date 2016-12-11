@@ -38,10 +38,10 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
 	 * @generated
 	 */
-	boolean removeRoomTypeFromBooking(int reservationId, String roomType);
+	boolean removeRoomTypeFromBooking(int bookingId, String roomType);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,18 +54,18 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" many="false" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomNumbersRequired="true" roomNumbersOrdered="false"
+	 * @model required="true" many="false" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomNumbersRequired="true" roomNumbersOrdered="false"
 	 * @generated
 	 */
-	EList checkIn(int reservationId, int roomNumbers);
+	EList checkIn(int bookingId, int roomNumbers);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
+	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
 	 * @generated
 	 */
-	boolean cancelBooking(int reservationId);
+	boolean cancelBooking(int bookingId);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,9 +102,9 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomNumberRequired="true" roomNumberOrdered="false" extraDescriptionRequired="true" extraDescriptionOrdered="false" priceRequired="true" priceOrdered="false"
+	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomNumberRequired="true" roomNumberOrdered="false" extraDescriptionRequired="true" extraDescriptionOrdered="false" priceRequired="true" priceOrdered="false"
 	 * @generated
 	 */
-	boolean addExtraToRoom(int reservationId, int roomNumber, String extraDescription, int price);
+	boolean addExtraToRoom(int bookingId, int roomNumber, String extraDescription, int price);
 
 } // IHotelReceptionistProvides
