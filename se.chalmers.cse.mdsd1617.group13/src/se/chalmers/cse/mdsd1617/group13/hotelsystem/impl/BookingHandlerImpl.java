@@ -26,6 +26,8 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
 
 /**
  * <!-- begin-user-doc -->
@@ -224,35 +226,77 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Work in progress 2
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT 
 	 */
 	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Booking b : reservation){
+			//Date needs to be checked if possible
+			b.setStartDate(startDate);
+			b.setEndDate(endDate);
+			return true;
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Work in progress 0
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT 
 	 */
 	public boolean addRoomTypeToBooking(int reservationId, String roomType, int numberOfRoomsForType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
+		for(RoomType rt : roomhandler.getAllRoomTypes()){
+			if(rt.getDescription() == roomType && roomhandler.countFreeRoom(rt) >= numberOfRoomsForType){
+				for(Booking b : reservation){
+					if(b.getBookingId() == reservationId){
+						for(int i = numberOfRoomsForType; i > 0; i--){
+							b.getRoomreservation().add(new RoomReservationImpl(/*insert rt here*/));
+						}
+						return true;
+					}	
+				}
+			}
+		}
+		return false;
+		}
+	
 	/**
 	 * <!-- begin-user-doc -->
+	 * Work in progress 1
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeRoomTypeFromBooking(int reservationId, String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Work in progress 1
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean removeRoomTypeFromBooking(int reservationId, String roomType, int numberOfRoomsForType) {
+		for(Booking b : reservation){
+			if(b.getBookingId() == reservationId){
+				int i = numberOfRoomsForType;
+				EList<RoomReservation> roomreservations = b.getRoomreservation();
+				for(RoomReservation rr : roomreservations){
+					if(i == 0){
+						break;
+					} else {
+						roomreservations.remove(rr);
+					}
+					i--;
+				}
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**

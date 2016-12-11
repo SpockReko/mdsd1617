@@ -155,13 +155,24 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Work in progress 3
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean changeRoomType(int roomNumber, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(IAdminRoomProvides iarp : iadminroomprovides){
+			//add when method fixed
+			//if (iarp.getId() == roomNumber){
+				for(RoomType rt : iadminroomtypeprovides){
+					if(rt.getDescription() == roomType){
+						//add when method fixed
+						//iarp.setRoomType(rt);
+						return true;
+					}
+				}
+			//}
+		}
+		return false;
 	}
 
 	/**
