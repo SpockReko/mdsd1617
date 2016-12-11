@@ -238,7 +238,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean addRoomTypeToBooking(int reservationId, String roomType, int numberOfRoomsForType) {
+	public boolean addRoomTypeToBooking(int bookingId, String roomType, int numberOfRoomsForType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -260,7 +260,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> listFreeRooms(int reservationId) {
+	public EList<Integer> listFreeRooms(int bookingId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

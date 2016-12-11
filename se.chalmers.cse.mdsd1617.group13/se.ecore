@@ -264,9 +264,9 @@
               <eOperations name="getRoomHandler" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="HotelInitializer" eSuperTypes="#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelStartupProvides">
-              <eStructuralFeatures xsi:type="ecore:EReference" name="roomhandler"
+              <eStructuralFeatures xsi:type="ecore:EReference" name="roomHandler"
                   ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler"/>
-              <eStructuralFeatures xsi:type="ecore:EReference" name="reservationhandler"
+              <eStructuralFeatures xsi:type="ecore:EReference" name="bookingHandler"
                   ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="IHotelReceptionistProvides"
@@ -278,7 +278,7 @@
               </eOperations>
               <eOperations name="addRoomTypeToBooking" ordered="false" lowerBound="1"
                   eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-                <eParameters name="reservationId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+                <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
                 <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eParameters name="numberOfRoomsForType" ordered="false" lowerBound="1"
                     eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -289,7 +289,7 @@
                 <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eOperations>
               <eOperations name="listFreeRooms" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
-                <eParameters name="reservationId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+                <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>
               <eOperations name="checkIn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
                 <eParameters name="reservationId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

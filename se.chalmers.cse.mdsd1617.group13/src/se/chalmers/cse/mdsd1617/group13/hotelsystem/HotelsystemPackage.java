@@ -1571,22 +1571,22 @@ public interface HotelsystemPackage extends EPackage {
 	int HOTEL_INITIALIZER = 17;
 
 	/**
-	 * The feature id for the '<em><b>Roomhandler</b></em>' reference.
+	 * The feature id for the '<em><b>Room Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_INITIALIZER__ROOMHANDLER = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 0;
+	int HOTEL_INITIALIZER__ROOM_HANDLER = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Reservationhandler</b></em>' reference.
+	 * The feature id for the '<em><b>Booking Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HOTEL_INITIALIZER__RESERVATIONHANDLER = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 1;
+	int HOTEL_INITIALIZER__BOOKING_HANDLER = IHOTEL_STARTUP_PROVIDES_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Hotel Initializer</em>' class.
@@ -2522,26 +2522,26 @@ public interface HotelsystemPackage extends EPackage {
 	EClass getHotelInitializer();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomhandler <em>Roomhandler</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler <em>Room Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Roomhandler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomhandler()
+	 * @return the meta object for the reference '<em>Room Handler</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler()
 	 * @see #getHotelInitializer()
 	 * @generated
 	 */
-	EReference getHotelInitializer_Roomhandler();
+	EReference getHotelInitializer_RoomHandler();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getReservationhandler <em>Reservationhandler</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getBookingHandler <em>Booking Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Reservationhandler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getReservationhandler()
+	 * @return the meta object for the reference '<em>Booking Handler</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getBookingHandler()
 	 * @see #getHotelInitializer()
 	 * @generated
 	 */
-	EReference getHotelInitializer_Reservationhandler();
+	EReference getHotelInitializer_BookingHandler();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}'.
@@ -3411,20 +3411,20 @@ public interface HotelsystemPackage extends EPackage {
 		EClass HOTEL_INITIALIZER = eINSTANCE.getHotelInitializer();
 
 		/**
-		 * The meta object literal for the '<em><b>Roomhandler</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Room Handler</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HOTEL_INITIALIZER__ROOMHANDLER = eINSTANCE.getHotelInitializer_Roomhandler();
+		EReference HOTEL_INITIALIZER__ROOM_HANDLER = eINSTANCE.getHotelInitializer_RoomHandler();
 
 		/**
-		 * The meta object literal for the '<em><b>Reservationhandler</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Booking Handler</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HOTEL_INITIALIZER__RESERVATIONHANDLER = eINSTANCE.getHotelInitializer_Reservationhandler();
+		EReference HOTEL_INITIALIZER__BOOKING_HANDLER = eINSTANCE.getHotelInitializer_BookingHandler();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}' class.

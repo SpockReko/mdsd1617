@@ -364,7 +364,7 @@
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_mb0YoKpJEeaqs-4dkG4NMQ" name="addRoomTypeToBooking">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_sgoawKpJEeaqs-4dkG4NMQ" name="reservationId">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_sgoawKpJEeaqs-4dkG4NMQ" name="bookingId">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_z15YIKpJEeaqs-4dkG4NMQ" name="roomType">
@@ -389,7 +389,7 @@
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_zjfvQKn2Eeaqs-4dkG4NMQ" name="listFreeRooms" concurrency="concurrent">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_4jxLMKn2Eeaqs-4dkG4NMQ" name="reservationId">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_4jxLMKn2Eeaqs-4dkG4NMQ" name="bookingId">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_ayYwoKn3Eeaqs-4dkG4NMQ" name="return" direction="return">
@@ -602,8 +602,8 @@
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_GDYBILuhEeaKgqXTYyzHxQ" name="HotelInitializer">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_sSXEsLuhEeaKgqXTYyzHxQ" name="roomhandler" type="_A4oCULhmEeaytfot7Bi3IA" association="_sRWYELuhEeaKgqXTYyzHxQ"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_2aEUgruhEeaKgqXTYyzHxQ" name="reservationhandler" type="_-1bbgLhlEeaytfot7Bi3IA" association="_2aDtcLuhEeaKgqXTYyzHxQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_sSXEsLuhEeaKgqXTYyzHxQ" name="roomHandler" type="_A4oCULhmEeaytfot7Bi3IA" association="_sRWYELuhEeaKgqXTYyzHxQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_2aEUgruhEeaKgqXTYyzHxQ" name="bookingHandler" type="_-1bbgLhlEeaytfot7Bi3IA" association="_2aDtcLuhEeaKgqXTYyzHxQ"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cu_sQL1IEea3vq_wXUyZng" client="_GDYBILuhEeaKgqXTYyzHxQ" supplier="_uUO4AI--EeaYFcjrTNGrQw" contract="_uUO4AI--EeaYFcjrTNGrQw"/>
             </packagedElement>
           </packagedElement>
@@ -665,7 +665,7 @@
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sHY1wLhqEeaytfot7Bi3IA" source="org.eclipse.papyrus">
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sHY1wbhqEeaytfot7Bi3IA" key="nature" value="UML_Nature"/>
             </eAnnotations>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_sHZc0LhqEeaytfot7Bi3IA" name="roomreservation" type="_HJOdsLhmEeaytfot7Bi3IA" association="_sHYOsLhqEeaytfot7Bi3IA"/>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_sHZc0LhqEeaytfot7Bi3IA" name="roomReservation" type="_HJOdsLhmEeaytfot7Bi3IA" association="_sHYOsLhqEeaytfot7Bi3IA"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_x48ksLhqEeaytfot7Bi3IA" memberEnd="_x49LwrhqEeaytfot7Bi3IA _x49Lw7hqEeaytfot7Bi3IA">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_x49LwLhqEeaytfot7Bi3IA" source="org.eclipse.papyrus">

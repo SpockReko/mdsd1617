@@ -30,10 +30,10 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" reservationIdRequired="true" reservationIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" numberOfRoomsForTypeRequired="true" numberOfRoomsForTypeOrdered="false"
+	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" numberOfRoomsForTypeRequired="true" numberOfRoomsForTypeOrdered="false"
 	 * @generated
 	 */
-	boolean addRoomTypeToBooking(int reservationId, String roomType, int numberOfRoomsForType);
+	boolean addRoomTypeToBooking(int bookingId, String roomType, int numberOfRoomsForType);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,10 +46,10 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model ordered="false" reservationIdRequired="true" reservationIdOrdered="false"
+	 * @model ordered="false" bookingIdRequired="true" bookingIdOrdered="false"
 	 * @generated
 	 */
-	EList<Integer> listFreeRooms(int reservationId);
+	EList<Integer> listFreeRooms(int bookingId);
 
 	/**
 	 * <!-- begin-user-doc -->

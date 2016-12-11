@@ -1032,7 +1032,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHotelInitializer_Roomhandler() {
+	public EReference getHotelInitializer_RoomHandler() {
 		return (EReference)hotelInitializerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1041,7 +1041,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHotelInitializer_Reservationhandler() {
+	public EReference getHotelInitializer_BookingHandler() {
 		return (EReference)hotelInitializerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1284,8 +1284,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(iHotelStartupProvidesEClass, IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER);
 
 		hotelInitializerEClass = createEClass(HOTEL_INITIALIZER);
-		createEReference(hotelInitializerEClass, HOTEL_INITIALIZER__ROOMHANDLER);
-		createEReference(hotelInitializerEClass, HOTEL_INITIALIZER__RESERVATIONHANDLER);
+		createEReference(hotelInitializerEClass, HOTEL_INITIALIZER__ROOM_HANDLER);
+		createEReference(hotelInitializerEClass, HOTEL_INITIALIZER__BOOKING_HANDLER);
 
 		iHotelReceptionistProvidesEClass = createEClass(IHOTEL_RECEPTIONIST_PROVIDES);
 		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___EDIT_BOOKING_TIME__INT_STRING_STRING);
@@ -1537,8 +1537,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEOperation(getIHotelStartupProvides__GetRoomHandler(), this.getRoomHandler(), "getRoomHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(hotelInitializerEClass, HotelInitializer.class, "HotelInitializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getHotelInitializer_Roomhandler(), this.getRoomHandler(), null, "roomhandler", null, 1, 1, HotelInitializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getHotelInitializer_Reservationhandler(), this.getBookingHandler(), null, "reservationhandler", null, 1, 1, HotelInitializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHotelInitializer_RoomHandler(), this.getRoomHandler(), null, "roomHandler", null, 1, 1, HotelInitializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHotelInitializer_BookingHandler(), this.getBookingHandler(), null, "bookingHandler", null, 1, 1, HotelInitializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(iHotelReceptionistProvidesEClass, IHotelReceptionistProvides.class, "IHotelReceptionistProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1548,7 +1548,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIHotelReceptionistProvides__AddRoomTypeToBooking__int_String_int(), ecorePackage.getEBoolean(), "addRoomTypeToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "reservationId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "numberOfRoomsForType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1557,7 +1557,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		addEParameter(op, ecorePackage.getEString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIHotelReceptionistProvides__ListFreeRooms__int(), ecorePackage.getEInt(), "listFreeRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "reservationId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIHotelReceptionistProvides__CheckIn__int_int(), ecorePackage.getEEList(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "reservationId", 1, 1, IS_UNIQUE, !IS_ORDERED);

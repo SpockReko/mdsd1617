@@ -11,8 +11,8 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomhandler <em>Roomhandler</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getReservationhandler <em>Reservationhandler</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler <em>Room Handler</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getBookingHandler <em>Booking Handler</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer()
@@ -21,55 +21,55 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem;
  */
 public interface HotelInitializer extends IHotelStartupProvides {
 	/**
-	 * Returns the value of the '<em><b>Roomhandler</b></em>' reference.
+	 * Returns the value of the '<em><b>Room Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Roomhandler</em>' reference isn't clear,
+	 * If the meaning of the '<em>Room Handler</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Roomhandler</em>' reference.
-	 * @see #setRoomhandler(RoomHandler)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer_Roomhandler()
+	 * @return the value of the '<em>Room Handler</em>' reference.
+	 * @see #setRoomHandler(RoomHandler)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer_RoomHandler()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	RoomHandler getRoomhandler();
+	RoomHandler getRoomHandler();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomhandler <em>Roomhandler</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler <em>Room Handler</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Roomhandler</em>' reference.
-	 * @see #getRoomhandler()
+	 * @param value the new value of the '<em>Room Handler</em>' reference.
+	 * @see #getRoomHandler()
 	 * @generated
 	 */
-	void setRoomhandler(RoomHandler value);
+	void setRoomHandler(RoomHandler value);
 
 	/**
-	 * Returns the value of the '<em><b>Reservationhandler</b></em>' reference.
+	 * Returns the value of the '<em><b>Booking Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reservationhandler</em>' reference isn't clear,
+	 * If the meaning of the '<em>Booking Handler</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reservationhandler</em>' reference.
-	 * @see #setReservationhandler(BookingHandler)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer_Reservationhandler()
+	 * @return the value of the '<em>Booking Handler</em>' reference.
+	 * @see #setBookingHandler(BookingHandler)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer_BookingHandler()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	BookingHandler getReservationhandler();
+	BookingHandler getBookingHandler();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getReservationhandler <em>Reservationhandler</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getBookingHandler <em>Booking Handler</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reservationhandler</em>' reference.
-	 * @see #getReservationhandler()
+	 * @param value the new value of the '<em>Booking Handler</em>' reference.
+	 * @see #getBookingHandler()
 	 * @generated
 	 */
-	void setReservationhandler(BookingHandler value);
+	void setBookingHandler(BookingHandler value);
 
 } // HotelInitializer
