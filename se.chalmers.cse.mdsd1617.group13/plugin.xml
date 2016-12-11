@@ -6,29 +6,6 @@
 
 <plugin>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ClassDiagramPackage -->
-      <package
-            uri="http:///ClassDiagramPackage.ecore"
-            class="ClassDiagramPackage.ClassDiagramPackagePackage"
-            genModel="ClassDiagramPackage.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ClassDiagramPackage -->
-      <package
-            uri="http:///ClassDiagramPackage/hotelsystem.ecore"
-            class="ClassDiagramPackage.hotelsystem.HotelsystemPackage"
-            genModel="ClassDiagramPackage.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ClassDiagramPackage -->
-      <package
-            uri="http:///ClassDiagramPackage/bankcomponents.ecore"
-            class="ClassDiagramPackage.bankcomponents.BankcomponentsPackage"
-            genModel="ClassDiagramPackage.genmodel"/>
-   </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated se -->
