@@ -32,6 +32,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
 
 /**
@@ -301,12 +302,13 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Booking> listBookings() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Booking booking: bookings){
+			booking.toString();
+		}
+		return bookings;
 	}
 
 	/**
@@ -521,12 +523,23 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean payRoomDuringCheckout(int roomNumber, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		boolean roomPaidAndCheckedOut = false;
+		for (Booking booking: bookings){
+			if(booking.getBookingId() == bookingCurrentlyCheckingOut){
+				for (RoomReservation roomReservation: booking.getRoomReservation()){
+					if(roomReservation.getRoomId() == roomNumber){
+						paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, roomReservation.checkOut(booking.nrOfNights()));
+					}
+				}
+				roomPaidAndCheckedOut = true;
+			} else {
+				roomPaidAndCheckedOut = false;
+			}
+		}
+		return roomPaidAndCheckedOut;
 	}
 
 	/**

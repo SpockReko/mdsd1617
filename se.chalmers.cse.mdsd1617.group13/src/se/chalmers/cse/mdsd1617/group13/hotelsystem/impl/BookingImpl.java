@@ -3,7 +3,9 @@
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -362,12 +364,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int nrOfNights() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int numberOfNights; 
+		DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyyMMdd");
+		LocalDate startDATE = LocalDate.parse(startDate, f);
+		LocalDate endDATE = LocalDate.parse(endDate, f);
+		
+		numberOfNights = (int) ChronoUnit.DAYS.between(startDATE, endDATE);
+		return numberOfNights;
 	}
 
 	/**
