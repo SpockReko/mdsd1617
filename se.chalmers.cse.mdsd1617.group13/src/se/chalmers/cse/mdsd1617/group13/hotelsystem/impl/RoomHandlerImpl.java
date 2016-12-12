@@ -211,7 +211,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 */
 	public boolean unblockRoom(int roomNumber) {
 		Room room = getRoom(roomNumber);
-		if(!room.isOccupied() && room.isBlocked()) {
+		if(null != room && !room.isOccupied() && room.isBlocked()) {
 			room.setBlocked(false);
 			return true;
 		}
