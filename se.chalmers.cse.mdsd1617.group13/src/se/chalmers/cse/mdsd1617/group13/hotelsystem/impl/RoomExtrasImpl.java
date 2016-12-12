@@ -34,7 +34,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int PRICE_EDEFAULT = 0;
+	protected static final double PRICE_EDEFAULT = 0.0;
 	/**
 	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * @generated
 	 * @ordered
 	 */
-	protected int price = PRICE_EDEFAULT;
+	protected double price = PRICE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -87,7 +87,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
@@ -96,8 +96,8 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrice(int newPrice) {
-		int oldPrice = price;
+	public void setPrice(double newPrice) {
+		double oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM_EXTRAS__PRICE, oldPrice, price));
@@ -149,7 +149,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HotelsystemPackage.ROOM_EXTRAS__PRICE:
-				setPrice((Integer)newValue);
+				setPrice((Double)newValue);
 				return;
 			case HotelsystemPackage.ROOM_EXTRAS__DESCRIPTION:
 				setDescription((String)newValue);

@@ -29,9 +29,6 @@
               </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_KNLkorhrEeaytfot7Bi3IA" name="paymentHandler" type="_B4FUMLhmEeaytfot7Bi3IA" association="_KNK9kLhrEeaytfot7Bi3IA"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_j1V6UrrLEear4uagTC-MRA" name="roomhandler" type="_OFT1ELuSEeaKgqXTYyzHxQ" association="_j1VTQLrLEear4uagTC-MRA"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_vX5L4LuZEeaKgqXTYyzHxQ" name="currentReservationId">
-                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-              </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_SLYzEMBHEeaYgdBx0NZ38A" name="bookingCurrentlyCheckingOut">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>
@@ -170,7 +167,7 @@
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_HJOdsLhmEeaytfot7Bi3IA" name="RoomReservation">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_06nbYrhpEeaytfot7Bi3IA" name="ireceptionistroomtypeprovides" type="_IpqVsLhmEeaytfot7Bi3IA" association="_06m0ULhpEeaytfot7Bi3IA"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_06nbYrhpEeaytfot7Bi3IA" name="roomType" type="_IpqVsLhmEeaytfot7Bi3IA" association="_06m0ULhpEeaytfot7Bi3IA"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_O4t8IrhqEeaytfot7Bi3IA" name="roomExtras" type="_LZjDYLhmEeaytfot7Bi3IA" association="_O4suALhqEeaytfot7Bi3IA">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SZ_qgLhqEeaytfot7Bi3IA"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SaBfsLhqEeaytfot7Bi3IA" value="*"/>
@@ -239,7 +236,7 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_LZjDYLhmEeaytfot7Bi3IA" name="RoomExtras">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_F99dEL1LEea3vq_wXUyZng" name="price">
-                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
               </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_Km3h4L1LEea3vq_wXUyZng" name="description">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>

@@ -38,7 +38,6 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getBookings <em>Bookings</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getPaymentHandler <em>Payment Handler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getRoomhandler <em>Roomhandler</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getCurrentReservationId <em>Current Reservation Id</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}</li>
  * </ul>
  *
@@ -74,26 +73,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected IRoomHandler roomhandler;
-
-	/**
-	 * The default value of the '{@link #getCurrentReservationId() <em>Current Reservation Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentReservationId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int CURRENT_RESERVATION_ID_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getCurrentReservationId() <em>Current Reservation Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentReservationId()
-	 * @generated
-	 * @ordered
-	 */
-	protected int currentReservationId = CURRENT_RESERVATION_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBookingCurrentlyCheckingOut() <em>Booking Currently Checking Out</em>}' attribute.
@@ -220,27 +199,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		roomhandler = newRoomhandler;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER, oldRoomhandler, roomhandler));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getCurrentReservationId() {
-		return currentReservationId;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCurrentReservationId(int newCurrentReservationId) {
-		int oldCurrentReservationId = currentReservationId;
-		currentReservationId = newCurrentReservationId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID, oldCurrentReservationId, currentReservationId));
 	}
 
 	/**
@@ -537,8 +495,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				if (resolve) return getRoomhandler();
 				return basicGetRoomhandler();
-			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
-				return getCurrentReservationId();
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				return getBookingCurrentlyCheckingOut();
 		}
@@ -564,9 +520,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				setRoomhandler((IRoomHandler)newValue);
 				return;
-			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
-				setCurrentReservationId((Integer)newValue);
-				return;
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				setBookingCurrentlyCheckingOut((Integer)newValue);
 				return;
@@ -591,9 +544,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				setRoomhandler((IRoomHandler)null);
 				return;
-			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
-				setCurrentReservationId(CURRENT_RESERVATION_ID_EDEFAULT);
-				return;
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				setBookingCurrentlyCheckingOut(BOOKING_CURRENTLY_CHECKING_OUT_EDEFAULT);
 				return;
@@ -615,8 +565,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return paymentHandler != null;
 			case HotelsystemPackage.BOOKING_HANDLER__ROOMHANDLER:
 				return roomhandler != null;
-			case HotelsystemPackage.BOOKING_HANDLER__CURRENT_RESERVATION_ID:
-				return currentReservationId != CURRENT_RESERVATION_ID_EDEFAULT;
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				return bookingCurrentlyCheckingOut != BOOKING_CURRENTLY_CHECKING_OUT_EDEFAULT;
 		}
@@ -715,9 +663,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (currentReservationId: ");
-		result.append(currentReservationId);
-		result.append(", bookingCurrentlyCheckingOut: ");
+		result.append(" (bookingCurrentlyCheckingOut: ");
 		result.append(bookingCurrentlyCheckingOut);
 		result.append(')');
 		return result.toString();

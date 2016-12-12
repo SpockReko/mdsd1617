@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookings <em>Bookings</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymentHandler <em>Payment Handler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler <em>Roomhandler</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId <em>Current Reservation Id</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}</li>
  * </ul>
  *
@@ -92,32 +91,6 @@ public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustom
 	 * @generated
 	 */
 	void setRoomhandler(IRoomHandler value);
-
-	/**
-	 * Returns the value of the '<em><b>Current Reservation Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Current Reservation Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current Reservation Id</em>' attribute.
-	 * @see #setCurrentReservationId(int)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler_CurrentReservationId()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	int getCurrentReservationId();
-
-	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId <em>Current Reservation Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current Reservation Id</em>' attribute.
-	 * @see #getCurrentReservationId()
-	 * @generated
-	 */
-	void setCurrentReservationId(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Booking Currently Checking Out</b></em>' attribute.

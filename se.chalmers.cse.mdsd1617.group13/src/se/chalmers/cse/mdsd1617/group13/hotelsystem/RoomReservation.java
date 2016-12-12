@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType <em>Room Type</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomExtras <em>Room Extras</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}</li>
@@ -28,30 +28,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface RoomReservation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Ireceptionistroomtypeprovides</b></em>' reference.
+	 * Returns the value of the '<em><b>Room Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ireceptionistroomtypeprovides</em>' reference isn't clear,
+	 * If the meaning of the '<em>Room Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ireceptionistroomtypeprovides</em>' reference.
-	 * @see #setIreceptionistroomtypeprovides(RoomType)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Ireceptionistroomtypeprovides()
+	 * @return the value of the '<em>Room Type</em>' reference.
+	 * @see #setRoomType(RoomType)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_RoomType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	RoomType getIreceptionistroomtypeprovides();
+	RoomType getRoomType();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType <em>Room Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ireceptionistroomtypeprovides</em>' reference.
-	 * @see #getIreceptionistroomtypeprovides()
+	 * @param value the new value of the '<em>Room Type</em>' reference.
+	 * @see #getRoomType()
 	 * @generated
 	 */
-	void setIreceptionistroomtypeprovides(RoomType value);
+	void setRoomType(RoomType value);
 
 	/**
 	 * Returns the value of the '<em><b>Room Extras</b></em>' reference list.

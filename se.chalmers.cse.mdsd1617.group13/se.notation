@@ -87,10 +87,6 @@
           <layoutConstraint xmi:type="notation:Location" xmi:id="_-1lzkrhlEeaytfot7Bi3IA" y="5"/>
         </children>
         <children xmi:type="notation:BasicCompartment" xmi:id="_-1lzk7hlEeaytfot7Bi3IA" type="Class_AttributeCompartment_CN">
-          <children xmi:type="notation:Shape" xmi:id="_2tVvcLuZEeaKgqXTYyzHxQ" type="Property_ClassAttributeLabel">
-            <element xmi:type="uml:Property" href="se.uml#_vX5L4LuZEeaKgqXTYyzHxQ"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_2tVvcbuZEeaKgqXTYyzHxQ"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_SMZfsMBHEeaYgdBx0NZ38A" type="Property_ClassAttributeLabel">
             <element xmi:type="uml:Property" href="se.uml#_SLYzEMBHEeaYgdBx0NZ38A"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_SMZfscBHEeaYgdBx0NZ38A"/>
