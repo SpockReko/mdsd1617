@@ -311,12 +311,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList checkIn(int bookingId, int roomNumbers) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Integer> checkIn(int bookingId, int roomNumbers) {
+		
+		if(roomNumbers != 0) {
+			this.getBookingById(bookingId).checkIn(roomNumbers);
+		}
+		
+		return this.listFreeRooms(bookingId);
 	}
 
 	/**
