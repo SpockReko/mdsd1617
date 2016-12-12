@@ -473,6 +473,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if(price <= 0) {
 			return false;
 		}
+		bookingCurrentlyCheckingOut = 0;
 		return paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, price);
 	}
 
