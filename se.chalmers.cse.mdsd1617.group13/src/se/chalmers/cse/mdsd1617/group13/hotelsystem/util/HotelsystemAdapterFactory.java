@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
+import se.chalmers.cse.mdsd1617.group13.bankcomponents.ICustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 /**
@@ -84,10 +85,6 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 				return createRoomReservationAdapter();
 			}
 			@Override
-			public Adapter caseIReceptionistRoomProvides(IReceptionistRoomProvides object) {
-				return createIReceptionistRoomProvidesAdapter();
-			}
-			@Override
 			public Adapter caseRoomType(RoomType object) {
 				return createRoomTypeAdapter();
 			}
@@ -96,16 +93,12 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 				return createRoomExtrasAdapter();
 			}
 			@Override
-			public Adapter caseBill(Bill object) {
-				return createBillAdapter();
-			}
-			@Override
 			public Adapter caseRoom(Room object) {
 				return createRoomAdapter();
 			}
 			@Override
-			public Adapter caseIAdminRoomProvides(IAdminRoomProvides object) {
-				return createIAdminRoomProvidesAdapter();
+			public Adapter caseBill(Bill object) {
+				return createBillAdapter();
 			}
 			@Override
 			public Adapter casePaymentHandler(PaymentHandler object) {
@@ -142,6 +135,10 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIHotelReceptionistProvides(IHotelReceptionistProvides object) {
 				return createIHotelReceptionistProvidesAdapter();
+			}
+			@Override
+			public Adapter caseICustomerProvides(ICustomerProvides object) {
+				return createICustomerProvidesAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -216,20 +213,6 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomReservationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistRoomProvides <em>IReceptionist Room Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistRoomProvides
-	 * @generated
-	 */
-	public Adapter createIReceptionistRoomProvidesAdapter() {
 		return null;
 	}
 
@@ -314,20 +297,6 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomHandlerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IAdminRoomProvides <em>IAdmin Room Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IAdminRoomProvides
-	 * @generated
-	 */
-	public Adapter createIAdminRoomProvidesAdapter() {
 		return null;
 	}
 
@@ -426,6 +395,20 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIHotelReceptionistProvidesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.bankcomponents.ICustomerProvides <em>ICustomer Provides</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see se.chalmers.cse.mdsd1617.group13.bankcomponents.ICustomerProvides
+	 * @generated
+	 */
+	public Adapter createICustomerProvidesAdapter() {
 		return null;
 	}
 

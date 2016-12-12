@@ -16,11 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer <em>Customer</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomreservation <em>Roomreservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservation <em>Room Reservation</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCanceled <em>Canceled</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingId <em>Booking Id</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBill <em>Bill</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking()
@@ -55,20 +56,20 @@ public interface Booking extends EObject {
 	void setCustomer(Customer value);
 
 	/**
-	 * Returns the value of the '<em><b>Roomreservation</b></em>' reference list.
+	 * Returns the value of the '<em><b>Room Reservation</b></em>' reference list.
 	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Roomreservation</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Room Reservation</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Roomreservation</em>' reference list.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_Roomreservation()
+	 * @return the value of the '<em>Room Reservation</em>' reference list.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_RoomReservation()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<RoomReservation> getRoomreservation();
+	EList<RoomReservation> getRoomReservation();
 
 	/**
 	 * Returns the value of the '<em><b>Start Date</b></em>' attribute.
@@ -175,6 +176,22 @@ public interface Booking extends EObject {
 	void setBookingId(int value);
 
 	/**
+	 * Returns the value of the '<em><b>Bill</b></em>' reference list.
+	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bill</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bill</em>' reference list.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_Bill()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<Bill> getBill();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -189,5 +206,21 @@ public interface Booking extends EObject {
 	 * @generated
 	 */
 	EList<Room> getOccupiedRooms(String date);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	double checkOut();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int nrOfNights();
 
 } // Booking

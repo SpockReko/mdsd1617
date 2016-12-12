@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getIadminroomtypeprovides <em>Iadminroomtypeprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getIadminroomprovides <em>Iadminroomprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getRooms <em>Rooms</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomHandler()
@@ -39,19 +39,19 @@ public interface RoomHandler extends IRoomHandler, IHotelAdministratorProvides {
 	EList<RoomType> getIadminroomtypeprovides();
 
 	/**
-	 * Returns the value of the '<em><b>Iadminroomprovides</b></em>' reference list.
-	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IAdminRoomProvides}.
+	 * Returns the value of the '<em><b>Rooms</b></em>' reference list.
+	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Iadminroomprovides</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Rooms</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Iadminroomprovides</em>' reference list.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomHandler_Iadminroomprovides()
+	 * @return the value of the '<em>Rooms</em>' reference list.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomHandler_Rooms()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<IAdminRoomProvides> getIadminroomprovides();
+	EList<Room> getRooms();
 
 } // RoomHandler

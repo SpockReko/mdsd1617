@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import se.chalmers.cse.mdsd1617.group13.bankcomponents.ICustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 /**
@@ -92,12 +93,6 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HotelsystemPackage.IRECEPTIONIST_ROOM_PROVIDES: {
-				IReceptionistRoomProvides iReceptionistRoomProvides = (IReceptionistRoomProvides)theEObject;
-				T result = caseIReceptionistRoomProvides(iReceptionistRoomProvides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case HotelsystemPackage.ROOM_TYPE: {
 				RoomType roomType = (RoomType)theEObject;
 				T result = caseRoomType(roomType);
@@ -110,29 +105,22 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HotelsystemPackage.ROOM: {
+				Room room = (Room)theEObject;
+				T result = caseRoom(room);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HotelsystemPackage.BILL: {
 				Bill bill = (Bill)theEObject;
 				T result = caseBill(bill);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HotelsystemPackage.ROOM: {
-				Room room = (Room)theEObject;
-				T result = caseRoom(room);
-				if (result == null) result = caseIAdminRoomProvides(room);
-				if (result == null) result = caseIReceptionistRoomProvides(room);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelsystemPackage.IADMIN_ROOM_PROVIDES: {
-				IAdminRoomProvides iAdminRoomProvides = (IAdminRoomProvides)theEObject;
-				T result = caseIAdminRoomProvides(iAdminRoomProvides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case HotelsystemPackage.PAYMENT_HANDLER: {
 				PaymentHandler paymentHandler = (PaymentHandler)theEObject;
 				T result = casePaymentHandler(paymentHandler);
+				if (result == null) result = caseICustomerProvides(paymentHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -252,21 +240,6 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IReceptionist Room Provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IReceptionist Room Provides</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIReceptionistRoomProvides(IReceptionistRoomProvides object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Room Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -353,21 +326,6 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoomHandler(RoomHandler object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IAdmin Room Provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IAdmin Room Provides</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIAdminRoomProvides(IAdminRoomProvides object) {
 		return null;
 	}
 
@@ -473,6 +431,21 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIHotelReceptionistProvides(IHotelReceptionistProvides object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ICustomer Provides</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ICustomer Provides</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseICustomerProvides(ICustomerProvides object) {
 		return null;
 	}
 

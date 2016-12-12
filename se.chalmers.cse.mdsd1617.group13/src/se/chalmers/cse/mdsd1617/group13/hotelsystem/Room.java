@@ -2,6 +2,8 @@
  */
 package se.chalmers.cse.mdsd1617.group13.hotelsystem;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -15,14 +17,14 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isOccupied <em>Occupied</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype <em>Roomtype</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isBlocked <em>Blocked</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomId <em>Room Id</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomNumber <em>Room Number</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoom()
  * @model
  * @generated
  */
-public interface Room extends IAdminRoomProvides, IReceptionistRoomProvides {
+public interface Room extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Occupied</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -102,29 +104,29 @@ public interface Room extends IAdminRoomProvides, IReceptionistRoomProvides {
 	void setBlocked(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Room Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Room Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Room Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Room Number</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Id</em>' attribute.
-	 * @see #setRoomId(int)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoom_RoomId()
+	 * @return the value of the '<em>Room Number</em>' attribute.
+	 * @see #setRoomNumber(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoom_RoomNumber()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getRoomId();
+	int getRoomNumber();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomId <em>Room Id</em>}' attribute.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomNumber <em>Room Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Room Id</em>' attribute.
-	 * @see #getRoomId()
+	 * @param value the new value of the '<em>Room Number</em>' attribute.
+	 * @see #getRoomNumber()
 	 * @generated
 	 */
-	void setRoomId(int value);
+	void setRoomNumber(int value);
 
 } // Room

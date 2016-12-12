@@ -14,9 +14,10 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookings <em>Bookings</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymenthandler <em>Paymenthandler</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymentHandler <em>Payment Handler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler <em>Roomhandler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId <em>Current Reservation Id</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler()
@@ -41,30 +42,30 @@ public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustom
 	EList<Booking> getBookings();
 
 	/**
-	 * Returns the value of the '<em><b>Paymenthandler</b></em>' reference.
+	 * Returns the value of the '<em><b>Payment Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Paymenthandler</em>' reference isn't clear,
+	 * If the meaning of the '<em>Payment Handler</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Paymenthandler</em>' reference.
-	 * @see #setPaymenthandler(PaymentHandler)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler_Paymenthandler()
+	 * @return the value of the '<em>Payment Handler</em>' reference.
+	 * @see #setPaymentHandler(PaymentHandler)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler_PaymentHandler()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	PaymentHandler getPaymenthandler();
+	PaymentHandler getPaymentHandler();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymenthandler <em>Paymenthandler</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymentHandler <em>Payment Handler</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Paymenthandler</em>' reference.
-	 * @see #getPaymenthandler()
+	 * @param value the new value of the '<em>Payment Handler</em>' reference.
+	 * @see #getPaymentHandler()
 	 * @generated
 	 */
-	void setPaymenthandler(PaymentHandler value);
+	void setPaymentHandler(PaymentHandler value);
 
 	/**
 	 * Returns the value of the '<em><b>Roomhandler</b></em>' reference.
@@ -117,6 +118,32 @@ public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustom
 	 * @generated
 	 */
 	void setCurrentReservationId(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Booking Currently Checking Out</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Booking Currently Checking Out</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Booking Currently Checking Out</em>' attribute.
+	 * @see #setBookingCurrentlyCheckingOut(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler_BookingCurrentlyCheckingOut()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getBookingCurrentlyCheckingOut();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Booking Currently Checking Out</em>' attribute.
+	 * @see #getBookingCurrentlyCheckingOut()
+	 * @generated
+	 */
+	void setBookingCurrentlyCheckingOut(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

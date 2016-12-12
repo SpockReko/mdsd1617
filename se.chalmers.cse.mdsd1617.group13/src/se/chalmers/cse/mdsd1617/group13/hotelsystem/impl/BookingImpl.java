@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
@@ -33,11 +34,12 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getCustomer <em>Customer</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getRoomreservation <em>Roomreservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getRoomReservation <em>Room Reservation</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#isCanceled <em>Canceled</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBookingId <em>Booking Id</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBill <em>Bill</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,14 +56,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected Customer customer;
 
 	/**
-	 * The cached value of the '{@link #getRoomreservation() <em>Roomreservation</em>}' reference list.
+	 * The cached value of the '{@link #getRoomReservation() <em>Room Reservation</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomreservation()
+	 * @see #getRoomReservation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomReservation> roomreservation;
+	protected EList<RoomReservation> roomReservation;
 
 	/**
 	 * The default value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
@@ -144,6 +146,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected int bookingId = BOOKING_ID_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getBill() <em>Bill</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBill()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Bill> bill;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -205,11 +217,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RoomReservation> getRoomreservation() {
-		if (roomreservation == null) {
-			roomreservation = new EObjectResolvingEList<RoomReservation>(RoomReservation.class, this, HotelsystemPackage.BOOKING__ROOMRESERVATION);
+	public EList<RoomReservation> getRoomReservation() {
+		if (roomReservation == null) {
+			roomReservation = new EObjectResolvingEList<RoomReservation>(RoomReservation.class, this, HotelsystemPackage.BOOKING__ROOM_RESERVATION);
 		}
-		return roomreservation;
+		return roomReservation;
 	}
 
 	/**
@@ -301,6 +313,18 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Bill> getBill() {
+		if (bill == null) {
+			bill = new EObjectResolvingEList<Bill>(Bill.class, this, HotelsystemPackage.BOOKING__BILL);
+		}
+		return bill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void cancel() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -323,14 +347,36 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double checkOut() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int nrOfNights() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				if (resolve) return getCustomer();
 				return basicGetCustomer();
-			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
-				return getRoomreservation();
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
+				return getRoomReservation();
 			case HotelsystemPackage.BOOKING__START_DATE:
 				return getStartDate();
 			case HotelsystemPackage.BOOKING__END_DATE:
@@ -339,6 +385,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return isCanceled();
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				return getBookingId();
+			case HotelsystemPackage.BOOKING__BILL:
+				return getBill();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -355,9 +403,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				setCustomer((Customer)newValue);
 				return;
-			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
-				getRoomreservation().clear();
-				getRoomreservation().addAll((Collection<? extends RoomReservation>)newValue);
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
+				getRoomReservation().clear();
+				getRoomReservation().addAll((Collection<? extends RoomReservation>)newValue);
 				return;
 			case HotelsystemPackage.BOOKING__START_DATE:
 				setStartDate((String)newValue);
@@ -370,6 +418,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return;
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				setBookingId((Integer)newValue);
+				return;
+			case HotelsystemPackage.BOOKING__BILL:
+				getBill().clear();
+				getBill().addAll((Collection<? extends Bill>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -386,8 +438,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				setCustomer((Customer)null);
 				return;
-			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
-				getRoomreservation().clear();
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
+				getRoomReservation().clear();
 				return;
 			case HotelsystemPackage.BOOKING__START_DATE:
 				setStartDate(START_DATE_EDEFAULT);
@@ -400,6 +452,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return;
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				setBookingId(BOOKING_ID_EDEFAULT);
+				return;
+			case HotelsystemPackage.BOOKING__BILL:
+				getBill().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -415,8 +470,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		switch (featureID) {
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				return customer != null;
-			case HotelsystemPackage.BOOKING__ROOMRESERVATION:
-				return roomreservation != null && !roomreservation.isEmpty();
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
+				return roomReservation != null && !roomReservation.isEmpty();
 			case HotelsystemPackage.BOOKING__START_DATE:
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
 			case HotelsystemPackage.BOOKING__END_DATE:
@@ -425,6 +480,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return canceled != CANCELED_EDEFAULT;
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				return bookingId != BOOKING_ID_EDEFAULT;
+			case HotelsystemPackage.BOOKING__BILL:
+				return bill != null && !bill.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -442,6 +499,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return null;
 			case HotelsystemPackage.BOOKING___GET_OCCUPIED_ROOMS__STRING:
 				return getOccupiedRooms((String)arguments.get(0));
+			case HotelsystemPackage.BOOKING___CHECK_OUT:
+				return checkOut();
+			case HotelsystemPackage.BOOKING___NR_OF_NIGHTS:
+				return nrOfNights();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

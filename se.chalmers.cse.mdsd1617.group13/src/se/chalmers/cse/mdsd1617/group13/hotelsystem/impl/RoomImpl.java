@@ -2,10 +2,7 @@
  */
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
@@ -27,7 +24,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#isOccupied <em>Occupied</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomtype <em>Roomtype</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#isBlocked <em>Blocked</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomId <em>Room Id</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl#getRoomNumber <em>Room Number</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,24 +81,24 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected boolean blocked = BLOCKED_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRoomId() <em>Room Id</em>}' attribute.
+	 * The default value of the '{@link #getRoomNumber() <em>Room Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomId()
+	 * @see #getRoomNumber()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ROOM_ID_EDEFAULT = 0;
+	protected static final int ROOM_NUMBER_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getRoomId() <em>Room Id</em>}' attribute.
+	 * The cached value of the '{@link #getRoomNumber() <em>Room Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomId()
+	 * @see #getRoomNumber()
 	 * @generated
 	 * @ordered
 	 */
-	protected int roomId = ROOM_ID_EDEFAULT;
+	protected int roomNumber = ROOM_NUMBER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -207,8 +204,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getRoomId() {
-		return roomId;
+	public int getRoomNumber() {
+		return roomNumber;
 	}
 
 	/**
@@ -216,22 +213,11 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoomId(int newRoomId) {
-		int oldRoomId = roomId;
-		roomId = newRoomId;
+	public void setRoomNumber(int newRoomNumber) {
+		int oldRoomNumber = roomNumber;
+		roomNumber = newRoomNumber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM__ROOM_ID, oldRoomId, roomId));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean hasRoomType(RoomType room) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM__ROOM_NUMBER, oldRoomNumber, roomNumber));
 	}
 
 	/**
@@ -249,8 +235,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return basicGetRoomtype();
 			case HotelsystemPackage.ROOM__BLOCKED:
 				return isBlocked();
-			case HotelsystemPackage.ROOM__ROOM_ID:
-				return getRoomId();
+			case HotelsystemPackage.ROOM__ROOM_NUMBER:
+				return getRoomNumber();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -272,8 +258,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelsystemPackage.ROOM__BLOCKED:
 				setBlocked((Boolean)newValue);
 				return;
-			case HotelsystemPackage.ROOM__ROOM_ID:
-				setRoomId((Integer)newValue);
+			case HotelsystemPackage.ROOM__ROOM_NUMBER:
+				setRoomNumber((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -296,8 +282,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case HotelsystemPackage.ROOM__BLOCKED:
 				setBlocked(BLOCKED_EDEFAULT);
 				return;
-			case HotelsystemPackage.ROOM__ROOM_ID:
-				setRoomId(ROOM_ID_EDEFAULT);
+			case HotelsystemPackage.ROOM__ROOM_NUMBER:
+				setRoomNumber(ROOM_NUMBER_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -317,24 +303,10 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 				return roomtype != null;
 			case HotelsystemPackage.ROOM__BLOCKED:
 				return blocked != BLOCKED_EDEFAULT;
-			case HotelsystemPackage.ROOM__ROOM_ID:
-				return roomId != ROOM_ID_EDEFAULT;
+			case HotelsystemPackage.ROOM__ROOM_NUMBER:
+				return roomNumber != ROOM_NUMBER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case HotelsystemPackage.ROOM___HAS_ROOM_TYPE__ROOMTYPE:
-				return hasRoomType((RoomType)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -351,8 +323,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		result.append(occupied);
 		result.append(", blocked: ");
 		result.append(blocked);
-		result.append(", roomId: ");
-		result.append(roomId);
+		result.append(", roomNumber: ");
+		result.append(roomNumber);
 		result.append(')');
 		return result.toString();
 	}

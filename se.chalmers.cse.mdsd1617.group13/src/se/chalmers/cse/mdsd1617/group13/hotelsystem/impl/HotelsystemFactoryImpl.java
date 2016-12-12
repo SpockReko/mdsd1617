@@ -62,8 +62,8 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 			case HotelsystemPackage.ROOM_RESERVATION: return createRoomReservation();
 			case HotelsystemPackage.ROOM_TYPE: return createRoomType();
 			case HotelsystemPackage.ROOM_EXTRAS: return createRoomExtras();
-			case HotelsystemPackage.BILL: return createBill();
 			case HotelsystemPackage.ROOM: return createRoom();
+			case HotelsystemPackage.BILL: return createBill();
 			case HotelsystemPackage.PAYMENT_HANDLER: return createPaymentHandler();
 			case HotelsystemPackage.FREE_ROOM_TYPES_DTO: return createFreeRoomTypesDTO();
 			case HotelsystemPackage.ROOM_HANDLER: return createRoomHandler();

@@ -15,12 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomprovides <em>Ireceptionistroomprovides</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomExtras <em>Room Extras</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getBill <em>Bill</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation()
@@ -28,32 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface RoomReservation extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Ireceptionistroomprovides</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ireceptionistroomprovides</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ireceptionistroomprovides</em>' reference.
-	 * @see #setIreceptionistroomprovides(IReceptionistRoomProvides)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Ireceptionistroomprovides()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	IReceptionistRoomProvides getIreceptionistroomprovides();
-
-	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomprovides <em>Ireceptionistroomprovides</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ireceptionistroomprovides</em>' reference.
-	 * @see #getIreceptionistroomprovides()
-	 * @generated
-	 */
-	void setIreceptionistroomprovides(IReceptionistRoomProvides value);
-
 	/**
 	 * Returns the value of the '<em><b>Ireceptionistroomtypeprovides</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -95,32 +68,6 @@ public interface RoomReservation extends EObject {
 	 * @generated
 	 */
 	EList<RoomExtras> getRoomExtras();
-
-	/**
-	 * Returns the value of the '<em><b>Bill</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bill</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bill</em>' reference.
-	 * @see #setBill(Bill)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Bill()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	Bill getBill();
-
-	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getBill <em>Bill</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bill</em>' reference.
-	 * @see #getBill()
-	 * @generated
-	 */
-	void setBill(Bill value);
 
 	/**
 	 * Returns the value of the '<em><b>Start Date</b></em>' attribute.
@@ -175,6 +122,32 @@ public interface RoomReservation extends EObject {
 	void setEndDate(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Room</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room</em>' reference.
+	 * @see #setRoom(Room)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_Room()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	Room getRoom();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room</em>' reference.
+	 * @see #getRoom()
+	 * @generated
+	 */
+	void setRoom(Room value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -185,10 +158,10 @@ public interface RoomReservation extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	void checkOut();
+	double checkOut();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,5 +170,13 @@ public interface RoomReservation extends EObject {
 	 * @generated
 	 */
 	Room getRoomIfOccupied(String date);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" required="true" ordered="false"
+	 * @generated
+	 */
+	int getRoomId();
 
 } // RoomReservation

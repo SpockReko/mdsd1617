@@ -17,10 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistRoomProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
@@ -34,27 +31,16 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getIreceptionistroomprovides <em>Ireceptionistroomprovides</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getRoomExtras <em>Room Extras</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getBill <em>Bill</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getEndDate <em>End Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getRoom <em>Room</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RoomReservationImpl extends MinimalEObjectImpl.Container implements RoomReservation {
-	/**
-	 * The cached value of the '{@link #getIreceptionistroomprovides() <em>Ireceptionistroomprovides</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIreceptionistroomprovides()
-	 * @generated
-	 * @ordered
-	 */
-	protected IReceptionistRoomProvides ireceptionistroomprovides;
-
 	/**
 	 * The cached value of the '{@link #getIreceptionistroomtypeprovides() <em>Ireceptionistroomtypeprovides</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -74,16 +60,6 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<RoomExtras> roomExtras;
-
-	/**
-	 * The cached value of the '{@link #getBill() <em>Bill</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBill()
-	 * @generated
-	 * @ordered
-	 */
-	protected Bill bill;
 
 	/**
 	 * The default value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
@@ -126,6 +102,16 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	protected String endDate = END_DATE_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getRoom() <em>Room</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoom()
+	 * @generated
+	 * @ordered
+	 */
+	protected Room room;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -142,44 +128,6 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	protected EClass eStaticClass() {
 		return HotelsystemPackage.Literals.ROOM_RESERVATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IReceptionistRoomProvides getIreceptionistroomprovides() {
-		if (ireceptionistroomprovides != null && ireceptionistroomprovides.eIsProxy()) {
-			InternalEObject oldIreceptionistroomprovides = (InternalEObject)ireceptionistroomprovides;
-			ireceptionistroomprovides = (IReceptionistRoomProvides)eResolveProxy(oldIreceptionistroomprovides);
-			if (ireceptionistroomprovides != oldIreceptionistroomprovides) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMPROVIDES, oldIreceptionistroomprovides, ireceptionistroomprovides));
-			}
-		}
-		return ireceptionistroomprovides;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IReceptionistRoomProvides basicGetIreceptionistroomprovides() {
-		return ireceptionistroomprovides;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIreceptionistroomprovides(IReceptionistRoomProvides newIreceptionistroomprovides) {
-		IReceptionistRoomProvides oldIreceptionistroomprovides = ireceptionistroomprovides;
-		ireceptionistroomprovides = newIreceptionistroomprovides;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMPROVIDES, oldIreceptionistroomprovides, ireceptionistroomprovides));
 	}
 
 	/**
@@ -237,44 +185,6 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bill getBill() {
-		if (bill != null && bill.eIsProxy()) {
-			InternalEObject oldBill = (InternalEObject)bill;
-			bill = (Bill)eResolveProxy(oldBill);
-			if (bill != oldBill) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.ROOM_RESERVATION__BILL, oldBill, bill));
-			}
-		}
-		return bill;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bill basicGetBill() {
-		return bill;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBill(Bill newBill) {
-		Bill oldBill = bill;
-		bill = newBill;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM_RESERVATION__BILL, oldBill, bill));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getStartDate() {
 		return startDate;
 	}
@@ -317,6 +227,44 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Room getRoom() {
+		if (room != null && room.eIsProxy()) {
+			InternalEObject oldRoom = (InternalEObject)room;
+			room = (Room)eResolveProxy(oldRoom);
+			if (room != oldRoom) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.ROOM_RESERVATION__ROOM, oldRoom, room));
+			}
+		}
+		return room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Room basicGetRoom() {
+		return room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoom(Room newRoom) {
+		Room oldRoom = room;
+		room = newRoom;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM_RESERVATION__ROOM, oldRoom, room));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void checkIn() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -328,7 +276,7 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkOut() {
+	public double checkOut() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -350,24 +298,32 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getRoomId() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMPROVIDES:
-				if (resolve) return getIreceptionistroomprovides();
-				return basicGetIreceptionistroomprovides();
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				if (resolve) return getIreceptionistroomtypeprovides();
 				return basicGetIreceptionistroomtypeprovides();
 			case HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS:
 				return getRoomExtras();
-			case HotelsystemPackage.ROOM_RESERVATION__BILL:
-				if (resolve) return getBill();
-				return basicGetBill();
 			case HotelsystemPackage.ROOM_RESERVATION__START_DATE:
 				return getStartDate();
 			case HotelsystemPackage.ROOM_RESERVATION__END_DATE:
 				return getEndDate();
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
+				if (resolve) return getRoom();
+				return basicGetRoom();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -381,9 +337,6 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMPROVIDES:
-				setIreceptionistroomprovides((IReceptionistRoomProvides)newValue);
-				return;
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				setIreceptionistroomtypeprovides((RoomType)newValue);
 				return;
@@ -391,14 +344,14 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 				getRoomExtras().clear();
 				getRoomExtras().addAll((Collection<? extends RoomExtras>)newValue);
 				return;
-			case HotelsystemPackage.ROOM_RESERVATION__BILL:
-				setBill((Bill)newValue);
-				return;
 			case HotelsystemPackage.ROOM_RESERVATION__START_DATE:
 				setStartDate((String)newValue);
 				return;
 			case HotelsystemPackage.ROOM_RESERVATION__END_DATE:
 				setEndDate((String)newValue);
+				return;
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
+				setRoom((Room)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -412,23 +365,20 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMPROVIDES:
-				setIreceptionistroomprovides((IReceptionistRoomProvides)null);
-				return;
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				setIreceptionistroomtypeprovides((RoomType)null);
 				return;
 			case HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS:
 				getRoomExtras().clear();
 				return;
-			case HotelsystemPackage.ROOM_RESERVATION__BILL:
-				setBill((Bill)null);
-				return;
 			case HotelsystemPackage.ROOM_RESERVATION__START_DATE:
 				setStartDate(START_DATE_EDEFAULT);
 				return;
 			case HotelsystemPackage.ROOM_RESERVATION__END_DATE:
 				setEndDate(END_DATE_EDEFAULT);
+				return;
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
+				setRoom((Room)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -442,18 +392,16 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMPROVIDES:
-				return ireceptionistroomprovides != null;
 			case HotelsystemPackage.ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES:
 				return ireceptionistroomtypeprovides != null;
 			case HotelsystemPackage.ROOM_RESERVATION__ROOM_EXTRAS:
 				return roomExtras != null && !roomExtras.isEmpty();
-			case HotelsystemPackage.ROOM_RESERVATION__BILL:
-				return bill != null;
 			case HotelsystemPackage.ROOM_RESERVATION__START_DATE:
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
 			case HotelsystemPackage.ROOM_RESERVATION__END_DATE:
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
+			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
+				return room != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -470,10 +418,11 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 				checkIn();
 				return null;
 			case HotelsystemPackage.ROOM_RESERVATION___CHECK_OUT:
-				checkOut();
-				return null;
+				return checkOut();
 			case HotelsystemPackage.ROOM_RESERVATION___GET_ROOM_IF_OCCUPIED__STRING:
 				return getRoomIfOccupied((String)arguments.get(0));
+			case HotelsystemPackage.ROOM_RESERVATION___GET_ROOM_ID:
+				return getRoomId();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
