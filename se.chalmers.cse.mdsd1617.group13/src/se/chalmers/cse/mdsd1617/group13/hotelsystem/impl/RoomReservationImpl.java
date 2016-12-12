@@ -3,7 +3,8 @@
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -309,6 +310,7 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public void checkIn() {
 		room.setOccupied(true);
+		checkIn = ( new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime() ); 
 	}
 
 	/**
@@ -342,12 +344,10 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getRoomId() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return room.getRoomNumber();
 	}
 
 	/**

@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -106,13 +107,13 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated NOT
 	 */
 	public EList<RoomType> getAllRoomTypes(int nrOfBeds) {
-		List<RoomType> result = new LinkedList<RoomType>();
+		EList<RoomType> result = new BasicEList<RoomType>();
 		for (RoomType type : roomTypes){
 			if(type.getNumBeds() == nrOfBeds){
 					result.add(type);
 			}
 		}
-		return (EList<RoomType>) result;
+		return result;
 	}
 
 
@@ -133,13 +134,13 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated NOT
 	 */
 	public EList<Room> getAllRoomsByType(RoomType roomType) {
-		List<Room> result = new LinkedList<Room>();
+		EList<Room> result = new BasicEList<Room>();
 		for (Room room : rooms){
 			if(room.getRoomtype().equals(roomType)){
 					result.add(room);
 			}
 		}
-		return (EList<Room>) result;
+		return result;
 	}
 
 	/**
@@ -156,13 +157,27 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editRoomType(String roomType, double price, int nbrOfBeds, String features) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+			
+		for(RoomType type : roomTypes){
+			if (type.getName().equals(roomType)){
+				if(price != 0.0){
+			type.setPricePerNight(price);
+			}
+			if(nbrOfBeds != 0){
+		type.setNumBeds(nbrOfBeds);
+		}
+		if(!features.equals("")){
+			type.setDescription(features);
+		}
+			return true;
+		}
+		}
+		return false;
+		}
+	
 
 	/**
 	 * <!-- begin-user-doc -->
