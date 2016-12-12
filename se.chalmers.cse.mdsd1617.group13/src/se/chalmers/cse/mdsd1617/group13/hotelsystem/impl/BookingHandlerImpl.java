@@ -3,12 +3,15 @@
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
-
+import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -269,12 +272,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList checkIn(int bookingId, int roomNumbers) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Integer> checkIn(int bookingId, int roomNumbers) {
+		
+		if(roomNumbers != 0) {
+			this.getBookingById(bookingId).checkIn(roomNumbers);
+		}
+		
+		return this.listFreeRooms(bookingId);
 	}
 
 	/**
@@ -313,23 +319,75 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * Same as listCheckouts(), just a placeholder atm. 
+	 * @generated NOT
 	 */
-	public EList listCheckins(String startDate, String endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Booking> listCheckins(String startDate, String endDate) {
+		DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+		Date sDate = null;
+		Date eDate = null;
+		try {
+			sDate = format.parse(startDate);
+			eDate = format.parse(endDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		EList<Booking> bookingList = new BasicEList<Booking>();
+		
+		for(Booking b : bookings) {
+			Date testDate = null;
+			try {
+				testDate = format.parse(b.getStartDate());
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			if(!(testDate.before(sDate) || testDate.after(eDate))) {
+				bookingList.add(b);
+			}
+		}
+		
+		return bookingList;	
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * Not sure if it should return a list of Bookings or RoomReservations
+	 * @generated NOT
 	 */
-	public EList listCheckouts(String startDate, String endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Booking> listCheckouts(String startDate, String endDate) {
+		DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+		Date sDate = null;
+		Date eDate = null;
+		try {
+			sDate = format.parse(startDate);
+			eDate = format.parse(endDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		EList<Booking> bookingList = new BasicEList<Booking>();
+		
+		for(Booking b : bookings) {
+			Date testDate = null;
+			try {
+				testDate = format.parse(b.getEndDate());
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			if(!(testDate.before(sDate) || testDate.after(eDate))) {
+				bookingList.add(b);
+			}
+		}
+		
+		return bookingList;	
 	}
 
 	/**
