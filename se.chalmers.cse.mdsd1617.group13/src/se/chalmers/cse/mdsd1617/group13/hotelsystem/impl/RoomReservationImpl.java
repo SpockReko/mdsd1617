@@ -274,12 +274,18 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public double checkOut(int nrOfNights) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(!room.isOccupied()) {
+			return 0;
+		}
+		room.setOccupied(false);
+		double price = nrOfNights * roomType.getPricePerNight();
+		for(RoomExtras extra : roomExtras) {
+			price += extra.getPrice();
+		}
+		return price;
 	}
 
 	/**
