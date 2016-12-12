@@ -74,12 +74,12 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void startup(int numRooms) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		roomHandler = new RoomHandlerImpl();
+		roomHandler.initialize(numRooms);
+		bookingHandler = new BookingHandlerImpl();
 	}
 
 	/**

@@ -65,9 +65,9 @@ public interface RoomHandler extends IRoomHandler, IHotelAdministratorProvides {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" descriptionRequired="true" descriptionOrdered="false"
+	 * @model numberOfRoomsRequired="true" numberOfRoomsOrdered="false"
 	 * @generated
 	 */
-	RoomType getRoomType(String description);
+	void initialize(int numberOfRooms);
 
 } // RoomHandler

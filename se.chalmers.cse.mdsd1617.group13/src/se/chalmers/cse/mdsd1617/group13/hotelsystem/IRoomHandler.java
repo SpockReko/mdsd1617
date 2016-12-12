@@ -32,4 +32,12 @@ public interface IRoomHandler extends EObject {
 	 */
 	int countFreeRoom(RoomType roomtype);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" descriptionRequired="true" descriptionOrdered="false"
+	 * @generated
+	 */
+	RoomType getRoomType(String description);
+
 } // IRoomHandler

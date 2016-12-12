@@ -74,11 +74,10 @@
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_b78_IMBQEeaqMcV8O91AUw" type="_Q6JlMLhmEeaytfot7Bi3IA" direction="return"/>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_lk4BMMBQEeaqMcV8O91AUw" name="getRoomType">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_rvBPQMBQEeaqMcV8O91AUw" name="description">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_ebpPsMCHEeaX1cj1ySaItQ" name="initialize">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_k9sAYMCHEeaX1cj1ySaItQ" name="numberOfRooms">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_wNipAMBQEeaqMcV8O91AUw" type="_IpqVsLhmEeaytfot7Bi3IA" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_B4FUMLhmEeaytfot7Bi3IA" name="PaymentHandler">
@@ -451,6 +450,9 @@
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_RQ_kMKpKEeaqs-4dkG4NMQ" name="return" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
                 </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_y8pOkMCHEeaX1cj1ySaItQ" name="nbrToRemove">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+                </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_zjfvQKn2Eeaqs-4dkG4NMQ" name="listFreeRooms" concurrency="concurrent">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_4jxLMKn2Eeaqs-4dkG4NMQ" name="bookingId">
@@ -663,6 +665,12 @@
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_DqsDkL3zEeaPAbmKLAIXGw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_PGit8MCHEeaX1cj1ySaItQ" name="getRoomType">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_UwjqcMCHEeaX1cj1ySaItQ" name="description">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WnRUcMCHEeaX1cj1ySaItQ" type="_IpqVsLhmEeaytfot7Bi3IA" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_GDYBILuhEeaKgqXTYyzHxQ" name="HotelInitializer">
