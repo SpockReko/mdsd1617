@@ -380,6 +380,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean checkIn(int roomNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -516,6 +527,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return nrOfNights();
 			case HotelsystemPackage.BOOKING___IS_CHECKED_IN:
 				return isCheckedIn();
+			case HotelsystemPackage.BOOKING___CHECK_IN__INT:
+				return checkIn((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -28,7 +28,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl#getIadminroomtypeprovides <em>Iadminroomtypeprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl#getRoomTypes <em>Room Types</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl#getRooms <em>Rooms</em>}</li>
  * </ul>
  *
@@ -36,14 +36,14 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  */
 public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements RoomHandler {
 	/**
-	 * The cached value of the '{@link #getIadminroomtypeprovides() <em>Iadminroomtypeprovides</em>}' reference list.
+	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIadminroomtypeprovides()
+	 * @see #getRoomTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomType> iadminroomtypeprovides;
+	protected EList<RoomType> roomTypes;
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' reference list.
@@ -79,11 +79,11 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RoomType> getIadminroomtypeprovides() {
-		if (iadminroomtypeprovides == null) {
-			iadminroomtypeprovides = new EObjectResolvingEList<RoomType>(RoomType.class, this, HotelsystemPackage.ROOM_HANDLER__IADMINROOMTYPEPROVIDES);
+	public EList<RoomType> getRoomTypes() {
+		if (roomTypes == null) {
+			roomTypes = new EObjectResolvingEList<RoomType>(RoomType.class, this, HotelsystemPackage.ROOM_HANDLER__ROOM_TYPES);
 		}
-		return iadminroomtypeprovides;
+		return roomTypes;
 	}
 
 	/**
@@ -213,11 +213,33 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Room getRoom(int roomNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType getRoomType(String description) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_HANDLER__IADMINROOMTYPEPROVIDES:
-				return getIadminroomtypeprovides();
+			case HotelsystemPackage.ROOM_HANDLER__ROOM_TYPES:
+				return getRoomTypes();
 			case HotelsystemPackage.ROOM_HANDLER__ROOMS:
 				return getRooms();
 		}
@@ -233,9 +255,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_HANDLER__IADMINROOMTYPEPROVIDES:
-				getIadminroomtypeprovides().clear();
-				getIadminroomtypeprovides().addAll((Collection<? extends RoomType>)newValue);
+			case HotelsystemPackage.ROOM_HANDLER__ROOM_TYPES:
+				getRoomTypes().clear();
+				getRoomTypes().addAll((Collection<? extends RoomType>)newValue);
 				return;
 			case HotelsystemPackage.ROOM_HANDLER__ROOMS:
 				getRooms().clear();
@@ -253,8 +275,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_HANDLER__IADMINROOMTYPEPROVIDES:
-				getIadminroomtypeprovides().clear();
+			case HotelsystemPackage.ROOM_HANDLER__ROOM_TYPES:
+				getRoomTypes().clear();
 				return;
 			case HotelsystemPackage.ROOM_HANDLER__ROOMS:
 				getRooms().clear();
@@ -271,8 +293,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.ROOM_HANDLER__IADMINROOMTYPEPROVIDES:
-				return iadminroomtypeprovides != null && !iadminroomtypeprovides.isEmpty();
+			case HotelsystemPackage.ROOM_HANDLER__ROOM_TYPES:
+				return roomTypes != null && !roomTypes.isEmpty();
 			case HotelsystemPackage.ROOM_HANDLER__ROOMS:
 				return rooms != null && !rooms.isEmpty();
 		}
@@ -330,6 +352,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				return blockRoom((Integer)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___UNBLOCK_ROOM__INT:
 				return unblockRoom((Integer)arguments.get(0));
+			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM__INT:
+				return getRoom((Integer)arguments.get(0));
+			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM_TYPE__STRING:
+				return getRoomType((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
