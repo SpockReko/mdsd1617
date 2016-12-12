@@ -345,12 +345,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public double checkOut() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		double price = 0;
+		for(RoomReservation roomReservation : this.roomReservation) {
+			price += roomReservation.checkOut(nrOfNights());
+		}
+		return price;
 	}
 
 	/**
