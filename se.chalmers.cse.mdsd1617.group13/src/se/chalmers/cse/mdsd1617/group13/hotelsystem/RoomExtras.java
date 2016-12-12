@@ -32,12 +32,12 @@ public interface RoomExtras extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Price</em>' attribute.
-	 * @see #setPrice(int)
+	 * @see #setPrice(double)
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomExtras_Price()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getPrice();
+	double getPrice();
 
 	/**
 	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras#getPrice <em>Price</em>}' attribute.
@@ -47,7 +47,7 @@ public interface RoomExtras extends EObject {
 	 * @see #getPrice()
 	 * @generated
 	 */
-	void setPrice(int value);
+	void setPrice(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

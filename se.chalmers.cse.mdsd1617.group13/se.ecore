@@ -114,7 +114,7 @@
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="RoomExtras">
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
-                  lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+                  lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="description"
                   ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
             </eClassifiers>
