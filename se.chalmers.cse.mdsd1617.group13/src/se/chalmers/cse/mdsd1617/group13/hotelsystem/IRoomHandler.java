@@ -19,10 +19,10 @@ public interface IRoomHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" ordered="false"
+	 * @model ordered="false" nrOfBedsRequired="true" nrOfBedsOrdered="false"
 	 * @generated
 	 */
-	EList<RoomType> getAllRoomTypes();
+	EList<RoomType> getAllRoomTypes(int nrOfBeds);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,5 +31,13 @@ public interface IRoomHandler extends EObject {
 	 * @generated
 	 */
 	int countFreeRoom(RoomType roomtype);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @generated
+	 */
+	EList<Room> getAllRoomsByType(RoomType roomType);
 
 } // IRoomHandler

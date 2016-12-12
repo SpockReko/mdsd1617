@@ -8,6 +8,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
@@ -29,6 +31,8 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
 
 /**
  * <!-- begin-user-doc -->
@@ -404,12 +408,38 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<FreeRoomTypesDTO> getFreeRooms(int numBeds, String startDate, String endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		List<FreeRoomTypesDTO> freeRooms = new LinkedList();
+		int nrOfRoomFree = 0;
+		//Get the list of room types.
+		//For each roomtype: if the nrOfBeds is more than requested
+			EList<RoomType> roomtypes = roomhandler.getAllRoomTypes(numBeds);
+				for (RoomType roomtype : roomtypes){
+		//Get the list of all room of a given roomtype
+					EList<Room> rooms = roomhandler.getAllRoomsByType(roomtype);
+		//For each room in the list
+					
+					for(Room room: rooms){
+		//see if it is free in the given period.
+							if(isFree(room.getRoomNumber(), startDate, endDate)){
+		//Count if it is true
+								nrOfRoomFree++;
+							}
+		//Get all the nesseary information
+							FreeRoomTypesDTO freeRoom = new FreeRoomTypesDTOImpl();
+							freeRoom.setNumBeds(roomtype.getNumBeds());
+							freeRoom.setNumFreeRooms(nrOfRoomFree);
+							freeRoom.setPricePerNight(roomtype.getPricePerNight());
+							freeRoom.setRoomTypeDescription(roomtype.getDescription());
+							freeRooms.add(freeRoom);
+					}
+		//Save the object to the list
+
+					
+				}
+				return (EList<FreeRoomTypesDTO>)freeRooms;
 	}
 
 	/**
@@ -546,6 +576,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
         return null;
     }
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isFree(int roomId, String startDate, String endDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -717,6 +758,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return addDay((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___GET_BOOKING_BY_ID__INT:
 				return getBookingById((Integer)arguments.get(0));
+			case HotelsystemPackage.BOOKING_HANDLER___IS_FREE__INT_STRING_STRING:
+				return isFree((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

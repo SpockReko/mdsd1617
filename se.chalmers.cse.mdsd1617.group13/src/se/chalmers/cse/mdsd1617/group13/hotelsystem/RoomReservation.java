@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn <em>Check In</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation()
@@ -146,6 +147,32 @@ public interface RoomReservation extends EObject {
 	 * @generated
 	 */
 	void setRoom(Room value);
+
+	/**
+	 * Returns the value of the '<em><b>Check In</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Check In</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Check In</em>' attribute.
+	 * @see #setCheckIn(String)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_CheckIn()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	String getCheckIn();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn <em>Check In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Check In</em>' attribute.
+	 * @see #getCheckIn()
+	 * @generated
+	 */
+	void setCheckIn(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

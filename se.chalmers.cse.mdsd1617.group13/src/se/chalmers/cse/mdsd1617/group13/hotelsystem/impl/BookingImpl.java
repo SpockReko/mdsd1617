@@ -427,6 +427,28 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isFree(int roomId, String startDate, String endDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean CheckedInDate(String indexDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -569,6 +591,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getBookingPrice();
 			case HotelsystemPackage.BOOKING___GET_ROOM_PRICE__INT:
 				return getRoomPrice((Integer)arguments.get(0));
+			case HotelsystemPackage.BOOKING___IS_FREE__INT_STRING_STRING:
+				return isFree((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+			case HotelsystemPackage.BOOKING___CHECKED_IN_DATE__STRING:
+				return CheckedInDate((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

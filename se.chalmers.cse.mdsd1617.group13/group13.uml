@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oZNqEI_JEeaMDqvmI2HKcg" name="se">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oZNqEI_JEeaMDqvmI2HKcg" name="se">
   <packagedElement xmi:type="uml:Package" xmi:id="_AYrT4I_KEeaMDqvmI2HKcg" name="chalmers">
     <packagedElement xmi:type="uml:Package" xmi:id="_AtYYkI_KEeaMDqvmI2HKcg" name="cse">
       <packagedElement xmi:type="uml:Package" xmi:id="_A7-OMI_KEeaMDqvmI2HKcg" name="mdsd1617">
@@ -622,4 +622,10 @@
       </packagedElement>
     </packagedElement>
   </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_dNeq58BwEeaPAbmKLAIXGw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dNeq6MBwEeaPAbmKLAIXGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
 </uml:Model>

@@ -142,4 +142,12 @@ public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustom
 	 */
 	Booking getBookingById(int bookingId);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomIdRequired="true" roomIdOrdered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
+	 * @generated
+	 */
+	boolean isFree(int roomId, String startDate, String endDate);
+
 } // BookingHandler

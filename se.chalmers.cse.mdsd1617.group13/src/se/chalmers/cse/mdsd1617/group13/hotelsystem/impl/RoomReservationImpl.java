@@ -36,6 +36,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getRoom <em>Room</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getCheckIn <em>Check In</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,6 +111,26 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected Room room;
+
+	/**
+	 * The default value of the '{@link #getCheckIn() <em>Check In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCheckIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CHECK_IN_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCheckIn() <em>Check In</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCheckIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected String checkIn = CHECK_IN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,6 +284,27 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCheckIn() {
+		return checkIn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCheckIn(String newCheckIn) {
+		String oldCheckIn = checkIn;
+		checkIn = newCheckIn;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM_RESERVATION__CHECK_IN, oldCheckIn, checkIn));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void checkIn() {
@@ -328,6 +370,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
 				if (resolve) return getRoom();
 				return basicGetRoom();
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN:
+				return getCheckIn();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -357,6 +401,9 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
 				setRoom((Room)newValue);
 				return;
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN:
+				setCheckIn((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -384,6 +431,9 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
 				setRoom((Room)null);
 				return;
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN:
+				setCheckIn(CHECK_IN_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -406,6 +456,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
 			case HotelsystemPackage.ROOM_RESERVATION__ROOM:
 				return room != null;
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN:
+				return CHECK_IN_EDEFAULT == null ? checkIn != null : !CHECK_IN_EDEFAULT.equals(checkIn);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -445,6 +497,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 		result.append(startDate);
 		result.append(", endDate: ");
 		result.append(endDate);
+		result.append(", checkIn: ");
+		result.append(checkIn);
 		result.append(')');
 		return result.toString();
 	}

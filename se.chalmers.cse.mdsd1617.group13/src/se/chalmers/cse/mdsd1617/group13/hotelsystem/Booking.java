@@ -256,4 +256,20 @@ public interface Booking extends EObject {
 	 */
 	double getRoomPrice(int roomNumber);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomIdRequired="true" roomIdOrdered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
+	 * @generated
+	 */
+	boolean isFree(int roomId, String startDate, String endDate);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" indexDateRequired="true" indexDateOrdered="false"
+	 * @generated
+	 */
+	boolean CheckedInDate(String indexDate);
+
 } // Booking
