@@ -275,7 +275,7 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public double checkOut(int nrOfNights) {
-		if(!room.isOccupied()) {
+		if(room != null && roomType != null && !room.isOccupied()) {
 			return 0;
 		}
 		room.setOccupied(false);
