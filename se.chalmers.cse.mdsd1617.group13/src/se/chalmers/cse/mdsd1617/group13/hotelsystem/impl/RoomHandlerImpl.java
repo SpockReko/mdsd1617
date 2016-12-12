@@ -25,7 +25,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Room Handler</b></em>'.
+ * An implementation of the model xobject '<em><b>Room Handler</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -411,13 +411,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				return getAllRoomTypes((Integer)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE:
 				return countFreeRoom((RoomType)arguments.get(0));
-<<<<<<< HEAD
-			case HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE:
-				return getAllRoomsByType((RoomType)arguments.get(0));
-=======
+
 			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM_TYPE__STRING:
 				return getRoomType((String)arguments.get(0));
->>>>>>> master
 			case HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING:
 				return addRoomType((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case HotelsystemPackage.ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING:
