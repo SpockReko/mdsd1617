@@ -509,13 +509,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Booking getBookingById(int bookingId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
+        for (Booking booking : bookings) {
+            if(booking.getBookingId() == bookingId) {
+                return booking;
+            }
+        }
+
+        return null;
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
