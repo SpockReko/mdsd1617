@@ -240,4 +240,20 @@ public interface Booking extends EObject {
 	 */
 	boolean checkIn(int roomNumber);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" required="true" ordered="false"
+	 * @generated
+	 */
+	double getBookingPrice();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false"
+	 * @generated
+	 */
+	double getRoomPrice(int roomNumber);
+
 } // Booking

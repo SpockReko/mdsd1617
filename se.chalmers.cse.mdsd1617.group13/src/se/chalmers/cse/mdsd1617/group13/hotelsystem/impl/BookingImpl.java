@@ -393,6 +393,28 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getBookingPrice() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getRoomPrice(int roomNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -531,6 +553,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return isCheckedIn();
 			case HotelsystemPackage.BOOKING___CHECK_IN__INT:
 				return checkIn((Integer)arguments.get(0));
+			case HotelsystemPackage.BOOKING___GET_BOOKING_PRICE:
+				return getBookingPrice();
+			case HotelsystemPackage.BOOKING___GET_ROOM_PRICE__INT:
+				return getRoomPrice((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

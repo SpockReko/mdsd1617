@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getRoomreservation <em>Roomreservation</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getPrice <em>Price</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getBillID <em>Bill ID</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBill()
@@ -73,5 +74,31 @@ public interface Bill extends EObject {
 	 * @generated
 	 */
 	void setPrice(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Bill ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bill ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bill ID</em>' attribute.
+	 * @see #setBillID(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBill_BillID()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getBillID();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getBillID <em>Bill ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bill ID</em>' attribute.
+	 * @see #getBillID()
+	 * @generated
+	 */
+	void setBillID(int value);
 
 } // Bill

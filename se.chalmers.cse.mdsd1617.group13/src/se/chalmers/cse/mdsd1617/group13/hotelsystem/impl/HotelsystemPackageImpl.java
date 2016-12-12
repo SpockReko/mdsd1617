@@ -440,6 +440,24 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getBooking__GetBookingPrice() {
+		return bookingEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBooking__GetRoomPrice__int() {
+		return bookingEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCustomer() {
 		return customerEClass;
 	}
@@ -649,6 +667,15 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 */
 	public EAttribute getBill_Price() {
 		return (EAttribute)billEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBill_BillID() {
+		return (EAttribute)billEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1224,6 +1251,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(bookingEClass, BOOKING___NR_OF_NIGHTS);
 		createEOperation(bookingEClass, BOOKING___IS_CHECKED_IN);
 		createEOperation(bookingEClass, BOOKING___CHECK_IN__INT);
+		createEOperation(bookingEClass, BOOKING___GET_BOOKING_PRICE);
+		createEOperation(bookingEClass, BOOKING___GET_ROOM_PRICE__INT);
 
 		customerEClass = createEClass(CUSTOMER);
 		createEAttribute(customerEClass, CUSTOMER__FIRST_NAME);
@@ -1259,6 +1288,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		billEClass = createEClass(BILL);
 		createEReference(billEClass, BILL__ROOMRESERVATION);
 		createEAttribute(billEClass, BILL__PRICE);
+		createEAttribute(billEClass, BILL__BILL_ID);
 
 		paymentHandlerEClass = createEClass(PAYMENT_HANDLER);
 		createEReference(paymentHandlerEClass, PAYMENT_HANDLER__BANKING_COMPONENT);
@@ -1400,6 +1430,11 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		op = initEOperation(getBooking__CheckIn__int(), ecorePackage.getEBoolean(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		initEOperation(getBooking__GetBookingPrice(), ecorePackage.getEDouble(), "getBookingPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBooking__GetRoomPrice__int(), ecorePackage.getEDouble(), "getRoomPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomer_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCustomer_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1443,6 +1478,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEClass(billEClass, Bill.class, "Bill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBill_Roomreservation(), this.getRoomReservation(), null, "roomreservation", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBill_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBill_BillID(), ecorePackage.getEInt(), "billID", null, 1, 1, Bill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(paymentHandlerEClass, PaymentHandler.class, "PaymentHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPaymentHandler_BankingComponent(), theBankcomponentsPackage.getICustomerProvides(), null, "bankingComponent", null, 1, 1, PaymentHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
