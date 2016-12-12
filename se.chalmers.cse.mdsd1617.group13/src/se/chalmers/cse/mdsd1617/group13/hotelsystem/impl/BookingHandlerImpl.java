@@ -19,13 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -280,12 +274,27 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean cancelBooking(int bookingId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking bookingToCancel = getBookingById(bookingId);
+
+		if (bookingToCancel == null) { // booking not found
+			return false;
+		}
+
+		if (bookingToCancel.isCheckedIn()) { // cannot cancel a checked in booking
+			return false;
+		}
+
+		// marks the room as free
+		for (RoomReservation roomReservation : bookingToCancel.getRoomReservation()) {
+			roomReservation.getRoom().setOccupied(false);
+		}
+
+		bookingToCancel.setCanceled(true);
+
+		return true;
 	}
 
 	/**
