@@ -393,9 +393,12 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public double initiateCheckout(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking booking = getBookingById(bookingID);
+		if(booking == null || this.bookingCurrentlyCheckingOut != 0) {
+			return -1;
+		}
+		this.bookingCurrentlyCheckingOut = bookingID;
+		return booking.checkOut();
 	}
 
 	/**
@@ -404,9 +407,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public boolean payDuringCheckout(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking booking = bookings.get(this.bookingCurrentlyCheckingOut);
+		if(booking == null) {
+			return false;
+		}
+		return paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, booking.getBookingPrice());
 	}
 
 	/**
