@@ -378,12 +378,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean checkIn(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (RoomReservation rr : roomReservation) {
+			if (rr.getRoomId() == roomNumber) {
+				rr.checkIn();
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 	/**
