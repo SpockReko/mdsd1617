@@ -469,7 +469,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if(booking == null) {
 			return false;
 		}
-		return paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, booking.getBookingPrice());
+		double price = booking.getBookingPrice();
+		if(price <= 0) {
+			return false;
+		}
+		return paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, price);
 	}
 
 	/**
