@@ -666,13 +666,13 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_RESERVATION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Ireceptionistroomtypeprovides</b></em>' reference.
+	 * The feature id for the '<em><b>Room Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES = 0;
+	int ROOM_RESERVATION__ROOM_TYPE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Room Extras</b></em>' reference list.
@@ -1889,15 +1889,15 @@ public interface HotelsystemPackage extends EPackage {
 	EClass getRoomReservation();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides <em>Ireceptionistroomtypeprovides</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType <em>Room Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ireceptionistroomtypeprovides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getIreceptionistroomtypeprovides()
+	 * @return the meta object for the reference '<em>Room Type</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
-	EReference getRoomReservation_Ireceptionistroomtypeprovides();
+	EReference getRoomReservation_RoomType();
 
 	/**
 	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomExtras <em>Room Extras</em>}'.
@@ -2931,12 +2931,12 @@ public interface HotelsystemPackage extends EPackage {
 		EClass ROOM_RESERVATION = eINSTANCE.getRoomReservation();
 
 		/**
-		 * The meta object literal for the '<em><b>Ireceptionistroomtypeprovides</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Room Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROOM_RESERVATION__IRECEPTIONISTROOMTYPEPROVIDES = eINSTANCE.getRoomReservation_Ireceptionistroomtypeprovides();
+		EReference ROOM_RESERVATION__ROOM_TYPE = eINSTANCE.getRoomReservation_RoomType();
 
 		/**
 		 * The meta object literal for the '<em><b>Room Extras</b></em>' reference list feature.
