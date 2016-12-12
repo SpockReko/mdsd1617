@@ -24,6 +24,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl#getRoomreservation <em>Roomreservation</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl#getPrice <em>Price</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl#getBillID <em>Bill ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +58,26 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * @ordered
 	 */
 	protected double price = PRICE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBillID() <em>Bill ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBillID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int BILL_ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getBillID() <em>Bill ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBillID()
+	 * @generated
+	 * @ordered
+	 */
+	protected int billID = BILL_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,6 +162,27 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getBillID() {
+		return billID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBillID(int newBillID) {
+		int oldBillID = billID;
+		billID = newBillID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BILL__BILL_ID, oldBillID, billID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -149,6 +191,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				return basicGetRoomreservation();
 			case HotelsystemPackage.BILL__PRICE:
 				return getPrice();
+			case HotelsystemPackage.BILL__BILL_ID:
+				return getBillID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,6 +210,9 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				return;
 			case HotelsystemPackage.BILL__PRICE:
 				setPrice((Double)newValue);
+				return;
+			case HotelsystemPackage.BILL__BILL_ID:
+				setBillID((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -185,6 +232,9 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 			case HotelsystemPackage.BILL__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
+			case HotelsystemPackage.BILL__BILL_ID:
+				setBillID(BILL_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -201,6 +251,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 				return roomreservation != null;
 			case HotelsystemPackage.BILL__PRICE:
 				return price != PRICE_EDEFAULT;
+			case HotelsystemPackage.BILL__BILL_ID:
+				return billID != BILL_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,6 +269,8 @@ public class BillImpl extends MinimalEObjectImpl.Container implements Bill {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (price: ");
 		result.append(price);
+		result.append(", billID: ");
+		result.append(billID);
 		result.append(')');
 		return result.toString();
 	}

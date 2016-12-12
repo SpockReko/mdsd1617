@@ -165,6 +165,19 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
                 </ownedParameter>
               </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_gtWGAMBaEeaYgdBx0NZ38A" name="getBookingPrice">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_mSZqAMBaEeaYgdBx0NZ38A" name="price" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_qbniIMBaEeaYgdBx0NZ38A" name="getRoomPrice">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_usjL0MBaEeaYgdBx0NZ38A" name="roomNumber">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_xiEAYMBaEeaYgdBx0NZ38A" name="price" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+                </ownedParameter>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_HJOdsLhmEeaytfot7Bi3IA" name="RoomReservation">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_06nbYrhpEeaytfot7Bi3IA" name="roomType" type="_IpqVsLhmEeaytfot7Bi3IA" association="_06m0ULhpEeaytfot7Bi3IA"/>
@@ -258,6 +271,9 @@
               <ownedAttribute xmi:type="uml:Property" xmi:id="_nAqzkrhqEeaytfot7Bi3IA" name="roomreservation" type="_HJOdsLhmEeaytfot7Bi3IA" association="_nAqMgLhqEeaytfot7Bi3IA"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_q5qT0L1LEea3vq_wXUyZng" name="price">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_ODxi0MBaEeaYgdBx0NZ38A" name="billID">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_UlwsQKspEea_ZvXe8054NA" name="IHotelCustomerProvides">

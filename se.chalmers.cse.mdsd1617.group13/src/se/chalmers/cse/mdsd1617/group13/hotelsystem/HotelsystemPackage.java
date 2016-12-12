@@ -592,13 +592,31 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING___CHECK_IN__INT = 5;
 
 	/**
+	 * The operation id for the '<em>Get Booking Price</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___GET_BOOKING_PRICE = 6;
+
+	/**
+	 * The operation id for the '<em>Get Room Price</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___GET_ROOM_PRICE__INT = 7;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 6;
+	int BOOKING_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -1008,13 +1026,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BILL__PRICE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Bill ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BILL__BILL_ID = 2;
+
+	/**
 	 * The number of structural features of the '<em>Bill</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BILL_FEATURE_COUNT = 2;
+	int BILL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Bill</em>' class.
@@ -1837,6 +1864,26 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBooking__CheckIn__int();
 
 	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingPrice() <em>Get Booking Price</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Booking Price</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingPrice()
+	 * @generated
+	 */
+	EOperation getBooking__GetBookingPrice();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomPrice(int) <em>Get Room Price</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Price</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomPrice(int)
+	 * @generated
+	 */
+	EOperation getBooking__GetRoomPrice__int();
+
+	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2089,6 +2136,17 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBill_Price();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getBillID <em>Bill ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bill ID</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getBillID()
+	 * @see #getBill()
+	 * @generated
+	 */
+	EAttribute getBill_BillID();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler <em>Payment Handler</em>}'.
@@ -2887,6 +2945,22 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation BOOKING___CHECK_IN__INT = eINSTANCE.getBooking__CheckIn__int();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Booking Price</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___GET_BOOKING_PRICE = eINSTANCE.getBooking__GetBookingPrice();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Price</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___GET_ROOM_PRICE__INT = eINSTANCE.getBooking__GetRoomPrice__int();
+
+		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3087,6 +3161,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BILL__PRICE = eINSTANCE.getBill_Price();
+
+		/**
+		 * The meta object literal for the '<em><b>Bill ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BILL__BILL_ID = eINSTANCE.getBill_BillID();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.PaymentHandlerImpl <em>Payment Handler</em>}' class.
