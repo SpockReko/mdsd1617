@@ -520,13 +520,13 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING__BOOKING_ID = 5;
 
 	/**
-	 * The feature id for the '<em><b>Bill</b></em>' reference list.
+	 * The feature id for the '<em><b>Bills</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__BILL = 6;
+	int BOOKING__BILLS = 6;
 
 	/**
 	 * The number of structural features of the '<em>Booking</em>' class.
@@ -1793,15 +1793,15 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getBooking_BookingId();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBill <em>Bill</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBills <em>Bills</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Bill</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBill()
+	 * @return the meta object for the reference list '<em>Bills</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBills()
 	 * @see #getBooking()
 	 * @generated
 	 */
-	EReference getBooking_Bill();
+	EReference getBooking_Bills();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#cancel() <em>Cancel</em>}' operation.
@@ -2889,12 +2889,12 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute BOOKING__BOOKING_ID = eINSTANCE.getBooking_BookingId();
 
 		/**
-		 * The meta object literal for the '<em><b>Bill</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Bills</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOOKING__BILL = eINSTANCE.getBooking_Bill();
+		EReference BOOKING__BILLS = eINSTANCE.getBooking_Bills();
 
 		/**
 		 * The meta object literal for the '<em><b>Cancel</b></em>' operation.

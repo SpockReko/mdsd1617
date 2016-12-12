@@ -72,7 +72,7 @@
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingId" ordered="false"
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-              <eStructuralFeatures xsi:type="ecore:EReference" name="bill" ordered="false"
+              <eStructuralFeatures xsi:type="ecore:EReference" name="bills" ordered="false"
                   upperBound="-1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Bill"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="Customer">

@@ -128,7 +128,7 @@
               <ownedAttribute xmi:type="uml:Property" xmi:id="_Gbb3cL30EeaPAbmKLAIXGw" name="bookingId">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_bwG_sMBJEeaYgdBx0NZ38A" name="bill" type="_cSCqgLhmEeaytfot7Bi3IA" association="_bwFKgMBJEeaYgdBx0NZ38A">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_bwG_sMBJEeaYgdBx0NZ38A" name="bills" type="_cSCqgLhmEeaytfot7Bi3IA" association="_bwFKgMBJEeaYgdBx0NZ38A">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hSo0IMBJEeaYgdBx0NZ38A"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hSx-EMBJEeaYgdBx0NZ38A" value="*"/>
               </ownedAttribute>

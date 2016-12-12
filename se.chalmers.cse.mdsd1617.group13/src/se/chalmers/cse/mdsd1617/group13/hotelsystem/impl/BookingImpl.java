@@ -39,7 +39,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#isCanceled <em>Canceled</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBookingId <em>Booking Id</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBill <em>Bill</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBills <em>Bills</em>}</li>
  * </ul>
  *
  * @generated
@@ -146,14 +146,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected int bookingId = BOOKING_ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBill() <em>Bill</em>}' reference list.
+	 * The cached value of the '{@link #getBills() <em>Bills</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBill()
+	 * @see #getBills()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Bill> bill;
+	protected EList<Bill> bills;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -313,11 +313,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Bill> getBill() {
-		if (bill == null) {
-			bill = new EObjectResolvingEList<Bill>(Bill.class, this, HotelsystemPackage.BOOKING__BILL);
+	public EList<Bill> getBills() {
+		if (bills == null) {
+			bills = new EObjectResolvingEList<Bill>(Bill.class, this, HotelsystemPackage.BOOKING__BILLS);
 		}
-		return bill;
+		return bills;
 	}
 
 	/**
@@ -434,8 +434,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return isCanceled();
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				return getBookingId();
-			case HotelsystemPackage.BOOKING__BILL:
-				return getBill();
+			case HotelsystemPackage.BOOKING__BILLS:
+				return getBills();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -468,9 +468,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				setBookingId((Integer)newValue);
 				return;
-			case HotelsystemPackage.BOOKING__BILL:
-				getBill().clear();
-				getBill().addAll((Collection<? extends Bill>)newValue);
+			case HotelsystemPackage.BOOKING__BILLS:
+				getBills().clear();
+				getBills().addAll((Collection<? extends Bill>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -502,8 +502,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				setBookingId(BOOKING_ID_EDEFAULT);
 				return;
-			case HotelsystemPackage.BOOKING__BILL:
-				getBill().clear();
+			case HotelsystemPackage.BOOKING__BILLS:
+				getBills().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -529,8 +529,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return canceled != CANCELED_EDEFAULT;
 			case HotelsystemPackage.BOOKING__BOOKING_ID:
 				return bookingId != BOOKING_ID_EDEFAULT;
-			case HotelsystemPackage.BOOKING__BILL:
-				return bill != null && !bill.isEmpty();
+			case HotelsystemPackage.BOOKING__BILLS:
+				return bills != null && !bills.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
