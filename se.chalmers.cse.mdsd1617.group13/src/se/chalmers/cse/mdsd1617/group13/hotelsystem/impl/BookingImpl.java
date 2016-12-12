@@ -352,6 +352,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		for(RoomReservation roomReservation : this.roomReservation) {
 			price += roomReservation.checkOut(nrOfNights());
 		}
+		Bill bill = new BillImpl();
+		bill.setBillID(this.bookingId);
+		bill.setPrice(price);
+		bills.add(bill);
 		return price;
 	}
 
@@ -396,12 +400,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public double getBookingPrice() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Bill bill : bills) {
+			if(bill.getBillID() == this.bookingId) {
+				return bill.getPrice();
+			}
+		}
+		return -1;
 	}
 
 	/**
