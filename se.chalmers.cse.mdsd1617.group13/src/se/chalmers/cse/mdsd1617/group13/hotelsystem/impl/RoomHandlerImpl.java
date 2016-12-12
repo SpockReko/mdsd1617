@@ -196,12 +196,19 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean blockRoom(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		boolean roomIsBlocked = false;
+		for (Room room: rooms){
+			if (room.getRoomNumber() == roomNumber){
+				room.isBlocked();
+				roomIsBlocked = true;
+			} else {
+				roomIsBlocked = false;
+			}
+		}
+		return roomIsBlocked;
 	}
 
 	/**
