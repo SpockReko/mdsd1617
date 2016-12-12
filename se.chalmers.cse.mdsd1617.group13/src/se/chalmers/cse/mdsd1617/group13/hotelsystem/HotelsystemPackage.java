@@ -7,7 +7,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -448,13 +447,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_HANDLER___ADD_DAY__STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 10;
 
 	/**
+	 * The operation id for the '<em>Get Booking By Id</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_HANDLER___GET_BOOKING_BY_ID__INT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 11;
+
+	/**
 	 * The number of operations of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_OPERATION_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 11;
+	int BOOKING_HANDLER_OPERATION_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 12;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
@@ -575,13 +583,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING___NR_OF_NIGHTS = 3;
 
 	/**
+	 * The operation id for the '<em>Is Checked In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___IS_CHECKED_IN = 4;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 4;
+	int BOOKING_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -718,7 +735,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_RESERVATION___CHECK_OUT = 1;
+	int ROOM_RESERVATION___CHECK_OUT__INT = 1;
 
 	/**
 	 * The operation id for the '<em>Get Room If Occupied</em>' operation.
@@ -1009,31 +1026,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BILL_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Banking Component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_HANDLER__BANKING_COMPONENT = 0;
+
+	/**
 	 * The number of structural features of the '<em>Payment Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_HANDLER_FEATURE_COUNT = BankcomponentsPackage.ICUSTOMER_PROVIDES_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Make Payment</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = BankcomponentsPackage.ICUSTOMER_PROVIDES___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Is Credit Card Valid</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_HANDLER___IS_CREDIT_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING = BankcomponentsPackage.ICUSTOMER_PROVIDES___IS_CREDIT_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING;
+	int PAYMENT_HANDLER_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>Pay If Card Valid</em>' operation.
@@ -1042,7 +1050,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_HANDLER___PAY_IF_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = BankcomponentsPackage.ICUSTOMER_PROVIDES_OPERATION_COUNT + 0;
+	int PAYMENT_HANDLER___PAY_IF_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = 0;
 
 	/**
 	 * The number of operations of the '<em>Payment Handler</em>' class.
@@ -1051,7 +1059,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_HANDLER_OPERATION_COUNT = BankcomponentsPackage.ICUSTOMER_PROVIDES_OPERATION_COUNT + 1;
+	int PAYMENT_HANDLER_OPERATION_COUNT = 1;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Handler</em>' class.
@@ -1665,6 +1673,16 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBookingHandler__AddDay__String();
 
 	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingById(int) <em>Get Booking By Id</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Booking By Id</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingById(int)
+	 * @generated
+	 */
+	EOperation getBookingHandler__GetBookingById__int();
+
+	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking <em>Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1792,6 +1810,16 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBooking__NrOfNights();
 
 	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCheckedIn() <em>Is Checked In</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Checked In</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCheckedIn()
+	 * @generated
+	 */
+	EOperation getBooking__IsCheckedIn();
+
+	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1909,14 +1937,14 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getRoomReservation__CheckIn();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkOut() <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkOut(int) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkOut()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkOut(int)
 	 * @generated
 	 */
-	EOperation getRoomReservation__CheckOut();
+	EOperation getRoomReservation__CheckOut__int();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomIfOccupied(java.lang.String) <em>Get Room If Occupied</em>}' operation.
@@ -2054,6 +2082,17 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPaymentHandler();
+
+	/**
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler#getBankingComponent <em>Banking Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Banking Component</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler#getBankingComponent()
+	 * @see #getPaymentHandler()
+	 * @generated
+	 */
+	EReference getPaymentHandler_BankingComponent();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler#payIfCardValid(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double) <em>Pay If Card Valid</em>}' operation.
@@ -2697,6 +2736,14 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation BOOKING_HANDLER___ADD_DAY__STRING = eINSTANCE.getBookingHandler__AddDay__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Booking By Id</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_HANDLER___GET_BOOKING_BY_ID__INT = eINSTANCE.getBookingHandler__GetBookingById__int();
+
+		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2793,6 +2840,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___NR_OF_NIGHTS = eINSTANCE.getBooking__NrOfNights();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Checked In</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___IS_CHECKED_IN = eINSTANCE.getBooking__IsCheckedIn();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -2892,7 +2947,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_RESERVATION___CHECK_OUT = eINSTANCE.getRoomReservation__CheckOut();
+		EOperation ROOM_RESERVATION___CHECK_OUT__INT = eINSTANCE.getRoomReservation__CheckOut__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Room If Occupied</b></em>' operation.
@@ -3005,6 +3060,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PAYMENT_HANDLER = eINSTANCE.getPaymentHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Banking Component</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PAYMENT_HANDLER__BANKING_COMPONENT = eINSTANCE.getPaymentHandler_BankingComponent();
 
 		/**
 		 * The meta object literal for the '<em><b>Pay If Card Valid</b></em>' operation.

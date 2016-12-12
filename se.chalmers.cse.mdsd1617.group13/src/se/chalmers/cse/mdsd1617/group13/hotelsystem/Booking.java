@@ -223,4 +223,12 @@ public interface Booking extends EObject {
 	 */
 	int nrOfNights();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isCheckedIn();
+
 } // Booking

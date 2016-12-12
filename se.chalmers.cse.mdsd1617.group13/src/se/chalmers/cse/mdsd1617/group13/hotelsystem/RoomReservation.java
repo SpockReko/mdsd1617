@@ -158,10 +158,10 @@ public interface RoomReservation extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false"
+	 * @model required="true" ordered="false" nrOfNightsRequired="true" nrOfNightsOrdered="false"
 	 * @generated
 	 */
-	double checkOut();
+	double checkOut(int nrOfNights);
 
 	/**
 	 * <!-- begin-user-doc -->

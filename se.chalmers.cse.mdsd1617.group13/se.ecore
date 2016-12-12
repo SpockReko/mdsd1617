@@ -29,6 +29,9 @@
               <eOperations name="addDay" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
                 <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eOperations>
+              <eOperations name="getBookingById" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking">
+                <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+              </eOperations>
               <eStructuralFeatures xsi:type="ecore:EReference" name="bookings" ordered="false"
                   upperBound="-1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking"/>
               <eStructuralFeatures xsi:type="ecore:EReference" name="paymentHandler"
@@ -48,6 +51,7 @@
               </eOperations>
               <eOperations name="checkOut" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
               <eOperations name="nrOfNights" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+              <eOperations name="isCheckedIn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
               <eStructuralFeatures xsi:type="ecore:EReference" name="customer" ordered="false"
                   lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Customer"/>
               <eStructuralFeatures xsi:type="ecore:EReference" name="roomReservation"
@@ -58,7 +62,7 @@
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="canceled" ordered="false"
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-              <eStructuralFeatures xsi:type="ecore:EAttribute" name="BookingId" ordered="false"
+              <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingId" ordered="false"
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               <eStructuralFeatures xsi:type="ecore:EReference" name="bill" ordered="false"
                   upperBound="-1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Bill"/>
@@ -75,7 +79,9 @@
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="RoomReservation">
               <eOperations name="checkIn" ordered="false" lowerBound="1"/>
-              <eOperations name="checkOut" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+              <eOperations name="checkOut" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+                <eParameters name="nrOfNights" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+              </eOperations>
               <eOperations name="getRoomIfOccupied" ordered="false" lowerBound="1"
                   eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room">
                 <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -122,8 +128,8 @@
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" ordered="false"
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
             </eClassifiers>
-            <eClassifiers xsi:type="ecore:EClass" name="PaymentHandler" eSuperTypes="#//chalmers/cse/mdsd1617/group13/bankcomponents/ICustomerProvides">
-              <eOperations name="payIfCardValid" ordered="false" lowerBound="1">
+            <eClassifiers xsi:type="ecore:EClass" name="PaymentHandler">
+              <eOperations name="payIfCardValid" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
                 <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -132,6 +138,8 @@
                 <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eParameters name="sum" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
               </eOperations>
+              <eStructuralFeatures xsi:type="ecore:EReference" name="bankingComponent"
+                  ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/bankcomponents/ICustomerProvides"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="IRoomHandler" abstract="true"
                 interface="true">

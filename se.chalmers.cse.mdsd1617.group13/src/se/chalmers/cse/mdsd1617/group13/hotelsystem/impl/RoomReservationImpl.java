@@ -276,7 +276,7 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double checkOut() {
+	public double checkOut(int nrOfNights) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -417,8 +417,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION___CHECK_IN:
 				checkIn();
 				return null;
-			case HotelsystemPackage.ROOM_RESERVATION___CHECK_OUT:
-				return checkOut();
+			case HotelsystemPackage.ROOM_RESERVATION___CHECK_OUT__INT:
+				return checkOut((Integer)arguments.get(0));
 			case HotelsystemPackage.ROOM_RESERVATION___GET_ROOM_IF_OCCUPIED__STRING:
 				return getRoomIfOccupied((String)arguments.get(0));
 			case HotelsystemPackage.ROOM_RESERVATION___GET_ROOM_ID:

@@ -511,6 +511,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Booking getBookingById(int bookingId) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -684,6 +695,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return BookingCheckin((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___ADD_DAY__STRING:
 				return addDay((String)arguments.get(0));
+			case HotelsystemPackage.BOOKING_HANDLER___GET_BOOKING_BY_ID__INT:
+				return getBookingById((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
