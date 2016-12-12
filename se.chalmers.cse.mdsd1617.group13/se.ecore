@@ -91,8 +91,8 @@
                 <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eOperations>
               <eOperations name="getRoomId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-              <eStructuralFeatures xsi:type="ecore:EReference" name="ireceptionistroomtypeprovides"
-                  ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
+              <eStructuralFeatures xsi:type="ecore:EReference" name="roomType" ordered="false"
+                  lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
               <eStructuralFeatures xsi:type="ecore:EReference" name="roomExtras" ordered="false"
                   upperBound="-1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomExtras"/>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
