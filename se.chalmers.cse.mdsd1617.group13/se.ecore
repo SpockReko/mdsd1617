@@ -177,9 +177,14 @@
               <eOperations name="countFreeRoom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
                 <eParameters name="roomtype" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
               </eOperations>
+<<<<<<< HEAD
               <eOperations name="getAllRoomsByType" ordered="false" upperBound="-1"
                   eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room">
                 <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
+=======
+              <eOperations name="getRoomType" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType">
+                <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+>>>>>>> master
               </eOperations>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="IHotelCustomerProvides" abstract="true"
@@ -252,8 +257,8 @@
               <eOperations name="getRoom" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room">
                 <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>
-              <eOperations name="getRoomType" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType">
-                <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              <eOperations name="initialize" ordered="false" lowerBound="1">
+                <eParameters name="numberOfRooms" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>
               <eStructuralFeatures xsi:type="ecore:EReference" name="roomTypes" ordered="false"
                   upperBound="-1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
@@ -326,6 +331,7 @@
                   eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
                 <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
                 <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eParameters name="nbrToRemove" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>
               <eOperations name="listFreeRooms" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
                 <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

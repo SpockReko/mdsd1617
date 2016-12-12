@@ -234,34 +234,59 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking booking = getBookingById(reservationId);
+		if(booking != null){
+			//Needs to be checked first!
+			booking.setStartDate(startDate);
+			booking.setEndDate(endDate);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean addRoomTypeToBooking(int bookingId, String roomType, int numberOfRoomsForType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking booking = getBookingById(bookingId);
+		RoomType rt = roomhandler.getRoomType(roomType);
+		if(booking != null && rt != null){
+			for(int i = 0; i < numberOfRoomsForType; i++){
+				booking.getRoomReservation().add(new RoomReservationImpl());
+			}
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated  NOT
 	 */
-	public boolean removeRoomTypeFromBooking(int bookingId, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public boolean removeRoomTypeFromBooking(int bookingId, String roomType, int nbrToRemove) {
+		Booking booking = getBookingById(bookingId);
+		RoomType rt = roomhandler.getRoomType(roomType);
+		if(booking != null && rt != null){
+			for(int i = 0; i < nbrToRemove; i++){
+				EList<RoomReservation> bookings = booking.getRoomReservation();
+				for(RoomReservation rr : bookings){
+					if(rr != null && rr.getRoomType() == rt){
+						bookings.remove(rr);
+					}
+				}
+			}
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -741,8 +766,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return editBookingTime((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT:
 				return addRoomTypeToBooking((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-			case HotelsystemPackage.BOOKING_HANDLER___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING:
-				return removeRoomTypeFromBooking((Integer)arguments.get(0), (String)arguments.get(1));
+			case HotelsystemPackage.BOOKING_HANDLER___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING_INT:
+				return removeRoomTypeFromBooking((Integer)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___LIST_FREE_ROOMS__INT:
 				return listFreeRooms((Integer)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___CHECK_IN__INT_INT:

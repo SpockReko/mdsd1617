@@ -184,8 +184,13 @@
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler/countFreeRoom">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler/countFreeRoom/roomtype"/>
                 </genOperations>
+<<<<<<< HEAD
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler/getAllRoomsByType">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler/getAllRoomsByType/roomType"/>
+=======
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler/getRoomType">
+                  <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler/getRoomType/description"/>
+>>>>>>> master
                 </genOperations>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelCustomerProvides">
@@ -250,8 +255,8 @@
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/getRoom">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/getRoom/roomNumber"/>
                 </genOperations>
-                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/getRoomType">
-                  <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/getRoomType/description"/>
+                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/initialize">
+                  <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler/initialize/numberOfRooms"/>
                 </genOperations>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelAdministratorProvides">
@@ -314,6 +319,7 @@
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelReceptionistProvides/removeRoomTypeFromBooking">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelReceptionistProvides/removeRoomTypeFromBooking/bookingId"/>
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelReceptionistProvides/removeRoomTypeFromBooking/roomType"/>
+                  <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelReceptionistProvides/removeRoomTypeFromBooking/nbrToRemove"/>
                 </genOperations>
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelReceptionistProvides/listFreeRooms">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelReceptionistProvides/listFreeRooms/bookingId"/>

@@ -38,10 +38,10 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomTypeRequired="true" roomTypeOrdered="false" nbrToRemoveRequired="true" nbrToRemoveOrdered="false"
 	 * @generated
 	 */
-	boolean removeRoomTypeFromBooking(int bookingId, String roomType);
+	boolean removeRoomTypeFromBooking(int bookingId, String roomType, int nbrToRemove);
 
 	/**
 	 * <!-- begin-user-doc -->
