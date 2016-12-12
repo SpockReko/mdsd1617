@@ -29,9 +29,6 @@
               </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_KNLkorhrEeaytfot7Bi3IA" name="paymentHandler" type="_B4FUMLhmEeaytfot7Bi3IA" association="_KNK9kLhrEeaytfot7Bi3IA"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_j1V6UrrLEear4uagTC-MRA" name="roomhandler" type="_OFT1ELuSEeaKgqXTYyzHxQ" association="_j1VTQLrLEear4uagTC-MRA"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_vX5L4LuZEeaKgqXTYyzHxQ" name="currentReservationId">
-                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-              </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_SLYzEMBHEeaYgdBx0NZ38A" name="bookingCurrentlyCheckingOut">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>

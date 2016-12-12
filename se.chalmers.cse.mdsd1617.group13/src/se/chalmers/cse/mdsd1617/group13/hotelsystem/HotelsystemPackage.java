@@ -222,22 +222,13 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_HANDLER__ROOMHANDLER = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Current Reservation Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_HANDLER__CURRENT_RESERVATION_ID = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Booking Currently Checking Out</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 4;
+	int BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Booking Handler</em>' class.
@@ -246,7 +237,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_FEATURE_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 5;
+	int BOOKING_HANDLER_FEATURE_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Edit Booking Time</em>' operation.
@@ -1658,17 +1649,6 @@ public interface HotelsystemPackage extends EPackage {
 	EReference getBookingHandler_Roomhandler();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId <em>Current Reservation Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Current Reservation Id</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getCurrentReservationId()
-	 * @see #getBookingHandler()
-	 * @generated
-	 */
-	EAttribute getBookingHandler_CurrentReservationId();
-
-	/**
 	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2759,14 +2739,6 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BOOKING_HANDLER__ROOMHANDLER = eINSTANCE.getBookingHandler_Roomhandler();
-
-		/**
-		 * The meta object literal for the '<em><b>Current Reservation Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOKING_HANDLER__CURRENT_RESERVATION_ID = eINSTANCE.getBookingHandler_CurrentReservationId();
 
 		/**
 		 * The meta object literal for the '<em><b>Booking Currently Checking Out</b></em>' attribute feature.

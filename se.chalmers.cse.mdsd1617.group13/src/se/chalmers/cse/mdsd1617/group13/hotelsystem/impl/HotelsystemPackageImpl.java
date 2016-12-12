@@ -278,17 +278,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBookingHandler_CurrentReservationId() {
-		return (EAttribute)bookingHandlerEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getBookingHandler_BookingCurrentlyCheckingOut() {
-		return (EAttribute)bookingHandlerEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)bookingHandlerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1214,7 +1205,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__BOOKINGS);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__PAYMENT_HANDLER);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__ROOMHANDLER);
-		createEAttribute(bookingHandlerEClass, BOOKING_HANDLER__CURRENT_RESERVATION_ID);
 		createEAttribute(bookingHandlerEClass, BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___BOOKING_CHECKIN__STRING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___ADD_DAY__STRING);
@@ -1376,7 +1366,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEReference(getBookingHandler_Bookings(), this.getBooking(), null, "bookings", null, 0, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_PaymentHandler(), this.getPaymentHandler(), null, "paymentHandler", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_Roomhandler(), this.getIRoomHandler(), null, "roomhandler", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBookingHandler_CurrentReservationId(), ecorePackage.getEInt(), "currentReservationId", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingHandler_BookingCurrentlyCheckingOut(), ecorePackage.getEInt(), "bookingCurrentlyCheckingOut", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		EOperation op = initEOperation(getBookingHandler__BookingCheckin__String(), theTypesPackage.getBoolean(), "BookingCheckin", 1, 1, IS_UNIQUE, !IS_ORDERED);
