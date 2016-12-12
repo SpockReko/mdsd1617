@@ -167,12 +167,19 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean addRoom(int roomNumber, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Room room = getRoom(roomNumber);
+		RoomType thisRoomType = getRoomType(roomType);
+		if(thisRoomType == null || room != null) {
+			return false;
+		}
+		room = new RoomImpl();
+		room.setRoomNumber(roomNumber);
+		room.setRoomtype(thisRoomType);
+		rooms.add(room);
+		return true;
 	}
 
 	/**
@@ -200,12 +207,15 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean unblockRoom(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Room room = getRoom(roomNumber);
+		if(!room.isOccupied() && room.isBlocked()) {
+			room.setBlocked(false);
+			return true;
+		}
+		return false;
 	}
 
 	/**
