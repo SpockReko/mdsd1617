@@ -213,6 +213,10 @@
             <element xmi:type="uml:Property" href="se.uml#_Gbb3cL30EeaPAbmKLAIXGw"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_GcY5sb30EeaPAbmKLAIXGw"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_PTlvYMEfEea_d8QopqIcIA" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="se.uml#_PQuBkMEfEea_d8QopqIcIA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_PTlvYcEfEea_d8QopqIcIA"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_GItb5rhmEeaytfot7Bi3IA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_GItb57hmEeaytfot7Bi3IA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_GItb6LhmEeaytfot7Bi3IA"/>

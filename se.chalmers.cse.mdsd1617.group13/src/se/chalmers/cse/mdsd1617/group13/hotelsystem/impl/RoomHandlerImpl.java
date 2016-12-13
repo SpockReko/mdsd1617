@@ -5,9 +5,6 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
@@ -411,7 +408,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				return getAllRoomTypes((Integer)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE:
 				return countFreeRoom((RoomType)arguments.get(0));
-
+			case HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE:
+				return getAllRoomsByType((RoomType)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM_TYPE__STRING:
 				return getRoomType((String)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING:

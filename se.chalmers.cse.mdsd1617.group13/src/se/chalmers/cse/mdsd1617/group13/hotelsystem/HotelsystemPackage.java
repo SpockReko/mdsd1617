@@ -538,13 +538,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING__BILLS = 6;
 
 	/**
+	 * The feature id for the '<em><b>Confirmed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__CONFIRMED = 7;
+
+	/**
 	 * The number of structural features of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_FEATURE_COUNT = 7;
+	int BOOKING_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
@@ -1162,13 +1171,21 @@ public interface HotelsystemPackage extends EPackage {
 
 	/**
 	 * The operation id for the '<em>Get All Rooms By Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = 2;
+
+	/**
 	 * The operation id for the '<em>Get Room Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_HANDLER___GET_ROOM_TYPE__STRING = 2;
+	int IROOM_HANDLER___GET_ROOM_TYPE__STRING = 3;
 
 	/**
 	 * The number of operations of the '<em>IRoom Handler</em>' class.
@@ -1177,7 +1194,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_HANDLER_OPERATION_COUNT = 3;
+	int IROOM_HANDLER_OPERATION_COUNT = 4;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Customer Provides</em>' class.
@@ -1378,8 +1395,16 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE = IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE;
 
 	/**
-	 * The operation id for the '<em>Get Room Type</em>' operation.
+	 * The operation id for the '<em>Get All Rooms By Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE;
 
+	/**
+	 * The operation id for the '<em>Get Room Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1879,6 +1904,17 @@ public interface HotelsystemPackage extends EPackage {
 	EReference getBooking_Bills();
 
 	/**
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed <em>Confirmed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Confirmed</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed()
+	 * @see #getBooking()
+	 * @generated
+	 */
+	EAttribute getBooking_Confirmed();
+
+	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#cancel() <em>Cancel</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2327,7 +2363,16 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getIRoomHandler__CountFreeRoom__RoomType();
 
 	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType) <em>Get All Rooms By Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get All Rooms By Type</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType)
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetAllRoomsByType__RoomType();
 
+	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getRoomType(java.lang.String) <em>Get Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3034,6 +3079,14 @@ public interface HotelsystemPackage extends EPackage {
 		EReference BOOKING__BILLS = eINSTANCE.getBooking_Bills();
 
 		/**
+		 * The meta object literal for the '<em><b>Confirmed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING__CONFIRMED = eINSTANCE.getBooking_Confirmed();
+
+		/**
 		 * The meta object literal for the '<em><b>Cancel</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3392,7 +3445,14 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE = eINSTANCE.getIRoomHandler__CountFreeRoom__RoomType();
 
 		/**
+		 * The meta object literal for the '<em><b>Get All Rooms By Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = eINSTANCE.getIRoomHandler__GetAllRoomsByType__RoomType();
 
+		/**
 		 * The meta object literal for the '<em><b>Get Room Type</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

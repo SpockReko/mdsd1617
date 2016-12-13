@@ -9,8 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
@@ -25,6 +23,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 
@@ -496,12 +501,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean confirmBooking(int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		getBookingById(bookingID).setConfirmed(true);
+		return true;
 	}
 
 	/**

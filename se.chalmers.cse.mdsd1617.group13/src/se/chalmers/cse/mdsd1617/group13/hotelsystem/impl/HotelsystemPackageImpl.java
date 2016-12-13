@@ -395,6 +395,15 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getBooking_Confirmed() {
+		return (EAttribute)bookingEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBooking__Cancel() {
 		return bookingEClass.getEOperations().get(0);
 	}
@@ -782,8 +791,17 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRoomHandler__GetRoomType__String() {
+	public EOperation getIRoomHandler__GetAllRoomsByType__RoomType() {
 		return iRoomHandlerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIRoomHandler__GetRoomType__String() {
+		return iRoomHandlerEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1300,6 +1318,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEAttribute(bookingEClass, BOOKING__CANCELED);
 		createEAttribute(bookingEClass, BOOKING__BOOKING_ID);
 		createEReference(bookingEClass, BOOKING__BILLS);
+		createEAttribute(bookingEClass, BOOKING__CONFIRMED);
 		createEOperation(bookingEClass, BOOKING___CANCEL);
 		createEOperation(bookingEClass, BOOKING___GET_OCCUPIED_ROOMS__STRING);
 		createEOperation(bookingEClass, BOOKING___CHECK_OUT);
@@ -1356,7 +1375,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		iRoomHandlerEClass = createEClass(IROOM_HANDLER);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ALL_ROOM_TYPES__INT);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE);
-
+		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ROOM_TYPE__STRING);
 
 		iHotelCustomerProvidesEClass = createEClass(IHOTEL_CUSTOMER_PROVIDES);
@@ -1481,6 +1500,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEAttribute(getBooking_Canceled(), ecorePackage.getEBoolean(), "canceled", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_BookingId(), ecorePackage.getEInt(), "bookingId", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBooking_Bills(), this.getBill(), null, "bills", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBooking_Confirmed(), ecorePackage.getEBoolean(), "confirmed", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getBooking__Cancel(), null, "cancel", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1576,6 +1596,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		op = initEOperation(getIRoomHandler__CountFreeRoom__RoomType(), ecorePackage.getEInt(), "countFreeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getRoomType(), "roomtype", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getIRoomHandler__GetAllRoomsByType__RoomType(), this.getRoom(), "getAllRoomsByType", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoomHandler__GetRoomType__String(), this.getRoomType(), "getRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
