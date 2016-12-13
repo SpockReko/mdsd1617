@@ -35,16 +35,10 @@ public interface IRoomHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-<<<<<<< HEAD
-	 * @model ordered="false" roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated
-	 */
-	EList<Room> getAllRoomsByType(RoomType roomType);
-=======
+
 	 * @model required="true" ordered="false" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
 	RoomType getRoomType(String description);
->>>>>>> master
 
 } // IRoomHandler
