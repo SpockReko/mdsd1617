@@ -3,9 +3,12 @@
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -18,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras;
@@ -333,12 +337,28 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Room getRoomIfOccupied(String date) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		DateFormat format = new SimpleDateFormat("yyyyMMdd");
+		Date requestDate;
+		Date checkOutDate;
+		try{
+			requestDate = format.parse(date);
+			checkOutDate = format.parse(endDate);
+		}catch (ParseException e) {
+			return null;
+		}
+		
+		/*
+		 * Since the room is not occupied until it is checked in we cannot know if the room
+		 * will be occupied in the future if it is not already checked in.
+		*/
+		if(room.isOccupied() && (requestDate.compareTo(checkOutDate)) < 0){
+			return room;
+		}else{
+			return null;
+		}
 	}
 
 	/**

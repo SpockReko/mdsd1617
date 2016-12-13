@@ -9,7 +9,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -336,12 +336,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Room> getOccupiedRooms(String date) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<Room> rooms = new BasicEList<Room>();
+		for(RoomReservation reservation : roomReservation){
+			Room room = reservation.getRoomIfOccupied(date);
+			if(room != null){
+				rooms.add(room);
+			}
+		}
+		return rooms;
 	}
 
 	/**

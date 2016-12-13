@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
@@ -353,13 +354,22 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Given a date, the system shows all occupied rooms during that day, as well as the
+	 * connected booking ID for each room.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Map listOccupiedRooms(String date) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Map<Integer,EList<Integer>> occupiedRooms = new HashMap<Integer, EList<Integer>>();
+		for(Booking booking : bookings){
+			int bookingId = booking.getBookingId();
+			EList<Integer> roomNumbers = new BasicEList<Integer>();
+			for(Room room : booking.getOccupiedRooms(date)){
+				roomNumbers.add(room.getRoomNumber());
+			}
+			occupiedRooms.put(bookingId, roomNumbers);
+		}
+		return occupiedRooms;
 	}
 
 	/**
