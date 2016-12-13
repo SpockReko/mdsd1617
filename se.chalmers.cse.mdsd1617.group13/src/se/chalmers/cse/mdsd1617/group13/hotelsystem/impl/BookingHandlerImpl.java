@@ -2,6 +2,7 @@
  */
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -11,6 +12,8 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TreeMap;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -23,13 +26,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 
@@ -103,10 +99,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected BookingHandlerImpl() {
 		super();
+		paymentHandler = new PaymentHandlerImpl();
 	}
 
 	/**
@@ -231,19 +228,53 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * Dates needs to be checked if available
 	 * @generated NOT
 	 */
 	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
 		Booking booking = getBookingById(reservationId);
-		if(booking != null){
-			//Needs to be checked first!
-			booking.setStartDate(startDate);
-			booking.setEndDate(endDate);
-			return true;
-		} else {
-			return false;
-		}
-	}
+        if(booking != null && startDate != "" && endDate != ""){ //check if valid input
+        	
+            EList<RoomReservation> reservations = booking.getRoomReservation();
+            
+            Map<RoomType, Integer> reqPerType = new TreeMap<RoomType, Integer>();
+            
+            for(RoomReservation rr : reservations){
+            	RoomType roomType = rr.getRoomType();
+            	Integer i = reqPerType.get(roomType);
+        		if(i != null){
+        			i++;
+        			reqPerType.put(rr.getRoomType(), i);
+        		} else {
+        			reqPerType.put(roomType, 1);
+        		}
+        	}
+    		
+            for(RoomReservation rr : reservations){
+            	RoomType rt = rr.getRoomType();
+            	int roomForType = reqPerType.get(rt);
+            	EList<Room> rooms = roomhandler.getAllRoomsByType(rt);
+            	for(Room r : rooms){
+                    if(roomForType <= 0){
+                    	reqPerType.put(rt, 0);
+                    	break;
+                    } else if(booking.isFree(r.getRoomNumber(), startDate, endDate)){   // If there exist one room that works, then it can be changed.
+                    	roomForType--;
+                    }
+            	}
+            	if(roomForType > 0){
+            		return false;
+            	}
+            }
+            booking.setStartDate(startDate);
+            booking.setEndDate(endDate);
+    		        	
+            return true;
+            
+        } else {
+            return false;
+        }
+    }
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,14 +284,29 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public boolean addRoomTypeToBooking(int bookingId, String roomType, int numberOfRoomsForType) {
 		Booking booking = getBookingById(bookingId);
 		RoomType rt = roomhandler.getRoomType(roomType);
-		if(booking != null && rt != null){
-			for(int i = 0; i < numberOfRoomsForType; i++){
-				booking.getRoomReservation().add(new RoomReservationImpl());
-			}
-			return true;
-		} else {
+		
+		if(booking == null || rt == null){
 			return false;
 		}
+		String startDate = booking.getStartDate();
+		String endDate = booking.getEndDate();
+		EList<FreeRoomTypesDTO> frts = getFreeRooms(rt.getNumBeds(), booking.getStartDate(), booking.getEndDate());
+		for(int i = 0; i < frts.size(); i++){
+			FreeRoomTypesDTO freeRT = frts.get(i);
+			if(freeRT.getRoomTypeDescription() == roomType && freeRT.getNumBeds() >= numberOfRoomsForType){
+				for(int j = 0; j < numberOfRoomsForType; j++){ //should be a method for adding a room to booking?
+					RoomReservation rr = new RoomReservationImpl();
+					rr.setRoomType(rt);
+					rr.setStartDate(startDate);
+					rr.setEndDate(endDate);
+					booking.getRoomReservation().add(rr);
+				}
+				return true;
+			}
+			
+		}
+		return false;
+		
 	}
 
 	/**
@@ -275,7 +321,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			for(int i = 0; i < nbrToRemove; i++){
 				EList<RoomReservation> bookings = booking.getRoomReservation();
 				for(RoomReservation rr : bookings){
-					if(rr != null && rr.getRoomType() == rt){
+					if(rr != null && rr.getCheckIn() == null && rr.getRoomType() == rt){
 						bookings.remove(rr);
 					}
 				}
