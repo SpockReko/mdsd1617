@@ -33,14 +33,14 @@
   <foreignModel>se.uml</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Se" disposableProviderFactory="true"
       ecorePackage="se.ecore#/">
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Chalmers" disposableProviderFactory="true"
-        ecorePackage="se.ecore#//chalmers">
-      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Cse" disposableProviderFactory="true"
-          ecorePackage="se.ecore#//chalmers/cse">
-        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Mdsd1617" disposableProviderFactory="true"
-            ecorePackage="se.ecore#//chalmers/cse/mdsd1617">
-          <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Group13" disposableProviderFactory="true"
-              ecorePackage="se.ecore#//chalmers/cse/mdsd1617/group13">
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Chalmers" basePackage="se"
+        disposableProviderFactory="true" ecorePackage="se.ecore#//chalmers">
+      <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Cse" basePackage="se.chalmers"
+          disposableProviderFactory="true" ecorePackage="se.ecore#//chalmers/cse">
+        <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Mdsd1617" basePackage="se.chalmers.cse"
+            disposableProviderFactory="true" ecorePackage="se.ecore#//chalmers/cse/mdsd1617">
+          <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Group13" basePackage="se.chalmers.cse.mdsd1617"
+              disposableProviderFactory="true" ecorePackage="se.ecore#//chalmers/cse/mdsd1617/group13">
             <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/User"/>
             <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/Receptionist">
               <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -55,7 +55,8 @@
                   propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/Administrator/ihotelstartupprovides"/>
             </genClasses>
             <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Hotelsystem"
-                disposableProviderFactory="true" ecorePackage="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem">
+                basePackage="se.chalmers.cse.mdsd1617.group13" disposableProviderFactory="true"
+                ecorePackage="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem">
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler">
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
                     propertySortChoices="true" ecoreFeature="ecore:EReference se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler/bookings"/>
@@ -350,7 +351,8 @@
               </genClasses>
             </nestedGenPackages>
             <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Bankcomponents"
-                disposableProviderFactory="true" ecorePackage="se.ecore#//chalmers/cse/mdsd1617/group13/bankcomponents">
+                basePackage="se.chalmers.cse.mdsd1617.group13" disposableProviderFactory="true"
+                ecorePackage="se.ecore#//chalmers/cse/mdsd1617/group13/bankcomponents">
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/bankcomponents/BankAdministrator"/>
               <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/bankcomponents/IAdministratorProvides">
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/bankcomponents/IAdministratorProvides/makeDeposit">

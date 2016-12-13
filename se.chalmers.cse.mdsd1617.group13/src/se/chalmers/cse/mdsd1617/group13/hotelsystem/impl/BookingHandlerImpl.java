@@ -2,7 +2,6 @@
  */
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -26,6 +25,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 
@@ -591,7 +597,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean initiateRoomCheckout(int roomNumber, int bookingId) {
+	public double initiateRoomCheckout(int roomNumber, int bookingId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

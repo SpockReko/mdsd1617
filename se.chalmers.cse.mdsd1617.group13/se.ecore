@@ -223,7 +223,7 @@
                 <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eOperations>
               <eOperations name="initiateRoomCheckout" ordered="false" lowerBound="1"
-                  eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+                  eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
                 <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
                 <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>

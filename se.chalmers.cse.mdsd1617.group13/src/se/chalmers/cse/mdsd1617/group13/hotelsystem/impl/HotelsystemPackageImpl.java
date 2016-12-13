@@ -1633,7 +1633,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		addEParameter(op, ecorePackage.getEString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIHotelCustomerProvides__InitiateRoomCheckout__int_int(), ecorePackage.getEBoolean(), "initiateRoomCheckout", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIHotelCustomerProvides__InitiateRoomCheckout__int_int(), ecorePackage.getEDouble(), "initiateRoomCheckout", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 

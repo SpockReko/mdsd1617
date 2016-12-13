@@ -415,7 +415,7 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_2NDnMLC0Eea2k6ekjMZ5Dg" direction="return">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_57lHYLC0Eea2k6ekjMZ5Dg" name="payRoomDuringCheckout">
