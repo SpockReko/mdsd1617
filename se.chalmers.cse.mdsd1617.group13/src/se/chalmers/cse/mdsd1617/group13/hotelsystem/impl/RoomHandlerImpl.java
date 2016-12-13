@@ -120,12 +120,16 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public int countFreeRoom(RoomType roomtype) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int countFreeRoom(RoomType roomType) {
+		int nbrOfFreeRooms = 0;
+		for(Room room : rooms){
+			if(room.getRoomtype().equals(roomType)){
+				nbrOfFreeRooms++;
+			}
+		}
+		return nbrOfFreeRooms;
 	}
 
 	/**

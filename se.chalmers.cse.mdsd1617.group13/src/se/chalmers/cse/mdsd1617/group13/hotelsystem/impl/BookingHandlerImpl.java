@@ -25,6 +25,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 
@@ -451,7 +458,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		EList<RoomType> roomtypes = roomhandler.getAllRoomTypes(numBeds);
 		for (RoomType roomtype : roomtypes){
 			//Get the list of all room of a given roomtype
-			EList<Room> rooms = roomhandler.getAllRoomsByType(roomtype);
+			
+			//Tmp fix to remove compilation error
+			RoomHandlerImpl impl = (RoomHandlerImpl) roomhandler;
+			EList<Room> rooms = impl.getAllRoomsByType(roomtype);
 					
 			for(Room room: rooms){
 					//see if it is free in the given period.
@@ -474,12 +484,20 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int initiateBooking(String firstName, String startDate, String endDate, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking booking = new BookingImpl();
+		Customer customer = new CustomerImpl();
+		customer.setFirstName(firstName);
+		customer.setLastName(lastName);
+		booking.setCustomer(customer);
+		booking.setStartDate(startDate);
+		booking.setEndDate(endDate);
+		int currentBookingId = bookings.size();
+		booking.setBookingId(currentBookingId);
+		bookings.add(booking);
+		return currentBookingId;
 	}
 
 	/**
@@ -585,7 +603,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean BookingCheckin(String date) {
+	public boolean bookingCheckin(String date) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -810,7 +828,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelsystemPackage.BOOKING_HANDLER___CHECK_IN_ROOM__STRING_INT:
 				return checkInRoom((String)arguments.get(0), (Integer)arguments.get(1));
 			case HotelsystemPackage.BOOKING_HANDLER___BOOKING_CHECKIN__STRING:
-				return BookingCheckin((String)arguments.get(0));
+				return bookingCheckin((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___ADD_DAY__STRING:
 				return addDay((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___GET_BOOKING_BY_ID__INT:

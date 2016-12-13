@@ -34,7 +34,7 @@
               </ownedAttribute>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_02xLQLhrEeaytfot7Bi3IA" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_Ef28AKnyEeaqs-4dkG4NMQ" contract="_Ef28AKnyEeaqs-4dkG4NMQ"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hDDwML1NEea3vq_wXUyZng" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_UlwsQKspEea_ZvXe8054NA" contract="_UlwsQKspEea_ZvXe8054NA"/>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_u5vSQL30EeaPAbmKLAIXGw" name="BookingCheckin">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_u5vSQL30EeaPAbmKLAIXGw" name="bookingCheckin">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_3DeZgL30EeaPAbmKLAIXGw" name="date">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
@@ -264,15 +264,6 @@
               <ownedAttribute xmi:type="uml:Property" xmi:id="_vzdf4LrQEear4uagTC-MRA" name="lastName" visibility="private" isUnique="false">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               </ownedAttribute>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_lFXlgLrQEear4uagTC-MRA" name="Customer">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lFXlgbrQEear4uagTC-MRA" name="return" type="_H9OtgLhmEeaytfot7Bi3IA" direction="return"/>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lFXlgrrQEear4uagTC-MRA" name="firstName">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lFXlg7rQEear4uagTC-MRA" name="lastName">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_IpqVsLhmEeaytfot7Bi3IA" name="RoomType" visibility="public">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_yiptMLrUEear4uagTC-MRA" name="description">
@@ -706,7 +697,7 @@
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_3gmsUL3yEeaPAbmKLAIXGw" name="countFreeRoom">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_AAzLwL3zEeaPAbmKLAIXGw" name="roomtype" type="_IpqVsLhmEeaytfot7Bi3IA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_AAzLwL3zEeaPAbmKLAIXGw" name="roomType" type="_IpqVsLhmEeaytfot7Bi3IA"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_DqsDkL3zEeaPAbmKLAIXGw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>

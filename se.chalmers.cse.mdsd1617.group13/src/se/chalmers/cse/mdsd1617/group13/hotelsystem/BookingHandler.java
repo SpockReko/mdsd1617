@@ -124,7 +124,7 @@ public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustom
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" dateRequired="true" dateOrdered="false"
 	 * @generated
 	 */
-	boolean BookingCheckin(String date);
+	boolean bookingCheckin(String date);
 
 	/**
 	 * <!-- begin-user-doc -->

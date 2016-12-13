@@ -683,22 +683,13 @@ public interface HotelsystemPackage extends EPackage {
 	int CUSTOMER_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Customer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOMER___CUSTOMER__STRING_STRING = 0;
-
-	/**
 	 * The number of operations of the '<em>Customer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOMER_OPERATION_COUNT = 1;
+	int CUSTOMER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl <em>Room Reservation</em>}' class.
@@ -1752,11 +1743,11 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getBookingHandler_BookingCurrentlyCheckingOut();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#BookingCheckin(java.lang.String) <em>Booking Checkin</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#bookingCheckin(java.lang.String) <em>Booking Checkin</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Booking Checkin</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#BookingCheckin(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#bookingCheckin(java.lang.String)
 	 * @generated
 	 */
 	EOperation getBookingHandler__BookingCheckin__String();
@@ -2009,16 +2000,6 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCustomer_LastName();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer#Customer(java.lang.String, java.lang.String) <em>Customer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Customer</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer#Customer(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getCustomer__Customer__String_String();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation <em>Room Reservation</em>}'.
@@ -3138,14 +3119,6 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOMER__LAST_NAME = eINSTANCE.getCustomer_LastName();
-
-		/**
-		 * The meta object literal for the '<em><b>Customer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CUSTOMER___CUSTOMER__STRING_STRING = eINSTANCE.getCustomer__Customer__String_String();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl <em>Room Reservation</em>}' class.
