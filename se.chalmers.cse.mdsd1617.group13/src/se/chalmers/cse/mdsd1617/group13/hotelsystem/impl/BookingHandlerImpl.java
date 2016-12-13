@@ -25,21 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-<<<<<<< Updated upstream
-
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
-=======
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
->>>>>>> Stashed changes
+
 
 /**
  * <!-- begin-user-doc -->
