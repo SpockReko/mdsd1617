@@ -267,15 +267,6 @@
               <ownedAttribute xmi:type="uml:Property" xmi:id="_vzdf4LrQEear4uagTC-MRA" name="lastName" visibility="private" isUnique="false">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               </ownedAttribute>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_lFXlgLrQEear4uagTC-MRA" name="Customer">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lFXlgbrQEear4uagTC-MRA" name="return" type="_H9OtgLhmEeaytfot7Bi3IA" direction="return"/>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lFXlgrrQEear4uagTC-MRA" name="firstName">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lFXlg7rQEear4uagTC-MRA" name="lastName">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_IpqVsLhmEeaytfot7Bi3IA" name="RoomType" visibility="public">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_yiptMLrUEear4uagTC-MRA" name="description">
@@ -475,7 +466,7 @@
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_sgoawKpJEeaqs-4dkG4NMQ" name="bookingId">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_z15YIKpJEeaqs-4dkG4NMQ" name="roomType">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_z15YIKpJEeaqs-4dkG4NMQ" name="roomTypeDescription">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_2vD9oKpJEeaqs-4dkG4NMQ" name="numberOfRoomsForType">

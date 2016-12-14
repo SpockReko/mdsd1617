@@ -287,9 +287,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean addRoomTypeToBooking(int bookingId, String roomType, int numberOfRoomsForType) {
+	public boolean addRoomTypeToBooking(int bookingId, String roomTypeDescription, int numberOfRoomsForType) {
 		Booking booking = getBookingById(bookingId);
-		RoomType rt = roomhandler.getRoomType(roomType);
+		RoomType rt = roomhandler.getRoomType(roomTypeDescription);
 
 		if(booking == null || rt == null){
 			return false;
@@ -299,7 +299,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		EList<FreeRoomTypesDTO> frts = getFreeRooms(rt.getNumBeds(), booking.getStartDate(), booking.getEndDate());
 		for(int i = 0; i < frts.size(); i++){
 			FreeRoomTypesDTO freeRT = frts.get(i);
-			if(freeRT.getRoomTypeDescription() == roomType && freeRT.getNumBeds() >= numberOfRoomsForType){
+			if(freeRT.getRoomTypeDescription() == roomTypeDescription && freeRT.getNumBeds() >= numberOfRoomsForType){
 				for(int j = 0; j < numberOfRoomsForType; j++){ //should be a method for adding a room to booking?
 					RoomReservation rr = new RoomReservationImpl();
 					rr.setRoomType(rt);

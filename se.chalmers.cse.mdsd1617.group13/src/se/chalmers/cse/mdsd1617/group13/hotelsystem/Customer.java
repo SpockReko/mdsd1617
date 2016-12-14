@@ -74,12 +74,4 @@ public interface Customer extends EObject {
 	 */
 	void setLastName(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" firstNameRequired="true" firstNameOrdered="false" lastNameRequired="true" lastNameOrdered="false"
-	 * @generated
-	 */
-	Customer Customer(String firstName, String lastName);
-
 } // Customer

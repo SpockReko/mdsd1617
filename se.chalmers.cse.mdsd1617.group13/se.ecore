@@ -91,10 +91,6 @@
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="Customer">
-              <eOperations name="Customer" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Customer">
-                <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-                <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-              </eOperations>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" ordered="false"
                   unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" ordered="false"
@@ -323,7 +319,8 @@
               <eOperations name="addRoomTypeToBooking" ordered="false" lowerBound="1"
                   eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
                 <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-                <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eParameters name="roomTypeDescription" ordered="false" lowerBound="1"
+                    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eParameters name="numberOfRoomsForType" ordered="false" lowerBound="1"
                     eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>
