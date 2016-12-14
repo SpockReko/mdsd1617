@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer <em>Customer</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservation <em>Room Reservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservations <em>Room Reservations</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCanceled <em>Canceled</em>}</li>
@@ -57,20 +57,20 @@ public interface Booking extends EObject {
 	void setCustomer(Customer value);
 
 	/**
-	 * Returns the value of the '<em><b>Room Reservation</b></em>' reference list.
+	 * Returns the value of the '<em><b>Room Reservations</b></em>' reference list.
 	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Room Reservation</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Room Reservations</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Reservation</em>' reference list.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_RoomReservation()
+	 * @return the value of the '<em>Room Reservations</em>' reference list.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_RoomReservations()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<RoomReservation> getRoomReservation();
+	EList<RoomReservation> getRoomReservations();
 
 	/**
 	 * Returns the value of the '<em><b>Start Date</b></em>' attribute.

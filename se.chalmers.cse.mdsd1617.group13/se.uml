@@ -125,7 +125,7 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_GIjD0LhmEeaytfot7Bi3IA" name="Booking" visibility="package">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_kDJH8LhpEeaytfot7Bi3IA" name="customer" visibility="private" type="_H9OtgLhmEeaytfot7Bi3IA" association="_kDIg4LhpEeaytfot7Bi3IA"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_k8ubU7hpEeaytfot7Bi3IA" name="roomReservation" type="_HJOdsLhmEeaytfot7Bi3IA" association="_k8ubULhpEeaytfot7Bi3IA">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_k8ubU7hpEeaytfot7Bi3IA" name="roomReservations" type="_HJOdsLhmEeaytfot7Bi3IA" association="_k8ubULhpEeaytfot7Bi3IA">
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fcn8gLrYEear4uagTC-MRA"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FcuqMLrYEear4uagTC-MRA" value="*"/>
               </ownedAttribute>

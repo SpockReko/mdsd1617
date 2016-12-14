@@ -484,13 +484,13 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING__CUSTOMER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Room Reservation</b></em>' reference list.
+	 * The feature id for the '<em><b>Room Reservations</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING__ROOM_RESERVATION = 1;
+	int BOOKING__ROOM_RESERVATIONS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
@@ -1847,15 +1847,15 @@ public interface HotelsystemPackage extends EPackage {
 	EReference getBooking_Customer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservation <em>Room Reservation</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservations <em>Room Reservations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Room Reservation</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservation()
+	 * @return the meta object for the reference list '<em>Room Reservations</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservations()
 	 * @see #getBooking()
 	 * @generated
 	 */
-	EReference getBooking_RoomReservation();
+	EReference getBooking_RoomReservations();
 
 	/**
 	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate <em>Start Date</em>}'.
@@ -3050,12 +3050,12 @@ public interface HotelsystemPackage extends EPackage {
 		EReference BOOKING__CUSTOMER = eINSTANCE.getBooking_Customer();
 
 		/**
-		 * The meta object literal for the '<em><b>Room Reservation</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Room Reservations</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOOKING__ROOM_RESERVATION = eINSTANCE.getBooking_RoomReservation();
+		EReference BOOKING__ROOM_RESERVATIONS = eINSTANCE.getBooking_RoomReservations();
 
 		/**
 		 * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.

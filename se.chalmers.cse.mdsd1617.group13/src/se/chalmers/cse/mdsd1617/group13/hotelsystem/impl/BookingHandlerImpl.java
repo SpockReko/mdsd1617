@@ -242,7 +242,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		Booking booking = getBookingById(reservationId);
         if(booking != null && startDate != "" && endDate != ""){ //check if valid input
         	
-            EList<RoomReservation> reservations = booking.getRoomReservation();
+            EList<RoomReservation> reservations = booking.getRoomReservations();
             
             Map<RoomType, Integer> reqPerType = new TreeMap<RoomType, Integer>();
             
@@ -306,7 +306,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 					rr.setRoomType(rt);
 					rr.setStartDate(startDate);
 					rr.setEndDate(endDate);
-					booking.getRoomReservation().add(rr);
+					booking.getRoomReservations().add(rr);
 				}
 				return true;
 			}
@@ -326,7 +326,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		RoomType rt = roomhandler.getRoomType(roomType);
 		if(booking != null && rt != null){
 			for(int i = 0; i < nbrToRemove; i++){
-				EList<RoomReservation> bookings = booking.getRoomReservation();
+				EList<RoomReservation> bookings = booking.getRoomReservations();
 				for(RoomReservation rr : bookings){
 					if(rr != null && rr.getCheckInDate() == null && rr.getRoomType() == rt){
 						bookings.remove(rr);
@@ -381,7 +381,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		}
 
 		// marks the room as free
-		for (RoomReservation roomReservation : bookingToCancel.getRoomReservation()) {
+		for (RoomReservation roomReservation : bookingToCancel.getRoomReservations()) {
 			roomReservation.getRoom().setOccupied(false);
 		}
 
@@ -443,7 +443,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		EList<Booking> bookingList = new BasicEList<Booking>();
 		Date testDate = sDate;		
 		for(Booking b : bookings) {
-			for(RoomReservation r : b.getRoomReservation()){
+			for(RoomReservation r : b.getRoomReservations()){
 				while(testDate.after(eDate)){
 					if(r.getCheckInDate().equals(testDate)){
 						bookingList.add(b);
@@ -635,7 +635,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		boolean roomPaidAndCheckedOut = false;
 		for (Booking booking: bookings){
 			if(booking.getBookingId() == bookingCurrentlyCheckingOut){
-				for (RoomReservation roomReservation: booking.getRoomReservation()){
+				for (RoomReservation roomReservation: booking.getRoomReservations()){
 					if(roomReservation.getRoomId() == roomNumber){
 						paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, roomReservation.checkOut(booking.nrOfNights()));
 					}

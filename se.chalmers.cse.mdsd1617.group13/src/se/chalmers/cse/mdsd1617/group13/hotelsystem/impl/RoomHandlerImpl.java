@@ -150,22 +150,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated
 	 */
 	public boolean addRoomType(String roomType, double price, int nbrOfBeds, String features) {
-		if(!roomType.equals("") && price != 0 && nbrOfBeds != 0 && !features.equals("")){
-			for (RoomType checkType : roomTypes){
-				if(roomType.equals(checkType)){
-					return false;
-				}
-			}
-			RoomType type = new RoomTypeImpl();
-			type.setName(roomType);
-			type.setPricePerNight(price);
-			type.setNumBeds(nbrOfBeds);
-			type.setDescription(features);
-			roomTypes.add(type);
-			return true;
-		}else{
-			return false;
-		}
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

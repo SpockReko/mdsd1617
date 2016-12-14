@@ -37,7 +37,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getCustomer <em>Customer</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getRoomReservation <em>Room Reservation</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getRoomReservations <em>Room Reservations</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#isCanceled <em>Canceled</em>}</li>
@@ -60,14 +60,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected Customer customer;
 
 	/**
-	 * The cached value of the '{@link #getRoomReservation() <em>Room Reservation</em>}' reference list.
+	 * The cached value of the '{@link #getRoomReservations() <em>Room Reservations</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomReservation()
+	 * @see #getRoomReservations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomReservation> roomReservation;
+	protected EList<RoomReservation> roomReservations;
 
 	/**
 	 * The default value of the '{@link #getStartDate() <em>Start Date</em>}' attribute.
@@ -241,11 +241,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RoomReservation> getRoomReservation() {
-		if (roomReservation == null) {
-			roomReservation = new EObjectResolvingEList<RoomReservation>(RoomReservation.class, this, HotelsystemPackage.BOOKING__ROOM_RESERVATION);
+	public EList<RoomReservation> getRoomReservations() {
+		if (roomReservations == null) {
+			roomReservations = new EObjectResolvingEList<RoomReservation>(RoomReservation.class, this, HotelsystemPackage.BOOKING__ROOM_RESERVATIONS);
 		}
-		return roomReservation;
+		return roomReservations;
 	}
 
 	/**
@@ -383,7 +383,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public EList<Room> getOccupiedRooms(String date) {
 		EList<Room> rooms = new BasicEList<Room>();
-		for(RoomReservation reservation : roomReservation){
+		for(RoomReservation reservation : roomReservations){
 			Room room = reservation.getRoomIfOccupied(date);
 			if(room != null){
 				rooms.add(room);
@@ -399,7 +399,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public double checkOut() {
 		double price = 0;
-		for(RoomReservation roomReservation : this.roomReservation) {
+		for(RoomReservation roomReservation : this.roomReservations) {
 			price += roomReservation.checkOut(nrOfNights());
 		}
 		Bill bill = new BillImpl();
@@ -441,7 +441,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public boolean checkIn(int roomNumber) {
-		for (RoomReservation rr : roomReservation) {
+		for (RoomReservation rr : roomReservations) {
 			if (rr.getRoomId() == roomNumber) {
 				rr.checkIn();
 				return true;
@@ -482,7 +482,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public boolean isFree(int roomId, String bStartDate, String bEndDate) {
-		for(RoomReservation r : roomReservation){
+		for(RoomReservation r : roomReservations){
 			if(r.getRoomId() == roomId){
 				if(Integer.parseInt(bStartDate) > Integer.parseInt(r.getEndDate()) 
 						|| Integer.parseInt(bEndDate) < Integer.parseInt(r.getStartDate() )){
@@ -511,7 +511,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public boolean addExtra(RoomExtra extra, int roomNbr) {
-		for(RoomReservation reservation : roomReservation){
+		for(RoomReservation reservation : roomReservations){
 			if(roomNbr == reservation.getRoomId()){
 				reservation.addExtra(extra);
 				return true;
@@ -531,8 +531,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				if (resolve) return getCustomer();
 				return basicGetCustomer();
-			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
-				return getRoomReservation();
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATIONS:
+				return getRoomReservations();
 			case HotelsystemPackage.BOOKING__START_DATE:
 				return getStartDate();
 			case HotelsystemPackage.BOOKING__END_DATE:
@@ -561,9 +561,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				setCustomer((Customer)newValue);
 				return;
-			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
-				getRoomReservation().clear();
-				getRoomReservation().addAll((Collection<? extends RoomReservation>)newValue);
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATIONS:
+				getRoomReservations().clear();
+				getRoomReservations().addAll((Collection<? extends RoomReservation>)newValue);
 				return;
 			case HotelsystemPackage.BOOKING__START_DATE:
 				setStartDate((String)newValue);
@@ -599,8 +599,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				setCustomer((Customer)null);
 				return;
-			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
-				getRoomReservation().clear();
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATIONS:
+				getRoomReservations().clear();
 				return;
 			case HotelsystemPackage.BOOKING__START_DATE:
 				setStartDate(START_DATE_EDEFAULT);
@@ -634,8 +634,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		switch (featureID) {
 			case HotelsystemPackage.BOOKING__CUSTOMER:
 				return customer != null;
-			case HotelsystemPackage.BOOKING__ROOM_RESERVATION:
-				return roomReservation != null && !roomReservation.isEmpty();
+			case HotelsystemPackage.BOOKING__ROOM_RESERVATIONS:
+				return roomReservations != null && !roomReservations.isEmpty();
 			case HotelsystemPackage.BOOKING__START_DATE:
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
 			case HotelsystemPackage.BOOKING__END_DATE:

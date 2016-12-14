@@ -79,7 +79,7 @@
               </eOperations>
               <eStructuralFeatures xsi:type="ecore:EReference" name="customer" ordered="false"
                   lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Customer"/>
-              <eStructuralFeatures xsi:type="ecore:EReference" name="roomReservation"
+              <eStructuralFeatures xsi:type="ecore:EReference" name="roomReservations"
                   ordered="false" upperBound="-1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomReservation"/>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
