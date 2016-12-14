@@ -233,7 +233,7 @@
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_udOi8MBFEeaYgdBx0NZ38A"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_udUpkMBFEeaYgdBx0NZ38A" value="1"/>
               </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_L_49gMBwEeaPAbmKLAIXGw" name="checkIn">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_L_49gMBwEeaPAbmKLAIXGw" name="checkInDate">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               </ownedAttribute>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_bEg80LuaEeaKgqXTYyzHxQ" name="checkIn"/>
