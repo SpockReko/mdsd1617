@@ -143,7 +143,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean addRoomType(String roomType, double price, int nbrOfBeds, String features) {
 		if(!roomType.equals("") && price != 0 && nbrOfBeds != 0 && !features.equals("")){
