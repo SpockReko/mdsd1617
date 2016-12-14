@@ -58,7 +58,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected RoomHandlerImpl() {
 		super();
@@ -286,6 +286,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 		for(int i = 0; i < numberOfRooms; i++){
 			Room room = new RoomImpl();
 			room.setRoomNumber(i);
+			rooms = new BasicEList<Room>();
 			rooms.add(room);
 		}
 	}
