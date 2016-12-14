@@ -765,13 +765,13 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_RESERVATION__ROOM = 4;
 
 	/**
-	 * The feature id for the '<em><b>Check In</b></em>' attribute.
+	 * The feature id for the '<em><b>Check In Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_RESERVATION__CHECK_IN = 5;
+	int ROOM_RESERVATION__CHECK_IN_DATE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Room Reservation</em>' class.
@@ -2122,15 +2122,15 @@ public interface HotelsystemPackage extends EPackage {
 	EReference getRoomReservation_Room();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn <em>Check In</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate <em>Check In Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check In</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn()
+	 * @return the meta object for the attribute '<em>Check In Date</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
-	EAttribute getRoomReservation_CheckIn();
+	EAttribute getRoomReservation_CheckInDate();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkIn() <em>Check In</em>}' operation.
@@ -3251,12 +3251,12 @@ public interface HotelsystemPackage extends EPackage {
 		EReference ROOM_RESERVATION__ROOM = eINSTANCE.getRoomReservation_Room();
 
 		/**
-		 * The meta object literal for the '<em><b>Check In</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Check In Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROOM_RESERVATION__CHECK_IN = eINSTANCE.getRoomReservation_CheckIn();
+		EAttribute ROOM_RESERVATION__CHECK_IN_DATE = eINSTANCE.getRoomReservation_CheckInDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Check In</b></em>' operation.

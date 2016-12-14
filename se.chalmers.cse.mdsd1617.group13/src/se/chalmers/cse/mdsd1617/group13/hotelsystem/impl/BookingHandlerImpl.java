@@ -327,7 +327,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			for(int i = 0; i < nbrToRemove; i++){
 				EList<RoomReservation> bookings = booking.getRoomReservation();
 				for(RoomReservation rr : bookings){
-					if(rr != null && rr.getCheckIn() == null && rr.getRoomType() == rt){
+					if(rr != null && rr.getCheckInDate() == null && rr.getRoomType() == rt){
 						bookings.remove(rr);
 					}
 				}
@@ -435,7 +435,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		for(Booking b : bookings) {
 			for(RoomReservation r : b.getRoomReservation()){
 				while(testDate.after(eDate)){
-					if(r.getCheckIn().equals(testDate)){
+					if(r.getCheckInDate().equals(testDate)){
 						bookingList.add(b);
 					}
 					try{

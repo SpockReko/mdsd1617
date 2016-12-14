@@ -120,8 +120,8 @@
                   lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false"
                   eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room"/>
-              <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkIn" ordered="false"
-                  lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkInDate"
+                  ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="RoomType">
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="description"
