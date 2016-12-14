@@ -182,7 +182,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__STRING_STRING_STRING = 11;
+	int IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__ROOMTYPE_STRING_STRING = 11;
 
 	/**
 	 * The number of operations of the '<em>IHotel Receptionist Provides</em>' class.
@@ -354,7 +354,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___GET_FREE_ROOM__STRING_STRING_STRING = IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__STRING_STRING_STRING;
+	int BOOKING_HANDLER___GET_FREE_ROOM__ROOMTYPE_STRING_STRING = IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__ROOMTYPE_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Free Rooms</em>' operation.
@@ -2895,14 +2895,14 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getIHotelReceptionistProvides__AddExtraToRoom__int_int_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(java.lang.String, java.lang.String, java.lang.String) <em>Get Free Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType, java.lang.String, java.lang.String) <em>Get Free Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Free Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(java.lang.String, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIHotelReceptionistProvides__GetFreeRoom__String_String_String();
+	EOperation getIHotelReceptionistProvides__GetFreeRoom__RoomType_String_String();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3871,7 +3871,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__STRING_STRING_STRING = eINSTANCE.getIHotelReceptionistProvides__GetFreeRoom__String_String_String();
+		EOperation IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__ROOMTYPE_STRING_STRING = eINSTANCE.getIHotelReceptionistProvides__GetFreeRoom__RoomType_String_String();
 
 	}
 

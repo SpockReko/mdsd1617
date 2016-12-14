@@ -110,9 +110,9 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomTypDescriptionRequired="true" roomTypDescriptionOrdered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
+	 * @model required="true" ordered="false" roomTypeRequired="true" roomTypeOrdered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
 	 * @generated
 	 */
-	void getFreeRoom(String roomTypDescription, String startDate, String endDate);
+	Room getFreeRoom(RoomType roomType, String startDate, String endDate);
 
 } // IHotelReceptionistProvides

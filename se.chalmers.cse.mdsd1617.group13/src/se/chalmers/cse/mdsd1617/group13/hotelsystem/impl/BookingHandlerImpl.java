@@ -32,6 +32,8 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 
 
@@ -500,12 +502,23 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void getFreeRoom(String roomTypDescription, String startDate, String endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Room getFreeRoom(RoomType roomType, String startDate, String endDate) {
+		if (roomType == null) {
+			return null;
+		}
+
+		EList<Room> rooms = roomhandler.getAllRoomsByType(roomType);
+
+		for (Room room : rooms) {
+			if(isFree(room.getRoomNumber(), startDate, endDate) && !room.isBlocked()) {
+				return room;
+			}
+		}
+
+		// no free room found
+		return null;
 	}
 
 	/**
@@ -525,7 +538,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 			for (Room room : rooms) {
 				//see if it is free in the given period.
-				if (isFree(room.getRoomNumber(), startDate, endDate)) {
+				if (isFree(room.getRoomNumber(), startDate, endDate) && !room.isBlocked()) {
 					//Count if it is true
 					nrOfRoomFree++;
 				}
@@ -654,23 +667,29 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 		EList<RoomReservation> roomReservations = booking.getRoomReservation();
 
-		boolean foundReservation = false;
-		int i = 0;
-
 		// find the first room reservation with the given room type that has not been checked in
-		while (i < roomReservations.size() && !foundReservation) {
-			RoomReservation currentRoomReservation = roomReservations.get(i);
+		for (RoomReservation currentRoomReservation : roomReservations) {
+
 			if (currentRoomReservation.getCheckInDate() != null) { // check in date null => not checkedIn
 				if (currentRoomReservation.getRoomType().getDescription().equals(roomType.getDescription())) {
 
-					// TODO : get a free room if avaible
+					Room roomToCheckIn = getFreeRoom(roomType,currentRoomReservation.getStartDate(), currentRoomReservation.getEndDate());
 
-					foundReservation = true;
+					if (roomToCheckIn == null) {
+						return -2;
+					}
+
+					// assign physical room to reservation and check in
+					currentRoomReservation.setRoom(roomToCheckIn);
+					currentRoomReservation.checkIn();
+
+					return roomToCheckIn.getRoomNumber();
 				}
 			}
 
-			i++;
 		}
+
+
 
 
 		return -2;
@@ -888,9 +907,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return listCheckouts((String)arguments.get(0), (String)arguments.get(1));
 			case HotelsystemPackage.BOOKING_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT:
 				return addExtraToRoom((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
-			case HotelsystemPackage.BOOKING_HANDLER___GET_FREE_ROOM__STRING_STRING_STRING:
-				getFreeRoom((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-				return null;
+			case HotelsystemPackage.BOOKING_HANDLER___GET_FREE_ROOM__ROOMTYPE_STRING_STRING:
+				return getFreeRoom((RoomType)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___GET_FREE_ROOMS__INT_STRING_STRING:
 				return getFreeRooms((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___INITIATE_BOOKING__STRING_STRING_STRING_STRING:

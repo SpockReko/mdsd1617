@@ -571,16 +571,15 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_ZT8NkMIdEea_9PZkN9kbgw" name="getFreeRoom">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y83U4MIeEea_9PZkN9kbgw" name="roomTypDescription">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_ZT8NkMIdEea_9PZkN9kbgw" name="getFreeRoom" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y83U4MIeEea_9PZkN9kbgw" name="roomType" type="_IpqVsLhmEeaytfot7Bi3IA"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_fC6tIMIeEea_9PZkN9kbgw" name="startDate">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_g5VcMMIeEea_9PZkN9kbgw" name="endDate">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_xy1zIMIiEea_9PZkN9kbgw" type="_Q6JlMLhmEeaytfot7Bi3IA" direction="return"/>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Interface" xmi:id="_T5_HsKnyEeaqs-4dkG4NMQ" name="IHotelAdministratorProvides" visibility="package">

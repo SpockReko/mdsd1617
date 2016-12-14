@@ -360,9 +360,8 @@
                     eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>
-              <eOperations name="getFreeRoom" ordered="false" lowerBound="1">
-                <eParameters name="roomTypDescription" ordered="false" lowerBound="1"
-                    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              <eOperations name="getFreeRoom" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room">
+                <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
                 <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eOperations>

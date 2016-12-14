@@ -1259,7 +1259,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIHotelReceptionistProvides__GetFreeRoom__String_String_String() {
+	public EOperation getIHotelReceptionistProvides__GetFreeRoom__RoomType_String_String() {
 		return iHotelReceptionistProvidesEClass.getEOperations().get(11);
 	}
 
@@ -1420,7 +1420,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_CHECKINS__STRING_STRING);
 		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_CHECKOUTS__STRING_STRING);
 		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__STRING_STRING_STRING);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__ROOMTYPE_STRING_STRING);
 	}
 
 	/**
@@ -1740,8 +1740,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		addEParameter(op, ecorePackage.getEString(), "extraDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIHotelReceptionistProvides__GetFreeRoom__String_String_String(), null, "getFreeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIHotelReceptionistProvides__GetFreeRoom__RoomType_String_String(), this.getRoom(), "getFreeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
