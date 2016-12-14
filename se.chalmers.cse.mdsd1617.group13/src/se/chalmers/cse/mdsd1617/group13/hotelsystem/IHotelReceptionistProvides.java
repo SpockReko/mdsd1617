@@ -107,4 +107,12 @@ public interface IHotelReceptionistProvides extends EObject {
 	 */
 	boolean addExtraToRoom(int bookingId, int roomNumber, String extraDescription, int price);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomTypDescriptionRequired="true" roomTypDescriptionOrdered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
+	 * @generated
+	 */
+	void getFreeRoom(String roomTypDescription, String startDate, String endDate);
+
 } // IHotelReceptionistProvides

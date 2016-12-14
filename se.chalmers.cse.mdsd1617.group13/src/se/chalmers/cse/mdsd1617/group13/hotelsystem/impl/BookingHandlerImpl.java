@@ -500,6 +500,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void getFreeRoom(String roomTypDescription, String startDate, String endDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 *
 	 * @generated NOT
 	 */
@@ -877,6 +888,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return listCheckouts((String)arguments.get(0), (String)arguments.get(1));
 			case HotelsystemPackage.BOOKING_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT:
 				return addExtraToRoom((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case HotelsystemPackage.BOOKING_HANDLER___GET_FREE_ROOM__STRING_STRING_STRING:
+				getFreeRoom((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+				return null;
 			case HotelsystemPackage.BOOKING_HANDLER___GET_FREE_ROOMS__INT_STRING_STRING:
 				return getFreeRooms((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case HotelsystemPackage.BOOKING_HANDLER___INITIATE_BOOKING__STRING_STRING_STRING_STRING:

@@ -176,13 +176,22 @@ public interface HotelsystemPackage extends EPackage {
 	int IHOTEL_RECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT = 10;
 
 	/**
+	 * The operation id for the '<em>Get Free Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__STRING_STRING_STRING = 11;
+
+	/**
 	 * The number of operations of the '<em>IHotel Receptionist Provides</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT = 11;
+	int IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT = 12;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
@@ -337,6 +346,15 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_HANDLER___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT = IHOTEL_RECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT;
+
+	/**
+	 * The operation id for the '<em>Get Free Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_HANDLER___GET_FREE_ROOM__STRING_STRING_STRING = IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__STRING_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Free Rooms</em>' operation.
@@ -856,22 +874,13 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_TYPE__PRICE_PER_NIGHT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPE__NAME = 3;
-
-	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 4;
+	int ROOM_TYPE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Room Type</em>' class.
@@ -1410,7 +1419,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING = IROOM_HANDLER_OPERATION_COUNT + 0;
+	int ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT = IROOM_HANDLER_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Edit Room Type</em>' operation.
@@ -1419,7 +1428,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING = IROOM_HANDLER_OPERATION_COUNT + 1;
+	int ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT = IROOM_HANDLER_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Remove Room Type</em>' operation.
@@ -1528,7 +1537,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING = 0;
+	int IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Edit Room Type</em>' operation.
@@ -1537,7 +1546,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING = 1;
+	int IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Room Type</em>' operation.
@@ -2197,17 +2206,6 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getRoomType_PricePerNight();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getName()
-	 * @see #getRoomType()
-	 * @generated
-	 */
-	EAttribute getRoomType_Name();
-
-	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras <em>Room Extras</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2635,24 +2633,24 @@ public interface HotelsystemPackage extends EPackage {
 	EClass getIHotelAdministratorProvides();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int, java.lang.String) <em>Add Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int) <em>Add Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int)
 	 * @generated
 	 */
-	EOperation getIHotelAdministratorProvides__AddRoomType__String_double_int_String();
+	EOperation getIHotelAdministratorProvides__AddRoomType__String_double_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int, java.lang.String) <em>Edit Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int) <em>Edit Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Room Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int)
 	 * @generated
 	 */
-	EOperation getIHotelAdministratorProvides__EditRoomType__String_double_int_String();
+	EOperation getIHotelAdministratorProvides__EditRoomType__String_double_int();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#removeRoomType(java.lang.String) <em>Remove Room Type</em>}' operation.
@@ -2895,6 +2893,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__AddExtraToRoom__int_int_String_int();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(java.lang.String, java.lang.String, java.lang.String) <em>Get Free Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Free Room</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(java.lang.String, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIHotelReceptionistProvides__GetFreeRoom__String_String_String();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3298,14 +3306,6 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute ROOM_TYPE__PRICE_PER_NIGHT = eINSTANCE.getRoomType_PricePerNight();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
-
-		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtrasImpl <em>Room Extras</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3657,7 +3657,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING = eINSTANCE.getIHotelAdministratorProvides__AddRoomType__String_double_int_String();
+		EOperation IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT = eINSTANCE.getIHotelAdministratorProvides__AddRoomType__String_double_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Room Type</b></em>' operation.
@@ -3665,7 +3665,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING = eINSTANCE.getIHotelAdministratorProvides__EditRoomType__String_double_int_String();
+		EOperation IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT = eINSTANCE.getIHotelAdministratorProvides__EditRoomType__String_double_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Room Type</b></em>' operation.
@@ -3864,6 +3864,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IHOTEL_RECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT = eINSTANCE.getIHotelReceptionistProvides__AddExtraToRoom__int_int_String_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Free Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__STRING_STRING_STRING = eINSTANCE.getIHotelReceptionistProvides__GetFreeRoom__String_String_String();
 
 	}
 

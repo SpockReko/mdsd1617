@@ -23,7 +23,6 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl#getNumBeds <em>Num Beds</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl#getPricePerNight <em>Price Per Night</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -88,26 +87,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * @ordered
 	 */
 	protected double pricePerNight = PRICE_PER_NIGHT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -196,27 +175,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM_TYPE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -226,8 +184,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return getNumBeds();
 			case HotelsystemPackage.ROOM_TYPE__PRICE_PER_NIGHT:
 				return getPricePerNight();
-			case HotelsystemPackage.ROOM_TYPE__NAME:
-				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -248,9 +204,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return;
 			case HotelsystemPackage.ROOM_TYPE__PRICE_PER_NIGHT:
 				setPricePerNight((Double)newValue);
-				return;
-			case HotelsystemPackage.ROOM_TYPE__NAME:
-				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -273,9 +226,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case HotelsystemPackage.ROOM_TYPE__PRICE_PER_NIGHT:
 				setPricePerNight(PRICE_PER_NIGHT_EDEFAULT);
 				return;
-			case HotelsystemPackage.ROOM_TYPE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -294,8 +244,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return numBeds != NUM_BEDS_EDEFAULT;
 			case HotelsystemPackage.ROOM_TYPE__PRICE_PER_NIGHT:
 				return pricePerNight != PRICE_PER_NIGHT_EDEFAULT;
-			case HotelsystemPackage.ROOM_TYPE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -316,8 +264,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		result.append(numBeds);
 		result.append(", pricePerNight: ");
 		result.append(pricePerNight);
-		result.append(", name: ");
-		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
