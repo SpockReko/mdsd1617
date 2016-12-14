@@ -538,13 +538,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING__BILLS = 6;
 
 	/**
+	 * The feature id for the '<em><b>Confirmed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING__CONFIRMED = 7;
+
+	/**
 	 * The number of structural features of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_FEATURE_COUNT = 7;
+	int BOOKING_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Cancel</em>' operation.
@@ -637,13 +646,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING___CHECKED_IN_DATE__STRING = 9;
 
 	/**
+	 * The operation id for the '<em>Add Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___ADD_EXTRA__ROOMEXTRA_INT = 10;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 10;
+	int BOOKING_OPERATION_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -747,13 +765,13 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_RESERVATION__ROOM = 4;
 
 	/**
-	 * The feature id for the '<em><b>Check In</b></em>' attribute.
+	 * The feature id for the '<em><b>Check In Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_RESERVATION__CHECK_IN = 5;
+	int ROOM_RESERVATION__CHECK_IN_DATE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Room Reservation</em>' class.
@@ -801,13 +819,22 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_RESERVATION___GET_ROOM_ID = 3;
 
 	/**
+	 * The operation id for the '<em>Add Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_RESERVATION___ADD_EXTRA__ROOMEXTRA = 4;
+
+	/**
 	 * The number of operations of the '<em>Room Reservation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_RESERVATION_OPERATION_COUNT = 4;
+	int ROOM_RESERVATION_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl <em>Room Type</em>}' class.
@@ -874,14 +901,14 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtrasImpl <em>Room Extras</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl <em>Room Extra</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtrasImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomExtras()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomExtra()
 	 * @generated
 	 */
-	int ROOM_EXTRAS = 5;
+	int ROOM_EXTRA = 5;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -890,7 +917,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_EXTRAS__PRICE = 0;
+	int ROOM_EXTRA__PRICE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -899,25 +926,25 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_EXTRAS__DESCRIPTION = 1;
+	int ROOM_EXTRA__DESCRIPTION = 1;
 
 	/**
-	 * The number of structural features of the '<em>Room Extras</em>' class.
+	 * The number of structural features of the '<em>Room Extra</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_EXTRAS_FEATURE_COUNT = 2;
+	int ROOM_EXTRA_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Room Extras</em>' class.
+	 * The number of operations of the '<em>Room Extra</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_EXTRAS_OPERATION_COUNT = 0;
+	int ROOM_EXTRA_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl <em>Bill</em>}' class.
@@ -1153,13 +1180,21 @@ public interface HotelsystemPackage extends EPackage {
 
 	/**
 	 * The operation id for the '<em>Get All Rooms By Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = 2;
+
+	/**
 	 * The operation id for the '<em>Get Room Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_HANDLER___GET_ROOM_TYPE__STRING = 2;
+	int IROOM_HANDLER___GET_ROOM_TYPE__STRING = 3;
 
 	/**
 	 * The number of operations of the '<em>IRoom Handler</em>' class.
@@ -1168,7 +1203,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_HANDLER_OPERATION_COUNT = 3;
+	int IROOM_HANDLER_OPERATION_COUNT = 4;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Customer Provides</em>' class.
@@ -1369,8 +1404,16 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE = IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE;
 
 	/**
-	 * The operation id for the '<em>Get Room Type</em>' operation.
+	 * The operation id for the '<em>Get All Rooms By Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE;
 
+	/**
+	 * The operation id for the '<em>Get Room Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1870,6 +1913,17 @@ public interface HotelsystemPackage extends EPackage {
 	EReference getBooking_Bills();
 
 	/**
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed <em>Confirmed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Confirmed</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed()
+	 * @see #getBooking()
+	 * @generated
+	 */
+	EAttribute getBooking_Confirmed();
+
+	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#cancel() <em>Cancel</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1970,6 +2024,16 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBooking__CheckedInDate__String();
 
 	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra, int) <em>Add Extra</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Extra</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra, int)
+	 * @generated
+	 */
+	EOperation getBooking__AddExtra__RoomExtra_int();
+
+	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2067,15 +2131,15 @@ public interface HotelsystemPackage extends EPackage {
 	EReference getRoomReservation_Room();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn <em>Check In</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate <em>Check In Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Check In</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn()
+	 * @return the meta object for the attribute '<em>Check In Date</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
-	EAttribute getRoomReservation_CheckIn();
+	EAttribute getRoomReservation_CheckInDate();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkIn() <em>Check In</em>}' operation.
@@ -2116,6 +2180,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomReservation__GetRoomId();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra) <em>Add Extra</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Extra</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra)
+	 * @generated
+	 */
+	EOperation getRoomReservation__AddExtra__RoomExtra();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType <em>Room Type</em>}'.
@@ -2172,36 +2246,36 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getRoomType_Name();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras <em>Room Extras</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra <em>Room Extra</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Room Extras</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras
+	 * @return the meta object for class '<em>Room Extra</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra
 	 * @generated
 	 */
-	EClass getRoomExtras();
+	EClass getRoomExtra();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras#getPrice <em>Price</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getPrice <em>Price</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Price</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras#getPrice()
-	 * @see #getRoomExtras()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getPrice()
+	 * @see #getRoomExtra()
 	 * @generated
 	 */
-	EAttribute getRoomExtras_Price();
+	EAttribute getRoomExtra_Price();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras#getDescription()
-	 * @see #getRoomExtras()
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getDescription()
+	 * @see #getRoomExtra()
 	 * @generated
 	 */
-	EAttribute getRoomExtras_Description();
+	EAttribute getRoomExtra_Description();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill <em>Bill</em>}'.
@@ -2308,7 +2382,16 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getIRoomHandler__CountFreeRoom__RoomType();
 
 	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType) <em>Get All Rooms By Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get All Rooms By Type</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType)
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetAllRoomsByType__RoomType();
 
+	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getRoomType(java.lang.String) <em>Get Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3015,6 +3098,14 @@ public interface HotelsystemPackage extends EPackage {
 		EReference BOOKING__BILLS = eINSTANCE.getBooking_Bills();
 
 		/**
+		 * The meta object literal for the '<em><b>Confirmed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING__CONFIRMED = eINSTANCE.getBooking_Confirmed();
+
+		/**
 		 * The meta object literal for the '<em><b>Cancel</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3095,6 +3186,14 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation BOOKING___CHECKED_IN_DATE__STRING = eINSTANCE.getBooking__CheckedInDate__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Add Extra</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___ADD_EXTRA__ROOMEXTRA_INT = eINSTANCE.getBooking__AddExtra__RoomExtra_int();
+
+		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3171,12 +3270,12 @@ public interface HotelsystemPackage extends EPackage {
 		EReference ROOM_RESERVATION__ROOM = eINSTANCE.getRoomReservation_Room();
 
 		/**
-		 * The meta object literal for the '<em><b>Check In</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Check In Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROOM_RESERVATION__CHECK_IN = eINSTANCE.getRoomReservation_CheckIn();
+		EAttribute ROOM_RESERVATION__CHECK_IN_DATE = eINSTANCE.getRoomReservation_CheckInDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Check In</b></em>' operation.
@@ -3209,6 +3308,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_RESERVATION___GET_ROOM_ID = eINSTANCE.getRoomReservation__GetRoomId();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Extra</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_RESERVATION___ADD_EXTRA__ROOMEXTRA = eINSTANCE.getRoomReservation__AddExtra__RoomExtra();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl <em>Room Type</em>}' class.
@@ -3253,14 +3360,14 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtrasImpl <em>Room Extras</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl <em>Room Extra</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtrasImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomExtras()
+		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomExtra()
 		 * @generated
 		 */
-		EClass ROOM_EXTRAS = eINSTANCE.getRoomExtras();
+		EClass ROOM_EXTRA = eINSTANCE.getRoomExtra();
 
 		/**
 		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
@@ -3268,7 +3375,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROOM_EXTRAS__PRICE = eINSTANCE.getRoomExtras_Price();
+		EAttribute ROOM_EXTRA__PRICE = eINSTANCE.getRoomExtra_Price();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -3276,7 +3383,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROOM_EXTRAS__DESCRIPTION = eINSTANCE.getRoomExtras_Description();
+		EAttribute ROOM_EXTRA__DESCRIPTION = eINSTANCE.getRoomExtra_Description();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl <em>Bill</em>}' class.
@@ -3365,7 +3472,14 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE = eINSTANCE.getIRoomHandler__CountFreeRoom__RoomType();
 
 		/**
+		 * The meta object literal for the '<em><b>Get All Rooms By Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = eINSTANCE.getIRoomHandler__GetAllRoomsByType__RoomType();
 
+		/**
 		 * The meta object literal for the '<em><b>Get Room Type</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

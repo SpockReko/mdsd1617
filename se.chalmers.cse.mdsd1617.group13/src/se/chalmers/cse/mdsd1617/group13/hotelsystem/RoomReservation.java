@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn <em>Check In</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate <em>Check In Date</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation()
@@ -56,7 +56,7 @@ public interface RoomReservation extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Room Extras</b></em>' reference list.
-	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras}.
+	 * The list contents are of type {@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Extras</em>' reference list isn't clear,
@@ -68,7 +68,7 @@ public interface RoomReservation extends EObject {
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<RoomExtras> getRoomExtras();
+	EList<RoomExtra> getRoomExtras();
 
 	/**
 	 * Returns the value of the '<em><b>Start Date</b></em>' attribute.
@@ -149,30 +149,30 @@ public interface RoomReservation extends EObject {
 	void setRoom(Room value);
 
 	/**
-	 * Returns the value of the '<em><b>Check In</b></em>' attribute.
+	 * Returns the value of the '<em><b>Check In Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Check In</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Check In Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Check In</em>' attribute.
-	 * @see #setCheckIn(String)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_CheckIn()
+	 * @return the value of the '<em>Check In Date</em>' attribute.
+	 * @see #setCheckInDate(String)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_CheckInDate()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	String getCheckIn();
+	String getCheckInDate();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckIn <em>Check In</em>}' attribute.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate <em>Check In Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Check In</em>' attribute.
-	 * @see #getCheckIn()
+	 * @param value the new value of the '<em>Check In Date</em>' attribute.
+	 * @see #getCheckInDate()
 	 * @generated
 	 */
-	void setCheckIn(String value);
+	void setCheckInDate(String value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,5 +205,13 @@ public interface RoomReservation extends EObject {
 	 * @generated
 	 */
 	int getRoomId();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model extraRequired="true" extraOrdered="false"
+	 * @generated
+	 */
+	void addExtra(RoomExtra extra);
 
 } // RoomReservation

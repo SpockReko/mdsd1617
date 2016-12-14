@@ -5,9 +5,6 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
@@ -61,7 +58,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected RoomHandlerImpl() {
 		super();
@@ -197,12 +194,15 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean changeRoomType(int roomNumber, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Room room = getRoom(roomNumber); 
+		if(room != null){
+			room.setRoomtype(getRoomType(roomType));
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -287,10 +287,13 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated NOT
 	 */
 	public void initialize(int numberOfRooms) {
-		for(int i = 0; i < numberOfRooms; i++){
-			Room room = new RoomImpl();
-			room.setRoomNumber(i);
-			rooms.add(room);
+
+		roomTypes = new BasicEList<RoomType>(); 
+		rooms = new BasicEList<Room>();
+		addRoomType("Default", 1, 1, "None");
+
+		for(int i = 0; i < numberOfRooms; i++){ //create all rooms
+			addRoom(i, roomTypes.get(0).getDescription());				
 		}
 	}
 
@@ -415,7 +418,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				return getAllRoomTypes((Integer)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE:
 				return countFreeRoom((RoomType)arguments.get(0));
-
+			case HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE:
+				return getAllRoomsByType((RoomType)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM_TYPE__STRING:
 				return getRoomType((String)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING:

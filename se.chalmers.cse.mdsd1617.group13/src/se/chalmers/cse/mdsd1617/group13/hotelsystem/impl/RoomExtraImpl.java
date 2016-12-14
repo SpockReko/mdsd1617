@@ -3,29 +3,30 @@
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Room Extras</b></em>'.
+ * An implementation of the model object '<em><b>Room Extra</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtrasImpl#getPrice <em>Price</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtrasImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl#getPrice <em>Price</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements RoomExtras {
+public class RoomExtraImpl extends MinimalEObjectImpl.Container implements RoomExtra {
 	/**
 	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,6 +36,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * @ordered
 	 */
 	protected static final double PRICE_EDEFAULT = 0.0;
+
 	/**
 	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -44,6 +46,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * @ordered
 	 */
 	protected double price = PRICE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,6 +56,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,7 +72,7 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoomExtrasImpl() {
+	protected RoomExtraImpl() {
 		super();
 	}
 
@@ -210,4 +214,4 @@ public class RoomExtrasImpl extends MinimalEObjectImpl.Container implements Room
 		return result.toString();
 	}
 
-} //RoomExtrasImpl
+} //RoomExtraImpl

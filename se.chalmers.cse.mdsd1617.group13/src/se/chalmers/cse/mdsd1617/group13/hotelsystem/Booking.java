@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCanceled <em>Canceled</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingId <em>Booking Id</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBills <em>Bills</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed <em>Confirmed</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking()
@@ -192,6 +193,32 @@ public interface Booking extends EObject {
 	EList<Bill> getBills();
 
 	/**
+	 * Returns the value of the '<em><b>Confirmed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Confirmed</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Confirmed</em>' attribute.
+	 * @see #setConfirmed(boolean)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBooking_Confirmed()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isConfirmed();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed <em>Confirmed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Confirmed</em>' attribute.
+	 * @see #isConfirmed()
+	 * @generated
+	 */
+	void setConfirmed(boolean value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -271,5 +298,13 @@ public interface Booking extends EObject {
 	 * @generated
 	 */
 	boolean CheckedInDate(String indexDate);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" extraRequired="true" extraOrdered="false" roomNbrRequired="true" roomNbrOrdered="false"
+	 * @generated
+	 */
+	boolean addExtra(RoomExtra extra, int roomNbr);
 
 } // Booking

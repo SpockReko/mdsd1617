@@ -25,6 +25,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 
 /**
@@ -42,6 +43,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#isCanceled <em>Canceled</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBookingId <em>Booking Id</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#getBills <em>Bills</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl#isConfirmed <em>Confirmed</em>}</li>
  * </ul>
  *
  * @generated
@@ -156,6 +158,26 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @ordered
 	 */
 	protected EList<Bill> bills;
+
+	/**
+	 * The default value of the '{@link #isConfirmed() <em>Confirmed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isConfirmed()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CONFIRMED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isConfirmed() <em>Confirmed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isConfirmed()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean confirmed = CONFIRMED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -327,6 +349,27 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isConfirmed() {
+		return confirmed;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConfirmed(boolean newConfirmed) {
+		boolean oldConfirmed = confirmed;
+		confirmed = newConfirmed;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING__CONFIRMED, oldConfirmed, confirmed));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void cancel() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -465,6 +508,21 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean addExtra(RoomExtra extra, int roomNbr) {
+		for(RoomReservation reservation : roomReservation){
+			if(roomNbr == reservation.getRoomId()){
+				reservation.addExtra(extra);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -485,6 +543,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getBookingId();
 			case HotelsystemPackage.BOOKING__BILLS:
 				return getBills();
+			case HotelsystemPackage.BOOKING__CONFIRMED:
+				return isConfirmed();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -521,6 +581,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				getBills().clear();
 				getBills().addAll((Collection<? extends Bill>)newValue);
 				return;
+			case HotelsystemPackage.BOOKING__CONFIRMED:
+				setConfirmed((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -554,6 +617,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case HotelsystemPackage.BOOKING__BILLS:
 				getBills().clear();
 				return;
+			case HotelsystemPackage.BOOKING__CONFIRMED:
+				setConfirmed(CONFIRMED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -580,6 +646,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return bookingId != BOOKING_ID_EDEFAULT;
 			case HotelsystemPackage.BOOKING__BILLS:
 				return bills != null && !bills.isEmpty();
+			case HotelsystemPackage.BOOKING__CONFIRMED:
+				return confirmed != CONFIRMED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -613,6 +681,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return isFree((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case HotelsystemPackage.BOOKING___CHECKED_IN_DATE__STRING:
 				return CheckedInDate((String)arguments.get(0));
+			case HotelsystemPackage.BOOKING___ADD_EXTRA__ROOMEXTRA_INT:
+				return addExtra((RoomExtra)arguments.get(0), (Integer)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -635,6 +705,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		result.append(canceled);
 		result.append(", bookingId: ");
 		result.append(bookingId);
+		result.append(", confirmed: ");
+		result.append(confirmed);
 		result.append(')');
 		return result.toString();
 	}

@@ -67,13 +67,13 @@ public interface HotelsystemFactory extends EFactory {
 	RoomType createRoomType();
 
 	/**
-	 * Returns a new object of class '<em>Room Extras</em>'.
+	 * Returns a new object of class '<em>Room Extra</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Extras</em>'.
+	 * @return a new object of class '<em>Room Extra</em>'.
 	 * @generated
 	 */
-	RoomExtras createRoomExtras();
+	RoomExtra createRoomExtra();
 
 	/**
 	 * Returns a new object of class '<em>Bill</em>'.

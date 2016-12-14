@@ -61,7 +61,7 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 			case HotelsystemPackage.CUSTOMER: return createCustomer();
 			case HotelsystemPackage.ROOM_RESERVATION: return createRoomReservation();
 			case HotelsystemPackage.ROOM_TYPE: return createRoomType();
-			case HotelsystemPackage.ROOM_EXTRAS: return createRoomExtras();
+			case HotelsystemPackage.ROOM_EXTRA: return createRoomExtra();
 			case HotelsystemPackage.ROOM: return createRoom();
 			case HotelsystemPackage.BILL: return createBill();
 			case HotelsystemPackage.PAYMENT_HANDLER: return createPaymentHandler();
@@ -128,9 +128,9 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomExtras createRoomExtras() {
-		RoomExtrasImpl roomExtras = new RoomExtrasImpl();
-		return roomExtras;
+	public RoomExtra createRoomExtra() {
+		RoomExtraImpl roomExtra = new RoomExtraImpl();
+		return roomExtra;
 	}
 
 	/**

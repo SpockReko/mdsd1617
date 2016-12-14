@@ -145,6 +145,9 @@
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hSo0IMBJEeaYgdBx0NZ38A"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hSx-EMBJEeaYgdBx0NZ38A" value="*"/>
               </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_PQuBkMEfEea_d8QopqIcIA" name="confirmed">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+              </ownedAttribute>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_AYEWIL1MEea3vq_wXUyZng" name="cancel"/>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_eajVgL1QEea3vq_wXUyZng" name="getOccupiedRooms">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_eajVgb1QEea3vq_wXUyZng" name="date">
@@ -213,6 +216,15 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
               </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_J_vMEMIPEeaju5t0hv2wvA" name="addExtra">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_J_vMEcIPEeaju5t0hv2wvA" name="extra" type="_LZjDYLhmEeaytfot7Bi3IA"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_OWLn4MIPEeaju5t0hv2wvA" name="roomNbr">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Sc8o8MIPEeaju5t0hv2wvA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+                </ownedParameter>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_HJOdsLhmEeaytfot7Bi3IA" name="RoomReservation">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_06nbYrhpEeaytfot7Bi3IA" name="roomType" type="_IpqVsLhmEeaytfot7Bi3IA" association="_06m0ULhpEeaytfot7Bi3IA"/>
@@ -230,7 +242,7 @@
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_udOi8MBFEeaYgdBx0NZ38A"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_udUpkMBFEeaYgdBx0NZ38A" value="1"/>
               </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_L_49gMBwEeaPAbmKLAIXGw" name="checkIn">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_L_49gMBwEeaPAbmKLAIXGw" name="checkInDate">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               </ownedAttribute>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_bEg80LuaEeaKgqXTYyzHxQ" name="checkIn"/>
@@ -256,6 +268,9 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
               </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_iZpEQMIREeaju5t0hv2wvA" name="addExtra">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_iZpEQcIREeaju5t0hv2wvA" name="extra" type="_LZjDYLhmEeaytfot7Bi3IA"/>
+              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_H9OtgLhmEeaytfot7Bi3IA" name="Customer">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_sav3oLrQEear4uagTC-MRA" name="firstName" visibility="private" isUnique="false">
@@ -279,7 +294,7 @@
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               </ownedAttribute>
             </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_LZjDYLhmEeaytfot7Bi3IA" name="RoomExtras">
+            <packagedElement xmi:type="uml:Class" xmi:id="_LZjDYLhmEeaytfot7Bi3IA" name="RoomExtra">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_F99dEL1LEea3vq_wXUyZng" name="price">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
               </ownedAttribute>
@@ -403,7 +418,7 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_2NDnMLC0Eea2k6ekjMZ5Dg" direction="return">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_57lHYLC0Eea2k6ekjMZ5Dg" name="payRoomDuringCheckout">

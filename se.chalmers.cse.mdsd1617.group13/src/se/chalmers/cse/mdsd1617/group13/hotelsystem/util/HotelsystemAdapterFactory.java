@@ -87,8 +87,8 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 				return createRoomTypeAdapter();
 			}
 			@Override
-			public Adapter caseRoomExtras(RoomExtras object) {
-				return createRoomExtrasAdapter();
+			public Adapter caseRoomExtra(RoomExtra object) {
+				return createRoomExtraAdapter();
 			}
 			@Override
 			public Adapter caseRoom(Room object) {
@@ -225,16 +225,16 @@ public class HotelsystemAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras <em>Room Extras</em>}'.
+	 * Creates a new adapter for an object of class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra <em>Room Extra</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtras
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra
 	 * @generated
 	 */
-	public Adapter createRoomExtrasAdapter() {
+	public Adapter createRoomExtraAdapter() {
 		return null;
 	}
 

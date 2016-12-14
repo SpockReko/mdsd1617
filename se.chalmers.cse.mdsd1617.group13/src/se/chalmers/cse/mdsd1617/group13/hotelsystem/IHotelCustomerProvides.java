@@ -71,7 +71,7 @@ public interface IHotelCustomerProvides extends EObject {
 	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" bookingIdRequired="true" bookingIdOrdered="false"
 	 * @generated
 	 */
-	boolean initiateRoomCheckout(int roomNumber, int bookingId);
+	double initiateRoomCheckout(int roomNumber, int bookingId);
 
 	/**
 	 * <!-- begin-user-doc -->

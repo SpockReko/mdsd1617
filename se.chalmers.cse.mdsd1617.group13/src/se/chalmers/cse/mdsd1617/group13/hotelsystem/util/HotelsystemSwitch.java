@@ -97,9 +97,9 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HotelsystemPackage.ROOM_EXTRAS: {
-				RoomExtras roomExtras = (RoomExtras)theEObject;
-				T result = caseRoomExtras(roomExtras);
+			case HotelsystemPackage.ROOM_EXTRA: {
+				RoomExtra roomExtra = (RoomExtra)theEObject;
+				T result = caseRoomExtra(roomExtra);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -252,17 +252,17 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Room Extras</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Room Extra</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Room Extras</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Room Extra</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoomExtras(RoomExtras object) {
+	public T caseRoomExtra(RoomExtra object) {
 		return null;
 	}
 
