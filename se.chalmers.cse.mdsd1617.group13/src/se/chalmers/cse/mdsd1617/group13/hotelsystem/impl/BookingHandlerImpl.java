@@ -240,11 +240,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
 		Booking booking = getBookingById(reservationId);
         if(booking != null && startDate != "" && endDate != ""){ //check if valid input
-        	
+
             EList<RoomReservation> reservations = booking.getRoomReservation();
-            
+
             Map<RoomType, Integer> reqPerType = new TreeMap<RoomType, Integer>();
-            
+
             for(RoomReservation rr : reservations){
             	RoomType roomType = rr.getRoomType();
             	Integer i = reqPerType.get(roomType);
@@ -255,7 +255,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
         			reqPerType.put(roomType, 1);
         		}
         	}
-    		
+
             for(RoomReservation rr : reservations){
             	RoomType rt = rr.getRoomType();
             	int roomForType = reqPerType.get(rt);
@@ -274,9 +274,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
             }
             booking.setStartDate(startDate);
             booking.setEndDate(endDate);
-    		        	
+
             return true;
-            
+
         } else {
             return false;
         }
@@ -290,7 +290,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public boolean addRoomTypeToBooking(int bookingId, String roomType, int numberOfRoomsForType) {
 		Booking booking = getBookingById(bookingId);
 		RoomType rt = roomhandler.getRoomType(roomType);
-		
+
 		if(booking == null || rt == null){
 			return false;
 		}
@@ -309,10 +309,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				}
 				return true;
 			}
-			
+
 		}
 		return false;
-		
+
 	}
 
 	/**
@@ -355,11 +355,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public EList<Integer> checkIn(int bookingId, int roomNumbers) {
-		
+
 		if(roomNumbers != 0) {
 			this.getBookingById(bookingId).checkIn(roomNumbers);
 		}
-		
+
 		return this.listFreeRooms(bookingId);
 	}
 
@@ -415,7 +415,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * Same as listCheckouts(), just a placeholder atm. 
+	 * Same as listCheckouts(), just a placeholder atm.
 	 * @generated NOT
 	 */
 	public EList<Booking> listCheckins(String startDate, String endDate) {
@@ -429,9 +429,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		EList<Booking> bookingList = new BasicEList<Booking>();
-		Date testDate = sDate;		
+		Date testDate = sDate;
 		for(Booking b : bookings) {
 			for(RoomReservation r : b.getRoomReservation()){
 				while(testDate.after(eDate)){
@@ -446,7 +446,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				}
 			}
 		}
-		return bookingList;	
+		return bookingList;
 	}
 
 	/**
@@ -500,30 +500,32 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 *
 	 * @generated NOT
 	 */
 	public EList<FreeRoomTypesDTO> getFreeRooms(int numBeds, String startDate, String endDate) {
 		EList<FreeRoomTypesDTO> freeRooms = new BasicEList<FreeRoomTypesDTO>();
-		int nrOfRoomFree = 0;
+
 		EList<RoomType> roomtypes = roomhandler.getAllRoomTypes(numBeds);
-		for (RoomType roomtype : roomtypes){
+		for (RoomType roomtype : roomtypes) {
+			int nrOfRoomFree = 0;
 			//Get the list of all room of a given roomtype
 			EList<Room> rooms = roomhandler.getAllRoomsByType(roomtype);
-					
-			for(Room room: rooms){
-					//see if it is free in the given period.
-					if(isFree(room.getRoomNumber(), startDate, endDate)){
-						//Count if it is true
-						nrOfRoomFree++;
-					}
+
+			for (Room room : rooms) {
+				//see if it is free in the given period.
+				if (isFree(room.getRoomNumber(), startDate, endDate)) {
+					//Count if it is true
+					nrOfRoomFree++;
+				}
 			}
-					//Get all the nesseary information and save them.
-					FreeRoomTypesDTO freeRoom = new FreeRoomTypesDTOImpl();
-					freeRoom.setNumBeds(roomtype.getNumBeds());
-					freeRoom.setNumFreeRooms(nrOfRoomFree);
-					freeRoom.setPricePerNight(roomtype.getPricePerNight());
-					freeRoom.setRoomTypeDescription(roomtype.getDescription());
-					freeRooms.add(freeRoom);			
+			//Get all the nesseary information and save them.
+			FreeRoomTypesDTO freeRoom = new FreeRoomTypesDTOImpl();
+			freeRoom.setNumBeds(roomtype.getNumBeds());
+			freeRoom.setNumFreeRooms(nrOfRoomFree);
+			freeRoom.setPricePerNight(roomtype.getPricePerNight());
+			freeRoom.setRoomTypeDescription(roomtype.getDescription());
+			freeRooms.add(freeRoom);
 		}
 		return freeRooms;
 	}
@@ -628,12 +630,40 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 *
+	 * @generated NOT
 	 */
 	public int checkInRoom(String roomTypeDescription, int bookindId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking booking = getBookingById(bookindId);
+		RoomType roomType = roomhandler.getRoomType(roomTypeDescription);
+
+		if (roomType == null || booking == null) { // roomtype or booking not found
+			return -1;
+		}
+
+		EList<RoomReservation> roomReservations = booking.getRoomReservation();
+
+		boolean foundReservation = false;
+		int i = 0;
+
+		// find the first room reservation with the given room type that has not been checked in
+		while (i < roomReservations.size() && !foundReservation) {
+			RoomReservation currentRoomReservation = roomReservations.get(i);
+			if (currentRoomReservation.getCheckInDate() != null) { // check in date null => not checkedIn
+				if (currentRoomReservation.getRoomType().getDescription().equals(roomType.getDescription())) {
+
+					// TODO : get a free room if avaible
+
+					foundReservation = true;
+				}
+			}
+
+			i++;
+		}
+
+
+		return -2;
+
 	}
 
 	/**
@@ -665,7 +695,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		year = cal.get(Calendar.YEAR);
 		month = cal.get(Calendar.MONTH);
 		day = cal.get(Calendar.DAY_OF_MONTH);
-		//Translate the new date to String 
+		//Translate the new date to String
 		String newDate = "" + year + month + day;
 		return newDate;
 	}
