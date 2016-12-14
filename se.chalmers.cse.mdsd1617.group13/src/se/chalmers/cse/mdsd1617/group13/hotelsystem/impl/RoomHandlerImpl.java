@@ -133,7 +133,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public EList<Room> getAllRoomsByType(RoomType roomType) {
 		EList<Room> result = new BasicEList<Room>();
 		for (Room room : rooms){
-			if(room.getRoomtype().getDescription().equals(roomType.getDescription())){
+			if(room.getRoomtype().getName().equals(roomType.getName())){
 					result.add(room);
 			}
 		}
@@ -251,10 +251,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 
 		roomTypes = new BasicEList<RoomType>(); 
 		rooms = new BasicEList<Room>();
-		addRoomType("Default", 1, 1);
+		addRoomType("Default", 1, 1, "None");
 
 		for(int i = 0; i < numberOfRooms; i++){ //create all rooms
-			addRoom(i, roomTypes.get(0).getDescription());				
+			addRoom(i, roomTypes.get(0).getName());
 		}
 	}
 
@@ -263,9 +263,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public RoomType getRoomType(String description) {
+	public RoomType getRoomType(String roomTypeName) {
 		for (RoomType roomType : roomTypes) {
-			if(roomType.getDescription().equals(description)) {
+			if(roomType.getName().equals(roomTypeName)) {
 				return roomType;
 			}
 		}
@@ -276,41 +276,26 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public boolean addRoomType(String roomTypeDescription, double price, int nbrOfBeds) {
-
-		for (RoomType checkType : roomTypes) {
-			if (checkType.getDescription().equals(roomTypeDescription)) {
-				// two room types cannot have the same description
-				return false;
-			}
-		}
-		RoomType type = new RoomTypeImpl();
-		type.setPricePerNight(price);
-		type.setNumBeds(nbrOfBeds);
-		type.setDescription(roomTypeDescription);
-		roomTypes.add(type);
-		return true;
+	public boolean addRoomType(String roomTypeName, double price, int nbrOfBeds, String featureDescription) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
-
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public boolean editRoomType(String roomTypeDescription, double price, int nbrOfBeds) {
-
-		RoomType roomType = getRoomType(roomTypeDescription);
-		if (roomType != null) {
-			roomType.setNumBeds(nbrOfBeds);
-			roomType.setPricePerNight(price);
-			return true;
-		} else {
-			return false;
-		}
+	public boolean editRoomType(String roomTypeName, double price, int nbrOfBeds, String featuresDescription) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
+
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -392,8 +377,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == IHotelAdministratorProvides.class) {
 			switch (baseOperationID) {
-				case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT: return HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT;
-				case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT: return HotelsystemPackage.ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT;
+				case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING: return HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING;
+				case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING: return HotelsystemPackage.ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING;
 				case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES___REMOVE_ROOM_TYPE__STRING: return HotelsystemPackage.ROOM_HANDLER___REMOVE_ROOM_TYPE__STRING;
 				case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES___CHANGE_ROOM_TYPE__INT_STRING: return HotelsystemPackage.ROOM_HANDLER___CHANGE_ROOM_TYPE__INT_STRING;
 				case HotelsystemPackage.IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM__INT_STRING: return HotelsystemPackage.ROOM_HANDLER___ADD_ROOM__INT_STRING;
@@ -422,10 +407,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				return getAllRoomsByType((RoomType)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM_TYPE__STRING:
 				return getRoomType((String)arguments.get(0));
-			case HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT:
-				return addRoomType((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2));
-			case HotelsystemPackage.ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT:
-				return editRoomType((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2));
+			case HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING:
+				return addRoomType((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
+			case HotelsystemPackage.ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING:
+				return editRoomType((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case HotelsystemPackage.ROOM_HANDLER___REMOVE_ROOM_TYPE__STRING:
 				return removeRoomType((String)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___CHANGE_ROOM_TYPE__INT_STRING:

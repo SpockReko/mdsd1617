@@ -18,18 +18,18 @@ public interface IHotelAdministratorProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false" featureDescriptionRequired="true" featureDescriptionOrdered="false"
 	 * @generated
 	 */
-	boolean addRoomType(String roomTypeDescription, double price, int nbrOfBeds);
+	boolean addRoomType(String roomTypeName, double price, int nbrOfBeds, String featureDescription);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false" featuresDescriptionRequired="true" featuresDescriptionOrdered="false"
 	 * @generated
 	 */
-	boolean editRoomType(String roomTypeDescription, double price, int nbrOfBeds);
+	boolean editRoomType(String roomTypeName, double price, int nbrOfBeds, String featuresDescription);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -36,10 +36,10 @@ public interface IHotelCustomerProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false" bookingIDRequired="true" bookingIDOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" bookingIDRequired="true" bookingIDOrdered="false"
 	 * @generated
 	 */
-	boolean addRoomToBooking(String roomTypeDescription, int bookingID);
+	boolean addRoomToBooking(String roomTypeName, int bookingID);
 
 	/**
 	 * <!-- begin-user-doc -->

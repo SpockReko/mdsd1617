@@ -656,6 +656,15 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoomType_Name() {
+		return (EAttribute)roomTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoomExtras() {
 		return roomExtrasEClass;
 	}
@@ -1025,7 +1034,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIHotelAdministratorProvides__AddRoomType__String_double_int() {
+	public EOperation getIHotelAdministratorProvides__AddRoomType__String_double_int_String() {
 		return iHotelAdministratorProvidesEClass.getEOperations().get(0);
 	}
 
@@ -1034,7 +1043,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIHotelAdministratorProvides__EditRoomType__String_double_int() {
+	public EOperation getIHotelAdministratorProvides__EditRoomType__String_double_int_String() {
 		return iHotelAdministratorProvidesEClass.getEOperations().get(1);
 	}
 
@@ -1341,6 +1350,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEAttribute(roomTypeEClass, ROOM_TYPE__DESCRIPTION);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__NUM_BEDS);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__PRICE_PER_NIGHT);
+		createEAttribute(roomTypeEClass, ROOM_TYPE__NAME);
 
 		roomExtrasEClass = createEClass(ROOM_EXTRAS);
 		createEAttribute(roomExtrasEClass, ROOM_EXTRAS__PRICE);
@@ -1391,8 +1401,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(roomHandlerEClass, ROOM_HANDLER___INITIALIZE__INT);
 
 		iHotelAdministratorProvidesEClass = createEClass(IHOTEL_ADMINISTRATOR_PROVIDES);
-		createEOperation(iHotelAdministratorProvidesEClass, IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT);
-		createEOperation(iHotelAdministratorProvidesEClass, IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT);
+		createEOperation(iHotelAdministratorProvidesEClass, IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING);
+		createEOperation(iHotelAdministratorProvidesEClass, IHOTEL_ADMINISTRATOR_PROVIDES___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING);
 		createEOperation(iHotelAdministratorProvidesEClass, IHOTEL_ADMINISTRATOR_PROVIDES___REMOVE_ROOM_TYPE__STRING);
 		createEOperation(iHotelAdministratorProvidesEClass, IHOTEL_ADMINISTRATOR_PROVIDES___CHANGE_ROOM_TYPE__INT_STRING);
 		createEOperation(iHotelAdministratorProvidesEClass, IHOTEL_ADMINISTRATOR_PROVIDES___ADD_ROOM__INT_STRING);
@@ -1545,6 +1555,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEAttribute(getRoomType_Description(), ecorePackage.getEString(), "description", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_NumBeds(), ecorePackage.getEInt(), "numBeds", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_PricePerNight(), ecorePackage.getEDouble(), "pricePerNight", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomType_Name(), ecorePackage.getEString(), "name", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(roomExtrasEClass, RoomExtras.class, "RoomExtras", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomExtras_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, RoomExtras.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1585,7 +1596,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoomHandler__GetRoomType__String(), this.getRoomType(), "getRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iHotelCustomerProvidesEClass, IHotelCustomerProvides.class, "IHotelCustomerProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1601,7 +1612,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		addEParameter(op, ecorePackage.getEString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIHotelCustomerProvides__AddRoomToBooking__String_int(), ecorePackage.getEBoolean(), "addRoomToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIHotelCustomerProvides__ConfirmBooking__int(), ecorePackage.getEBoolean(), "confirmBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1653,15 +1664,17 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		initEClass(iHotelAdministratorProvidesEClass, IHotelAdministratorProvides.class, "IHotelAdministratorProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIHotelAdministratorProvides__AddRoomType__String_double_int(), ecorePackage.getEBoolean(), "addRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIHotelAdministratorProvides__AddRoomType__String_double_int_String(), ecorePackage.getEBoolean(), "addRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "nbrOfBeds", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "featureDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIHotelAdministratorProvides__EditRoomType__String_double_int(), ecorePackage.getEBoolean(), "editRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIHotelAdministratorProvides__EditRoomType__String_double_int_String(), ecorePackage.getEBoolean(), "editRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "nbrOfBeds", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "featuresDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIHotelAdministratorProvides__RemoveRoomType__String(), ecorePackage.getEBoolean(), "removeRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "roomTypeDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1703,7 +1716,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		op = initEOperation(getIHotelReceptionistProvides__AddRoomTypeToBooking__int_String_int(), ecorePackage.getEBoolean(), "addRoomTypeToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "numberOfRoomsForType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIHotelReceptionistProvides__RemoveRoomTypeFromBooking__int_String_int(), ecorePackage.getEBoolean(), "removeRoomTypeFromBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);

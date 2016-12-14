@@ -289,9 +289,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean addRoomTypeToBooking(int bookingId, String roomTypeDescription, int numberOfRoomsForType) {
+	public boolean addRoomTypeToBooking(int bookingId, String roomTypeName, int numberOfRoomsForType) {
 		Booking booking = getBookingById(bookingId);
-		RoomType rt = roomhandler.getRoomType(roomTypeDescription);
+		RoomType rt = roomhandler.getRoomType(roomTypeName);
 
 		if(booking == null || rt == null){
 			return false;
@@ -301,7 +301,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		EList<FreeRoomTypesDTO> frts = getFreeRooms(rt.getNumBeds(), booking.getStartDate(), booking.getEndDate());
 		for(int i = 0; i < frts.size(); i++){
 			FreeRoomTypesDTO freeRT = frts.get(i);
-			if(freeRT.getRoomTypeDescription() == roomTypeDescription && freeRT.getNumBeds() >= numberOfRoomsForType){
+			//TODO : we should compare the name instead of the description
+			if(freeRT.getRoomTypeDescription().equals(rt.getDescription()) && freeRT.getNumBeds() >= numberOfRoomsForType){
 				for(int j = 0; j < numberOfRoomsForType; j++){ //should be a method for adding a room to booking?
 					RoomReservation rr = new RoomReservationImpl();
 					rr.setRoomType(rt);
@@ -570,7 +571,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean addRoomToBooking(String roomTypeDescription, int bookingID) {
+	public boolean addRoomToBooking(String roomTypeName, int bookingID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -671,7 +672,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		for (RoomReservation currentRoomReservation : roomReservations) {
 
 			if (currentRoomReservation.getCheckInDate() != null) { // check in date null => not checkedIn
-				if (currentRoomReservation.getRoomType().getDescription().equals(roomType.getDescription())) {
+				if (currentRoomReservation.getRoomType().getName().equals(roomType.getName())) {
 
 					Room roomToCheckIn = getFreeRoom(roomType,currentRoomReservation.getStartDate(), currentRoomReservation.getEndDate());
 

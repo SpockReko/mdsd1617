@@ -30,10 +30,10 @@ public interface IHotelReceptionistProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false" numberOfRoomsForTypeRequired="true" numberOfRoomsForTypeOrdered="false"
+	 * @model required="true" ordered="false" bookingIdRequired="true" bookingIdOrdered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" numberOfRoomsForTypeRequired="true" numberOfRoomsForTypeOrdered="false"
 	 * @generated
 	 */
-	boolean addRoomTypeToBooking(int bookingId, String roomTypeDescription, int numberOfRoomsForType);
+	boolean addRoomTypeToBooking(int bookingId, String roomTypeName, int numberOfRoomsForType);
 
 	/**
 	 * <!-- begin-user-doc -->

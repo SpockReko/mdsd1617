@@ -44,9 +44,9 @@ public interface IRoomHandler extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 
-	 * @model required="true" ordered="false" descriptionRequired="true" descriptionOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false"
 	 * @generated
 	 */
-	RoomType getRoomType(String description);
+	RoomType getRoomType(String roomTypeName);
 
 } // IRoomHandler
