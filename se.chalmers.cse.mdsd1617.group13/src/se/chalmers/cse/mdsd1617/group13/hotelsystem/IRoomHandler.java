@@ -27,10 +27,10 @@ public interface IRoomHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model kind="operation" ordered="false"
 	 * @generated
 	 */
-	int countFreeRoom(RoomType roomType);
+	EList<Integer> getFreeRooms();
 
 	/**
 	 * <!-- begin-user-doc -->

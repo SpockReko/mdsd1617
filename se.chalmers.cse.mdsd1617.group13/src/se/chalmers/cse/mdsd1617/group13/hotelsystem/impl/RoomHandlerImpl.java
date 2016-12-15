@@ -119,6 +119,22 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public EList<Integer> getFreeRooms() {
+		EList<Integer> freeRoomNbrs = new BasicEList<Integer>();
+		for(Room room : rooms){
+			if(!(room.isOccupied() && room.isBlocked())){
+				int roomNumber = room.getRoomNumber();
+				freeRoomNbrs.add(roomNumber);
+			}
+		}
+		return freeRoomNbrs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public int countFreeRoom(RoomType roomType) {
 		int nbrOfFreeRooms = 0;
 		for(Room room : rooms){
@@ -405,8 +421,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 		switch (operationID) {
 			case HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOM_TYPES__INT:
 				return getAllRoomTypes((Integer)arguments.get(0));
-			case HotelsystemPackage.ROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE:
-				return countFreeRoom((RoomType)arguments.get(0));
+			case HotelsystemPackage.ROOM_HANDLER___GET_FREE_ROOMS:
+				return getFreeRooms();
 			case HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE:
 				return getAllRoomsByType((RoomType)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM_TYPE__STRING:

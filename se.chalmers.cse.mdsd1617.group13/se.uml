@@ -721,10 +721,11 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_3gmsUL3yEeaPAbmKLAIXGw" name="countFreeRoom">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_AAzLwL3zEeaPAbmKLAIXGw" name="roomType" type="_IpqVsLhmEeaytfot7Bi3IA"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_3gmsUL3yEeaPAbmKLAIXGw" name="getFreeRooms">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_DqsDkL3zEeaPAbmKLAIXGw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bm8JgMKiEea78qcevSx-LQ"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bnJk4MKiEea78qcevSx-LQ" value="*"/>
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_35k24MBsEeaPAbmKLAIXGw" name="getAllRoomsByType">

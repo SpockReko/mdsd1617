@@ -179,9 +179,7 @@
                   eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType">
                 <eParameters name="nrOfBeds" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>
-              <eOperations name="countFreeRoom" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
-                <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
-              </eOperations>
+              <eOperations name="getFreeRooms" ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               <eOperations name="getAllRoomsByType" ordered="false" upperBound="-1"
                   eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room">
                 <eParameters name="roomType" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomType"/>
