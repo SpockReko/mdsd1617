@@ -681,7 +681,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean confirmBooking(int bookingID) {
-		getBookingById(bookingID).setConfirmed(true);
+		Booking bookingToConfirm = getBookingById(bookingID);
+		if (bookingToConfirm == null) {
+			return false;
+		}
+		bookingToConfirm.setConfirmed(true);
 		return true;
 	}
 
