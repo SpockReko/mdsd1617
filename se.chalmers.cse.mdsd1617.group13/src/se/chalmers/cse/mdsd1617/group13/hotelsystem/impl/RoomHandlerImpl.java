@@ -317,9 +317,19 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated
 	 */
 	public boolean addRoomType(String roomTypeName, double price, int nbrOfBeds, String featureDescription) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (RoomType checkType : roomTypes) {
+			if (checkType.getName().equals(roomTypeName)) {
+				// two room types cannot have the same description
+				return false;
+			}
+		}
+		RoomType type = new RoomTypeImpl();
+		type.setName(roomTypeName);
+		type.setPricePerNight(price);
+		type.setNumBeds(nbrOfBeds);
+		type.setDescription(featureDescription);
+		roomTypes.add(type);
+		return true;
 	}
 
 	/**
@@ -328,9 +338,15 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated
 	 */
 	public boolean editRoomType(String roomTypeName, double price, int nbrOfBeds, String featuresDescription) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		RoomType roomType = getRoomType(roomTypeName);
+		if (roomType != null) {
+			roomType.setNumBeds(nbrOfBeds);
+			roomType.setPricePerNight(price);
+			roomType.setDescription(featuresDescription);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 
