@@ -682,13 +682,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING___ADD_EXTRA__ROOMEXTRA_INT = 10;
 
 	/**
+	 * The operation id for the '<em>Check Out Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___CHECK_OUT_ROOM__INT = 11;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 11;
+	int BOOKING_OPERATION_COUNT = 12;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -2072,6 +2081,16 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBooking__AddExtra__RoomExtra_int();
 
 	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkOutRoom(int) <em>Check Out Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Out Room</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkOutRoom(int)
+	 * @generated
+	 */
+	EOperation getBooking__CheckOutRoom__int();
+
+	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3248,6 +3267,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___ADD_EXTRA__ROOMEXTRA_INT = eINSTANCE.getBooking__AddExtra__RoomExtra_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Out Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___CHECK_OUT_ROOM__INT = eINSTANCE.getBooking__CheckOutRoom__int();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
