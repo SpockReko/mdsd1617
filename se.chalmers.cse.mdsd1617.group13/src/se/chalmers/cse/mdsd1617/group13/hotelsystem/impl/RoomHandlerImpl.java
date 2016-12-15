@@ -164,12 +164,30 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeRoomType(String roomTypeDescription) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Room room : rooms){
+			RoomType roomType = room.getRoomtype();
+			String description = roomType.getDescription();
+			if(description.equals(roomTypeDescription)){
+				room.setRoomtype(null); //Throw exception or return false?
+			}
+		}
+		RoomType roomType = null;
+		for(RoomType type : roomTypes){
+			String description = type.getDescription();
+			if(roomTypeDescription.equals(description)){
+				roomType = type;
+				break;
+			}
+		}
+		if(roomType == null){
+			return false;
+		}else{
+			roomTypes.remove(roomType);
+			return true;
+		}
 	}
 
 	/**
