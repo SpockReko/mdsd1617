@@ -299,6 +299,10 @@
             <element xmi:type="uml:Property" href="se.uml#_L_49gMBwEeaPAbmKLAIXGw"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_MAuD8cBwEeaPAbmKLAIXGw"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_oL3vQMLaEea9RYqOHK2Zug" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="se.uml#_oHXCsMLaEea9RYqOHK2Zug"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_oL4WUMLaEea9RYqOHK2Zug"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_HJY1xLhmEeaytfot7Bi3IA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_HJY1xbhmEeaytfot7Bi3IA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_HJY1xrhmEeaytfot7Bi3IA"/>

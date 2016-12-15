@@ -465,75 +465,90 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * Same as listCheckouts(), just a placeholder atm.
 	 * @generated NOT
 	 */
-	public EList<Booking> listCheckins(String startDate, String endDate) {
+	public EList<RoomReservation> listCheckins(String startDate, String endDate) {
 		DateFormat format = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
-		Date sDate = null;
-		Date eDate = null;
+		Date sDate;
+		Date eDate;
 		try {
 			sDate = format.parse(startDate);
 			eDate = format.parse(endDate);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return null;
 		}
 
-		EList<Booking> bookingList = new BasicEList<Booking>();
-		Date testDate = sDate;
-		for(Booking b : bookings) {
-			for(RoomReservation r : b.getRoomReservations()){
-				while(testDate.after(eDate)){
-					if(r.getCheckInDate().equals(testDate)){
-						bookingList.add(b);
-					}
-					try{
-						testDate = format.parse(addDay(testDate.toString()));
-					}catch (ParseException e) {
-						e.printStackTrace();
+		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
+
+		// go through all the bookings and check
+		for (Booking b : bookings) {
+			EList<RoomReservation> bookingRoomReservations = b.getRoomReservations();
+
+			for (RoomReservation roomReservation : bookingRoomReservations) {
+				String checkInDateString = roomReservation.getCheckInDate();
+
+				if(checkInDateString != null) {
+					// the reservation has been checked in
+					try {
+						Date checkInDate = format.parse(roomReservation.getCheckInDate());
+						if (checkInDate.after(sDate) && checkInDate.before(eDate)) {
+							roomReservations.add(roomReservation);
+						}
+
+					} catch (ParseException ignored) {
+						// mabybe log something here
 					}
 				}
+
 			}
+
 		}
-		return bookingList;
+		return roomReservations;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * Not sure if it should return a list of Bookings or RoomReservations
+	 *
 	 * @generated NOT
 	 */
-	public EList<Booking> listCheckouts(String startDate, String endDate) {
-		DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
-		Date sDate = null;
-		Date eDate = null;
+	public EList<RoomReservation> listCheckouts(String startDate, String endDate) {
+		DateFormat format = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
+		Date sDate;
+		Date eDate;
 		try {
 			sDate = format.parse(startDate);
 			eDate = format.parse(endDate);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return null;
 		}
-		
-		EList<Booking> bookingList = new BasicEList<Booking>();
-		
-		for(Booking b : bookings) {
-			Date testDate = null;
-			try {
-				testDate = format.parse(b.getEndDate());
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+
+		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
+
+		for (Booking b : bookings) {
+			EList<RoomReservation> bookingRoomReservations = b.getRoomReservations();
+
+			for (RoomReservation roomReservation : bookingRoomReservations) {
+				String checkOutDateString = roomReservation.getCheckOuDate();
+
+				if (checkOutDateString != null) {
+					// the reservation has been checked in
+					try {
+						Date checkouDate = format.parse(roomReservation.getCheckOuDate());
+						if (checkouDate.after(sDate) && checkouDate.before(eDate)) {
+							roomReservations.add(roomReservation);
+						}
+
+					} catch (ParseException ignored) {
+						// mabybe log something here
+					}
+				}
+
 			}
-			
-			if(!(testDate.before(sDate) || testDate.after(eDate))) {
-				bookingList.add(b);
-			}
+
 		}
-		
-		return bookingList;	
+
+		return roomReservations;
 	}
 
 	/**

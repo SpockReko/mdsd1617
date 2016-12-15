@@ -42,6 +42,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getRoom <em>Room</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getCheckInDate <em>Check In Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl#getCheckOuDate <em>Check Ou Date</em>}</li>
  * </ul>
  *
  * @generated
@@ -136,6 +137,26 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String checkInDate = CHECK_IN_DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCheckOuDate() <em>Check Ou Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCheckOuDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CHECK_OU_DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCheckOuDate() <em>Check Ou Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCheckOuDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String checkOuDate = CHECK_OU_DATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -310,6 +331,27 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCheckOuDate() {
+		return checkOuDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCheckOuDate(String newCheckOuDate) {
+		String oldCheckOuDate = checkOuDate;
+		checkOuDate = newCheckOuDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.ROOM_RESERVATION__CHECK_OU_DATE, oldCheckOuDate, checkOuDate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void checkIn() {
@@ -401,6 +443,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 				return basicGetRoom();
 			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN_DATE:
 				return getCheckInDate();
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_OU_DATE:
+				return getCheckOuDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -433,6 +477,9 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN_DATE:
 				setCheckInDate((String)newValue);
 				return;
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_OU_DATE:
+				setCheckOuDate((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -463,6 +510,9 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN_DATE:
 				setCheckInDate(CHECK_IN_DATE_EDEFAULT);
 				return;
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_OU_DATE:
+				setCheckOuDate(CHECK_OU_DATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -487,6 +537,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 				return room != null;
 			case HotelsystemPackage.ROOM_RESERVATION__CHECK_IN_DATE:
 				return CHECK_IN_DATE_EDEFAULT == null ? checkInDate != null : !CHECK_IN_DATE_EDEFAULT.equals(checkInDate);
+			case HotelsystemPackage.ROOM_RESERVATION__CHECK_OU_DATE:
+				return CHECK_OU_DATE_EDEFAULT == null ? checkOuDate != null : !CHECK_OU_DATE_EDEFAULT.equals(checkOuDate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -531,6 +583,8 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 		result.append(endDate);
 		result.append(", checkInDate: ");
 		result.append(checkInDate);
+		result.append(", checkOuDate: ");
+		result.append(checkOuDate);
 		result.append(')');
 		return result.toString();
 	}
