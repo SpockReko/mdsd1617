@@ -106,7 +106,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public EList<RoomType> getAllRoomTypes(int nrOfBeds) {
 		EList<RoomType> result = new BasicEList<RoomType>();
 		for (RoomType type : roomTypes){
-			if(type.getNumBeds() == nrOfBeds){
+			if(type.getNumBeds() >= nrOfBeds){
 					result.add(type);
 			}
 		}
