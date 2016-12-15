@@ -18,26 +18,26 @@ public interface IHotelAdministratorProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeRequired="true" roomTypeOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false" featuresRequired="true" featuresOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false" featureDescriptionRequired="true" featureDescriptionOrdered="false"
 	 * @generated
 	 */
-	boolean addRoomType(String roomType, double price, int nbrOfBeds, String features);
+	boolean addRoomType(String roomTypeName, double price, int nbrOfBeds, String featureDescription);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeRequired="true" roomTypeOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false" featuresRequired="true" featuresOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" priceRequired="true" priceOrdered="false" nbrOfBedsRequired="true" nbrOfBedsOrdered="false" featuresDescriptionRequired="true" featuresDescriptionOrdered="false"
 	 * @generated
 	 */
-	boolean editRoomType(String roomType, double price, int nbrOfBeds, String features);
+	boolean editRoomType(String roomTypeName, double price, int nbrOfBeds, String featuresDescription);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model required="true" ordered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false"
 	 * @generated
 	 */
-	boolean removeRoomType(String roomType);
+	boolean removeRoomType(String roomTypeDescription);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -50,10 +50,10 @@ public interface IHotelAdministratorProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false"
 	 * @generated
 	 */
-	boolean addRoom(int roomNumber, String roomType);
+	boolean addRoom(int roomNumber, String roomTypeDescription);
 
 	/**
 	 * <!-- begin-user-doc -->

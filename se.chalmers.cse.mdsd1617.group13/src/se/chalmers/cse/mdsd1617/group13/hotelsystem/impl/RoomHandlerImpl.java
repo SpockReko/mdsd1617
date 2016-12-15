@@ -137,55 +137,20 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public EList<Room> getAllRoomsByType(RoomType roomType) {
 		EList<Room> result = new BasicEList<Room>();
 		for (Room room : rooms){
-			if(room.getRoomtype().equals(roomType)){
+			if(room.getRoomtype().getName().equals(roomType.getName())){
 					result.add(room);
 			}
 		}
 		return result;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean addRoomType(String roomType, double price, int nbrOfBeds, String features) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean editRoomType(String roomType, double price, int nbrOfBeds, String features) {
-			
-		for(RoomType type : roomTypes){
-			if (type.getName().equals(roomType)){
-				if(price != 0.0){
-			type.setPricePerNight(price);
-			}
-			if(nbrOfBeds != 0){
-		type.setNumBeds(nbrOfBeds);
-		}
-		if(!features.equals("")){
-			type.setDescription(features);
-		}
-			return true;
-		}
-		}
-		return false;
-		}
-	
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean removeRoomType(String roomType) {
+	public boolean removeRoomType(String roomTypeDescription) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -293,7 +258,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 		addRoomType("Default", 1, 1, "None");
 
 		for(int i = 0; i < numberOfRooms; i++){ //create all rooms
-			addRoom(i, roomTypes.get(0).getDescription());				
+			addRoom(i, roomTypes.get(0).getName());
 		}
 	}
 
@@ -302,15 +267,39 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public RoomType getRoomType(String description) {
+	public RoomType getRoomType(String roomTypeName) {
 		for (RoomType roomType : roomTypes) {
-			if(roomType.getDescription().equals(description)) {
+			if(roomType.getName().equals(roomTypeName)) {
 				return roomType;
 			}
 		}
 
 		return null;
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean addRoomType(String roomTypeName, double price, int nbrOfBeds, String featureDescription) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean editRoomType(String roomTypeName, double price, int nbrOfBeds, String featuresDescription) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+
 
 	/**
 	 * <!-- begin-user-doc -->
