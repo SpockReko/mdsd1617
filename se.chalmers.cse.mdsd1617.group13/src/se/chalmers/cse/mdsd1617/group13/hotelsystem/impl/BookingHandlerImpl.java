@@ -607,7 +607,13 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<FreeRoomTypesDTO> getFreeRooms(int numBeds, String startDate, String endDate) {
 		EList<FreeRoomTypesDTO> freeRooms = new BasicEList<FreeRoomTypesDTO>();
-
+		FreeRoomTypesDTO testRoom = new FreeRoomTypesDTOImpl();
+		testRoom.setNumBeds(1);
+		testRoom.setNumFreeRooms(1);
+		testRoom.setPricePerNight(1.1);
+		testRoom.setRoomTypeDescription("nothing");
+		freeRooms.add(testRoom);
+		
 		EList<RoomType> roomtypes = roomhandler.getAllRoomTypes(numBeds);
 		for (RoomType roomtype : roomtypes) {
 			int nrOfRoomFree = 0;
