@@ -307,4 +307,12 @@ public interface Booking extends EObject {
 	 */
 	boolean addExtra(RoomExtra extra, int roomNbr);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false"
+	 * @generated
+	 */
+	double checkOutRoom(int roomNumber);
+
 } // Booking

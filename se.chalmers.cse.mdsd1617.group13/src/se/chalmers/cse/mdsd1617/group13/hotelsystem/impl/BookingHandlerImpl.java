@@ -638,12 +638,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public double initiateRoomCheckout(int roomNumber, int bookingId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Booking booking = getBookingById(bookingId);
+		if(booking == null || this.bookingCurrentlyCheckingOut != 0) {
+			return -1;
+		}
+		this.bookingCurrentlyCheckingOut = bookingId;
+		return booking.checkOutRoom(roomNumber);
 	}
 
 	/**
@@ -652,20 +655,16 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean payRoomDuringCheckout(int roomNumber, String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		boolean roomPaidAndCheckedOut = false;
-		for (Booking booking: bookings){
-			if(booking.getBookingId() == bookingCurrentlyCheckingOut){
-				for (RoomReservation roomReservation: booking.getRoomReservations()){
-					if(roomReservation.getRoomId() == roomNumber){
-						paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, roomReservation.checkOut(booking.nrOfNights()));
-					}
-				}
-				roomPaidAndCheckedOut = true;
-			} else {
-				roomPaidAndCheckedOut = false;
-			}
+		Booking booking = getBookingById(bookingCurrentlyCheckingOut);
+		if(booking == null) {
+			return false;
 		}
-		return roomPaidAndCheckedOut;
+		double price = booking.getRoomPrice(roomNumber);
+		if(price <= 0) {
+			return false;
+		}
+		bookingCurrentlyCheckingOut = 0;
+		return paymentHandler.payIfCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, price);
 	}
 
 	/**

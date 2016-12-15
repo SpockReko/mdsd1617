@@ -476,12 +476,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public double getRoomPrice(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(Bill bill : bills) {
+			if(bill.getBillID() == this.bookingId+roomNumber) {
+				return bill.getPrice();
+			}
+		}
+		return -1;
 	}
 
 	/**
@@ -526,6 +529,25 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public double checkOutRoom(int roomNumber) {
+		for(RoomReservation r : roomReservations){
+			if(r.getRoomId() == roomNumber){
+				double price = r.checkOut(nrOfNights());
+				Bill bill = new BillImpl();
+				bill.setPrice(price);
+				bill.setBillID(this.bookingId + roomNumber);
+				bills.add(bill);
+				return price;
+			}
+		} 
+		return -1;
 	}
 
 	/**
@@ -691,6 +713,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return CheckedInDate((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING___ADD_EXTRA__ROOMEXTRA_INT:
 				return addExtra((RoomExtra)arguments.get(0), (Integer)arguments.get(1));
+			case HotelsystemPackage.BOOKING___CHECK_OUT_ROOM__INT:
+				return checkOutRoom((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
