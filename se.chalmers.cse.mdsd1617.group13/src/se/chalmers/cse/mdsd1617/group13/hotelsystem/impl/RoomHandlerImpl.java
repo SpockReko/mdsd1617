@@ -314,7 +314,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean addRoomType(String roomTypeName, double price, int nbrOfBeds, String featureDescription) {
 		for (RoomType checkType : roomTypes) {
@@ -335,7 +335,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editRoomType(String roomTypeName, double price, int nbrOfBeds, String featuresDescription) {
 		RoomType roomType = getRoomType(roomTypeName);
