@@ -256,6 +256,9 @@
               <ownedAttribute xmi:type="uml:Property" xmi:id="_L_49gMBwEeaPAbmKLAIXGw" name="checkInDate">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_oHXCsMLaEea9RYqOHK2Zug" name="checkOuDate">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+              </ownedAttribute>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_bEg80LuaEeaKgqXTYyzHxQ" name="checkIn"/>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_hXEjQL1LEea3vq_wXUyZng" name="checkOut">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_HTlGkMBIEeaYgdBx0NZ38A" name="price" direction="return">

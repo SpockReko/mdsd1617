@@ -810,13 +810,22 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_RESERVATION__CHECK_IN_DATE = 5;
 
 	/**
+	 * The feature id for the '<em><b>Check Ou Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_RESERVATION__CHECK_OU_DATE = 6;
+
+	/**
 	 * The number of structural features of the '<em>Room Reservation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_RESERVATION_FEATURE_COUNT = 6;
+	int ROOM_RESERVATION_FEATURE_COUNT = 7;
 
 	/**
 	 * The operation id for the '<em>Check In</em>' operation.
@@ -2199,6 +2208,17 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getRoomReservation_CheckInDate();
 
 	/**
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckOuDate <em>Check Ou Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Ou Date</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckOuDate()
+	 * @see #getRoomReservation()
+	 * @generated
+	 */
+	EAttribute getRoomReservation_CheckOuDate();
+
+	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkIn() <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3359,6 +3379,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_RESERVATION__CHECK_IN_DATE = eINSTANCE.getRoomReservation_CheckInDate();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Ou Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_RESERVATION__CHECK_OU_DATE = eINSTANCE.getRoomReservation_CheckOuDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Check In</b></em>' operation.
