@@ -610,28 +610,41 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public int initiateBooking(String firstName, String startDate, String endDate, String lastName) {
-		Booking booking = new BookingImpl();
-		Customer customer = new CustomerImpl();
-		customer.setFirstName(firstName);
-		customer.setLastName(lastName);
-		booking.setCustomer(customer);
-		booking.setStartDate(startDate);
-		booking.setEndDate(endDate);
-		int currentBookingId = bookings.size();
-		booking.setBookingId(currentBookingId);
-		bookings.add(booking);
-		return currentBookingId;
+		if(firstName == null || startDate == null || endDate == null || lastName == null){
+            return -1;
+        }
+        DateFormat format = new SimpleDateFormat("yyyyMMdd");
+        Date dStartDate;
+        Date dEndDate;
+        try{
+            dStartDate = format.parse(startDate);
+            dEndDate = format.parse(endDate);
+        }catch (ParseException e) {
+            return -1;
+        }
+        if(startDate.compareTo(endDate) >= 0){
+            return -1;
+        }
+        Booking booking = new BookingImpl();
+        Customer customer = new CustomerImpl();
+        customer.setFirstName(firstName);
+        customer.setLastName(lastName);
+        booking.setCustomer(customer);
+        booking.setStartDate(startDate);
+        booking.setEndDate(endDate);
+        int currentBookingId = bookings.size();
+        booking.setBookingId(currentBookingId);
+        bookings.add(booking);
+        return currentBookingId;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean addRoomToBooking(String roomTypeName, int bookingID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return addRoomTypeToBooking(bookingID, roomTypeName, 1);
 	}
 
 	/**

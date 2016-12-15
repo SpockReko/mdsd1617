@@ -80,6 +80,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 		roomHandler = new RoomHandlerImpl();
 		roomHandler.initialize(numRooms);
 		bookingHandler = new BookingHandlerImpl();
+		bookingHandler.setRoomhandler(roomHandler);
 	}
 
 	/**
