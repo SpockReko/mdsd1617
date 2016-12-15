@@ -1188,13 +1188,13 @@ public interface HotelsystemPackage extends EPackage {
 	int IROOM_HANDLER___GET_ALL_ROOM_TYPES__INT = 0;
 
 	/**
-	 * The operation id for the '<em>Count Free Room</em>' operation.
+	 * The operation id for the '<em>Get Free Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE = 1;
+	int IROOM_HANDLER___GET_FREE_ROOMS = 1;
 
 	/**
 	 * The operation id for the '<em>Get All Rooms By Type</em>' operation.
@@ -1413,13 +1413,13 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_HANDLER___GET_ALL_ROOM_TYPES__INT = IROOM_HANDLER___GET_ALL_ROOM_TYPES__INT;
 
 	/**
-	 * The operation id for the '<em>Count Free Room</em>' operation.
+	 * The operation id for the '<em>Get Free Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE = IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE;
+	int ROOM_HANDLER___GET_FREE_ROOMS = IROOM_HANDLER___GET_FREE_ROOMS;
 
 	/**
 	 * The operation id for the '<em>Get All Rooms By Type</em>' operation.
@@ -2390,14 +2390,14 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getIRoomHandler__GetAllRoomTypes__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#countFreeRoom(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType) <em>Count Free Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getFreeRooms() <em>Get Free Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Count Free Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#countFreeRoom(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType)
+	 * @return the meta object for the '<em>Get Free Rooms</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getFreeRooms()
 	 * @generated
 	 */
-	EOperation getIRoomHandler__CountFreeRoom__RoomType();
+	EOperation getIRoomHandler__GetFreeRooms();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType) <em>Get All Rooms By Type</em>}' operation.
@@ -3492,12 +3492,12 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation IROOM_HANDLER___GET_ALL_ROOM_TYPES__INT = eINSTANCE.getIRoomHandler__GetAllRoomTypes__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Count Free Room</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Free Rooms</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE = eINSTANCE.getIRoomHandler__CountFreeRoom__RoomType();
+		EOperation IROOM_HANDLER___GET_FREE_ROOMS = eINSTANCE.getIRoomHandler__GetFreeRooms();
 
 		/**
 		 * The meta object literal for the '<em><b>Get All Rooms By Type</b></em>' operation.

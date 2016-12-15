@@ -792,7 +792,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRoomHandler__CountFreeRoom__RoomType() {
+	public EOperation getIRoomHandler__GetFreeRooms() {
 		return iRoomHandlerEClass.getEOperations().get(1);
 	}
 
@@ -1394,7 +1394,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		iRoomHandlerEClass = createEClass(IROOM_HANDLER);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ALL_ROOM_TYPES__INT);
-		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___COUNT_FREE_ROOM__ROOMTYPE);
+		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_FREE_ROOMS);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ROOM_TYPE__STRING);
 
@@ -1617,8 +1617,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		op = initEOperation(getIRoomHandler__GetAllRoomTypes__int(), this.getRoomType(), "getAllRoomTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "nrOfBeds", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRoomHandler__CountFreeRoom__RoomType(), ecorePackage.getEInt(), "countFreeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIRoomHandler__GetFreeRooms(), ecorePackage.getEInt(), "getFreeRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoomHandler__GetAllRoomsByType__RoomType(), this.getRoom(), "getAllRoomsByType", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
