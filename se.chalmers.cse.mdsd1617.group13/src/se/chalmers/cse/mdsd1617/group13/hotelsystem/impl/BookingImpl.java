@@ -426,13 +426,21 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 
+	 * Returns true if any of the booking's reservations have been checked in.
+	 * Used to check if booking can be canceled or not, which would not be possible
+	 * if any of the reservations is checked in.
+	 * 
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isCheckedIn() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(RoomReservation reservation : roomReservations){
+			if(reservation.getCheckInDate() == null){
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
