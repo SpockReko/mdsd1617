@@ -182,10 +182,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected BookingImpl() {
 		super();
+		roomReservations = new BasicEList<RoomReservation>();
 	}
 
 	/**

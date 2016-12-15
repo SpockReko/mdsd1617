@@ -287,6 +287,15 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getBookingHandler_NextBookingId() {
+		return (EAttribute)bookingHandlerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBookingHandler__BookingCheckin__String() {
 		return bookingHandlerEClass.getEOperations().get(0);
 	}
@@ -1324,6 +1333,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__PAYMENT_HANDLER);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__ROOMHANDLER);
 		createEAttribute(bookingHandlerEClass, BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT);
+		createEAttribute(bookingHandlerEClass, BOOKING_HANDLER__NEXT_BOOKING_ID);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___BOOKING_CHECKIN__STRING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___ADD_DAY__STRING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___GET_BOOKING_BY_ID__INT);
@@ -1498,6 +1508,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEReference(getBookingHandler_PaymentHandler(), this.getPaymentHandler(), null, "paymentHandler", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_Roomhandler(), this.getIRoomHandler(), null, "roomhandler", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingHandler_BookingCurrentlyCheckingOut(), ecorePackage.getEInt(), "bookingCurrentlyCheckingOut", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookingHandler_NextBookingId(), ecorePackage.getEInt(), "nextBookingId", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		EOperation op = initEOperation(getBookingHandler__BookingCheckin__String(), theTypesPackage.getBoolean(), "bookingCheckin", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);

@@ -240,13 +240,22 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Next Booking Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_HANDLER__NEXT_BOOKING_ID = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_FEATURE_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 4;
+	int BOOKING_HANDLER_FEATURE_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Edit Booking Time</em>' operation.
@@ -1804,6 +1813,17 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getBookingHandler_BookingCurrentlyCheckingOut();
 
 	/**
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getNextBookingId <em>Next Booking Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Next Booking Id</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getNextBookingId()
+	 * @see #getBookingHandler()
+	 * @generated
+	 */
+	EAttribute getBookingHandler_NextBookingId();
+
+	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#bookingCheckin(java.lang.String) <em>Booking Checkin</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3026,6 +3046,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT = eINSTANCE.getBookingHandler_BookingCurrentlyCheckingOut();
+
+		/**
+		 * The meta object literal for the '<em><b>Next Booking Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_HANDLER__NEXT_BOOKING_ID = eINSTANCE.getBookingHandler_NextBookingId();
 
 		/**
 		 * The meta object literal for the '<em><b>Booking Checkin</b></em>' operation.

@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymentHandler <em>Payment Handler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler <em>Roomhandler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getNextBookingId <em>Next Booking Id</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler()
@@ -117,6 +118,32 @@ public interface BookingHandler extends IHotelReceptionistProvides, IHotelCustom
 	 * @generated
 	 */
 	void setBookingCurrentlyCheckingOut(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Next Booking Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Next Booking Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Next Booking Id</em>' attribute.
+	 * @see #setNextBookingId(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getBookingHandler_NextBookingId()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	int getNextBookingId();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getNextBookingId <em>Next Booking Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Next Booking Id</em>' attribute.
+	 * @see #getNextBookingId()
+	 * @generated
+	 */
+	void setNextBookingId(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

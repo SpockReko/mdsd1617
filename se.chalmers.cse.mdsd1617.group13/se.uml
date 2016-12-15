@@ -32,6 +32,9 @@
               <ownedAttribute xmi:type="uml:Property" xmi:id="_SLYzEMBHEeaYgdBx0NZ38A" name="bookingCurrentlyCheckingOut">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
               </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_PsHK4MLREea2-_f1Ax92fg" name="nextBookingId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+              </ownedAttribute>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_02xLQLhrEeaytfot7Bi3IA" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_Ef28AKnyEeaqs-4dkG4NMQ" contract="_Ef28AKnyEeaqs-4dkG4NMQ"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hDDwML1NEea3vq_wXUyZng" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_UlwsQKspEea_ZvXe8054NA" contract="_UlwsQKspEea_ZvXe8054NA"/>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_u5vSQL30EeaPAbmKLAIXGw" name="bookingCheckin">

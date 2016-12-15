@@ -45,6 +45,8 @@
                   ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/IRoomHandler"/>
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingCurrentlyCheckingOut"
                   ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+              <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextBookingId"
+                  ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="Booking">
               <eOperations name="cancel" ordered="false" lowerBound="1"/>

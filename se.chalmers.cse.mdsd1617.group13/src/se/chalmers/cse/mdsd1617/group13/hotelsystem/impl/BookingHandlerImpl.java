@@ -50,6 +50,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getPaymentHandler <em>Payment Handler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getRoomhandler <em>Roomhandler</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl#getNextBookingId <em>Next Booking Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -106,6 +107,26 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	protected int bookingCurrentlyCheckingOut = BOOKING_CURRENTLY_CHECKING_OUT_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getNextBookingId() <em>Next Booking Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextBookingId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NEXT_BOOKING_ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNextBookingId() <em>Next Booking Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextBookingId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nextBookingId = NEXT_BOOKING_ID_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
@@ -113,6 +134,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	protected BookingHandlerImpl() {
 		super();
 		paymentHandler = new PaymentHandlerImpl();
+		bookings = new BasicEList<Booking>();
 	}
 
 	/**
@@ -232,6 +254,27 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		bookingCurrentlyCheckingOut = newBookingCurrentlyCheckingOut;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT, oldBookingCurrentlyCheckingOut, bookingCurrentlyCheckingOut));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNextBookingId() {
+		return nextBookingId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNextBookingId(int newNextBookingId) {
+		int oldNextBookingId = nextBookingId;
+		nextBookingId = newNextBookingId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.BOOKING_HANDLER__NEXT_BOOKING_ID, oldNextBookingId, nextBookingId));
 	}
 
 	/**
@@ -378,12 +421,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if (bookingToCancel.isCheckedIn()) { // cannot cancel a checked in booking
 			return false;
 		}
-
-		// marks the room as free
-		for (RoomReservation roomReservation : bookingToCancel.getRoomReservations()) {
-			roomReservation.getRoom().setOccupied(false);
-		}
-
+		
 		bookingToCancel.setCanceled(true);
 
 		return true;
@@ -395,10 +433,13 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public EList<Booking> listBookings() {
+		EList<Booking> confirmedBookings = new BasicEList<Booking>();
 		for(Booking booking: bookings){
-			booking.toString();
+			if(booking.isConfirmed()){
+				confirmedBookings.add(booking);
+			}
 		}
-		return bookings;
+		return confirmedBookings;
 	}
 
 	/**
@@ -504,7 +545,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		RoomExtra extra = new RoomExtraImpl();
 		extra.setDescription(extraDescription);
 		extra.setPrice(price);
-		Booking booking = bookings.get(bookingId);
+		Booking booking = getBookingById(bookingId);
 		return booking.addExtra(extra, roomNumber);
 	}
 
@@ -623,7 +664,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean payDuringCheckout(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		Booking booking = bookings.get(this.bookingCurrentlyCheckingOut);
+		Booking booking = getBookingById(this.bookingCurrentlyCheckingOut);
 		if(booking == null) {
 			return false;
 		}
@@ -796,6 +837,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return basicGetRoomhandler();
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				return getBookingCurrentlyCheckingOut();
+			case HotelsystemPackage.BOOKING_HANDLER__NEXT_BOOKING_ID:
+				return getNextBookingId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -822,6 +865,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				setBookingCurrentlyCheckingOut((Integer)newValue);
 				return;
+			case HotelsystemPackage.BOOKING_HANDLER__NEXT_BOOKING_ID:
+				setNextBookingId((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -846,6 +892,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				setBookingCurrentlyCheckingOut(BOOKING_CURRENTLY_CHECKING_OUT_EDEFAULT);
 				return;
+			case HotelsystemPackage.BOOKING_HANDLER__NEXT_BOOKING_ID:
+				setNextBookingId(NEXT_BOOKING_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -866,6 +915,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return roomhandler != null;
 			case HotelsystemPackage.BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT:
 				return bookingCurrentlyCheckingOut != BOOKING_CURRENTLY_CHECKING_OUT_EDEFAULT;
+			case HotelsystemPackage.BOOKING_HANDLER__NEXT_BOOKING_ID:
+				return nextBookingId != NEXT_BOOKING_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -968,6 +1019,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (bookingCurrentlyCheckingOut: ");
 		result.append(bookingCurrentlyCheckingOut);
+		result.append(", nextBookingId: ");
+		result.append(nextBookingId);
 		result.append(')');
 		return result.toString();
 	}
