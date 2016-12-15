@@ -521,7 +521,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-<<<<<<< HEAD
 	public EAttribute getCustomer_LastName() {
 		return (EAttribute)customerEClass.getEStructuralFeatures().get(1);
 	}
@@ -531,8 +530,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-=======
->>>>>>> master
+
 	public EClass getRoomReservation() {
 		return roomReservationEClass;
 	}
