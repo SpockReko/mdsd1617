@@ -468,6 +468,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public EList<RoomReservation> listCheckins(String startDate, String endDate) {
+		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
+
 		DateFormat format = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
 		Date sDate;
 		Date eDate;
@@ -475,10 +477,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			sDate = format.parse(startDate);
 			eDate = format.parse(endDate);
 		} catch (ParseException e) {
-			return null;
+			return roomReservations;
 		}
 
-		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
+		// check if the dates are in the future
+		Date today = new Date();
+		if (sDate.after(today) || eDate.after(today)) {
+			return roomReservations;
+		}
+
 
 		// go through all the bookings and check
 		for (Booking b : bookings) {
@@ -513,6 +520,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public EList<RoomReservation> listCheckouts(String startDate, String endDate) {
+		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
 		DateFormat format = new SimpleDateFormat("yyyyMMdd", Locale.ENGLISH);
 		Date sDate;
 		Date eDate;
@@ -520,10 +528,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			sDate = format.parse(startDate);
 			eDate = format.parse(endDate);
 		} catch (ParseException e) {
-			return null;
+			return roomReservations;
 		}
 
-		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
+		// check if the dates are in the future
+		Date today = new Date();
+		if (sDate.after(today) || eDate.after(today)) {
+			return roomReservations;
+		}
+
 
 		for (Booking b : bookings) {
 			EList<RoomReservation> bookingRoomReservations = b.getRoomReservations();
