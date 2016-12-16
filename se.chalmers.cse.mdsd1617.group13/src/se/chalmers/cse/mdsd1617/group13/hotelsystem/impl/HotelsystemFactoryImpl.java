@@ -73,13 +73,21 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 		}
 	}
 
+
+	/**
+	 * @generated NOT
+	 */
+	private static BookingHandler bookingHandler;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public BookingHandler createBookingHandler() {
-		BookingHandlerImpl bookingHandler = new BookingHandlerImpl();
+		if(bookingHandler == null){
+			bookingHandler = new BookingHandlerImpl();
+		}
 		return bookingHandler;
 	}
 
@@ -154,12 +162,19 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	}
 
 	/**
+	 * @generated NOT
+	 */
+	private static RoomHandler roomHandler;
+	
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomHandler createRoomHandler() {
-		RoomHandlerImpl roomHandler = new RoomHandlerImpl();
+		if(roomHandler == null){
+			roomHandler = new RoomHandlerImpl();
+		}
 		return roomHandler;
 	}
 

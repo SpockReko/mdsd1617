@@ -755,7 +755,6 @@
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_GDYBILuhEeaKgqXTYyzHxQ" name="HotelInitializer">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_sSXEsLuhEeaKgqXTYyzHxQ" name="roomHandler" type="_A4oCULhmEeaytfot7Bi3IA" association="_sRWYELuhEeaKgqXTYyzHxQ"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_2aEUgruhEeaKgqXTYyzHxQ" name="bookingHandler" type="_-1bbgLhlEeaytfot7Bi3IA" association="_2aDtcLuhEeaKgqXTYyzHxQ"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cu_sQL1IEea3vq_wXUyZng" client="_GDYBILuhEeaKgqXTYyzHxQ" supplier="_uUO4AI--EeaYFcjrTNGrQw" contract="_uUO4AI--EeaYFcjrTNGrQw"/>
             </packagedElement>
           </packagedElement>
@@ -1016,12 +1015,6 @@
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sSWdobuhEeaKgqXTYyzHxQ" key="nature" value="UML_Nature"/>
             </eAnnotations>
             <ownedEnd xmi:type="uml:Property" xmi:id="_sSXEsbuhEeaKgqXTYyzHxQ" name="hotelinitializer" type="_GDYBILuhEeaKgqXTYyzHxQ" association="_sRWYELuhEeaKgqXTYyzHxQ"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_2aDtcLuhEeaKgqXTYyzHxQ" memberEnd="_2aEUgruhEeaKgqXTYyzHxQ _2aE7kLuhEeaKgqXTYyzHxQ">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2aEUgLuhEeaKgqXTYyzHxQ" source="org.eclipse.papyrus">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2aEUgbuhEeaKgqXTYyzHxQ" key="nature" value="UML_Nature"/>
-            </eAnnotations>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_2aE7kLuhEeaKgqXTYyzHxQ" name="hotelinitializer" type="_GDYBILuhEeaKgqXTYyzHxQ" association="_2aDtcLuhEeaKgqXTYyzHxQ"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>

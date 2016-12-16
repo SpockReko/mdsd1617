@@ -77,10 +77,9 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public void startup(int numRooms) {
-		roomHandler = new RoomHandlerImpl();
+		HotelsystemFactoryImpl factory = new HotelsystemFactoryImpl();
+		roomHandler = factory.createRoomHandler();
 		roomHandler.initialize(numRooms);
-		bookingHandler = new BookingHandlerImpl();
-		bookingHandler.setRoomhandler(roomHandler);
 	}
 
 	/**
