@@ -239,16 +239,16 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated NOT
 	 */
 	public boolean blockRoom(int roomNumber) {
-		boolean roomIsBlocked = false;
+		if(rooms == null || rooms.isEmpty()) {
+			return false;
+		}
 		for (Room room: rooms){
-			if (room.getRoomNumber() == roomNumber){
-				room.isBlocked();
-				roomIsBlocked = true;
-			} else {
-				roomIsBlocked = false;
+			if (room.getRoomNumber() == roomNumber && !room.isOccupied()){
+				room.setBlocked(true);
+				return true;
 			}
 		}
-		return roomIsBlocked;
+		return false;
 	}
 
 	/**
