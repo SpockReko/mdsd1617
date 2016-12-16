@@ -292,7 +292,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 		addRoomType("Default", 1, 1, "None");
 
 		for(int i = 0; i < numberOfRooms; i++){ //create all rooms
-			addRoom(i, roomTypes.get(0).getName());
+			addRoom(i+1, roomTypes.get(0).getName());
 		}
 	}
 
