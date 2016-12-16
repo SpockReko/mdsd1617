@@ -98,12 +98,18 @@ public class PaymentHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean payIfCardValid(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double sum) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+        if (bankingComponent.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)){
+            if (bankingComponent.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, sum)){
+                return true;
+            } else{
+                return false;
+            }
+        } else {
+            return false;
+        }
 	}
 
 	/**
