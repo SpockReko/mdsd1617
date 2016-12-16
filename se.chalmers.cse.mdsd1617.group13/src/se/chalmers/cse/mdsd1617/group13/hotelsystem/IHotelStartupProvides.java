@@ -23,12 +23,4 @@ public interface IHotelStartupProvides extends EObject {
 	 */
 	void startup(int numRooms);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	RoomHandler getRoomHandler();
-
 } // IHotelStartupProvides

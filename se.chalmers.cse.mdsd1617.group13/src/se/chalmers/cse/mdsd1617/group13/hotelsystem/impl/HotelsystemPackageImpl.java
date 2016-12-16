@@ -1170,15 +1170,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIHotelStartupProvides__GetRoomHandler() {
-		return iHotelStartupProvidesEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getHotelInitializer() {
 		return hotelInitializerEClass;
 	}
@@ -1463,7 +1454,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		iHotelStartupProvidesEClass = createEClass(IHOTEL_STARTUP_PROVIDES);
 		createEOperation(iHotelStartupProvidesEClass, IHOTEL_STARTUP_PROVIDES___STARTUP__INT);
-		createEOperation(iHotelStartupProvidesEClass, IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER);
 
 		hotelInitializerEClass = createEClass(HOTEL_INITIALIZER);
 		createEReference(hotelInitializerEClass, HOTEL_INITIALIZER__ROOM_HANDLER);
@@ -1762,8 +1752,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		op = initEOperation(getIHotelStartupProvides__Startup__int(), null, "startup", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "numRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIHotelStartupProvides__GetRoomHandler(), this.getRoomHandler(), "getRoomHandler", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(hotelInitializerEClass, HotelInitializer.class, "HotelInitializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHotelInitializer_RoomHandler(), this.getRoomHandler(), null, "roomHandler", null, 1, 1, HotelInitializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

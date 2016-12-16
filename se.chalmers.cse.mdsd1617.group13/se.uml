@@ -707,9 +707,6 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_fJw2wLuhEeaKgqXTYyzHxQ" name="getRoomHandler">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_pC2bwLuhEeaKgqXTYyzHxQ" type="_A4oCULhmEeaytfot7Bi3IA" direction="return"/>
-              </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:DataType" xmi:id="_Ul2y4KspEea_ZvXe8054NA" name="FreeRoomTypesDTO">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_Ul2y4aspEea_ZvXe8054NA" name="roomTypeDescription">

@@ -1694,22 +1694,13 @@ public interface HotelsystemPackage extends EPackage {
 	int IHOTEL_STARTUP_PROVIDES___STARTUP__INT = 0;
 
 	/**
-	 * The operation id for the '<em>Get Room Handler</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER = 1;
-
-	/**
 	 * The number of operations of the '<em>IHotel Startup Provides</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT = 2;
+	int IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.
@@ -1756,15 +1747,6 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int HOTEL_INITIALIZER___STARTUP__INT = IHOTEL_STARTUP_PROVIDES___STARTUP__INT;
-
-	/**
-	 * The operation id for the '<em>Get Room Handler</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HOTEL_INITIALIZER___GET_ROOM_HANDLER = IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER;
 
 	/**
 	 * The number of operations of the '<em>Hotel Initializer</em>' class.
@@ -2850,16 +2832,6 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getIHotelStartupProvides__Startup__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides#getRoomHandler() <em>Get Room Handler</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Handler</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides#getRoomHandler()
-	 * @generated
-	 */
-	EOperation getIHotelStartupProvides__GetRoomHandler();
-
-	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer <em>Hotel Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3897,14 +3869,6 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IHOTEL_STARTUP_PROVIDES___STARTUP__INT = eINSTANCE.getIHotelStartupProvides__Startup__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Room Handler</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IHOTEL_STARTUP_PROVIDES___GET_ROOM_HANDLER = eINSTANCE.getIHotelStartupProvides__GetRoomHandler();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.

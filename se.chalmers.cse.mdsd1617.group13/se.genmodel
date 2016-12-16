@@ -302,7 +302,6 @@
                 <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelStartupProvides/startup">
                   <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelStartupProvides/startup/numRooms"/>
                 </genOperations>
-                <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelStartupProvides/getRoomHandler"/>
               </genClasses>
               <genClasses xsi:type="genmodel:GenClass" ecoreClass="se.ecore#//chalmers/cse/mdsd1617/group13/hotelsystem/HotelInitializer">
                 <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
