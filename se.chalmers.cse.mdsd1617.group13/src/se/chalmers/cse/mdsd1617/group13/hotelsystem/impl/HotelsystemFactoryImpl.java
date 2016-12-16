@@ -162,20 +162,12 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	}
 
 	/**
-	 * @generated NOT
-	 */
-	private static RoomHandler roomHandler;
-	
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public RoomHandler createRoomHandler() {
-		if(roomHandler == null){
-			roomHandler = new RoomHandlerImpl();
-		}
-		return roomHandler;
+		return RoomHandlerImpl.getRoomHandler();
 	}
 
 	/**
