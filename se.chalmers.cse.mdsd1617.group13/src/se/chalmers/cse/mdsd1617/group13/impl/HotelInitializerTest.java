@@ -2,6 +2,8 @@ package se.chalmers.cse.mdsd1617.group13.impl;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import se.chalmers.cse.mdsd1617.group13.Administrator;
@@ -11,20 +13,29 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
 
 public class HotelInitializerTest {
 
-	HotelInitializer hotelInitializer = new HotelsystemFactoryImpl().createHotelInitializer();
+	static HotelInitializer hotelInitializer = new HotelsystemFactoryImpl().createHotelInitializer();
 	RoomHandler roomHandler = new HotelsystemFactoryImpl().createRoomHandler();
-	Administrator admin = new Group13FactoryImpl().createAdministrator();
+	static Administrator admin = new Group13FactoryImpl().createAdministrator();
 
-
-	@Test
-	public void testStartUp() {
+	@BeforeClass
+	public static void setUpClass(){
 		admin.setIhotelstartupprovides(hotelInitializer);
 		admin.getIhotelstartupprovides().startup(10);
 
+	}
+	
+	
+	@Test
+	public void testStartUp() {
 		//hotelInitializer.startup(10);
-		boolean expected = roomHandler.getRooms().isEmpty();
-		assertEquals(expected, false);
-
+		boolean actual = roomHandler.getRooms().isEmpty();
+		assertEquals(false, actual);
+	}
+	
+	@Test
+	public void testStartUpRoomAdded(){
+		int totalRooms = roomHandler.getRooms().size();
+		assertEquals(10, totalRooms);
 	}
 
 }

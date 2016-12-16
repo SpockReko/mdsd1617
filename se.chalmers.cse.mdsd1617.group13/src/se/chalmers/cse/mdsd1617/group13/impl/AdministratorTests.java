@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import se.chalmers.cse.mdsd1617.group13.Administrator;
 //import se.chalmers.cse.mdsd1617.group13.Administrator;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
@@ -13,15 +14,22 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
 
 public class AdministratorTests {
 
-	//Administrator admin = new Group13FactoryImpl().createAdministrator();
+	static Administrator admin = new Group13FactoryImpl().createAdministrator();
 	static HotelInitializer hotelInitializer = new HotelsystemFactoryImpl().createHotelInitializer();
 	RoomHandler roomHandler = new HotelsystemFactoryImpl().createRoomHandler();
 
 	@BeforeClass
 	public static void setUpClass() throws Exception{
-		hotelInitializer.startup(10);
+		admin.setIhotelstartupprovides(hotelInitializer);
+		admin.getIhotelstartupprovides().startup(10);
 	}
 
+	@Test
+	public void testStartUpRoomAdded(){
+		int totalRooms = roomHandler.getRooms().size();
+		assertEquals(totalRooms, 10);
+	}
+	
 	@Test
 	public void testBlockValidRoom() {
 		boolean expected = roomHandler.blockRoom(2);
@@ -46,11 +54,6 @@ public class AdministratorTests {
 		roomHandler.getRoom(4).setBlocked(true);
 		boolean expected = roomHandler.unblockRoom(4);
 		assertEquals(expected, true);
-	}
-
-	@Test
-	public void addRoomType(){
-
 	}
 
 }
