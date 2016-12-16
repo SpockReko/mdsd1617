@@ -65,22 +65,6 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	}
 	
 	/**
-	 * @generated NOT
-	 */
-	private static RoomHandler roomHandler;
-	
-	/**
-	 * @generated NOT
-	 */
-	public static RoomHandler getRoomHandler() {
-		if(roomHandler == null) {
-			roomHandler = new RoomHandlerImpl();
-		}
-		return roomHandler;
-	}
-	
-	
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
