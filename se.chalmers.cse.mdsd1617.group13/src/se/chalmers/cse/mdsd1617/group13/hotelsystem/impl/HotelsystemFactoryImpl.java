@@ -73,14 +73,15 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 		}
 	}
 
+
 	/**
 	 * @generated NOT
 	 */
-	private BookingHandler bookingHandler;
+	private static BookingHandler bookingHandler;
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->b
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public BookingHandler createBookingHandler() {
@@ -163,11 +164,11 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	/**
 	 * @generated NOT
 	 */
-	private RoomHandler roomHandler;
+	private static RoomHandler roomHandler;
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->b
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public RoomHandler createRoomHandler() {
