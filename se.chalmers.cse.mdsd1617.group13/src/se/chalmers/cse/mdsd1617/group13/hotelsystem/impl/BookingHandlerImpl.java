@@ -133,6 +133,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected BookingHandlerImpl() {
 		super();
+		HotelsystemFactory factory = new HotelsystemFactoryImpl();
+		roomhandler = factory.createRoomHandler();
 		paymentHandler = new PaymentHandlerImpl();
 		bookings = new BasicEList<Booking>();
 	}

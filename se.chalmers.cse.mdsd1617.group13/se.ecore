@@ -320,8 +320,6 @@
             <eClassifiers xsi:type="ecore:EClass" name="HotelInitializer" eSuperTypes="#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelStartupProvides">
               <eStructuralFeatures xsi:type="ecore:EReference" name="roomHandler"
                   ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/RoomHandler"/>
-              <eStructuralFeatures xsi:type="ecore:EReference" name="bookingHandler"
-                  ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/BookingHandler"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="IHotelReceptionistProvides"
                 abstract="true" interface="true">

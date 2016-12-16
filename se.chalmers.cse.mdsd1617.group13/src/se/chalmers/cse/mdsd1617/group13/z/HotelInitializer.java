@@ -1,6 +1,7 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.hotelsystem;
+package se.chalmers.cse.mdsd1617.group13.z;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -11,10 +12,10 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler <em>Room Handler</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.z.HotelInitializer#getRoomHandler <em>Room Handler</em>}</li>
  * </ul>
  *
- * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer()
+ * @see se.chalmers.cse.mdsd1617.group13.z.ZPackage#getHotelInitializer()
  * @model
  * @generated
  */
@@ -29,14 +30,14 @@ public interface HotelInitializer extends IHotelStartupProvides {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Handler</em>' reference.
 	 * @see #setRoomHandler(RoomHandler)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer_RoomHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.ZPackage#getHotelInitializer_RoomHandler()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	RoomHandler getRoomHandler();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler <em>Room Handler</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.z.HotelInitializer#getRoomHandler <em>Room Handler</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Room Handler</em>' reference.

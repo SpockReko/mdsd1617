@@ -1,20 +1,22 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
+package se.chalmers.cse.mdsd1617.group13.z.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemFactory;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
+
+import se.chalmers.cse.mdsd1617.group13.z.HotelInitializer;
+import se.chalmers.cse.mdsd1617.group13.z.RoomHandler;
+import se.chalmers.cse.mdsd1617.group13.z.ZPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +26,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl#getRoomHandler <em>Room Handler</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.z.impl.HotelInitializerImpl#getRoomHandler <em>Room Handler</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,18 +58,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return HotelsystemPackage.Literals.HOTEL_INITIALIZER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void startup(int numRooms) {
-		HotelsystemFactory factory = new HotelsystemFactoryImpl();
-		roomHandler = factory.createRoomHandler();
-		roomHandler.initialize(numRooms);
+		return ZPackage.Literals.HOTEL_INITIALIZER;
 	}
 
 	/**
@@ -81,7 +72,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 			roomHandler = (RoomHandler)eResolveProxy(oldRoomHandler);
 			if (roomHandler != oldRoomHandler) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER, oldRoomHandler, roomHandler));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ZPackage.HOTEL_INITIALIZER__ROOM_HANDLER, oldRoomHandler, roomHandler));
 			}
 		}
 		return roomHandler;
@@ -105,7 +96,18 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 		RoomHandler oldRoomHandler = roomHandler;
 		roomHandler = newRoomHandler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER, oldRoomHandler, roomHandler));
+			eNotify(new ENotificationImpl(this, Notification.SET, ZPackage.HOTEL_INITIALIZER__ROOM_HANDLER, oldRoomHandler, roomHandler));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void startup(int numRooms) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -116,7 +118,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
+			case ZPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				if (resolve) return getRoomHandler();
 				return basicGetRoomHandler();
 		}
@@ -131,7 +133,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
+			case ZPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				setRoomHandler((RoomHandler)newValue);
 				return;
 		}
@@ -146,7 +148,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
+			case ZPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				setRoomHandler((RoomHandler)null);
 				return;
 		}
@@ -161,7 +163,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
+			case ZPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				return roomHandler != null;
 		}
 		return super.eIsSet(featureID);
@@ -175,7 +177,7 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case HotelsystemPackage.HOTEL_INITIALIZER___STARTUP__INT:
+			case ZPackage.HOTEL_INITIALIZER___STARTUP__INT:
 				startup((Integer)arguments.get(0));
 				return null;
 		}

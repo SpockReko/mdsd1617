@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.hotelsystem;
+package se.chalmers.cse.mdsd1617.group13.z;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -20,18 +20,18 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemFactory
+ * @see se.chalmers.cse.mdsd1617.group13.z.ZFactory
  * @model kind="package"
  * @generated
  */
-public interface HotelsystemPackage extends EPackage {
+public interface ZPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "hotelsystem";
+	String eNAME = "z";
 
 	/**
 	 * The package namespace URI.
@@ -39,7 +39,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///se/chalmers/cse/mdsd1617/group13/hotelsystem.ecore";
+	String eNS_URI = "http:///se/chalmers/cse/mdsd1617/group13/z.ecore";
 
 	/**
 	 * The package namespace name.
@@ -47,7 +47,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "se.chalmers.cse.mdsd1617.group13.hotelsystem";
+	String eNS_PREFIX = "se.chalmers.cse.mdsd1617.group13.z";
 
 	/**
 	 * The singleton instance of the package.
@@ -55,14 +55,14 @@ public interface HotelsystemPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	HotelsystemPackage eINSTANCE = se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl.init();
+	ZPackage eINSTANCE = se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelReceptionistProvides()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelReceptionistProvides()
 	 * @generated
 	 */
 	int IHOTEL_RECEPTIONIST_PROVIDES = 16;
@@ -194,11 +194,11 @@ public interface HotelsystemPackage extends EPackage {
 	int IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT = 12;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBookingHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.BookingHandlerImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getBookingHandler()
 	 * @generated
 	 */
 	int BOOKING_HANDLER = 0;
@@ -492,11 +492,11 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_HANDLER_OPERATION_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 13;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.BookingImpl <em>Booking</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBooking()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.BookingImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getBooking()
 	 * @generated
 	 */
 	int BOOKING = 1;
@@ -700,11 +700,11 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_OPERATION_COUNT = 12;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.CustomerImpl <em>Customer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getCustomer()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.CustomerImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getCustomer()
 	 * @generated
 	 */
 	int CUSTOMER = 2;
@@ -746,11 +746,11 @@ public interface HotelsystemPackage extends EPackage {
 	int CUSTOMER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl <em>Room Reservation</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomReservationImpl <em>Room Reservation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomReservation()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomReservationImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomReservation()
 	 * @generated
 	 */
 	int ROOM_RESERVATION = 3;
@@ -882,11 +882,11 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_RESERVATION_OPERATION_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl <em>Room Type</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomTypeImpl <em>Room Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomType()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomTypeImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomType()
 	 * @generated
 	 */
 	int ROOM_TYPE = 4;
@@ -946,11 +946,11 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl <em>Room Extra</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomExtraImpl <em>Room Extra</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomExtra()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomExtraImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomExtra()
 	 * @generated
 	 */
 	int ROOM_EXTRA = 5;
@@ -992,74 +992,14 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_EXTRA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl <em>Bill</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomImpl <em>Room</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBill()
-	 * @generated
-	 */
-	int BILL = 7;
-
-	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.PaymentHandlerImpl <em>Payment Handler</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.PaymentHandlerImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getPaymentHandler()
-	 * @generated
-	 */
-	int PAYMENT_HANDLER = 8;
-
-	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler <em>IRoom Handler</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIRoomHandler()
-	 * @generated
-	 */
-	int IROOM_HANDLER = 9;
-
-	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl <em>Room Handler</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomHandler()
-	 * @generated
-	 */
-	int ROOM_HANDLER = 12;
-
-	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl <em>Room</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoom()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoom()
 	 * @generated
 	 */
 	int ROOM = 6;
-
-	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides <em>IHotel Customer Provides</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelCustomerProvides()
-	 * @generated
-	 */
-	int IHOTEL_CUSTOMER_PROVIDES = 10;
-
-	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.FreeRoomTypesDTOImpl <em>Free Room Types DTO</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.FreeRoomTypesDTOImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getFreeRoomTypesDTO()
-	 * @generated
-	 */
-	int FREE_ROOM_TYPES_DTO = 11;
 
 	/**
 	 * The feature id for the '<em><b>Occupied</b></em>' attribute.
@@ -1116,6 +1056,16 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.BillImpl <em>Bill</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.BillImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getBill()
+	 * @generated
+	 */
+	int BILL = 7;
+
+	/**
 	 * The feature id for the '<em><b>Roomreservation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1161,6 +1111,16 @@ public interface HotelsystemPackage extends EPackage {
 	int BILL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.PaymentHandlerImpl <em>Payment Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.PaymentHandlerImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getPaymentHandler()
+	 * @generated
+	 */
+	int PAYMENT_HANDLER = 8;
+
+	/**
 	 * The feature id for the '<em><b>Banking Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1195,6 +1155,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int PAYMENT_HANDLER_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.IRoomHandler <em>IRoom Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IRoomHandler
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIRoomHandler()
+	 * @generated
+	 */
+	int IROOM_HANDLER = 9;
 
 	/**
 	 * The number of structural features of the '<em>IRoom Handler</em>' class.
@@ -1249,6 +1219,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int IROOM_HANDLER_OPERATION_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides <em>IHotel Customer Provides</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelCustomerProvides()
+	 * @generated
+	 */
+	int IHOTEL_CUSTOMER_PROVIDES = 10;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Customer Provides</em>' class.
@@ -1350,6 +1330,16 @@ public interface HotelsystemPackage extends EPackage {
 	int IHOTEL_CUSTOMER_PROVIDES_OPERATION_COUNT = 9;
 
 	/**
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.FreeRoomTypesDTOImpl <em>Free Room Types DTO</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.FreeRoomTypesDTOImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getFreeRoomTypesDTO()
+	 * @generated
+	 */
+	int FREE_ROOM_TYPES_DTO = 11;
+
+	/**
 	 * The feature id for the '<em><b>Room Type Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1402,6 +1392,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int FREE_ROOM_TYPES_DTO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomHandlerImpl <em>Room Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomHandlerImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomHandler()
+	 * @generated
+	 */
+	int ROOM_HANDLER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Room Types</b></em>' reference list.
@@ -1566,11 +1566,11 @@ public interface HotelsystemPackage extends EPackage {
 	int ROOM_HANDLER_OPERATION_COUNT = IROOM_HANDLER_OPERATION_COUNT + 10;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides <em>IHotel Administrator Provides</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides <em>IHotel Administrator Provides</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelAdministratorProvides()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelAdministratorProvides()
 	 * @generated
 	 */
 	int IHOTEL_ADMINISTRATOR_PROVIDES = 13;
@@ -1666,11 +1666,11 @@ public interface HotelsystemPackage extends EPackage {
 	int IHOTEL_ADMINISTRATOR_PROVIDES_OPERATION_COUNT = 8;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides <em>IHotel Startup Provides</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides <em>IHotel Startup Provides</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelStartupProvides()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelStartupProvides()
 	 * @generated
 	 */
 	int IHOTEL_STARTUP_PROVIDES = 14;
@@ -1703,11 +1703,11 @@ public interface HotelsystemPackage extends EPackage {
 	int IHOTEL_STARTUP_PROVIDES_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getHotelInitializer()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.HotelInitializerImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getHotelInitializer()
 	 * @generated
 	 */
 	int HOTEL_INITIALIZER = 15;
@@ -1750,1225 +1750,1224 @@ public interface HotelsystemPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler <em>Booking Handler</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler <em>Booking Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Booking Handler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler
 	 * @generated
 	 */
 	EClass getBookingHandler();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookings <em>Bookings</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getBookings <em>Bookings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Bookings</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookings()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getBookings()
 	 * @see #getBookingHandler()
 	 * @generated
 	 */
 	EReference getBookingHandler_Bookings();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymentHandler <em>Payment Handler</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getPaymentHandler <em>Payment Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Payment Handler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getPaymentHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getPaymentHandler()
 	 * @see #getBookingHandler()
 	 * @generated
 	 */
 	EReference getBookingHandler_PaymentHandler();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler <em>Roomhandler</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getRoomhandler <em>Roomhandler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Roomhandler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getRoomhandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getRoomhandler()
 	 * @see #getBookingHandler()
 	 * @generated
 	 */
 	EReference getBookingHandler_Roomhandler();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getBookingCurrentlyCheckingOut <em>Booking Currently Checking Out</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Booking Currently Checking Out</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingCurrentlyCheckingOut()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getBookingCurrentlyCheckingOut()
 	 * @see #getBookingHandler()
 	 * @generated
 	 */
 	EAttribute getBookingHandler_BookingCurrentlyCheckingOut();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getNextBookingId <em>Next Booking Id</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getNextBookingId <em>Next Booking Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Next Booking Id</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getNextBookingId()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getNextBookingId()
 	 * @see #getBookingHandler()
 	 * @generated
 	 */
 	EAttribute getBookingHandler_NextBookingId();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#bookingCheckin(java.lang.String) <em>Booking Checkin</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#bookingCheckin(java.lang.String) <em>Booking Checkin</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Booking Checkin</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#bookingCheckin(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#bookingCheckin(java.lang.String)
 	 * @generated
 	 */
 	EOperation getBookingHandler__BookingCheckin__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#addDay(java.lang.String) <em>Add Day</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#addDay(java.lang.String) <em>Add Day</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Day</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#addDay(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#addDay(java.lang.String)
 	 * @generated
 	 */
 	EOperation getBookingHandler__AddDay__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingById(int) <em>Get Booking By Id</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getBookingById(int) <em>Get Booking By Id</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booking By Id</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingById(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#getBookingById(int)
 	 * @generated
 	 */
 	EOperation getBookingHandler__GetBookingById__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#isFree(int, java.lang.String, java.lang.String) <em>Is Free</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.BookingHandler#isFree(int, java.lang.String, java.lang.String) <em>Is Free</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Free</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#isFree(int, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.BookingHandler#isFree(int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getBookingHandler__IsFree__int_String_String();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking <em>Booking</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.Booking <em>Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Booking</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking
 	 * @generated
 	 */
 	EClass getBooking();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer <em>Customer</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getCustomer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Customer</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getCustomer()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getCustomer()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EReference getBooking_Customer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservations <em>Room Reservations</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getRoomReservations <em>Room Reservations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Room Reservations</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomReservations()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getRoomReservations()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EReference getBooking_RoomReservations();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate <em>Start Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getStartDate <em>Start Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Start Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getStartDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getStartDate()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EAttribute getBooking_StartDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate <em>End Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getEndDate <em>End Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>End Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getEndDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getEndDate()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EAttribute getBooking_EndDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCanceled <em>Canceled</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#isCanceled <em>Canceled</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Canceled</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCanceled()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#isCanceled()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EAttribute getBooking_Canceled();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingId <em>Booking Id</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getBookingId <em>Booking Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Booking Id</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingId()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getBookingId()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EAttribute getBooking_BookingId();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBills <em>Bills</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getBills <em>Bills</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Bills</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBills()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getBills()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EReference getBooking_Bills();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed <em>Confirmed</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#isConfirmed <em>Confirmed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Confirmed</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isConfirmed()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#isConfirmed()
 	 * @see #getBooking()
 	 * @generated
 	 */
 	EAttribute getBooking_Confirmed();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#cancel() <em>Cancel</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#cancel() <em>Cancel</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cancel</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#cancel()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#cancel()
 	 * @generated
 	 */
 	EOperation getBooking__Cancel();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getOccupiedRooms(java.lang.String) <em>Get Occupied Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getOccupiedRooms(java.lang.String) <em>Get Occupied Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Occupied Rooms</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getOccupiedRooms(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getOccupiedRooms(java.lang.String)
 	 * @generated
 	 */
 	EOperation getBooking__GetOccupiedRooms__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkOut() <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#checkOut() <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkOut()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#checkOut()
 	 * @generated
 	 */
 	EOperation getBooking__CheckOut();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#nrOfNights() <em>Nr Of Nights</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#nrOfNights() <em>Nr Of Nights</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Nr Of Nights</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#nrOfNights()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#nrOfNights()
 	 * @generated
 	 */
 	EOperation getBooking__NrOfNights();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCheckedIn() <em>Is Checked In</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#isCheckedIn() <em>Is Checked In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Checked In</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isCheckedIn()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#isCheckedIn()
 	 * @generated
 	 */
 	EOperation getBooking__IsCheckedIn();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkIn(int) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#checkIn(int) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkIn(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#checkIn(int)
 	 * @generated
 	 */
 	EOperation getBooking__CheckIn__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingPrice() <em>Get Booking Price</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getBookingPrice() <em>Get Booking Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Booking Price</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingPrice()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getBookingPrice()
 	 * @generated
 	 */
 	EOperation getBooking__GetBookingPrice();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomPrice(int) <em>Get Room Price</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#getRoomPrice(int) <em>Get Room Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Room Price</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getRoomPrice(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#getRoomPrice(int)
 	 * @generated
 	 */
 	EOperation getBooking__GetRoomPrice__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isFree(int, java.lang.String, java.lang.String) <em>Is Free</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#isFree(int, java.lang.String, java.lang.String) <em>Is Free</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Free</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#isFree(int, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#isFree(int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getBooking__IsFree__int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#CheckedInDate(java.lang.String) <em>Checked In Date</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#CheckedInDate(java.lang.String) <em>Checked In Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Checked In Date</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#CheckedInDate(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#CheckedInDate(java.lang.String)
 	 * @generated
 	 */
 	EOperation getBooking__CheckedInDate__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra, int) <em>Add Extra</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#addExtra(se.chalmers.cse.mdsd1617.group13.z.RoomExtra, int) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#addExtra(se.chalmers.cse.mdsd1617.group13.z.RoomExtra, int)
 	 * @generated
 	 */
 	EOperation getBooking__AddExtra__RoomExtra_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkOutRoom(int) <em>Check Out Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.Booking#checkOutRoom(int) <em>Check Out Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkOutRoom(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Booking#checkOutRoom(int)
 	 * @generated
 	 */
 	EOperation getBooking__CheckOutRoom__int();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer <em>Customer</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Customer</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Customer
 	 * @generated
 	 */
 	EClass getCustomer();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer#getFirstName <em>First Name</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Customer#getFirstName <em>First Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>First Name</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer#getFirstName()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Customer#getFirstName()
 	 * @see #getCustomer()
 	 * @generated
 	 */
 	EAttribute getCustomer_FirstName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer#getLastName <em>Last Name</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Customer#getLastName <em>Last Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Last Name</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer#getLastName()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Customer#getLastName()
 	 * @see #getCustomer()
 	 * @generated
 	 */
 	EAttribute getCustomer_LastName();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation <em>Room Reservation</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation <em>Room Reservation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Room Reservation</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation
 	 * @generated
 	 */
 	EClass getRoomReservation();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType <em>Room Type</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomType <em>Room Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Room Type</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomType()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomType()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
 	EReference getRoomReservation_RoomType();
 
 	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomExtras <em>Room Extras</em>}'.
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomExtras <em>Room Extras</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Room Extras</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomExtras()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomExtras()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
 	EReference getRoomReservation_RoomExtras();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate <em>Start Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getStartDate <em>Start Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Start Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getStartDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getStartDate()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
 	EAttribute getRoomReservation_StartDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getEndDate <em>End Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>End Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getEndDate()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
 	EAttribute getRoomReservation_EndDate();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoom <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Room</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoom()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
 	EReference getRoomReservation_Room();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate <em>Check In Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getCheckInDate <em>Check In Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Check In Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getCheckInDate()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
 	EAttribute getRoomReservation_CheckInDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckOuDate <em>Check Ou Date</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getCheckOuDate <em>Check Ou Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Check Ou Date</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckOuDate()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getCheckOuDate()
 	 * @see #getRoomReservation()
 	 * @generated
 	 */
 	EAttribute getRoomReservation_CheckOuDate();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkIn() <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#checkIn() <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkIn()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#checkIn()
 	 * @generated
 	 */
 	EOperation getRoomReservation__CheckIn();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkOut(int) <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#checkOut(int) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#checkOut(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#checkOut(int)
 	 * @generated
 	 */
 	EOperation getRoomReservation__CheckOut__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomIfOccupied(java.lang.String) <em>Get Room If Occupied</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomIfOccupied(java.lang.String) <em>Get Room If Occupied</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Room If Occupied</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomIfOccupied(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomIfOccupied(java.lang.String)
 	 * @generated
 	 */
 	EOperation getRoomReservation__GetRoomIfOccupied__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomId() <em>Get Room Id</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomId() <em>Get Room Id</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Room Id</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoomId()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#getRoomId()
 	 * @generated
 	 */
 	EOperation getRoomReservation__GetRoomId();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra) <em>Add Extra</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.RoomReservation#addExtra(se.chalmers.cse.mdsd1617.group13.z.RoomExtra) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomReservation#addExtra(se.chalmers.cse.mdsd1617.group13.z.RoomExtra)
 	 * @generated
 	 */
 	EOperation getRoomReservation__AddExtra__RoomExtra();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType <em>Room Type</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.RoomType <em>Room Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Room Type</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomType
 	 * @generated
 	 */
 	EClass getRoomType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomType#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getDescription()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomType#getDescription()
 	 * @see #getRoomType()
 	 * @generated
 	 */
 	EAttribute getRoomType_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getNumBeds <em>Num Beds</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomType#getNumBeds <em>Num Beds</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Num Beds</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getNumBeds()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomType#getNumBeds()
 	 * @see #getRoomType()
 	 * @generated
 	 */
 	EAttribute getRoomType_NumBeds();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getPricePerNight <em>Price Per Night</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomType#getPricePerNight <em>Price Per Night</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Price Per Night</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getPricePerNight()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomType#getPricePerNight()
 	 * @see #getRoomType()
 	 * @generated
 	 */
 	EAttribute getRoomType_PricePerNight();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomType#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType#getName()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomType#getName()
 	 * @see #getRoomType()
 	 * @generated
 	 */
 	EAttribute getRoomType_Name();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra <em>Room Extra</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.RoomExtra <em>Room Extra</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Room Extra</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomExtra
 	 * @generated
 	 */
 	EClass getRoomExtra();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getPrice <em>Price</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomExtra#getPrice <em>Price</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Price</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getPrice()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomExtra#getPrice()
 	 * @see #getRoomExtra()
 	 * @generated
 	 */
 	EAttribute getRoomExtra_Price();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.RoomExtra#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra#getDescription()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomExtra#getDescription()
 	 * @see #getRoomExtra()
 	 * @generated
 	 */
 	EAttribute getRoomExtra_Description();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill <em>Bill</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Bill</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill
-	 * @generated
-	 */
-	EClass getBill();
-
-	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getRoomreservation <em>Roomreservation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Roomreservation</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getRoomreservation()
-	 * @see #getBill()
-	 * @generated
-	 */
-	EReference getBill_Roomreservation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getPrice <em>Price</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Price</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getPrice()
-	 * @see #getBill()
-	 * @generated
-	 */
-	EAttribute getBill_Price();
-
-	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getBillID <em>Bill ID</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bill ID</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill#getBillID()
-	 * @see #getBill()
-	 * @generated
-	 */
-	EAttribute getBill_BillID();
-
-	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler <em>Payment Handler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Payment Handler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler
-	 * @generated
-	 */
-	EClass getPaymentHandler();
-
-	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler#getBankingComponent <em>Banking Component</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Banking Component</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler#getBankingComponent()
-	 * @see #getPaymentHandler()
-	 * @generated
-	 */
-	EReference getPaymentHandler_BankingComponent();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler#payIfCardValid(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double) <em>Pay If Card Valid</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Pay If Card Valid</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler#payIfCardValid(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double)
-	 * @generated
-	 */
-	EOperation getPaymentHandler__PayIfCardValid__String_String_int_int_String_String_double();
-
-	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler <em>IRoom Handler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IRoom Handler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler
-	 * @generated
-	 */
-	EClass getIRoomHandler();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomTypes(int) <em>Get All Room Types</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Room Types</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomTypes(int)
-	 * @generated
-	 */
-	EOperation getIRoomHandler__GetAllRoomTypes__int();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getFreeRooms() <em>Get Free Rooms</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Free Rooms</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getFreeRooms()
-	 * @generated
-	 */
-	EOperation getIRoomHandler__GetFreeRooms();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType) <em>Get All Rooms By Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Rooms By Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType)
-	 * @generated
-	 */
-	EOperation getIRoomHandler__GetAllRoomsByType__RoomType();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getRoomType(java.lang.String) <em>Get Room Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getRoomType(java.lang.String)
-	 * @generated
-	 */
-	EOperation getIRoomHandler__GetRoomType__String();
-
-
-	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler <em>Room Handler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Room Handler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler
-	 * @generated
-	 */
-	EClass getRoomHandler();
-
-	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getRoomTypes <em>Room Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Room Types</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getRoomTypes()
-	 * @see #getRoomHandler()
-	 * @generated
-	 */
-	EReference getRoomHandler_RoomTypes();
-
-	/**
-	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getRooms <em>Rooms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Rooms</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getRooms()
-	 * @see #getRoomHandler()
-	 * @generated
-	 */
-	EReference getRoomHandler_Rooms();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getRoom(int) <em>Get Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#getRoom(int)
-	 * @generated
-	 */
-	EOperation getRoomHandler__GetRoom__int();
-
-	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#initialize(int) <em>Initialize</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Initialize</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler#initialize(int)
-	 * @generated
-	 */
-	EOperation getRoomHandler__Initialize__int();
-
-	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room <em>Room</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.Room <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Room</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Room
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Room
 	 * @generated
 	 */
 	EClass getRoom();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isOccupied <em>Occupied</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Room#isOccupied <em>Occupied</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Occupied</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isOccupied()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Room#isOccupied()
 	 * @see #getRoom()
 	 * @generated
 	 */
 	EAttribute getRoom_Occupied();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype <em>Roomtype</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.Room#getRoomtype <em>Roomtype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Roomtype</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomtype()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Room#getRoomtype()
 	 * @see #getRoom()
 	 * @generated
 	 */
 	EReference getRoom_Roomtype();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isBlocked <em>Blocked</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Room#isBlocked <em>Blocked</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Blocked</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#isBlocked()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Room#isBlocked()
 	 * @see #getRoom()
 	 * @generated
 	 */
 	EAttribute getRoom_Blocked();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomNumber <em>Room Number</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Room#getRoomNumber <em>Room Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Room Number</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Room#getRoomNumber()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Room#getRoomNumber()
 	 * @see #getRoom()
 	 * @generated
 	 */
 	EAttribute getRoom_RoomNumber();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides <em>IHotel Customer Provides</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.Bill <em>Bill</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bill</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Bill
+	 * @generated
+	 */
+	EClass getBill();
+
+	/**
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.Bill#getRoomreservation <em>Roomreservation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Roomreservation</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Bill#getRoomreservation()
+	 * @see #getBill()
+	 * @generated
+	 */
+	EReference getBill_Roomreservation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Bill#getPrice <em>Price</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Bill#getPrice()
+	 * @see #getBill()
+	 * @generated
+	 */
+	EAttribute getBill_Price();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.Bill#getBillID <em>Bill ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bill ID</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.Bill#getBillID()
+	 * @see #getBill()
+	 * @generated
+	 */
+	EAttribute getBill_BillID();
+
+	/**
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.PaymentHandler <em>Payment Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Payment Handler</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.PaymentHandler
+	 * @generated
+	 */
+	EClass getPaymentHandler();
+
+	/**
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.PaymentHandler#getBankingComponent <em>Banking Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Banking Component</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.PaymentHandler#getBankingComponent()
+	 * @see #getPaymentHandler()
+	 * @generated
+	 */
+	EReference getPaymentHandler_BankingComponent();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.PaymentHandler#payIfCardValid(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double) <em>Pay If Card Valid</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Pay If Card Valid</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.PaymentHandler#payIfCardValid(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double)
+	 * @generated
+	 */
+	EOperation getPaymentHandler__PayIfCardValid__String_String_int_int_String_String_double();
+
+	/**
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.IRoomHandler <em>IRoom Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IRoom Handler</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IRoomHandler
+	 * @generated
+	 */
+	EClass getIRoomHandler();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getAllRoomTypes(int) <em>Get All Room Types</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get All Room Types</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getAllRoomTypes(int)
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetAllRoomTypes__int();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getFreeRooms() <em>Get Free Rooms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Free Rooms</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getFreeRooms()
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetFreeRooms();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.z.RoomType) <em>Get All Rooms By Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get All Rooms By Type</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getAllRoomsByType(se.chalmers.cse.mdsd1617.group13.z.RoomType)
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetAllRoomsByType__RoomType();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getRoomType(java.lang.String) <em>Get Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Type</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IRoomHandler#getRoomType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetRoomType__String();
+
+	/**
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides <em>IHotel Customer Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>IHotel Customer Provides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides
 	 * @generated
 	 */
 	EClass getIHotelCustomerProvides();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#getFreeRooms(int, java.lang.String, java.lang.String) <em>Get Free Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#getFreeRooms(int, java.lang.String, java.lang.String) <em>Get Free Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Free Rooms</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#getFreeRooms(int, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#getFreeRooms(int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__GetFreeRooms__int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#initiateBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Initiate Booking</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#initiateBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Initiate Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initiate Booking</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#initiateBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#initiateBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__InitiateBooking__String_String_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#addRoomToBooking(java.lang.String, int) <em>Add Room To Booking</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#addRoomToBooking(java.lang.String, int) <em>Add Room To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room To Booking</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#addRoomToBooking(java.lang.String, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#addRoomToBooking(java.lang.String, int)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__AddRoomToBooking__String_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#confirmBooking(int) <em>Confirm Booking</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#confirmBooking(int) <em>Confirm Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Confirm Booking</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#confirmBooking(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#confirmBooking(int)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__ConfirmBooking__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#initiateCheckout(int) <em>Initiate Checkout</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#initiateCheckout(int) <em>Initiate Checkout</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initiate Checkout</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#initiateCheckout(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#initiateCheckout(int)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__InitiateCheckout__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#payDuringCheckout(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay During Checkout</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#payDuringCheckout(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay During Checkout</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay During Checkout</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#payDuringCheckout(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#payDuringCheckout(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__PayDuringCheckout__String_String_int_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#initiateRoomCheckout(int, int) <em>Initiate Room Checkout</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#initiateRoomCheckout(int, int) <em>Initiate Room Checkout</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initiate Room Checkout</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#initiateRoomCheckout(int, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#initiateRoomCheckout(int, int)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__InitiateRoomCheckout__int_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#payRoomDuringCheckout(int, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay Room During Checkout</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#payRoomDuringCheckout(int, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay Room During Checkout</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay Room During Checkout</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#payRoomDuringCheckout(int, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#payRoomDuringCheckout(int, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__PayRoomDuringCheckout__int_String_String_int_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#checkInRoom(java.lang.String, int) <em>Check In Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#checkInRoom(java.lang.String, int) <em>Check In Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides#checkInRoom(java.lang.String, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides#checkInRoom(java.lang.String, int)
 	 * @generated
 	 */
 	EOperation getIHotelCustomerProvides__CheckInRoom__String_int();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO <em>Free Room Types DTO</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO <em>Free Room Types DTO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Free Room Types DTO</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO
+	 * @see se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO
 	 * @generated
 	 */
 	EClass getFreeRoomTypesDTO();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getRoomTypeDescription <em>Room Type Description</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getRoomTypeDescription <em>Room Type Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Room Type Description</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getRoomTypeDescription()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getRoomTypeDescription()
 	 * @see #getFreeRoomTypesDTO()
 	 * @generated
 	 */
 	EAttribute getFreeRoomTypesDTO_RoomTypeDescription();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getNumBeds <em>Num Beds</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getNumBeds <em>Num Beds</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Num Beds</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getNumBeds()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getNumBeds()
 	 * @see #getFreeRoomTypesDTO()
 	 * @generated
 	 */
 	EAttribute getFreeRoomTypesDTO_NumBeds();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getPricePerNight <em>Price Per Night</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getPricePerNight <em>Price Per Night</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Price Per Night</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getPricePerNight()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getPricePerNight()
 	 * @see #getFreeRoomTypesDTO()
 	 * @generated
 	 */
 	EAttribute getFreeRoomTypesDTO_PricePerNight();
 
 	/**
-	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getNumFreeRooms <em>Num Free Rooms</em>}'.
+	 * Returns the meta object for the attribute '{@link se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getNumFreeRooms <em>Num Free Rooms</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Num Free Rooms</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO#getNumFreeRooms()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO#getNumFreeRooms()
 	 * @see #getFreeRoomTypesDTO()
 	 * @generated
 	 */
 	EAttribute getFreeRoomTypesDTO_NumFreeRooms();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides <em>IHotel Administrator Provides</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.RoomHandler <em>Room Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Room Handler</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomHandler
+	 * @generated
+	 */
+	EClass getRoomHandler();
+
+	/**
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.z.RoomHandler#getRoomTypes <em>Room Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Room Types</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomHandler#getRoomTypes()
+	 * @see #getRoomHandler()
+	 * @generated
+	 */
+	EReference getRoomHandler_RoomTypes();
+
+	/**
+	 * Returns the meta object for the reference list '{@link se.chalmers.cse.mdsd1617.group13.z.RoomHandler#getRooms <em>Rooms</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Rooms</em>'.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomHandler#getRooms()
+	 * @see #getRoomHandler()
+	 * @generated
+	 */
+	EReference getRoomHandler_Rooms();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.RoomHandler#getRoom(int) <em>Get Room</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomHandler#getRoom(int)
+	 * @generated
+	 */
+	EOperation getRoomHandler__GetRoom__int();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.RoomHandler#initialize(int) <em>Initialize</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Initialize</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.z.RoomHandler#initialize(int)
+	 * @generated
+	 */
+	EOperation getRoomHandler__Initialize__int();
+
+	/**
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides <em>IHotel Administrator Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>IHotel Administrator Provides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides
 	 * @generated
 	 */
 	EClass getIHotelAdministratorProvides();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int, java.lang.String) <em>Add Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int, java.lang.String) <em>Add Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#addRoomType(java.lang.String, double, int, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__AddRoomType__String_double_int_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int, java.lang.String) <em>Edit Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int, java.lang.String) <em>Edit Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Room Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#editRoomType(java.lang.String, double, int, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__EditRoomType__String_double_int_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#removeRoomType(java.lang.String) <em>Remove Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#removeRoomType(java.lang.String) <em>Remove Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Room Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#removeRoomType(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#removeRoomType(java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__RemoveRoomType__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#changeRoomType(int, java.lang.String) <em>Change Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#changeRoomType(int, java.lang.String) <em>Change Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Change Room Type</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#changeRoomType(int, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#changeRoomType(int, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__ChangeRoomType__int_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoom(int, java.lang.String) <em>Add Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#addRoom(int, java.lang.String) <em>Add Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#addRoom(int, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#addRoom(int, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__AddRoom__int_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#removeRoom(int) <em>Remove Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#removeRoom(int) <em>Remove Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#removeRoom(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#removeRoom(int)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__RemoveRoom__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#blockRoom(int) <em>Block Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#blockRoom(int) <em>Block Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Block Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#blockRoom(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#blockRoom(int)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__BlockRoom__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#unblockRoom(int) <em>Unblock Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#unblockRoom(int) <em>Unblock Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Unblock Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides#unblockRoom(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides#unblockRoom(int)
 	 * @generated
 	 */
 	EOperation getIHotelAdministratorProvides__UnblockRoom__int();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides <em>IHotel Startup Provides</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides <em>IHotel Startup Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>IHotel Startup Provides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides
 	 * @generated
 	 */
 	EClass getIHotelStartupProvides();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides#startup(int) <em>Startup</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides#startup(int) <em>Startup</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Startup</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides#startup(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides#startup(int)
 	 * @generated
 	 */
 	EOperation getIHotelStartupProvides__Startup__int();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer <em>Hotel Initializer</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.HotelInitializer <em>Hotel Initializer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Hotel Initializer</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer
+	 * @see se.chalmers.cse.mdsd1617.group13.z.HotelInitializer
 	 * @generated
 	 */
 	EClass getHotelInitializer();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler <em>Room Handler</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.z.HotelInitializer#getRoomHandler <em>Room Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Room Handler</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.HotelInitializer#getRoomHandler()
 	 * @see #getHotelInitializer()
 	 * @generated
 	 */
 	EReference getHotelInitializer_RoomHandler();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>IHotel Receptionist Provides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides
 	 * @generated
 	 */
 	EClass getIHotelReceptionistProvides();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#editBookingTime(int, java.lang.String, java.lang.String) <em>Edit Booking Time</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#editBookingTime(int, java.lang.String, java.lang.String) <em>Edit Booking Time</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Booking Time</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#editBookingTime(int, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#editBookingTime(int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__EditBookingTime__int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#addRoomTypeToBooking(int, java.lang.String, int) <em>Add Room Type To Booking</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#addRoomTypeToBooking(int, java.lang.String, int) <em>Add Room Type To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room Type To Booking</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#addRoomTypeToBooking(int, java.lang.String, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#addRoomTypeToBooking(int, java.lang.String, int)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__AddRoomTypeToBooking__int_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#removeRoomTypeFromBooking(int, java.lang.String, int) <em>Remove Room Type From Booking</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#removeRoomTypeFromBooking(int, java.lang.String, int) <em>Remove Room Type From Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Room Type From Booking</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#removeRoomTypeFromBooking(int, java.lang.String, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#removeRoomTypeFromBooking(int, java.lang.String, int)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__RemoveRoomTypeFromBooking__int_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listFreeRooms(int) <em>List Free Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listFreeRooms(int) <em>List Free Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>List Free Rooms</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listFreeRooms(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listFreeRooms(int)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__ListFreeRooms__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#checkIn(int, int) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#checkIn(int, int) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#checkIn(int, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#checkIn(int, int)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__CheckIn__int_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#cancelBooking(int) <em>Cancel Booking</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#cancelBooking(int) <em>Cancel Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Cancel Booking</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#cancelBooking(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#cancelBooking(int)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__CancelBooking__int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listBookings() <em>List Bookings</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listBookings() <em>List Bookings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>List Bookings</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listBookings()
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listBookings()
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__ListBookings();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listOccupiedRooms(java.lang.String) <em>List Occupied Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listOccupiedRooms(java.lang.String) <em>List Occupied Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>List Occupied Rooms</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listOccupiedRooms(java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listOccupiedRooms(java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__ListOccupiedRooms__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listCheckins(java.lang.String, java.lang.String) <em>List Checkins</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listCheckins(java.lang.String, java.lang.String) <em>List Checkins</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>List Checkins</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listCheckins(java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listCheckins(java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__ListCheckins__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listCheckouts(java.lang.String, java.lang.String) <em>List Checkouts</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listCheckouts(java.lang.String, java.lang.String) <em>List Checkouts</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>List Checkouts</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#listCheckouts(java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#listCheckouts(java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__ListCheckouts__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#addExtraToRoom(int, int, java.lang.String, int) <em>Add Extra To Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#addExtraToRoom(int, int, java.lang.String, int) <em>Add Extra To Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra To Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#addExtraToRoom(int, int, java.lang.String, int)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#addExtraToRoom(int, int, java.lang.String, int)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__AddExtraToRoom__int_int_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType, java.lang.String, java.lang.String) <em>Get Free Room</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#getFreeRoom(se.chalmers.cse.mdsd1617.group13.z.RoomType, java.lang.String, java.lang.String) <em>Get Free Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Free Room</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides#getFreeRoom(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType, java.lang.String, java.lang.String)
+	 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides#getFreeRoom(se.chalmers.cse.mdsd1617.group13.z.RoomType, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getIHotelReceptionistProvides__GetFreeRoom__RoomType_String_String();
@@ -2980,7 +2979,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	HotelsystemFactory getHotelsystemFactory();
+	ZFactory getZFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2997,11 +2996,11 @@ public interface HotelsystemPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBookingHandler()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.BookingHandlerImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getBookingHandler()
 		 * @generated
 		 */
 		EClass BOOKING_HANDLER = eINSTANCE.getBookingHandler();
@@ -3079,11 +3078,11 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation BOOKING_HANDLER___IS_FREE__INT_STRING_STRING = eINSTANCE.getBookingHandler__IsFree__int_String_String();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.BookingImpl <em>Booking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBooking()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.BookingImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getBooking()
 		 * @generated
 		 */
 		EClass BOOKING = eINSTANCE.getBooking();
@@ -3249,11 +3248,11 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation BOOKING___CHECK_OUT_ROOM__INT = eINSTANCE.getBooking__CheckOutRoom__int();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.CustomerImpl <em>Customer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getCustomer()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.CustomerImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getCustomer()
 		 * @generated
 		 */
 		EClass CUSTOMER = eINSTANCE.getCustomer();
@@ -3275,11 +3274,11 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute CUSTOMER__LAST_NAME = eINSTANCE.getCustomer_LastName();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl <em>Room Reservation</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomReservationImpl <em>Room Reservation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomReservationImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomReservation()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomReservationImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomReservation()
 		 * @generated
 		 */
 		EClass ROOM_RESERVATION = eINSTANCE.getRoomReservation();
@@ -3381,11 +3380,11 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation ROOM_RESERVATION___ADD_EXTRA__ROOMEXTRA = eINSTANCE.getRoomReservation__AddExtra__RoomExtra();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl <em>Room Type</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomTypeImpl <em>Room Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomTypeImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomType()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomTypeImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomType()
 		 * @generated
 		 */
 		EClass ROOM_TYPE = eINSTANCE.getRoomType();
@@ -3423,11 +3422,11 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute ROOM_TYPE__NAME = eINSTANCE.getRoomType_Name();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl <em>Room Extra</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomExtraImpl <em>Room Extra</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomExtraImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomExtra()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomExtraImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomExtra()
 		 * @generated
 		 */
 		EClass ROOM_EXTRA = eINSTANCE.getRoomExtra();
@@ -3449,155 +3448,11 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute ROOM_EXTRA__DESCRIPTION = eINSTANCE.getRoomExtra_Description();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl <em>Bill</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomImpl <em>Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BillImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getBill()
-		 * @generated
-		 */
-		EClass BILL = eINSTANCE.getBill();
-
-		/**
-		 * The meta object literal for the '<em><b>Roomreservation</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BILL__ROOMRESERVATION = eINSTANCE.getBill_Roomreservation();
-
-		/**
-		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BILL__PRICE = eINSTANCE.getBill_Price();
-
-		/**
-		 * The meta object literal for the '<em><b>Bill ID</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BILL__BILL_ID = eINSTANCE.getBill_BillID();
-
-		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.PaymentHandlerImpl <em>Payment Handler</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.PaymentHandlerImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getPaymentHandler()
-		 * @generated
-		 */
-		EClass PAYMENT_HANDLER = eINSTANCE.getPaymentHandler();
-
-		/**
-		 * The meta object literal for the '<em><b>Banking Component</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PAYMENT_HANDLER__BANKING_COMPONENT = eINSTANCE.getPaymentHandler_BankingComponent();
-
-		/**
-		 * The meta object literal for the '<em><b>Pay If Card Valid</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_HANDLER___PAY_IF_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = eINSTANCE.getPaymentHandler__PayIfCardValid__String_String_int_int_String_String_double();
-
-		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler <em>IRoom Handler</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIRoomHandler()
-		 * @generated
-		 */
-		EClass IROOM_HANDLER = eINSTANCE.getIRoomHandler();
-
-		/**
-		 * The meta object literal for the '<em><b>Get All Room Types</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_HANDLER___GET_ALL_ROOM_TYPES__INT = eINSTANCE.getIRoomHandler__GetAllRoomTypes__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Free Rooms</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_HANDLER___GET_FREE_ROOMS = eINSTANCE.getIRoomHandler__GetFreeRooms();
-
-		/**
-		 * The meta object literal for the '<em><b>Get All Rooms By Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = eINSTANCE.getIRoomHandler__GetAllRoomsByType__RoomType();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Room Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_HANDLER___GET_ROOM_TYPE__STRING = eINSTANCE.getIRoomHandler__GetRoomType__String();
-
-		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl <em>Room Handler</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomHandler()
-		 * @generated
-		 */
-		EClass ROOM_HANDLER = eINSTANCE.getRoomHandler();
-
-		/**
-		 * The meta object literal for the '<em><b>Room Types</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_HANDLER__ROOM_TYPES = eINSTANCE.getRoomHandler_RoomTypes();
-
-		/**
-		 * The meta object literal for the '<em><b>Rooms</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOM_HANDLER__ROOMS = eINSTANCE.getRoomHandler_Rooms();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_HANDLER___GET_ROOM__INT = eINSTANCE.getRoomHandler__GetRoom__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Initialize</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_HANDLER___INITIALIZE__INT = eINSTANCE.getRoomHandler__Initialize__int();
-
-		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl <em>Room</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoom()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoom()
 		 * @generated
 		 */
 		EClass ROOM = eINSTANCE.getRoom();
@@ -3635,11 +3490,113 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute ROOM__ROOM_NUMBER = eINSTANCE.getRoom_RoomNumber();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides <em>IHotel Customer Provides</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.BillImpl <em>Bill</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelCustomerProvides()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.BillImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getBill()
+		 * @generated
+		 */
+		EClass BILL = eINSTANCE.getBill();
+
+		/**
+		 * The meta object literal for the '<em><b>Roomreservation</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BILL__ROOMRESERVATION = eINSTANCE.getBill_Roomreservation();
+
+		/**
+		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BILL__PRICE = eINSTANCE.getBill_Price();
+
+		/**
+		 * The meta object literal for the '<em><b>Bill ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BILL__BILL_ID = eINSTANCE.getBill_BillID();
+
+		/**
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.PaymentHandlerImpl <em>Payment Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.PaymentHandlerImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getPaymentHandler()
+		 * @generated
+		 */
+		EClass PAYMENT_HANDLER = eINSTANCE.getPaymentHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Banking Component</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PAYMENT_HANDLER__BANKING_COMPONENT = eINSTANCE.getPaymentHandler_BankingComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Pay If Card Valid</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAYMENT_HANDLER___PAY_IF_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = eINSTANCE.getPaymentHandler__PayIfCardValid__String_String_int_int_String_String_double();
+
+		/**
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.IRoomHandler <em>IRoom Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see se.chalmers.cse.mdsd1617.group13.z.IRoomHandler
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIRoomHandler()
+		 * @generated
+		 */
+		EClass IROOM_HANDLER = eINSTANCE.getIRoomHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Get All Room Types</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_ALL_ROOM_TYPES__INT = eINSTANCE.getIRoomHandler__GetAllRoomTypes__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Free Rooms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_FREE_ROOMS = eINSTANCE.getIRoomHandler__GetFreeRooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Get All Rooms By Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE = eINSTANCE.getIRoomHandler__GetAllRoomsByType__RoomType();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_ROOM_TYPE__STRING = eINSTANCE.getIRoomHandler__GetRoomType__String();
+
+		/**
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides <em>IHotel Customer Provides</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelCustomerProvides()
 		 * @generated
 		 */
 		EClass IHOTEL_CUSTOMER_PROVIDES = eINSTANCE.getIHotelCustomerProvides();
@@ -3717,11 +3674,11 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation IHOTEL_CUSTOMER_PROVIDES___CHECK_IN_ROOM__STRING_INT = eINSTANCE.getIHotelCustomerProvides__CheckInRoom__String_int();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.FreeRoomTypesDTOImpl <em>Free Room Types DTO</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.FreeRoomTypesDTOImpl <em>Free Room Types DTO</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.FreeRoomTypesDTOImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getFreeRoomTypesDTO()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.FreeRoomTypesDTOImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getFreeRoomTypesDTO()
 		 * @generated
 		 */
 		EClass FREE_ROOM_TYPES_DTO = eINSTANCE.getFreeRoomTypesDTO();
@@ -3759,11 +3716,53 @@ public interface HotelsystemPackage extends EPackage {
 		EAttribute FREE_ROOM_TYPES_DTO__NUM_FREE_ROOMS = eINSTANCE.getFreeRoomTypesDTO_NumFreeRooms();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides <em>IHotel Administrator Provides</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.RoomHandlerImpl <em>Room Handler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelAdministratorProvides()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.RoomHandlerImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getRoomHandler()
+		 * @generated
+		 */
+		EClass ROOM_HANDLER = eINSTANCE.getRoomHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Room Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_HANDLER__ROOM_TYPES = eINSTANCE.getRoomHandler_RoomTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Rooms</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_HANDLER__ROOMS = eINSTANCE.getRoomHandler_Rooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_HANDLER___GET_ROOM__INT = eINSTANCE.getRoomHandler__GetRoom__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Initialize</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_HANDLER___INITIALIZE__INT = eINSTANCE.getRoomHandler__Initialize__int();
+
+		/**
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides <em>IHotel Administrator Provides</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelAdministratorProvides()
 		 * @generated
 		 */
 		EClass IHOTEL_ADMINISTRATOR_PROVIDES = eINSTANCE.getIHotelAdministratorProvides();
@@ -3833,11 +3832,11 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation IHOTEL_ADMINISTRATOR_PROVIDES___UNBLOCK_ROOM__INT = eINSTANCE.getIHotelAdministratorProvides__UnblockRoom__int();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides <em>IHotel Startup Provides</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides <em>IHotel Startup Provides</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelStartupProvides()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelStartupProvides()
 		 * @generated
 		 */
 		EClass IHOTEL_STARTUP_PROVIDES = eINSTANCE.getIHotelStartupProvides();
@@ -3851,11 +3850,11 @@ public interface HotelsystemPackage extends EPackage {
 		EOperation IHOTEL_STARTUP_PROVIDES___STARTUP__INT = eINSTANCE.getIHotelStartupProvides__Startup__int();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.impl.HotelInitializerImpl <em>Hotel Initializer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getHotelInitializer()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.HotelInitializerImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getHotelInitializer()
 		 * @generated
 		 */
 		EClass HOTEL_INITIALIZER = eINSTANCE.getHotelInitializer();
@@ -3869,11 +3868,11 @@ public interface HotelsystemPackage extends EPackage {
 		EReference HOTEL_INITIALIZER__ROOM_HANDLER = eINSTANCE.getHotelInitializer_RoomHandler();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides <em>IHotel Receptionist Provides</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides
-		 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelReceptionistProvides()
+		 * @see se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides
+		 * @see se.chalmers.cse.mdsd1617.group13.z.impl.ZPackageImpl#getIHotelReceptionistProvides()
 		 * @generated
 		 */
 		EClass IHOTEL_RECEPTIONIST_PROVIDES = eINSTANCE.getIHotelReceptionistProvides();
@@ -3976,4 +3975,4 @@ public interface HotelsystemPackage extends EPackage {
 
 	}
 
-} //HotelsystemPackage
+} //ZPackage

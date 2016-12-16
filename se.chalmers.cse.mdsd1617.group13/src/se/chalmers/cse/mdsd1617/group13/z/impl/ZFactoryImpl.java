@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
+package se.chalmers.cse.mdsd1617.group13.z.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
+import se.chalmers.cse.mdsd1617.group13.z.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,24 +18,24 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemFactory {
+public class ZFactoryImpl extends EFactoryImpl implements ZFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static HotelsystemFactory init() {
+	public static ZFactory init() {
 		try {
-			HotelsystemFactory theHotelsystemFactory = (HotelsystemFactory)EPackage.Registry.INSTANCE.getEFactory(HotelsystemPackage.eNS_URI);
-			if (theHotelsystemFactory != null) {
-				return theHotelsystemFactory;
+			ZFactory theZFactory = (ZFactory)EPackage.Registry.INSTANCE.getEFactory(ZPackage.eNS_URI);
+			if (theZFactory != null) {
+				return theZFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new HotelsystemFactoryImpl();
+		return new ZFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelsystemFactoryImpl() {
+	public ZFactoryImpl() {
 		super();
 	}
 
@@ -56,37 +56,30 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case HotelsystemPackage.BOOKING_HANDLER: return createBookingHandler();
-			case HotelsystemPackage.BOOKING: return createBooking();
-			case HotelsystemPackage.CUSTOMER: return createCustomer();
-			case HotelsystemPackage.ROOM_RESERVATION: return createRoomReservation();
-			case HotelsystemPackage.ROOM_TYPE: return createRoomType();
-			case HotelsystemPackage.ROOM_EXTRA: return createRoomExtra();
-			case HotelsystemPackage.ROOM: return createRoom();
-			case HotelsystemPackage.BILL: return createBill();
-			case HotelsystemPackage.PAYMENT_HANDLER: return createPaymentHandler();
-			case HotelsystemPackage.FREE_ROOM_TYPES_DTO: return createFreeRoomTypesDTO();
-			case HotelsystemPackage.ROOM_HANDLER: return createRoomHandler();
-			case HotelsystemPackage.HOTEL_INITIALIZER: return createHotelInitializer();
+			case ZPackage.BOOKING_HANDLER: return createBookingHandler();
+			case ZPackage.BOOKING: return createBooking();
+			case ZPackage.CUSTOMER: return createCustomer();
+			case ZPackage.ROOM_RESERVATION: return createRoomReservation();
+			case ZPackage.ROOM_TYPE: return createRoomType();
+			case ZPackage.ROOM_EXTRA: return createRoomExtra();
+			case ZPackage.ROOM: return createRoom();
+			case ZPackage.BILL: return createBill();
+			case ZPackage.PAYMENT_HANDLER: return createPaymentHandler();
+			case ZPackage.FREE_ROOM_TYPES_DTO: return createFreeRoomTypesDTO();
+			case ZPackage.ROOM_HANDLER: return createRoomHandler();
+			case ZPackage.HOTEL_INITIALIZER: return createHotelInitializer();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
-	 * @generated NOT
-	 */
-	private BookingHandler bookingHandler;
-	
-	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->b
-	 * @generated NOT
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public BookingHandler createBookingHandler() {
-		if(bookingHandler == null){
-			bookingHandler = new BookingHandlerImpl();
-		}
+		BookingHandlerImpl bookingHandler = new BookingHandlerImpl();
 		return bookingHandler;
 	}
 
@@ -145,6 +138,16 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Room createRoom() {
+		RoomImpl room = new RoomImpl();
+		return room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Bill createBill() {
 		BillImpl bill = new BillImpl();
 		return bill;
@@ -158,33 +161,6 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	public PaymentHandler createPaymentHandler() {
 		PaymentHandlerImpl paymentHandler = new PaymentHandlerImpl();
 		return paymentHandler;
-	}
-
-	/**
-	 * @generated NOT
-	 */
-	private RoomHandler roomHandler;
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->b
-	 * @generated NOT
-	 */
-	public RoomHandler createRoomHandler() {
-		if(roomHandler == null){
-			roomHandler = new RoomHandlerImpl();
-		}
-		return roomHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Room createRoom() {
-		RoomImpl room = new RoomImpl();
-		return room;
 	}
 
 	/**
@@ -202,6 +178,16 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public RoomHandler createRoomHandler() {
+		RoomHandlerImpl roomHandler = new RoomHandlerImpl();
+		return roomHandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public HotelInitializer createHotelInitializer() {
 		HotelInitializerImpl hotelInitializer = new HotelInitializerImpl();
 		return hotelInitializer;
@@ -212,8 +198,8 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelsystemPackage getHotelsystemPackage() {
-		return (HotelsystemPackage)getEPackage();
+	public ZPackage getZPackage() {
+		return (ZPackage)getEPackage();
 	}
 
 	/**
@@ -223,8 +209,8 @@ public class HotelsystemFactoryImpl extends EFactoryImpl implements HotelsystemF
 	 * @generated
 	 */
 	@Deprecated
-	public static HotelsystemPackage getPackage() {
-		return HotelsystemPackage.eINSTANCE;
+	public static ZPackage getPackage() {
+		return ZPackage.eINSTANCE;
 	}
 
-} //HotelsystemFactoryImpl
+} //ZFactoryImpl

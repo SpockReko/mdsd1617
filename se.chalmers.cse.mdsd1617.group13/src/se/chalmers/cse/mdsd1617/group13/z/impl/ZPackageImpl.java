@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
+package se.chalmers.cse.mdsd1617.group13.z.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,33 +11,34 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
+
 import se.chalmers.cse.mdsd1617.group13.Group13Package;
 
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage;
 
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.impl.BankcomponentsPackageImpl;
 
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Bill;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Customer;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemFactory;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
-
 import se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl;
+
+import se.chalmers.cse.mdsd1617.group13.z.Bill;
+import se.chalmers.cse.mdsd1617.group13.z.Booking;
+import se.chalmers.cse.mdsd1617.group13.z.BookingHandler;
+import se.chalmers.cse.mdsd1617.group13.z.Customer;
+import se.chalmers.cse.mdsd1617.group13.z.FreeRoomTypesDTO;
+import se.chalmers.cse.mdsd1617.group13.z.HotelInitializer;
+import se.chalmers.cse.mdsd1617.group13.z.IHotelAdministratorProvides;
+import se.chalmers.cse.mdsd1617.group13.z.IHotelCustomerProvides;
+import se.chalmers.cse.mdsd1617.group13.z.IHotelReceptionistProvides;
+import se.chalmers.cse.mdsd1617.group13.z.IHotelStartupProvides;
+import se.chalmers.cse.mdsd1617.group13.z.IRoomHandler;
+import se.chalmers.cse.mdsd1617.group13.z.PaymentHandler;
+import se.chalmers.cse.mdsd1617.group13.z.Room;
+import se.chalmers.cse.mdsd1617.group13.z.RoomExtra;
+import se.chalmers.cse.mdsd1617.group13.z.RoomHandler;
+import se.chalmers.cse.mdsd1617.group13.z.RoomReservation;
+import se.chalmers.cse.mdsd1617.group13.z.RoomType;
+import se.chalmers.cse.mdsd1617.group13.z.ZFactory;
+import se.chalmers.cse.mdsd1617.group13.z.ZPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,7 +46,7 @@ import se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemPackage {
+public class ZPackageImpl extends EPackageImpl implements ZPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,6 +94,13 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass roomEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass billEClass = null;
 
 	/**
@@ -114,20 +122,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass roomHandlerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass roomEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass iHotelCustomerProvidesEClass = null;
 
 	/**
@@ -136,6 +130,13 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * @generated
 	 */
 	private EClass freeRoomTypesDTOEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass roomHandlerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -176,12 +177,12 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#eNS_URI
+	 * @see se.chalmers.cse.mdsd1617.group13.z.ZPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private HotelsystemPackageImpl() {
-		super(eNS_URI, HotelsystemFactory.eINSTANCE);
+	private ZPackageImpl() {
+		super(eNS_URI, ZFactory.eINSTANCE);
 	}
 
 	/**
@@ -194,7 +195,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link HotelsystemPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ZPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -203,11 +204,11 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static HotelsystemPackage init() {
-		if (isInited) return (HotelsystemPackage)EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI);
+	public static ZPackage init() {
+		if (isInited) return (ZPackage)EPackage.Registry.INSTANCE.getEPackage(ZPackage.eNS_URI);
 
 		// Obtain or create and register package
-		HotelsystemPackageImpl theHotelsystemPackage = (HotelsystemPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof HotelsystemPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new HotelsystemPackageImpl());
+		ZPackageImpl theZPackage = (ZPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ZPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ZPackageImpl());
 
 		isInited = true;
 
@@ -219,22 +220,22 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		BankcomponentsPackageImpl theBankcomponentsPackage = (BankcomponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) instanceof BankcomponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) : BankcomponentsPackage.eINSTANCE);
 
 		// Create package meta-data objects
-		theHotelsystemPackage.createPackageContents();
+		theZPackage.createPackageContents();
 		theGroup13Package.createPackageContents();
 		theBankcomponentsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theHotelsystemPackage.initializePackageContents();
+		theZPackage.initializePackageContents();
 		theGroup13Package.initializePackageContents();
 		theBankcomponentsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theHotelsystemPackage.freeze();
+		theZPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(HotelsystemPackage.eNS_URI, theHotelsystemPackage);
-		return theHotelsystemPackage;
+		EPackage.Registry.INSTANCE.put(ZPackage.eNS_URI, theZPackage);
+		return theZPackage;
 	}
 
 	/**
@@ -548,7 +549,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-
 	public EClass getRoomReservation() {
 		return roomReservationEClass;
 	}
@@ -738,6 +738,51 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRoom() {
+		return roomEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoom_Occupied() {
+		return (EAttribute)roomEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRoom_Roomtype() {
+		return (EReference)roomEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoom_Blocked() {
+		return (EAttribute)roomEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoom_RoomNumber() {
+		return (EAttribute)roomEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBill() {
 		return billEClass;
 	}
@@ -839,96 +884,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 */
 	public EOperation getIRoomHandler__GetRoomType__String() {
 		return iRoomHandlerEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRoomHandler() {
-		return roomHandlerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoomHandler_RoomTypes() {
-		return (EReference)roomHandlerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoomHandler_Rooms() {
-		return (EReference)roomHandlerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomHandler__GetRoom__int() {
-		return roomHandlerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomHandler__Initialize__int() {
-		return roomHandlerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRoom() {
-		return roomEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRoom_Occupied() {
-		return (EAttribute)roomEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoom_Roomtype() {
-		return (EReference)roomEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRoom_Blocked() {
-		return (EAttribute)roomEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRoom_RoomNumber() {
-		return (EAttribute)roomEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1064,6 +1019,51 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 */
 	public EAttribute getFreeRoomTypesDTO_NumFreeRooms() {
 		return (EAttribute)freeRoomTypesDTOEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRoomHandler() {
+		return roomHandlerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRoomHandler_RoomTypes() {
+		return (EReference)roomHandlerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRoomHandler_Rooms() {
+		return (EReference)roomHandlerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomHandler__GetRoom__int() {
+		return roomHandlerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomHandler__Initialize__int() {
+		return roomHandlerEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1305,8 +1305,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HotelsystemFactory getHotelsystemFactory() {
-		return (HotelsystemFactory)getEFactoryInstance();
+	public ZFactory getZFactory() {
+		return (ZFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -1818,4 +1818,4 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		   });
 	}
 
-} //HotelsystemPackageImpl
+} //ZPackageImpl
