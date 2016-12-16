@@ -25,6 +25,10 @@ public class Util {
      */
     public static Date parseDate(String dateToParse) {
 
+        if (dateToParse == null) {
+            return null;
+        }
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT, Locale.ENGLISH);
         try {
             return simpleDateFormat.parse(dateToParse);
