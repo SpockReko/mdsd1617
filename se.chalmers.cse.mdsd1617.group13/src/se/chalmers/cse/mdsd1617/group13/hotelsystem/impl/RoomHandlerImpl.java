@@ -122,7 +122,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public EList<Integer> getFreeRooms() {
 		EList<Integer> freeRoomNbrs = new BasicEList<Integer>();
 		for(Room room : rooms){
-			if(!(room.isOccupied() && room.isBlocked())){
+			if(!(room.isOccupied() || room.isBlocked())){
 				int roomNumber = room.getRoomNumber();
 				freeRoomNbrs.add(roomNumber);
 			}
