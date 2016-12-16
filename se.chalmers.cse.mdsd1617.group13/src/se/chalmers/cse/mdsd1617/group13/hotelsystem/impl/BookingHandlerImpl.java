@@ -640,7 +640,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
         booking.setCustomer(customer);
         booking.setStartDate(startDate);
         booking.setEndDate(endDate);
-        int currentBookingId = bookings.size();
+        int currentBookingId = bookings.size()+1;
         booking.setBookingId(currentBookingId);
         bookings.add(booking);
         return currentBookingId;
