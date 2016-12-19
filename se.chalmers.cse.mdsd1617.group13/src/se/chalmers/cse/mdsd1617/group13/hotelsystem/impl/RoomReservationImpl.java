@@ -409,7 +409,10 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getRoomId() {
-		return room.getRoomNumber();
+		if(room != null){
+			return room.getRoomNumber();
+		}
+		return -1;
 	}
 
 	/**
