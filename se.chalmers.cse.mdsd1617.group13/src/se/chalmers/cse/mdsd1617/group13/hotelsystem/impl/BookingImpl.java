@@ -400,13 +400,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public double checkOut() {
 		double price = 0;
-		for(RoomReservation roomReservation : this.roomReservations) {
+		for(RoomReservation roomReservation : this.getRoomReservations()) {
 			price += roomReservation.checkOut(nrOfNights());
 		}
 		Bill bill = new BillImpl();
-		bill.setBillID(this.bookingId);
+		bill.setBillID(this.getBookingId());
 		bill.setPrice(price);
-		bills.add(bill);
+		this.getBills().add(bill);
 		return price;
 	}
 
