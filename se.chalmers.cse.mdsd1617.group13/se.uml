@@ -211,14 +211,6 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_VEDawMByEeaPAbmKLAIXGw" name="CheckedInDate">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_fJRXQMByEeaPAbmKLAIXGw" direction="return">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
-                </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_joBagMByEeaPAbmKLAIXGw" name="indexDate">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-              </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_J_vMEMIPEeaju5t0hv2wvA" name="addExtra">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_J_vMEcIPEeaju5t0hv2wvA" name="extra" type="_LZjDYLhmEeaytfot7Bi3IA"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_OWLn4MIPEeaju5t0hv2wvA" name="roomNbr">

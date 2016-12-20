@@ -494,7 +494,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__CheckedInDate__String() {
+	public EOperation getBooking__AddExtra__RoomExtra_int() {
 		return bookingEClass.getEOperations().get(9);
 	}
 
@@ -503,17 +503,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__AddExtra__RoomExtra_int() {
-		return bookingEClass.getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBooking__CheckOutRoom__int() {
-		return bookingEClass.getEOperations().get(11);
+		return bookingEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -1357,7 +1348,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(bookingEClass, BOOKING___GET_BOOKING_PRICE);
 		createEOperation(bookingEClass, BOOKING___GET_ROOM_PRICE__INT);
 		createEOperation(bookingEClass, BOOKING___IS_FREE__INT_STRING_STRING);
-		createEOperation(bookingEClass, BOOKING___CHECKED_IN_DATE__STRING);
 		createEOperation(bookingEClass, BOOKING___ADD_EXTRA__ROOMEXTRA_INT);
 		createEOperation(bookingEClass, BOOKING___CHECK_OUT_ROOM__INT);
 
@@ -1557,9 +1547,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		addEParameter(op, ecorePackage.getEInt(), "roomId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBooking__CheckedInDate__String(), ecorePackage.getEBoolean(), "CheckedInDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "indexDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBooking__AddExtra__RoomExtra_int(), ecorePackage.getEBoolean(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getRoomExtra(), "extra", 1, 1, IS_UNIQUE, !IS_ORDERED);

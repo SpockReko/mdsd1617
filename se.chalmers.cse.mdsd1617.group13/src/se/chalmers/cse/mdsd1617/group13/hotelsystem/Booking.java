@@ -294,14 +294,6 @@ public interface Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" indexDateRequired="true" indexDateOrdered="false"
-	 * @generated
-	 */
-	boolean CheckedInDate(String indexDate);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" extraRequired="true" extraOrdered="false" roomNbrRequired="true" roomNbrOrdered="false"
 	 * @generated
 	 */
