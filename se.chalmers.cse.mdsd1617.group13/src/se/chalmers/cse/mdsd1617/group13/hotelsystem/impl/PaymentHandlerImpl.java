@@ -3,6 +3,9 @@
 package se.chalmers.cse.mdsd1617.group13.hotelsystem.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
+import javax.xml.soap.SOAPException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
@@ -101,15 +104,24 @@ public class PaymentHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean payIfCardValid(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double sum) {
-        if (this.getBankingComponent().isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)){
-            if (this.getBankingComponent().makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, sum)){
-                return true;
-            } else{
-                return false;
-            }
-        } else {
-            return false;
-        }
+		try {
+			se.chalmers.cse.mdsd1617.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1617.banking.customerRequires.CustomerRequires.instance();
+	        
+			if (banking.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)){
+	            if (banking.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, sum)){
+	                return true;
+	            } else{
+	                return false;
+	            }
+	        } else {
+	            return false;
+	        }
+		} catch (SOAPException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
 	}
 
 	/**
