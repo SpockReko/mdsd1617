@@ -799,7 +799,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 					Room roomToCheckIn = roomhandler.getFreeRoomByType(roomTypeDescription);
 
 					if (roomToCheckIn == null) {
-						return -2;
+						return -1;
 					}
 
 					// assign physical room to reservation and check in
