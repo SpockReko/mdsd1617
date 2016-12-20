@@ -370,7 +370,7 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 		}
 		room.setOccupied(false);
 		double price = nrOfNights * roomType.getPricePerNight();
-		for(RoomExtra extra : roomExtras) {
+		for(RoomExtra extra : this.getRoomExtras()) {
 			price += extra.getPrice();
 		}
 		return price;
