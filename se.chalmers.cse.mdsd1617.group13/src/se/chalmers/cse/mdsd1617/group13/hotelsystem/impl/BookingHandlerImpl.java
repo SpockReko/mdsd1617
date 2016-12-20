@@ -695,7 +695,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			return false;
 		}
 		EList<RoomReservation> reservations = booking.getRoomReservations();
-		if(reservations != null || reservations.size() <= 0){
+		if(reservations == null || reservations.size() <= 0){
 			return false;
 		}
 		booking.setConfirmed(true);
