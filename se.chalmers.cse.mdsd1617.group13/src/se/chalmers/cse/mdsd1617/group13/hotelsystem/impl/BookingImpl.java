@@ -494,6 +494,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public boolean isFree(int roomId, String bStartDate, String bEndDate) {
+		if(Integer.parseInt(bStartDate) > Integer.parseInt(bEndDate)){
+			return false;
+		}
 		for(RoomReservation r : roomReservations){
 			if(r.getRoomId() == roomId){
 				if(Integer.parseInt(bStartDate) > Integer.parseInt(r.getEndDate()) 

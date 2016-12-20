@@ -587,24 +587,45 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<FreeRoomTypesDTO> getFreeRooms(int numBeds, String startDate, String endDate) {
 		EList<FreeRoomTypesDTO> freeRooms = new BasicEList<FreeRoomTypesDTO>();
-		
 		EList<RoomType> roomtypes = roomhandler.getAllRoomTypes(numBeds);
+		
+		//Test if the dates is valid!
+		if( startDate == null || endDate == null){
+            return freeRooms;
+        }
+        DateFormat format = new SimpleDateFormat("yyyyMMdd");
+        Date dStartDate;
+        Date dEndDate;
+        try{
+            dStartDate = format.parse(startDate);
+            dEndDate = format.parse(endDate);
+        }catch (ParseException e) {
+            return freeRooms;
+        }
+        if(dStartDate.after(dEndDate)){
+            return freeRooms;
+        }
+        
+		
 		for (RoomType roomtype : roomtypes) {
 			int nrOfRoomFree = 0;
 			//Get the list of all room of a given roomtype
 			EList<Room> rooms = roomhandler.getAllRoomsByType(roomtype);
-
-			for (Room room : rooms) {
-				//see if it is free in the given period.
-				if (isFree(room.getRoomNumber(), startDate, endDate) && !room.isBlocked()) {
-					//Count if it is true
-					nrOfRoomFree++;
-				}
-			}
+			int amountOfRooms = rooms.size();
+            for (Booking booking : bookings) {
+                for(RoomReservation rr : booking.getRoomReservations()){
+                    boolean roomsEqual = rr.getRoomType().equals(roomtype);
+                    boolean before = Integer.parseInt(endDate) < Integer.parseInt(rr.getStartDate());
+                    boolean after = Integer.parseInt(startDate) > Integer.parseInt(rr.getEndDate());
+                    if(roomsEqual && !(before || after)){
+                        amountOfRooms--;
+                    }
+                }
+            }
 			//Get all the nesseary information and save them.
 			FreeRoomTypesDTO freeRoom = new FreeRoomTypesDTOImpl();
 			freeRoom.setNumBeds(roomtype.getNumBeds());
-			freeRoom.setNumFreeRooms(nrOfRoomFree);
+			freeRoom.setNumFreeRooms(amountOfRooms);
 			freeRoom.setPricePerNight(roomtype.getPricePerNight());
 			freeRoom.setRoomTypeDescription(roomtype.getDescription());
 			freeRooms.add(freeRoom);
