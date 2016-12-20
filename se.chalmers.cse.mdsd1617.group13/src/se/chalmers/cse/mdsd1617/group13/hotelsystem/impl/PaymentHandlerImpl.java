@@ -107,15 +107,12 @@ public class PaymentHandlerImpl extends MinimalEObjectImpl.Container implements 
 		try {
 			se.chalmers.cse.mdsd1617.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1617.banking.customerRequires.CustomerRequires.instance();
 	        
-			if (banking.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)){
-	            if (banking.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, sum)){
+			if (banking.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
+	            if (banking.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, sum)) {
 	                return true;
-	            } else{
-	                return false;
 	            }
-	        } else {
-	            return false;
 	        }
+			
 		} catch (SOAPException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
