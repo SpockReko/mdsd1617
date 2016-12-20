@@ -536,7 +536,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				Bill bill = new BillImpl();
 				bill.setPrice(price);
 				bill.setBillID(this.bookingId + roomNumber);
-				bills.add(bill);
+				getBills().add(bill);
 				return price;
 			}
 		} 
