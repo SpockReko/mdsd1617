@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -380,9 +381,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if(booking != null && rt != null){
 			for(int i = 0; i < nbrToRemove; i++){
 				EList<RoomReservation> bookings = booking.getRoomReservations();
-				for(RoomReservation rr : bookings){
+				Iterator<RoomReservation> iter = bookings.iterator();
+				while(iter.hasNext()){
+					RoomReservation rr = iter.next();
 					if(rr != null && rr.getCheckInDate() == null && rr.getRoomType() == rt){
-						bookings.remove(rr);
+						iter.remove();
 					}
 				}
 			}
@@ -391,7 +394,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			return false;
 		}
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
