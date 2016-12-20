@@ -10,8 +10,10 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.Comparator;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
@@ -287,9 +289,22 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
 		Booking booking = getBookingById(reservationId);
-        if(booking != null && startDate != "" && endDate != ""){ //check if valid input
+        if(booking != null && startDate != "" && endDate != ""){
             EList<RoomReservation> reservations = booking.getRoomReservations();
-            Map<RoomType, Integer> reqPerType = new TreeMap<RoomType, Integer>();
+            Map<RoomType, Integer> reqPerType = new TreeMap<RoomType, Integer>(new Comparator<RoomType>() {
+
+				@Override
+				public int compare(RoomType arg0, RoomType arg1) {
+					if(arg0.getNumBeds() >= arg1.getNumBeds()){
+						return 1;
+					} else if(arg0.getNumBeds() < arg1.getNumBeds()) {
+						return -1;
+					} else {
+						return 0;	
+					}
+				}
+            	
+            });
 
             for(RoomReservation rr : reservations){
             	RoomType roomType = rr.getRoomType();
@@ -302,24 +317,16 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
         		}
         	}
 
-            for(RoomReservation rr : reservations){
-            	RoomType rt = rr.getRoomType();
-            	int roomForType = reqPerType.get(rt);
-            	EList<Room> rooms = roomhandler.getAllRoomsByType(rt);
-            	for(Room r : rooms){
-                    if(roomForType <= 0){
-                    	reqPerType.put(rt, 0);
-                    	break;
-                    } else if(booking.isFree(r.getRoomNumber(), startDate, endDate)){   // If there exist one room that works, then it can be changed.
-                    	roomForType--;
-                    }
-            	}
-            	if(roomForType > 0){
-            		return false;
-            	}
-            }
-            booking.setStartDate(startDate);
-            booking.setEndDate(endDate);
+           EList<FreeRoomTypesDTO> frts = getFreeRooms(0, booking.getStartDate(), booking.getEndDate());
+           for(FreeRoomTypesDTO freeRT : frts){
+        	   RoomType roomType = roomhandler.getRoomType(freeRT.getRoomTypeDescription());
+        	   Integer roomForType = reqPerType.get(roomType);
+        	   if(roomForType != null && roomForType > freeRT.getNumBeds()){
+        		   return false;
+        	   }
+           }
+           booking.setStartDate(startDate);
+           booking.setEndDate(endDate);
 
             return true;
 
@@ -380,9 +387,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if(booking != null && rt != null){
 			for(int i = 0; i < nbrToRemove; i++){
 				EList<RoomReservation> bookings = booking.getRoomReservations();
-				for(RoomReservation rr : bookings){
+				Iterator<RoomReservation> iter = bookings.iterator();
+				while(iter.hasNext()){
+					RoomReservation rr = iter.next();
 					if(rr != null && rr.getCheckInDate() == null && rr.getRoomType() == rt){
-						bookings.remove(rr);
+						iter.remove();
 					}
 				}
 			}
@@ -391,7 +400,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			return false;
 		}
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
