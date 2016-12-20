@@ -787,7 +787,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			if (currentRoomReservation.getCheckInDate() != null) { // check in date null => not checkedIn
 				if (currentRoomReservation.getRoomType().getName().equals(roomType.getName())) {
 
-					Room roomToCheckIn = getFreeRoom(roomType,currentRoomReservation.getStartDate(), currentRoomReservation.getEndDate());
+					Room roomToCheckIn = roomhandler.getFreeRoomByType(roomTypeDescription);
 
 					if (roomToCheckIn == null) {
 						return -2;

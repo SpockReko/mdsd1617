@@ -1233,13 +1233,22 @@ public interface HotelsystemPackage extends EPackage {
 	int IROOM_HANDLER___GET_ROOM_TYPE__STRING = 3;
 
 	/**
+	 * The operation id for the '<em>Get Free Room By Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING = 4;
+
+	/**
 	 * The number of operations of the '<em>IRoom Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_HANDLER_OPERATION_COUNT = 4;
+	int IROOM_HANDLER_OPERATION_COUNT = 5;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Customer Provides</em>' class.
@@ -1456,6 +1465,15 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_HANDLER___GET_ROOM_TYPE__STRING = IROOM_HANDLER___GET_ROOM_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Free Room By Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING = IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING;
 
 	/**
 	 * The operation id for the '<em>Add Room Type</em>' operation.
@@ -2432,6 +2450,16 @@ public interface HotelsystemPackage extends EPackage {
 	 */
 	EOperation getIRoomHandler__GetRoomType__String();
 
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getFreeRoomByType(java.lang.String) <em>Get Free Room By Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Free Room By Type</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getFreeRoomByType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetFreeRoomByType__String();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler <em>Room Handler</em>}'.
@@ -3522,6 +3550,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_HANDLER___GET_ROOM_TYPE__STRING = eINSTANCE.getIRoomHandler__GetRoomType__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Free Room By Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING = eINSTANCE.getIRoomHandler__GetFreeRoomByType__String();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl <em>Room Handler</em>}' class.
