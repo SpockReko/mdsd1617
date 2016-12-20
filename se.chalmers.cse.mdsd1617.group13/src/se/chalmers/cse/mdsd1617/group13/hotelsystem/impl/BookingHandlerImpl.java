@@ -344,6 +344,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		String startDate = booking.getStartDate();
 		String endDate = booking.getEndDate();
 		EList<FreeRoomTypesDTO> frts = getFreeRooms(rt.getNumBeds(), booking.getStartDate(), booking.getEndDate());
+		if(numberOfRoomsForType > frts.size()) {
+			return false;
+		}
 		for(int i = 0; i < frts.size(); i++){
 			FreeRoomTypesDTO freeRT = frts.get(i);
 			//TODO : we should compare the name instead of the description
