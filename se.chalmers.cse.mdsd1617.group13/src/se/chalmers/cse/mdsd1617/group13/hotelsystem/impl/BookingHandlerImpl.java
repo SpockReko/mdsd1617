@@ -620,7 +620,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			freeRoom.setNumBeds(roomtype.getNumBeds());
 			freeRoom.setNumFreeRooms(amountOfRooms);
 			freeRoom.setPricePerNight(roomtype.getPricePerNight());
-			freeRoom.setRoomTypeDescription(roomtype.getDescription());
+			freeRoom.setRoomTypeDescription(roomtype.getName());
 			freeRooms.add(freeRoom);
 		}
 		return freeRooms;
