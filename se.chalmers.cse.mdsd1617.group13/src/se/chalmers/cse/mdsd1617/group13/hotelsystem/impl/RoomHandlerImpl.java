@@ -182,9 +182,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 */
 	public boolean changeRoomType(int roomNumber, String roomType) {
 		Room room = getRoom(roomNumber); 
-		if(room != null){
-			room.setRoomtype(getRoomType(roomType));
-			return true;
+		RoomType rt = getRoomType(roomType);
+		if(room != null && roomType != null){
+			room.setRoomtype(rt);
 		}
 		return false;
 	}
