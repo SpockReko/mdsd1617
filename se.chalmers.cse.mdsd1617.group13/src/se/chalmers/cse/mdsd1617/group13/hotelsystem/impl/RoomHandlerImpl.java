@@ -210,12 +210,16 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeRoom(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Room room = getRoom(roomNumber);
+		if(room != null && !room.isOccupied()){
+			rooms.remove(room);
+			return true;
+		}
+		
+		return false;
 	}
 
 	/**
