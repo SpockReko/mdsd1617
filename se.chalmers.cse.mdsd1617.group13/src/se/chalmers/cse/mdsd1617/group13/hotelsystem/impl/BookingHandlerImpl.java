@@ -793,7 +793,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		// find the first room reservation with the given room type that has not been checked in
 		for (RoomReservation currentRoomReservation : roomReservations) {
 
-			if (currentRoomReservation.getCheckInDate() != null) { // check in date null => not checkedIn
+			if (currentRoomReservation.getCheckInDate() == null) { // check in date null => not checkedIn
 				if (currentRoomReservation.getRoomType().getName().equals(roomType.getName())) {
 
 					Room roomToCheckIn = roomhandler.getFreeRoomByType(roomTypeDescription);
