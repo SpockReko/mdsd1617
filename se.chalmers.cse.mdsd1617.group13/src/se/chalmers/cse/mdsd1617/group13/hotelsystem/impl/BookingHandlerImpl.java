@@ -347,7 +347,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		for(int i = 0; i < frts.size(); i++){
 			FreeRoomTypesDTO freeRT = frts.get(i);
 			//TODO : we should compare the name instead of the description
-			if(freeRT.getRoomTypeDescription().equals(rt.getDescription()) && freeRT.getNumBeds() >= numberOfRoomsForType){
+			if(freeRT.getRoomTypeDescription().equals(rt.getName()) && freeRT.getNumBeds() >= numberOfRoomsForType){
 				for(int j = 0; j < numberOfRoomsForType; j++){ //should be a method for adding a room to booking?
 					RoomReservation rr = new RoomReservationImpl();
 					rr.setRoomType(rt);
@@ -627,7 +627,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			freeRoom.setNumBeds(roomtype.getNumBeds());
 			freeRoom.setNumFreeRooms(amountOfRooms);
 			freeRoom.setPricePerNight(roomtype.getPricePerNight());
-			freeRoom.setRoomTypeDescription(roomtype.getDescription());
+			// looks like the description in FreeRoomTypesDTO is the name of our RoomType
+			freeRoom.setRoomTypeDescription(roomtype.getName());
 			freeRooms.add(freeRoom);
 		}
 		return freeRooms;
