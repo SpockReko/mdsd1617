@@ -466,8 +466,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public double getBookingPrice() {
-		for(Bill bill : bills) {
-			if(bill.getBillID() == this.bookingId) {
+		for(Bill bill : this.getBills()) {
+			if(bill.getBillID() == this.getBookingId()) {
 				return bill.getPrice();
 			}
 		}
