@@ -664,22 +664,13 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING___IS_FREE__INT_STRING_STRING = 8;
 
 	/**
-	 * The operation id for the '<em>Checked In Date</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___CHECKED_IN_DATE__STRING = 9;
-
-	/**
 	 * The operation id for the '<em>Add Extra</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___ADD_EXTRA__ROOMEXTRA_INT = 10;
+	int BOOKING___ADD_EXTRA__ROOMEXTRA_INT = 9;
 
 	/**
 	 * The operation id for the '<em>Check Out Room</em>' operation.
@@ -688,7 +679,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHECK_OUT_ROOM__INT = 11;
+	int BOOKING___CHECK_OUT_ROOM__INT = 10;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -697,7 +688,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 12;
+	int BOOKING_OPERATION_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.CustomerImpl <em>Customer</em>}' class.
@@ -2043,16 +2034,6 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBooking__IsFree__int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#CheckedInDate(java.lang.String) <em>Checked In Date</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Checked In Date</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#CheckedInDate(java.lang.String)
-	 * @generated
-	 */
-	EOperation getBooking__CheckedInDate__String();
-
-	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#addExtra(se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra, int) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3223,14 +3204,6 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___IS_FREE__INT_STRING_STRING = eINSTANCE.getBooking__IsFree__int_String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Checked In Date</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___CHECKED_IN_DATE__STRING = eINSTANCE.getBooking__CheckedInDate__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Extra</b></em>' operation.

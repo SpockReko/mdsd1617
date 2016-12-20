@@ -135,21 +135,6 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int countFreeRoom(RoomType roomType) {
-		int nbrOfFreeRooms = 0;
-		for(Room room : rooms){
-			if(room.getRoomtype().equals(roomType)){
-				nbrOfFreeRooms++;
-			}
-		}
-		return nbrOfFreeRooms;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
 	public EList<Room> getAllRoomsByType(RoomType roomType) {
 		EList<Room> result = new BasicEList<Room>();
 		for (Room room : rooms){
