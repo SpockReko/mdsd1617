@@ -278,8 +278,8 @@ public class ReceptionistBookingTests {
 		assertTrue(receptionist.getIreceptionistprovides().listCheckins(today,today).size() == 0); //empty list		
 		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", today, today, "Fritzon");
 		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 2);
+		//TODO: Problem with how to checkIn a room!
 		EList<RoomReservation> list = receptionist.getIreceptionistprovides().checkIn(bookingId, 2); // Check in a room today.
-		//TODO: problem with how to checkIn a room.
 		assertTrue(bookingHandler.listCheckins(today,today).size() + "" ,bookingHandler.listCheckins(today,today).size() == 1); //emptylist
 	}
 }
