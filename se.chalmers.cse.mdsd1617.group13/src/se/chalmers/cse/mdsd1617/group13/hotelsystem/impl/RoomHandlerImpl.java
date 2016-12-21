@@ -154,14 +154,14 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public boolean removeRoomType(String roomTypeDescription) {
 		for(Room room : rooms){
 			RoomType roomType = room.getRoomtype();
-			String description = roomType.getDescription();
+			String description = roomType.getName();
 			if(description.equals(roomTypeDescription)){
 				room.setRoomtype(null); //Throw exception or return false?
 			}
 		}
 		RoomType roomType = null;
 		for(RoomType type : roomTypes){
-			String description = type.getDescription();
+			String description = type.getName();
 			if(roomTypeDescription.equals(description)){
 				roomType = type;
 				break;
