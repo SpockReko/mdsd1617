@@ -8,6 +8,7 @@ import org.junit.BeforeClass;
 
 import se.chalmers.cse.mdsd1617.group13.Administrator;
 import se.chalmers.cse.mdsd1617.group13.Receptionist;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
@@ -129,4 +130,120 @@ public class ReceptionistBookingTests {
 		assertEquals(false, result);
 	}
 */
+	
+	/*
+	 *Tests for UC 2.1.5 Edit a booking 	
+	 */
+	
+	//Used for initializing booking to test
+	public int initBooking(){
+		return receptionist.getIhotelcustomerprovides().initiateBooking("John", "20170101", "20170108", "Doe");
+	}
+	
+	//Used for deleting a booking
+	public void clearBooking(int id){
+		bookingHandler.getBookings().remove(bookingHandler.getBookingById(id));
+	}
+	
+	/*
+	 *Tests for adding room to an existing booking
+	 */
+	
+	//Adds a room to a booking and checks if a new room has been added
+	@Test
+	public void testAddRoomTypeToBookingValid(){
+		int bookingId = initBooking();
+		Booking b = bookingHandler.getBookingById(bookingId);
+		assertEquals(b.getRoomReservations().size(), 0);
+		boolean result = receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
+		assertTrue(result);
+		assertEquals(b.getRoomReservations().size(), 1);
+		clearBooking(bookingId);
+	}
+	
+	//Tries to adding too many (and -1) of a room to a booking
+	@Test
+	public void testAddRoomTypeToBookingInvalidAmount(){
+		int bookingId = initBooking();
+		Booking b = bookingHandler.getBookingById(bookingId);
+		assertEquals(b.getRoomReservations().size(), 0);
+		assertFalse(receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 21));
+		assertFalse(receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", -1));
+		assertEquals(b.getRoomReservations().size(), 0);
+		clearBooking(bookingId);
+	}
+	
+	//Tries to add in invalid roomtype to a booking
+	@Test
+	public void testAddRoomTypeToBookingInvalidRoomType(){
+		int bookingId = initBooking();
+		Booking b = bookingHandler.getBookingById(bookingId);
+		assertEquals(b.getRoomReservations().size(), 0);
+		assertFalse(receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Failure", 1));
+		assertEquals(b.getRoomReservations().size(), 0);
+		clearBooking(bookingId);
+	}
+	
+	/*
+	 * Tests for removing rooms from an existing booking
+	 * First add a room which is tested above so we now it works as intended, then remove it again
+	 */
+	@Test
+	public void testRemoveRoomTypeFromBookingValid(){
+		int bookingId = initBooking();
+		Booking b = bookingHandler.getBookingById(bookingId);
+		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
+		assertEquals(b.getRoomReservations().size(), 1);
+		boolean result = receptionist.getIreceptionistprovides().removeRoomTypeFromBooking(bookingId, "Default", 1);
+		assertTrue(result);
+		assertEquals(b.getRoomReservations().size(), 0);
+		clearBooking(bookingId);
+	}
+	
+	//Tries to change remove a roomtype from an invalid (non-existent) bookingId
+	@Test
+	public void testRemoveRoomTypeFromBookingInvalidRoomBookingId(){
+		int invalidId = -1;
+		boolean result = receptionist.getIreceptionistprovides().removeRoomTypeFromBooking(invalidId, "Default", 1);
+		assertFalse(result);
+		
+	}
+	
+	//Tries to remove an invalid roomtype from a booking
+	@Test
+	public void testRemoveRoomTypeFromBookingInvalidRoomType(){
+		int bookingId = initBooking();
+		Booking b = bookingHandler.getBookingById(bookingId);
+		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
+		assertEquals(b.getRoomReservations().size(), 1);
+		boolean result = receptionist.getIreceptionistprovides().removeRoomTypeFromBooking(bookingId, "Failure", 1);
+		assertFalse(result);
+		assertEquals(b.getRoomReservations().size(), 1);
+		clearBooking(bookingId);
+	}
+	
+	//Tests for changing dates of an existing booking
+	@Test
+	public void testEditBookingTimeValid(){
+		int bookingId = initBooking();
+		assertTrue(receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1));
+		assertTrue(receptionist.getIreceptionistprovides().editBookingTime(bookingId, "20170201", "20170202"));
+		clearBooking(bookingId);
+	}
+
+	//Tries to edit the time on a booking with an invalid date
+	@Test
+	public void testEditBookingTimeInvalidDate(){
+		int bookingId = initBooking();
+		assertTrue(receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1));
+		assertFalse(receptionist.getIreceptionistprovides().editBookingTime(bookingId, "", ""));
+		clearBooking(bookingId);
+	}
+	
+	//Tries to edit a booking with invalid ID
+	@Test
+	public void testEditBookingTimeInvalidId(){
+		int invalidId = -1;
+		assertFalse(receptionist.getIreceptionistprovides().editBookingTime(invalidId, "20170201", "20170202"));
+	}
 }

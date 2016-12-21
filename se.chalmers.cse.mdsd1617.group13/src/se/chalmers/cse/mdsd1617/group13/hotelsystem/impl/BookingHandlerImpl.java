@@ -288,6 +288,19 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
+		DateFormat format = new SimpleDateFormat("yyyyMMdd");
+        Date dStartDate;
+        Date dEndDate;
+        try{
+            dStartDate = format.parse(startDate);
+            dEndDate = format.parse(endDate);
+        }catch (ParseException e) {
+            return false;
+        }
+        if(dStartDate.after(dEndDate)){
+            return false;
+        }
+        
 		Booking booking = getBookingById(reservationId);
         if(booking != null && startDate != "" && endDate != ""){
             EList<RoomReservation> reservations = booking.getRoomReservations();
@@ -317,11 +330,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
         		}
         	}
 
-           EList<FreeRoomTypesDTO> frts = getFreeRooms(0, booking.getStartDate(), booking.getEndDate());
+           EList<FreeRoomTypesDTO> frts = getFreeRooms(0, startDate, endDate);
            for(FreeRoomTypesDTO freeRT : frts){
         	   RoomType roomType = roomhandler.getRoomType(freeRT.getRoomTypeDescription());
         	   Integer roomForType = reqPerType.get(roomType);
-        	   if(roomForType != null && roomForType > freeRT.getNumBeds()){
+        	   if(roomForType != null && roomForType > freeRT.getNumFreeRooms()){
         		   return false;
         	   }
            }
@@ -344,7 +357,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		Booking booking = getBookingById(bookingId);
 		RoomType rt = roomhandler.getRoomType(roomTypeName);
 
-		if(booking == null || rt == null){
+		if(booking == null || rt == null || numberOfRoomsForType <= 0){
 			return false;
 		}
 		String startDate = booking.getStartDate();
