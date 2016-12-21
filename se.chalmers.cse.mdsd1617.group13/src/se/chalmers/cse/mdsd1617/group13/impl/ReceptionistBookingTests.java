@@ -2,6 +2,11 @@ package se.chalmers.cse.mdsd1617.group13.impl;
 
 import static org.junit.Assert.*;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.eclipse.emf.common.util.EList;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -10,8 +15,10 @@ import se.chalmers.cse.mdsd1617.group13.Administrator;
 import se.chalmers.cse.mdsd1617.group13.Receptionist;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 
@@ -132,6 +139,21 @@ public class ReceptionistBookingTests {
 */
 	
 	/*
+	 *  Test for UC 2.1.2 Search for free rooms 
+	 */
+	
+	@Test
+	public void testGetFreeRooms(){
+		EList<FreeRoomTypesDTO> rooms = receptionist.getIhotelcustomerprovides().getFreeRooms(1, "20161216", "20170102");
+		for(FreeRoomTypesDTO type : rooms){
+			assertTrue(type.getNumBeds() == 2); 									// 2 beds in te rooms.
+			assertTrue(type.getNumFreeRooms() + "", type.getNumFreeRooms() == 19);  //20 rooms in startup, 1 room booked in id 2, 19 room left 			
+			assertTrue(type.getPricePerNight() == 1000); 							// default price per night
+			assertTrue(type.getRoomTypeDescription() + "",type.getRoomTypeDescription().equals("Default")); //roomtypename
+		}
+	}
+	
+	/*
 	 *Tests for UC 2.1.5 Edit a booking 	
 	 */
 	
@@ -245,5 +267,19 @@ public class ReceptionistBookingTests {
 	public void testEditBookingTimeInvalidId(){
 		int invalidId = -1;
 		assertFalse(receptionist.getIreceptionistprovides().editBookingTime(invalidId, "20170201", "20170202"));
+	}
+	
+	// 2.1.9 List check ins for a specific day
+	
+	@Test
+	public void testListCheckIn(){
+		Date dToday = Calendar.getInstance().getTime();
+		String today = (new SimpleDateFormat( "yyyyMMdd" ) ).format( dToday );
+		assertTrue(receptionist.getIreceptionistprovides().listCheckins(today,today).size() == 0); //empty list		
+		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", today, today, "Fritzon");
+		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 2);
+		EList<RoomReservation> list = receptionist.getIreceptionistprovides().checkIn(bookingId, 2); // Check in a room today.
+		//TODO: problem with how to checkIn a room.
+		assertTrue(bookingHandler.listCheckins(today,today).size() + "" ,bookingHandler.listCheckins(today,today).size() == 1); //emptylist
 	}
 }
