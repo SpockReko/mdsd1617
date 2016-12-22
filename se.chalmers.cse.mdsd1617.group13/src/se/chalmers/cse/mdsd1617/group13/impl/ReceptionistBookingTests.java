@@ -17,8 +17,12 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
@@ -32,6 +36,7 @@ public class ReceptionistBookingTests {
 	static BookingHandler bookingHandler = new HotelsystemFactoryImpl().createBookingHandler();
 	static RoomHandler roomHandler = new HotelsystemFactoryImpl().createRoomHandler();
 	static PaymentHandler paymentHandler = new HotelsystemFactoryImpl().createPaymentHandler();
+	private static int booking3Roomnbr;
 
 	//this happens when the class is created and @Before happens every time a test is run
 	@BeforeClass
@@ -55,6 +60,16 @@ public class ReceptionistBookingTests {
 		receptionist.getIhotelcustomerprovides().confirmBooking(2);
 		receptionist.getIhotelcustomerprovides().addRoomToBooking("Default", 2);
 		//System.out.println(bookingHandler.getBookings().get(1));
+		
+
+		//initiate booking number 3 with booking Id 3?
+		BookingHandlerImpl bookingHandler = (BookingHandlerImpl) receptionist.getIhotelcustomerprovides();
+		bookingHandler.initiateBooking("booking3Name", "20161220", "20170103", "booking3lastName");
+		bookingHandler.addRoomToBooking("Default", 3);
+		EList<Integer> roomNbrs = bookingHandler.listFreeRooms(3);
+		booking3Roomnbr = roomNbrs.get(0);
+		bookingHandler.confirmBooking(3);
+		bookingHandler.checkIn(3,booking3Roomnbr);
 		
 	}
 
@@ -310,5 +325,15 @@ public class ReceptionistBookingTests {
 		//TODO: Problem with how to checkIn a room!
 		EList<RoomReservation> list = receptionist.getIreceptionistprovides().checkIn(bookingId, 2); // Check in a room today.
 		assertTrue(bookingHandler.listCheckins(today,today).size() + "" ,bookingHandler.listCheckins(today,today).size() == 1); //emptylist
+	}
+	
+	//2.1.13 Add extra cost to rooms
+	@Test
+	public void testAddExtraCostToRoom(){
+		IHotelReceptionistProvides receptionistProvides = receptionist.getIreceptionistprovides();
+		IHotelCustomerProvides customerProvides = receptionist.getIhotelcustomerprovides();
+		assertTrue(bookingHandler.addExtraToRoom(3, booking3Roomnbr, "testExtra", 100));
+		double bookingPrice = customerProvides.initiateCheckout(3);
+		assertTrue(bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
 	}
 }
