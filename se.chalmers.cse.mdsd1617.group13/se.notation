@@ -809,6 +809,10 @@
             <element xmi:type="uml:Operation" href="se.uml#_rv0xUMbDEeaZy5PnoCkdzA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_rxovMcbDEeaZy5PnoCkdzA"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_Rn8sYMgqEeayauOCCdhBJQ" type="Operation_InterfaceOperationLabel">
+            <element xmi:type="uml:Operation" href="se.uml#_RlqNYMgqEeayauOCCdhBJQ"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Rn8sYcgqEeayauOCCdhBJQ"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_OGPCJ7uSEeaKgqXTYyzHxQ"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_OGPCKLuSEeaKgqXTYyzHxQ"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_OGPCKbuSEeaKgqXTYyzHxQ"/>

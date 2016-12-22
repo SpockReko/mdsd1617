@@ -420,7 +420,20 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public EList<Integer> listFreeRooms(int bookingId) {
-		return roomhandler.getFreeRooms();
+		EList<Integer> freeRoomNbrs = new BasicEList<Integer>();
+		Booking booking = getBookingById(bookingId);
+		EList<RoomReservation> reservations = booking.getRoomReservations();
+		for(RoomReservation reservation : reservations){
+			RoomType roomType = reservation.getRoomType();
+			EList<Room> rooms = roomhandler.getAllRoomsByType(roomType);
+			for(Room room : rooms){
+				if(!room.isOccupied() && !room.isBlocked()){
+					int roomNumber = room.getRoomNumber();
+					freeRoomNbrs.add(roomNumber);
+				}
+			}
+		}
+		return freeRoomNbrs;
 	}
 
 	/**
@@ -429,13 +442,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public EList<Integer> checkIn(int bookingId, int roomNumbers) {
-
-		if(roomNumbers != 0) {
-			this.getBookingById(bookingId).checkIn(roomNumbers);
+		EList<Room> rooms = roomhandler.getAllRooms();
+		for(Room room : rooms){
+			if(roomNumbers == room.getRoomNumber()) {
+				this.getBookingById(bookingId).checkIn(room);
+			}
 		}
 
 		return this.listFreeRooms(bookingId);
 	}
+	
+	
 
 	/**
 	 * <!-- begin-user-doc -->

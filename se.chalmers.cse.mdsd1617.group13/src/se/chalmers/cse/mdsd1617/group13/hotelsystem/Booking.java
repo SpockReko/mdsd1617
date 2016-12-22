@@ -261,11 +261,11 @@ public interface Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false"
+	 * @model required="true" ordered="false" roomRequired="true" roomOrdered="false"
 	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='checkIn()'"
 	 * @generated
 	 */
-	boolean checkIn(int roomNumber);
+	boolean checkIn(Room room);
 
 	/**
 	 * <!-- begin-user-doc -->

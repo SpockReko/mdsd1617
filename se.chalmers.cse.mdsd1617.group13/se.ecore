@@ -61,7 +61,7 @@
                 <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details key="originalName" value="checkIn()"/>
                 </eAnnotations>
-                <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+                <eParameters name="room" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room"/>
               </eOperations>
               <eOperations name="getBookingPrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
               <eOperations name="getRoomPrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
@@ -195,6 +195,7 @@
                   eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room">
                 <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eOperations>
+              <eOperations name="getAllRooms" ordered="false" upperBound="-1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Room"/>
             </eClassifiers>
             <eClassifiers xsi:type="ecore:EClass" name="IHotelCustomerProvides" abstract="true"
                 interface="true">

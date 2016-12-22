@@ -177,9 +177,7 @@
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_w0zSwMBPEeaqMcV8O91AUw" name="checkIn()">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_CWj5UMBQEeaqMcV8O91AUw" name="roomNumber">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_CWj5UMBQEeaqMcV8O91AUw" name="room" type="_Q6JlMLhmEeaytfot7Bi3IA"/>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gy13YMBQEeaqMcV8O91AUw" direction="return">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
                 </ownedParameter>
@@ -749,6 +747,12 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_6szuAMbDEeaZy5PnoCkdzA" name="room" type="_Q6JlMLhmEeaytfot7Bi3IA" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_RlqNYMgqEeayauOCCdhBJQ" name="getAllRooms">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_YiuGIMgqEeayauOCCdhBJQ" type="_Q6JlMLhmEeaytfot7Bi3IA" direction="return">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zz8dcMgqEeayauOCCdhBJQ"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z0PYYMgqEeayauOCCdhBJQ" value="*"/>
+                </ownedParameter>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_GDYBILuhEeaKgqXTYyzHxQ" name="HotelInitializer">

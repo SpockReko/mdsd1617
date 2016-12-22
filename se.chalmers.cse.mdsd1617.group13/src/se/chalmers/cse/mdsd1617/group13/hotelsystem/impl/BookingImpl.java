@@ -449,14 +449,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean checkIn(int roomNumber) {
+	public boolean checkIn(Room room) {
 		for (RoomReservation rr : roomReservations) {
-			if (rr.getRoomId() == roomNumber) {
+			if (rr.getRoom() == null) {
+				rr.setRoom(room);
 				rr.checkIn();
 				return true;
 			}
 		}
-		
 		return false;
 	}
 
@@ -694,8 +694,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return nrOfNights();
 			case HotelsystemPackage.BOOKING___IS_CHECKED_IN:
 				return isCheckedIn();
-			case HotelsystemPackage.BOOKING___CHECK_IN__INT:
-				return checkIn((Integer)arguments.get(0));
+			case HotelsystemPackage.BOOKING___CHECK_IN__ROOM:
+				return checkIn((Room)arguments.get(0));
 			case HotelsystemPackage.BOOKING___GET_BOOKING_PRICE:
 				return getBookingPrice();
 			case HotelsystemPackage.BOOKING___GET_ROOM_PRICE__INT:

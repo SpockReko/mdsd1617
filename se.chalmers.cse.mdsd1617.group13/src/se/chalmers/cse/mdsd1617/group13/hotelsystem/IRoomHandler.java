@@ -57,4 +57,12 @@ public interface IRoomHandler extends EObject {
 	 */
 	Room getFreeRoomByType(String roomType);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" ordered="false"
+	 * @generated
+	 */
+	EList<Room> getAllRooms();
+
 } // IRoomHandler

@@ -458,7 +458,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__CheckIn__int() {
+	public EOperation getBooking__CheckIn__Room() {
 		return bookingEClass.getEOperations().get(5);
 	}
 
@@ -839,6 +839,15 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 */
 	public EOperation getIRoomHandler__GetFreeRoomByType__String() {
 		return iRoomHandlerEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIRoomHandler__GetAllRooms() {
+		return iRoomHandlerEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1353,7 +1362,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(bookingEClass, BOOKING___CHECK_OUT);
 		createEOperation(bookingEClass, BOOKING___NR_OF_NIGHTS);
 		createEOperation(bookingEClass, BOOKING___IS_CHECKED_IN);
-		createEOperation(bookingEClass, BOOKING___CHECK_IN__INT);
+		createEOperation(bookingEClass, BOOKING___CHECK_IN__ROOM);
 		createEOperation(bookingEClass, BOOKING___GET_BOOKING_PRICE);
 		createEOperation(bookingEClass, BOOKING___GET_ROOM_PRICE__INT);
 		createEOperation(bookingEClass, BOOKING___IS_FREE__INT_STRING_STRING);
@@ -1409,6 +1418,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ALL_ROOMS_BY_TYPE__ROOMTYPE);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ROOM_TYPE__STRING);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING);
+		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ALL_ROOMS);
 
 		iHotelCustomerProvidesEClass = createEClass(IHOTEL_CUSTOMER_PROVIDES);
 		createEOperation(iHotelCustomerProvidesEClass, IHOTEL_CUSTOMER_PROVIDES___GET_FREE_ROOMS__INT_STRING_STRING);
@@ -1545,8 +1555,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		initEOperation(getBooking__IsCheckedIn(), ecorePackage.getEBoolean(), "isCheckedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBooking__CheckIn__int(), ecorePackage.getEBoolean(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBooking__CheckIn__Room(), ecorePackage.getEBoolean(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoom(), "room", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GetBookingPrice(), ecorePackage.getEDouble(), "getBookingPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1639,6 +1649,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		op = initEOperation(getIRoomHandler__GetFreeRoomByType__String(), this.getRoom(), "getFreeRoomByType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getIRoomHandler__GetAllRooms(), this.getRoom(), "getAllRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iHotelCustomerProvidesEClass, IHotelCustomerProvides.class, "IHotelCustomerProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1811,7 +1823,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	protected void createUMLAnnotations() {
 		String source = "http://www.eclipse.org/uml2/2.0.0/UML";	
 		addAnnotation
-		  (getBooking__CheckIn__int(), 
+		  (getBooking__CheckIn__Room(), 
 		   source, 
 		   new String[] {
 			 "originalName", "checkIn()"

@@ -321,6 +321,15 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public EList<Room> getAllRooms() {
+		return rooms;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public boolean addRoomType(String roomTypeName, double price, int nbrOfBeds, String featureDescription) {
 		for (RoomType checkType : roomTypes) {
 			if (checkType.getName().equals(roomTypeName)) {
@@ -468,6 +477,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				return getRoomType((String)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING:
 				return getFreeRoomByType((String)arguments.get(0));
+			case HotelsystemPackage.ROOM_HANDLER___GET_ALL_ROOMS:
+				return getAllRooms();
 			case HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING:
 				return addRoomType((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case HotelsystemPackage.ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING:

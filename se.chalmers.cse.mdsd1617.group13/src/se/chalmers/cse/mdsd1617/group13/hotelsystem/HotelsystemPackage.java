@@ -634,7 +634,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHECK_IN__INT = 5;
+	int BOOKING___CHECK_IN__ROOM = 5;
 
 	/**
 	 * The operation id for the '<em>Get Booking Price</em>' operation.
@@ -1242,13 +1242,22 @@ public interface HotelsystemPackage extends EPackage {
 	int IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING = 4;
 
 	/**
+	 * The operation id for the '<em>Get All Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_HANDLER___GET_ALL_ROOMS = 5;
+
+	/**
 	 * The number of operations of the '<em>IRoom Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_HANDLER_OPERATION_COUNT = 5;
+	int IROOM_HANDLER_OPERATION_COUNT = 6;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Customer Provides</em>' class.
@@ -1474,6 +1483,15 @@ public interface HotelsystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING = IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get All Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_HANDLER___GET_ALL_ROOMS = IROOM_HANDLER___GET_ALL_ROOMS;
 
 	/**
 	 * The operation id for the '<em>Add Room Type</em>' operation.
@@ -2012,14 +2030,14 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBooking__IsCheckedIn();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkIn(int) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkIn(se.chalmers.cse.mdsd1617.group13.hotelsystem.Room) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkIn(int)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#checkIn(se.chalmers.cse.mdsd1617.group13.hotelsystem.Room)
 	 * @generated
 	 */
-	EOperation getBooking__CheckIn__int();
+	EOperation getBooking__CheckIn__Room();
 
 	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking#getBookingPrice() <em>Get Booking Price</em>}' operation.
@@ -2460,6 +2478,16 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIRoomHandler__GetFreeRoomByType__String();
+
+	/**
+	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRooms() <em>Get All Rooms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get All Rooms</em>' operation.
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.IRoomHandler#getAllRooms()
+	 * @generated
+	 */
+	EOperation getIRoomHandler__GetAllRooms();
 
 	/**
 	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler <em>Room Handler</em>}'.
@@ -3207,7 +3235,7 @@ public interface HotelsystemPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING___CHECK_IN__INT = eINSTANCE.getBooking__CheckIn__int();
+		EOperation BOOKING___CHECK_IN__ROOM = eINSTANCE.getBooking__CheckIn__Room();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Booking Price</b></em>' operation.
@@ -3558,6 +3586,14 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING = eINSTANCE.getIRoomHandler__GetFreeRoomByType__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get All Rooms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_HANDLER___GET_ALL_ROOMS = eINSTANCE.getIRoomHandler__GetAllRooms();
 
 		/**
 		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomHandlerImpl <em>Room Handler</em>}' class.
