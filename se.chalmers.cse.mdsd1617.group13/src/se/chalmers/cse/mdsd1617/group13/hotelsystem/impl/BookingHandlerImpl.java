@@ -6,7 +6,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
@@ -853,17 +852,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean bookingCheckin(String date) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Booking getBookingById(int bookingId) {
@@ -1067,8 +1055,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return payRoomDuringCheckout((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 			case HotelsystemPackage.BOOKING_HANDLER___CHECK_IN_ROOM__STRING_INT:
 				return checkInRoom((String)arguments.get(0), (Integer)arguments.get(1));
-			case HotelsystemPackage.BOOKING_HANDLER___BOOKING_CHECKIN__STRING:
-				return bookingCheckin((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___GET_BOOKING_BY_ID__INT:
 				return getBookingById((Integer)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___IS_FREE__INT_STRING_STRING:

@@ -7,8 +7,6 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.uml2.types.TypesPackage;
 import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
 import se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl;
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankAdministrator;
@@ -94,9 +92,6 @@ public class BankcomponentsPackageImpl extends EPackageImpl implements Bankcompo
 		BankcomponentsPackageImpl theBankcomponentsPackage = (BankcomponentsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof BankcomponentsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new BankcomponentsPackageImpl());
 
 		isInited = true;
-
-		// Initialize simple dependencies
-		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		HotelsystemPackageImpl theHotelsystemPackage = (HotelsystemPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI) instanceof HotelsystemPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI) : HotelsystemPackage.eINSTANCE);

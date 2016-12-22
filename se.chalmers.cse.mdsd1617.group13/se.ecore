@@ -10,9 +10,6 @@
           <eSubpackages name="hotelsystem" nsURI="http:///se/chalmers/cse/mdsd1617/group13/hotelsystem.ecore"
               nsPrefix="se.chalmers.cse.mdsd1617.group13.hotelsystem">
             <eClassifiers xsi:type="ecore:EClass" name="BookingHandler" eSuperTypes="#//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelReceptionistProvides #//chalmers/cse/mdsd1617/group13/hotelsystem/IHotelCustomerProvides">
-              <eOperations name="bookingCheckin" ordered="false" lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Boolean">
-                <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-              </eOperations>
               <eOperations name="getBookingById" ordered="false" lowerBound="1" eType="#//chalmers/cse/mdsd1617/group13/hotelsystem/Booking">
                 <eParameters name="bookingId" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
               </eOperations>

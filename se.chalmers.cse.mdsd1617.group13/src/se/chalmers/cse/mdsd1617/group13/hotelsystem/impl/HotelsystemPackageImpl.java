@@ -9,8 +9,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.uml2.types.TypesPackage;
 import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
 import se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl;
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage;
@@ -209,9 +207,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		TypesPackage.eINSTANCE.eClass();
-
 		// Obtain or create and register interdependencies
 		BankcomponentsPackageImpl theBankcomponentsPackage = (BankcomponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) instanceof BankcomponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) : BankcomponentsPackage.eINSTANCE);
 		ActorPackageImpl theActorPackage = (ActorPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ActorPackage.eNS_URI) instanceof ActorPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ActorPackage.eNS_URI) : ActorPackage.eINSTANCE);
@@ -294,7 +289,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__BookingCheckin__String() {
+	public EOperation getBookingHandler__GetBookingById__int() {
 		return bookingHandlerEClass.getEOperations().get(0);
 	}
 
@@ -303,17 +298,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__GetBookingById__int() {
-		return bookingHandlerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBookingHandler__IsFree__int_String_String() {
-		return bookingHandlerEClass.getEOperations().get(2);
+		return bookingHandlerEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1332,7 +1318,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__ROOMHANDLER);
 		createEAttribute(bookingHandlerEClass, BOOKING_HANDLER__BOOKING_CURRENTLY_CHECKING_OUT);
 		createEAttribute(bookingHandlerEClass, BOOKING_HANDLER__NEXT_BOOKING_ID);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___BOOKING_CHECKIN__STRING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___GET_BOOKING_BY_ID__INT);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___IS_FREE__INT_STRING_STRING);
 
@@ -1486,7 +1471,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		BankcomponentsPackage theBankcomponentsPackage = (BankcomponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI);
 
 		// Create type parameters
@@ -1508,10 +1492,7 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEAttribute(getBookingHandler_BookingCurrentlyCheckingOut(), ecorePackage.getEInt(), "bookingCurrentlyCheckingOut", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingHandler_NextBookingId(), ecorePackage.getEInt(), "nextBookingId", null, 1, 1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getBookingHandler__BookingCheckin__String(), theTypesPackage.getBoolean(), "bookingCheckin", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBookingHandler__GetBookingById__int(), this.getBooking(), "getBookingById", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getBookingHandler__GetBookingById__int(), this.getBooking(), "getBookingById", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingHandler__IsFree__int_String_String(), ecorePackage.getEBoolean(), "isFree", 1, 1, IS_UNIQUE, !IS_ORDERED);

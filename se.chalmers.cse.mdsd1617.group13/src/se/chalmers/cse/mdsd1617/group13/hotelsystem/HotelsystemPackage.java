@@ -447,22 +447,13 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_HANDLER___CHECK_IN_ROOM__STRING_INT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 8;
 
 	/**
-	 * The operation id for the '<em>Booking Checkin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_HANDLER___BOOKING_CHECKIN__STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 9;
-
-	/**
 	 * The operation id for the '<em>Get Booking By Id</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___GET_BOOKING_BY_ID__INT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 10;
+	int BOOKING_HANDLER___GET_BOOKING_BY_ID__INT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Is Free</em>' operation.
@@ -471,7 +462,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___IS_FREE__INT_STRING_STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 11;
+	int BOOKING_HANDLER___IS_FREE__INT_STRING_STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Booking Handler</em>' class.
@@ -480,7 +471,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_OPERATION_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 12;
+	int BOOKING_HANDLER_OPERATION_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
@@ -1833,16 +1824,6 @@ public interface HotelsystemPackage extends EPackage {
 	EAttribute getBookingHandler_NextBookingId();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#bookingCheckin(java.lang.String) <em>Booking Checkin</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Booking Checkin</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#bookingCheckin(java.lang.String)
-	 * @generated
-	 */
-	EOperation getBookingHandler__BookingCheckin__String();
-
-	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingById(int) <em>Get Booking By Id</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3063,14 +3044,6 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOKING_HANDLER__NEXT_BOOKING_ID = eINSTANCE.getBookingHandler_NextBookingId();
-
-		/**
-		 * The meta object literal for the '<em><b>Booking Checkin</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_HANDLER___BOOKING_CHECKIN__STRING = eINSTANCE.getBookingHandler__BookingCheckin__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Booking By Id</b></em>' operation.

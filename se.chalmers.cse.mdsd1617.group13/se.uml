@@ -20,14 +20,6 @@
               </ownedAttribute>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_02xLQLhrEeaytfot7Bi3IA" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_Ef28AKnyEeaqs-4dkG4NMQ" contract="_Ef28AKnyEeaqs-4dkG4NMQ"/>
               <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hDDwML1NEea3vq_wXUyZng" client="_-1bbgLhlEeaytfot7Bi3IA" supplier="_UlwsQKspEea_ZvXe8054NA" contract="_UlwsQKspEea_ZvXe8054NA"/>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_u5vSQL30EeaPAbmKLAIXGw" name="bookingCheckin">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_3DeZgL30EeaPAbmKLAIXGw" name="date">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_6bjIkL30EeaPAbmKLAIXGw" direction="return">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-                </ownedParameter>
-              </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_1by98MBNEeaqMcV8O91AUw" name="getBookingById">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_5VvD8MBNEeaqMcV8O91AUw" name="bookingId">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
