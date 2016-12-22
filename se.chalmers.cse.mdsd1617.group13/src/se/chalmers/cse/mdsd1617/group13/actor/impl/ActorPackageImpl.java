@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.impl;
+package se.chalmers.cse.mdsd1617.group13.actor.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -9,11 +9,12 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
-import se.chalmers.cse.mdsd1617.group13.Administrator;
-import se.chalmers.cse.mdsd1617.group13.Group13Factory;
-import se.chalmers.cse.mdsd1617.group13.Group13Package;
-import se.chalmers.cse.mdsd1617.group13.Receptionist;
-import se.chalmers.cse.mdsd1617.group13.User;
+
+import se.chalmers.cse.mdsd1617.group13.actor.ActorFactory;
+import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
+import se.chalmers.cse.mdsd1617.group13.actor.Administrator;
+import se.chalmers.cse.mdsd1617.group13.actor.Receptionist;
+import se.chalmers.cse.mdsd1617.group13.actor.User;
 
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage;
 
@@ -29,7 +30,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Group13PackageImpl extends EPackageImpl implements Group13Package {
+public class ActorPackageImpl extends EPackageImpl implements ActorPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,12 +63,12 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see se.chalmers.cse.mdsd1617.group13.Group13Package#eNS_URI
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private Group13PackageImpl() {
-		super(eNS_URI, Group13Factory.eINSTANCE);
+	private ActorPackageImpl() {
+		super(eNS_URI, ActorFactory.eINSTANCE);
 	}
 
 	/**
@@ -80,7 +81,7 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link Group13Package#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ActorPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,11 +90,11 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static Group13Package init() {
-		if (isInited) return (Group13Package)EPackage.Registry.INSTANCE.getEPackage(Group13Package.eNS_URI);
+	public static ActorPackage init() {
+		if (isInited) return (ActorPackage)EPackage.Registry.INSTANCE.getEPackage(ActorPackage.eNS_URI);
 
 		// Obtain or create and register package
-		Group13PackageImpl theGroup13Package = (Group13PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Group13PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Group13PackageImpl());
+		ActorPackageImpl theActorPackage = (ActorPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ActorPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ActorPackageImpl());
 
 		isInited = true;
 
@@ -105,22 +106,22 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 		BankcomponentsPackageImpl theBankcomponentsPackage = (BankcomponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) instanceof BankcomponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) : BankcomponentsPackage.eINSTANCE);
 
 		// Create package meta-data objects
-		theGroup13Package.createPackageContents();
+		theActorPackage.createPackageContents();
 		theHotelsystemPackage.createPackageContents();
 		theBankcomponentsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theGroup13Package.initializePackageContents();
+		theActorPackage.initializePackageContents();
 		theHotelsystemPackage.initializePackageContents();
 		theBankcomponentsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theGroup13Package.freeze();
+		theActorPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(Group13Package.eNS_URI, theGroup13Package);
-		return theGroup13Package;
+		EPackage.Registry.INSTANCE.put(ActorPackage.eNS_URI, theActorPackage);
+		return theActorPackage;
 	}
 
 	/**
@@ -191,8 +192,8 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Group13Factory getGroup13Factory() {
-		return (Group13Factory)getEFactoryInstance();
+	public ActorFactory getActorFactory() {
+		return (ActorFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -250,11 +251,6 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 
 		// Obtain other dependent packages
 		HotelsystemPackage theHotelsystemPackage = (HotelsystemPackage)EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI);
-		BankcomponentsPackage theBankcomponentsPackage = (BankcomponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI);
-
-		// Add subpackages
-		getESubpackages().add(theHotelsystemPackage);
-		getESubpackages().add(theBankcomponentsPackage);
 
 		// Create type parameters
 
@@ -279,4 +275,4 @@ public class Group13PackageImpl extends EPackageImpl implements Group13Package {
 		createResource(eNS_URI);
 	}
 
-} //Group13PackageImpl
+} //ActorPackageImpl

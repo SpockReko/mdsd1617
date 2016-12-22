@@ -4,23 +4,6 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_eScDsL1CEeaDErfRl6lcxg" name="cse">
       <packagedElement xmi:type="uml:Package" xmi:id="_g9hJ4L1CEeaDErfRl6lcxg" name="mdsd1617">
         <packagedElement xmi:type="uml:Package" xmi:id="_j0yR8L1CEeaDErfRl6lcxg" name="group13">
-          <packagedElement xmi:type="uml:Class" xmi:id="_iOeCILhlEeaytfot7Bi3IA" name="User"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="_mGp0oLhlEeaytfot7Bi3IA" name="Receptionist">
-            <generalization xmi:type="uml:Generalization" xmi:id="_9SQw4LhrEeaytfot7Bi3IA" general="_iOeCILhlEeaytfot7Bi3IA"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_yjs8crhrEeaytfot7Bi3IA" name="ireceptionistprovides" type="_Ef28AKnyEeaqs-4dkG4NMQ" association="_yjruULhrEeaytfot7Bi3IA"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_L5bTwrrLEear4uagTC-MRA" name="ihotelcustomerprovides" type="_UlwsQKspEea_ZvXe8054NA" association="_L5assLrLEear4uagTC-MRA">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Od5boLrLEear4uagTC-MRA" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Od7Q0LrLEear4uagTC-MRA" value="1"/>
-            </ownedAttribute>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_n4UmkLhlEeaytfot7Bi3IA" name="Administrator">
-            <generalization xmi:type="uml:Generalization" xmi:id="_95skULhrEeaytfot7Bi3IA" general="_iOeCILhlEeaytfot7Bi3IA"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_iwap4rhrEeaytfot7Bi3IA" name="iadministratorprovides" type="_T5_HsKnyEeaqs-4dkG4NMQ" association="_iwaC0LhrEeaytfot7Bi3IA">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_krf2gLhrEeaytfot7Bi3IA" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_krhEoLhrEeaytfot7Bi3IA" value="1"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_n3reorhrEeaytfot7Bi3IA" name="ihotelstartupprovides" type="_uUO4AI--EeaYFcjrTNGrQw" association="_n3q3kLhrEeaytfot7Bi3IA"/>
-          </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_5VAf4LhlEeaytfot7Bi3IA" name="hotelsystem">
             <packagedElement xmi:type="uml:Class" xmi:id="_-1bbgLhlEeaytfot7Bi3IA" name="BookingHandler">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_x49LwrhqEeaytfot7Bi3IA" name="bookings" type="_GIjD0LhmEeaytfot7Bi3IA" association="_x48ksLhqEeaytfot7Bi3IA">
@@ -1017,6 +1000,25 @@
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sSWdobuhEeaKgqXTYyzHxQ" key="nature" value="UML_Nature"/>
             </eAnnotations>
             <ownedEnd xmi:type="uml:Property" xmi:id="_sSXEsbuhEeaKgqXTYyzHxQ" name="hotelinitializer" type="_GDYBILuhEeaKgqXTYyzHxQ" association="_sRWYELuhEeaKgqXTYyzHxQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_l4IcsMhZEeag8uMkwKDDWw" name="actor">
+            <packagedElement xmi:type="uml:Class" xmi:id="_iOeCILhlEeaytfot7Bi3IA" name="User"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_mGp0oLhlEeaytfot7Bi3IA" name="Receptionist">
+              <generalization xmi:type="uml:Generalization" xmi:id="_9SQw4LhrEeaytfot7Bi3IA" general="_iOeCILhlEeaytfot7Bi3IA"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_yjs8crhrEeaytfot7Bi3IA" name="ireceptionistprovides" type="_Ef28AKnyEeaqs-4dkG4NMQ" association="_yjruULhrEeaytfot7Bi3IA"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_L5bTwrrLEear4uagTC-MRA" name="ihotelcustomerprovides" type="_UlwsQKspEea_ZvXe8054NA" association="_L5assLrLEear4uagTC-MRA">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Od5boLrLEear4uagTC-MRA" value="1"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Od7Q0LrLEear4uagTC-MRA" value="1"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_n4UmkLhlEeaytfot7Bi3IA" name="Administrator">
+              <generalization xmi:type="uml:Generalization" xmi:id="_95skULhrEeaytfot7Bi3IA" general="_iOeCILhlEeaytfot7Bi3IA"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_iwap4rhrEeaytfot7Bi3IA" name="iadministratorprovides" type="_T5_HsKnyEeaqs-4dkG4NMQ" association="_iwaC0LhrEeaytfot7Bi3IA">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_krf2gLhrEeaytfot7Bi3IA" value="1"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_krhEoLhrEeaytfot7Bi3IA" value="1"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_n3reorhrEeaytfot7Bi3IA" name="ihotelstartupprovides" type="_uUO4AI--EeaYFcjrTNGrQw" association="_n3q3kLhrEeaytfot7Bi3IA"/>
+            </packagedElement>
           </packagedElement>
         </packagedElement>
       </packagedElement>

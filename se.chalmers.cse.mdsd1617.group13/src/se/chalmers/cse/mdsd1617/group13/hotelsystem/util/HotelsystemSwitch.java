@@ -127,6 +127,12 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HotelsystemPackage.IHOTEL_RECEPTIONIST_PROVIDES: {
+				IHotelReceptionistProvides iHotelReceptionistProvides = (IHotelReceptionistProvides)theEObject;
+				T result = caseIHotelReceptionistProvides(iHotelReceptionistProvides);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HotelsystemPackage.IHOTEL_CUSTOMER_PROVIDES: {
 				IHotelCustomerProvides iHotelCustomerProvides = (IHotelCustomerProvides)theEObject;
 				T result = caseIHotelCustomerProvides(iHotelCustomerProvides);
@@ -163,12 +169,6 @@ public class HotelsystemSwitch<T> extends Switch<T> {
 				HotelInitializer hotelInitializer = (HotelInitializer)theEObject;
 				T result = caseHotelInitializer(hotelInitializer);
 				if (result == null) result = caseIHotelStartupProvides(hotelInitializer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HotelsystemPackage.IHOTEL_RECEPTIONIST_PROVIDES: {
-				IHotelReceptionistProvides iHotelReceptionistProvides = (IHotelReceptionistProvides)theEObject;
-				T result = caseIHotelReceptionistProvides(iHotelReceptionistProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

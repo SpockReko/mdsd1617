@@ -1,13 +1,13 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.impl;
+package se.chalmers.cse.mdsd1617.group13.actor.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import se.chalmers.cse.mdsd1617.group13.Group13Package;
-import se.chalmers.cse.mdsd1617.group13.User;
+import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
+import se.chalmers.cse.mdsd1617.group13.actor.User;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Group13Package.Literals.USER;
+		return ActorPackage.Literals.USER;
 	}
 
 } //UserImpl

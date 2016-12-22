@@ -1,13 +1,13 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.util;
+package se.chalmers.cse.mdsd1617.group13.actor.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import se.chalmers.cse.mdsd1617.group13.*;
+import se.chalmers.cse.mdsd1617.group13.actor.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import se.chalmers.cse.mdsd1617.group13.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see se.chalmers.cse.mdsd1617.group13.Group13Package
+ * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage
  * @generated
  */
-public class Group13Switch<T> extends Switch<T> {
+public class ActorSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static Group13Package modelPackage;
+	protected static ActorPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class Group13Switch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Group13Switch() {
+	public ActorSwitch() {
 		if (modelPackage == null) {
-			modelPackage = Group13Package.eINSTANCE;
+			modelPackage = ActorPackage.eINSTANCE;
 		}
 	}
 
@@ -66,20 +66,20 @@ public class Group13Switch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Group13Package.USER: {
+			case ActorPackage.USER: {
 				User user = (User)theEObject;
 				T result = caseUser(user);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Group13Package.RECEPTIONIST: {
+			case ActorPackage.RECEPTIONIST: {
 				Receptionist receptionist = (Receptionist)theEObject;
 				T result = caseReceptionist(receptionist);
 				if (result == null) result = caseUser(receptionist);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Group13Package.ADMINISTRATOR: {
+			case ActorPackage.ADMINISTRATOR: {
 				Administrator administrator = (Administrator)theEObject;
 				T result = caseAdministrator(administrator);
 				if (result == null) result = caseUser(administrator);
@@ -151,4 +151,4 @@ public class Group13Switch<T> extends Switch<T> {
 		return null;
 	}
 
-} //Group13Switch
+} //ActorSwitch

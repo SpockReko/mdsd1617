@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13;
+package se.chalmers.cse.mdsd1617.group13.actor;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getUser()
+ * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#getUser()
  * @model
  * @generated
  */

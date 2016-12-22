@@ -65,7 +65,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelReceptionistProvides()
 	 * @generated
 	 */
-	int IHOTEL_RECEPTIONIST_PROVIDES = 16;
+	int IHOTEL_RECEPTIONIST_PROVIDES = 10;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Receptionist Provides</em>' class.
@@ -1020,7 +1020,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getRoomHandler()
 	 * @generated
 	 */
-	int ROOM_HANDLER = 12;
+	int ROOM_HANDLER = 13;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.RoomImpl <em>Room</em>}' class.
@@ -1040,7 +1040,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelCustomerProvides()
 	 * @generated
 	 */
-	int IHOTEL_CUSTOMER_PROVIDES = 10;
+	int IHOTEL_CUSTOMER_PROVIDES = 11;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.FreeRoomTypesDTOImpl <em>Free Room Types DTO</em>}' class.
@@ -1050,7 +1050,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getFreeRoomTypesDTO()
 	 * @generated
 	 */
-	int FREE_ROOM_TYPES_DTO = 11;
+	int FREE_ROOM_TYPES_DTO = 12;
 
 	/**
 	 * The feature id for the '<em><b>Occupied</b></em>' attribute.
@@ -1600,7 +1600,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelAdministratorProvides()
 	 * @generated
 	 */
-	int IHOTEL_ADMINISTRATOR_PROVIDES = 13;
+	int IHOTEL_ADMINISTRATOR_PROVIDES = 14;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Administrator Provides</em>' class.
@@ -1700,7 +1700,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getIHotelStartupProvides()
 	 * @generated
 	 */
-	int IHOTEL_STARTUP_PROVIDES = 14;
+	int IHOTEL_STARTUP_PROVIDES = 15;
 
 	/**
 	 * The number of structural features of the '<em>IHotel Startup Provides</em>' class.
@@ -1737,7 +1737,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl#getHotelInitializer()
 	 * @generated
 	 */
-	int HOTEL_INITIALIZER = 15;
+	int HOTEL_INITIALIZER = 16;
 
 	/**
 	 * The feature id for the '<em><b>Room Handler</b></em>' reference.

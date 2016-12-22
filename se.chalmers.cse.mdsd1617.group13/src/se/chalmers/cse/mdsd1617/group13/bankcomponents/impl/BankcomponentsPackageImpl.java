@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
-import se.chalmers.cse.mdsd1617.group13.Group13Package;
-
+import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
+import se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl;
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankAdministrator;
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsFactory;
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage;
@@ -20,8 +20,6 @@ import se.chalmers.cse.mdsd1617.group13.bankcomponents.ICustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemPackageImpl;
-
-import se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -101,18 +99,18 @@ public class BankcomponentsPackageImpl extends EPackageImpl implements Bankcompo
 		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Group13PackageImpl theGroup13Package = (Group13PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Group13Package.eNS_URI) instanceof Group13PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Group13Package.eNS_URI) : Group13Package.eINSTANCE);
 		HotelsystemPackageImpl theHotelsystemPackage = (HotelsystemPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI) instanceof HotelsystemPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HotelsystemPackage.eNS_URI) : HotelsystemPackage.eINSTANCE);
+		ActorPackageImpl theActorPackage = (ActorPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ActorPackage.eNS_URI) instanceof ActorPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ActorPackage.eNS_URI) : ActorPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBankcomponentsPackage.createPackageContents();
-		theGroup13Package.createPackageContents();
 		theHotelsystemPackage.createPackageContents();
+		theActorPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBankcomponentsPackage.initializePackageContents();
-		theGroup13Package.initializePackageContents();
 		theHotelsystemPackage.initializePackageContents();
+		theActorPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theBankcomponentsPackage.freeze();
@@ -331,6 +329,9 @@ public class BankcomponentsPackageImpl extends EPackageImpl implements Bankcompo
 		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
 	}
 
 } //BankcomponentsPackageImpl

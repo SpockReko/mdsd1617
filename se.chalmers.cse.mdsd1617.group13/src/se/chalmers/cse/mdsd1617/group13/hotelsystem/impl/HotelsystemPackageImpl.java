@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
-import se.chalmers.cse.mdsd1617.group13.Group13Package;
-
+import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
+import se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl;
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage;
 
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.impl.BankcomponentsPackageImpl;
@@ -36,8 +36,6 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomExtra;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomType;
-
-import se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -215,18 +213,18 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		TypesPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Group13PackageImpl theGroup13Package = (Group13PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Group13Package.eNS_URI) instanceof Group13PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Group13Package.eNS_URI) : Group13Package.eINSTANCE);
 		BankcomponentsPackageImpl theBankcomponentsPackage = (BankcomponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) instanceof BankcomponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BankcomponentsPackage.eNS_URI) : BankcomponentsPackage.eINSTANCE);
+		ActorPackageImpl theActorPackage = (ActorPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ActorPackage.eNS_URI) instanceof ActorPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ActorPackage.eNS_URI) : ActorPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theHotelsystemPackage.createPackageContents();
-		theGroup13Package.createPackageContents();
 		theBankcomponentsPackage.createPackageContents();
+		theActorPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theHotelsystemPackage.initializePackageContents();
-		theGroup13Package.initializePackageContents();
 		theBankcomponentsPackage.initializePackageContents();
+		theActorPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theHotelsystemPackage.freeze();
@@ -1420,6 +1418,20 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING);
 		createEOperation(iRoomHandlerEClass, IROOM_HANDLER___GET_ALL_ROOMS);
 
+		iHotelReceptionistProvidesEClass = createEClass(IHOTEL_RECEPTIONIST_PROVIDES);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___EDIT_BOOKING_TIME__INT_STRING_STRING);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING_INT);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_FREE_ROOMS__INT);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___CHECK_IN__INT_INT);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___CANCEL_BOOKING__INT);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_BOOKINGS);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_OCCUPIED_ROOMS__STRING);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_CHECKINS__STRING_STRING);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_CHECKOUTS__STRING_STRING);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT);
+		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__ROOMTYPE_STRING_STRING);
+
 		iHotelCustomerProvidesEClass = createEClass(IHOTEL_CUSTOMER_PROVIDES);
 		createEOperation(iHotelCustomerProvidesEClass, IHOTEL_CUSTOMER_PROVIDES___GET_FREE_ROOMS__INT_STRING_STRING);
 		createEOperation(iHotelCustomerProvidesEClass, IHOTEL_CUSTOMER_PROVIDES___INITIATE_BOOKING__STRING_STRING_STRING_STRING);
@@ -1458,20 +1470,6 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		hotelInitializerEClass = createEClass(HOTEL_INITIALIZER);
 		createEReference(hotelInitializerEClass, HOTEL_INITIALIZER__ROOM_HANDLER);
-
-		iHotelReceptionistProvidesEClass = createEClass(IHOTEL_RECEPTIONIST_PROVIDES);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___EDIT_BOOKING_TIME__INT_STRING_STRING);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___ADD_ROOM_TYPE_TO_BOOKING__INT_STRING_INT);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___REMOVE_ROOM_TYPE_FROM_BOOKING__INT_STRING_INT);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_FREE_ROOMS__INT);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___CHECK_IN__INT_INT);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___CANCEL_BOOKING__INT);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_BOOKINGS);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_OCCUPIED_ROOMS__STRING);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_CHECKINS__STRING_STRING);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___LIST_CHECKOUTS__STRING_STRING);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___ADD_EXTRA_TO_ROOM__INT_INT_STRING_INT);
-		createEOperation(iHotelReceptionistProvidesEClass, IHOTEL_RECEPTIONIST_PROVIDES___GET_FREE_ROOM__ROOMTYPE_STRING_STRING);
 	}
 
 	/**
@@ -1652,6 +1650,57 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 
 		initEOperation(getIRoomHandler__GetAllRooms(), this.getRoom(), "getAllRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
+		initEClass(iHotelReceptionistProvidesEClass, IHotelReceptionistProvides.class, "IHotelReceptionistProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getIHotelReceptionistProvides__EditBookingTime__int_String_String(), ecorePackage.getEBoolean(), "editBookingTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "reservationId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__AddRoomTypeToBooking__int_String_int(), ecorePackage.getEBoolean(), "addRoomTypeToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "numberOfRoomsForType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__RemoveRoomTypeFromBooking__int_String_int(), ecorePackage.getEBoolean(), "removeRoomTypeFromBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "nbrToRemove", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__ListFreeRooms__int(), ecorePackage.getEInt(), "listFreeRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__CheckIn__int_int(), ecorePackage.getEEList(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomNumbers", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__CancelBooking__int(), ecorePackage.getEBoolean(), "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getIHotelReceptionistProvides__ListBookings(), this.getBooking(), "listBookings", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__ListOccupiedRooms__String(), ecorePackage.getEMap(), "listOccupiedRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__ListCheckins__String_String(), ecorePackage.getEEList(), "listCheckins", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__ListCheckouts__String_String(), ecorePackage.getEEList(), "listCheckouts", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__AddExtraToRoom__int_int_String_int(), ecorePackage.getEBoolean(), "addExtraToRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "extraDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIHotelReceptionistProvides__GetFreeRoom__RoomType_String_String(), this.getRoom(), "getFreeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(iHotelCustomerProvidesEClass, IHotelCustomerProvides.class, "IHotelCustomerProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getIHotelCustomerProvides__GetFreeRooms__int_String_String(), this.getFreeRoomTypesDTO(), "getFreeRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
@@ -1758,56 +1807,8 @@ public class HotelsystemPackageImpl extends EPackageImpl implements HotelsystemP
 		initEClass(hotelInitializerEClass, HotelInitializer.class, "HotelInitializer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHotelInitializer_RoomHandler(), this.getRoomHandler(), null, "roomHandler", null, 1, 1, HotelInitializer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(iHotelReceptionistProvidesEClass, IHotelReceptionistProvides.class, "IHotelReceptionistProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getIHotelReceptionistProvides__EditBookingTime__int_String_String(), ecorePackage.getEBoolean(), "editBookingTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "reservationId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__AddRoomTypeToBooking__int_String_int(), ecorePackage.getEBoolean(), "addRoomTypeToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "numberOfRoomsForType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__RemoveRoomTypeFromBooking__int_String_int(), ecorePackage.getEBoolean(), "removeRoomTypeFromBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "nbrToRemove", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__ListFreeRooms__int(), ecorePackage.getEInt(), "listFreeRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__CheckIn__int_int(), ecorePackage.getEEList(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomNumbers", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__CancelBooking__int(), ecorePackage.getEBoolean(), "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getIHotelReceptionistProvides__ListBookings(), this.getBooking(), "listBookings", 0, -1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__ListOccupiedRooms__String(), ecorePackage.getEMap(), "listOccupiedRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__ListCheckins__String_String(), ecorePackage.getEEList(), "listCheckins", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__ListCheckouts__String_String(), ecorePackage.getEEList(), "listCheckouts", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__AddExtraToRoom__int_int_String_int(), ecorePackage.getEBoolean(), "addExtraToRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bookingId", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "extraDescription", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIHotelReceptionistProvides__GetFreeRoom__RoomType_String_String(), this.getRoom(), "getFreeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		// Create resource
+		createResource(eNS_URI);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

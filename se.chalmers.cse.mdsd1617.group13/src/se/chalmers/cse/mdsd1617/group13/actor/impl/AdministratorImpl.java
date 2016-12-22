@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.impl;
+package se.chalmers.cse.mdsd1617.group13.actor.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import se.chalmers.cse.mdsd1617.group13.Administrator;
-import se.chalmers.cse.mdsd1617.group13.Group13Package;
+import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
+import se.chalmers.cse.mdsd1617.group13.actor.Administrator;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides;
@@ -23,8 +23,8 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.impl.AdministratorImpl#getIadministratorprovides <em>Iadministratorprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.impl.AdministratorImpl#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.impl.AdministratorImpl#getIadministratorprovides <em>Iadministratorprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.impl.AdministratorImpl#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Group13Package.Literals.ADMINISTRATOR;
+		return ActorPackage.Literals.ADMINISTRATOR;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 			iadministratorprovides = (IHotelAdministratorProvides)eResolveProxy(oldIadministratorprovides);
 			if (iadministratorprovides != oldIadministratorprovides) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Group13Package.ADMINISTRATOR__IADMINISTRATORPROVIDES, oldIadministratorprovides, iadministratorprovides));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActorPackage.ADMINISTRATOR__IADMINISTRATORPROVIDES, oldIadministratorprovides, iadministratorprovides));
 			}
 		}
 		return iadministratorprovides;
@@ -104,7 +104,7 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 		IHotelAdministratorProvides oldIadministratorprovides = iadministratorprovides;
 		iadministratorprovides = newIadministratorprovides;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Group13Package.ADMINISTRATOR__IADMINISTRATORPROVIDES, oldIadministratorprovides, iadministratorprovides));
+			eNotify(new ENotificationImpl(this, Notification.SET, ActorPackage.ADMINISTRATOR__IADMINISTRATORPROVIDES, oldIadministratorprovides, iadministratorprovides));
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 			ihotelstartupprovides = (IHotelStartupProvides)eResolveProxy(oldIhotelstartupprovides);
 			if (ihotelstartupprovides != oldIhotelstartupprovides) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Group13Package.ADMINISTRATOR__IHOTELSTARTUPPROVIDES, oldIhotelstartupprovides, ihotelstartupprovides));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActorPackage.ADMINISTRATOR__IHOTELSTARTUPPROVIDES, oldIhotelstartupprovides, ihotelstartupprovides));
 			}
 		}
 		return ihotelstartupprovides;
@@ -142,7 +142,7 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 		IHotelStartupProvides oldIhotelstartupprovides = ihotelstartupprovides;
 		ihotelstartupprovides = newIhotelstartupprovides;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Group13Package.ADMINISTRATOR__IHOTELSTARTUPPROVIDES, oldIhotelstartupprovides, ihotelstartupprovides));
+			eNotify(new ENotificationImpl(this, Notification.SET, ActorPackage.ADMINISTRATOR__IHOTELSTARTUPPROVIDES, oldIhotelstartupprovides, ihotelstartupprovides));
 	}
 
 	/**
@@ -153,10 +153,10 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Group13Package.ADMINISTRATOR__IADMINISTRATORPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IADMINISTRATORPROVIDES:
 				if (resolve) return getIadministratorprovides();
 				return basicGetIadministratorprovides();
-			case Group13Package.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
 				if (resolve) return getIhotelstartupprovides();
 				return basicGetIhotelstartupprovides();
 		}
@@ -171,10 +171,10 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Group13Package.ADMINISTRATOR__IADMINISTRATORPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IADMINISTRATORPROVIDES:
 				setIadministratorprovides((IHotelAdministratorProvides)newValue);
 				return;
-			case Group13Package.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
 				setIhotelstartupprovides((IHotelStartupProvides)newValue);
 				return;
 		}
@@ -189,10 +189,10 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Group13Package.ADMINISTRATOR__IADMINISTRATORPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IADMINISTRATORPROVIDES:
 				setIadministratorprovides((IHotelAdministratorProvides)null);
 				return;
-			case Group13Package.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
 				setIhotelstartupprovides((IHotelStartupProvides)null);
 				return;
 		}
@@ -207,9 +207,9 @@ public class AdministratorImpl extends UserImpl implements Administrator {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Group13Package.ADMINISTRATOR__IADMINISTRATORPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IADMINISTRATORPROVIDES:
 				return iadministratorprovides != null;
-			case Group13Package.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
+			case ActorPackage.ADMINISTRATOR__IHOTELSTARTUPPROVIDES:
 				return ihotelstartupprovides != null;
 		}
 		return super.eIsSet(featureID);

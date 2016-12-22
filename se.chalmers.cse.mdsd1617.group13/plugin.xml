@@ -10,14 +10,6 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated se -->
       <package
-            uri="http:///se/chalmers/cse/mdsd1617/group13.ecore"
-            class="se.chalmers.cse.mdsd1617.group13.Group13Package"
-            genModel="se.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated se -->
-      <package
             uri="http:///se/chalmers/cse/mdsd1617/group13/hotelsystem.ecore"
             class="se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage"
             genModel="se.genmodel"/>
@@ -28,6 +20,14 @@
       <package
             uri="http:///se/chalmers/cse/mdsd1617/group13/bankcomponents.ecore"
             class="se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage"
+            genModel="se.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated se -->
+      <package
+            uri="http:///se/chalmers/cse/mdsd1617/group13/actor.ecore"
+            class="se.chalmers.cse.mdsd1617.group13.actor.ActorPackage"
             genModel="se.genmodel"/>
    </extension>
 </plugin>

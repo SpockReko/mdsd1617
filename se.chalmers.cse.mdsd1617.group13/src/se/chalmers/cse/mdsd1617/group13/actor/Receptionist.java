@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13;
+package se.chalmers.cse.mdsd1617.group13.actor;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
@@ -14,11 +14,11 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.Receptionist#getIreceptionistprovides <em>Ireceptionistprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.Receptionist#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIreceptionistprovides <em>Ireceptionistprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}</li>
  * </ul>
  *
- * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getReceptionist()
+ * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#getReceptionist()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface Receptionist extends User {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ireceptionistprovides</em>' reference.
 	 * @see #setIreceptionistprovides(IHotelReceptionistProvides)
-	 * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getReceptionist_Ireceptionistprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#getReceptionist_Ireceptionistprovides()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	IHotelReceptionistProvides getIreceptionistprovides();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.Receptionist#getIreceptionistprovides <em>Ireceptionistprovides</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIreceptionistprovides <em>Ireceptionistprovides</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ireceptionistprovides</em>' reference.
@@ -59,14 +59,14 @@ public interface Receptionist extends User {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ihotelcustomerprovides</em>' reference.
 	 * @see #setIhotelcustomerprovides(IHotelCustomerProvides)
-	 * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getReceptionist_Ihotelcustomerprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#getReceptionist_Ihotelcustomerprovides()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	IHotelCustomerProvides getIhotelcustomerprovides();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.Receptionist#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ihotelcustomerprovides</em>' reference.

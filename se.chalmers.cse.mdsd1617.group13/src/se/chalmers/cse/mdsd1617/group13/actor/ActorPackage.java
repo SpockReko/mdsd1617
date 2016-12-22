@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13;
+package se.chalmers.cse.mdsd1617.group13.actor;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -18,18 +18,18 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see se.chalmers.cse.mdsd1617.group13.Group13Factory
+ * @see se.chalmers.cse.mdsd1617.group13.actor.ActorFactory
  * @model kind="package"
  * @generated
  */
-public interface Group13Package extends EPackage {
+public interface ActorPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "group13";
+	String eNAME = "actor";
 
 	/**
 	 * The package namespace URI.
@@ -37,7 +37,7 @@ public interface Group13Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///se/chalmers/cse/mdsd1617/group13.ecore";
+	String eNS_URI = "http:///se/chalmers/cse/mdsd1617/group13/actor.ecore";
 
 	/**
 	 * The package namespace name.
@@ -45,7 +45,7 @@ public interface Group13Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "se.chalmers.cse.mdsd1617.group13";
+	String eNS_PREFIX = "se.chalmers.cse.mdsd1617.group13.actor";
 
 	/**
 	 * The singleton instance of the package.
@@ -53,14 +53,14 @@ public interface Group13Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	Group13Package eINSTANCE = se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl.init();
+	ActorPackage eINSTANCE = se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.impl.UserImpl <em>User</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.actor.impl.UserImpl <em>User</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.impl.UserImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl#getUser()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.UserImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl#getUser()
 	 * @generated
 	 */
 	int USER = 0;
@@ -84,11 +84,11 @@ public interface Group13Package extends EPackage {
 	int USER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.impl.ReceptionistImpl <em>Receptionist</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.actor.impl.ReceptionistImpl <em>Receptionist</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.impl.ReceptionistImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl#getReceptionist()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ReceptionistImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl#getReceptionist()
 	 * @generated
 	 */
 	int RECEPTIONIST = 1;
@@ -130,11 +130,11 @@ public interface Group13Package extends EPackage {
 	int RECEPTIONIST_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.impl.AdministratorImpl <em>Administrator</em>}' class.
+	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.actor.impl.AdministratorImpl <em>Administrator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.chalmers.cse.mdsd1617.group13.impl.AdministratorImpl
-	 * @see se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl#getAdministrator()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.AdministratorImpl
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl#getAdministrator()
 	 * @generated
 	 */
 	int ADMINISTRATOR = 2;
@@ -177,74 +177,74 @@ public interface Group13Package extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.User <em>User</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.actor.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>User</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.User
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.User
 	 * @generated
 	 */
 	EClass getUser();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.Receptionist <em>Receptionist</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.actor.Receptionist <em>Receptionist</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Receptionist</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.Receptionist
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.Receptionist
 	 * @generated
 	 */
 	EClass getReceptionist();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.Receptionist#getIreceptionistprovides <em>Ireceptionistprovides</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIreceptionistprovides <em>Ireceptionistprovides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ireceptionistprovides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.Receptionist#getIreceptionistprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIreceptionistprovides()
 	 * @see #getReceptionist()
 	 * @generated
 	 */
 	EReference getReceptionist_Ireceptionistprovides();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.Receptionist#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ihotelcustomerprovides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.Receptionist#getIhotelcustomerprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.Receptionist#getIhotelcustomerprovides()
 	 * @see #getReceptionist()
 	 * @generated
 	 */
 	EReference getReceptionist_Ihotelcustomerprovides();
 
 	/**
-	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.Administrator <em>Administrator</em>}'.
+	 * Returns the meta object for class '{@link se.chalmers.cse.mdsd1617.group13.actor.Administrator <em>Administrator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Administrator</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.Administrator
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.Administrator
 	 * @generated
 	 */
 	EClass getAdministrator();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.Administrator#getIadministratorprovides <em>Iadministratorprovides</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIadministratorprovides <em>Iadministratorprovides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Iadministratorprovides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.Administrator#getIadministratorprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIadministratorprovides()
 	 * @see #getAdministrator()
 	 * @generated
 	 */
 	EReference getAdministrator_Iadministratorprovides();
 
 	/**
-	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.Administrator#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}'.
+	 * Returns the meta object for the reference '{@link se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Ihotelstartupprovides</em>'.
-	 * @see se.chalmers.cse.mdsd1617.group13.Administrator#getIhotelstartupprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIhotelstartupprovides()
 	 * @see #getAdministrator()
 	 * @generated
 	 */
@@ -257,7 +257,7 @@ public interface Group13Package extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	Group13Factory getGroup13Factory();
+	ActorFactory getActorFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -274,21 +274,21 @@ public interface Group13Package extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.impl.UserImpl <em>User</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.actor.impl.UserImpl <em>User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.impl.UserImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl#getUser()
+		 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.UserImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl#getUser()
 		 * @generated
 		 */
 		EClass USER = eINSTANCE.getUser();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.impl.ReceptionistImpl <em>Receptionist</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.actor.impl.ReceptionistImpl <em>Receptionist</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.impl.ReceptionistImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl#getReceptionist()
+		 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ReceptionistImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl#getReceptionist()
 		 * @generated
 		 */
 		EClass RECEPTIONIST = eINSTANCE.getReceptionist();
@@ -310,11 +310,11 @@ public interface Group13Package extends EPackage {
 		EReference RECEPTIONIST__IHOTELCUSTOMERPROVIDES = eINSTANCE.getReceptionist_Ihotelcustomerprovides();
 
 		/**
-		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.impl.AdministratorImpl <em>Administrator</em>}' class.
+		 * The meta object literal for the '{@link se.chalmers.cse.mdsd1617.group13.actor.impl.AdministratorImpl <em>Administrator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.chalmers.cse.mdsd1617.group13.impl.AdministratorImpl
-		 * @see se.chalmers.cse.mdsd1617.group13.impl.Group13PackageImpl#getAdministrator()
+		 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.AdministratorImpl
+		 * @see se.chalmers.cse.mdsd1617.group13.actor.impl.ActorPackageImpl#getAdministrator()
 		 * @generated
 		 */
 		EClass ADMINISTRATOR = eINSTANCE.getAdministrator();
@@ -337,4 +337,4 @@ public interface Group13Package extends EPackage {
 
 	}
 
-} //Group13Package
+} //ActorPackage

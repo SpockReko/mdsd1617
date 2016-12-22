@@ -1,4 +1,4 @@
-package se.chalmers.cse.mdsd1617.group13.impl;
+package se.chalmers.cse.mdsd1617.group13.actor.test;
 
 import static org.junit.Assert.*;
 
@@ -11,26 +11,26 @@ import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
 
-import se.chalmers.cse.mdsd1617.group13.Administrator;
-import se.chalmers.cse.mdsd1617.group13.Receptionist;
+import se.chalmers.cse.mdsd1617.group13.actor.Administrator;
+import se.chalmers.cse.mdsd1617.group13.actor.Receptionist;
+import se.chalmers.cse.mdsd1617.group13.actor.impl.ActorFactoryImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IReceptionistProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
+
 
 public class ReceptionistBookingTests {
 
-	static Receptionist receptionist = new Group13FactoryImpl().createReceptionist();
-	static Administrator admin = new Group13FactoryImpl().createAdministrator();
+	static Receptionist receptionist = new ActorFactoryImpl().createReceptionist();
+	static Administrator admin = new ActorFactoryImpl().createAdministrator();
 	//static BankAdministratorImpl bankAdmin = new BankAdministratorImpl();
 	static HotelInitializer hotelInitializer = new HotelsystemFactoryImpl().createHotelInitializer();
 	static BookingHandler bookingHandler = new HotelsystemFactoryImpl().createBookingHandler();

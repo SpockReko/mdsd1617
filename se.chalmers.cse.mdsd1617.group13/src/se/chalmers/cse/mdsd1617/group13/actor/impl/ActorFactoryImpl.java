@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.impl;
+package se.chalmers.cse.mdsd1617.group13.actor.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import se.chalmers.cse.mdsd1617.group13.*;
+import se.chalmers.cse.mdsd1617.group13.actor.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,24 +18,24 @@ import se.chalmers.cse.mdsd1617.group13.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Group13FactoryImpl extends EFactoryImpl implements Group13Factory {
+public class ActorFactoryImpl extends EFactoryImpl implements ActorFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static Group13Factory init() {
+	public static ActorFactory init() {
 		try {
-			Group13Factory theGroup13Factory = (Group13Factory)EPackage.Registry.INSTANCE.getEFactory(Group13Package.eNS_URI);
-			if (theGroup13Factory != null) {
-				return theGroup13Factory;
+			ActorFactory theActorFactory = (ActorFactory)EPackage.Registry.INSTANCE.getEFactory(ActorPackage.eNS_URI);
+			if (theActorFactory != null) {
+				return theActorFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new Group13FactoryImpl();
+		return new ActorFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Group13FactoryImpl extends EFactoryImpl implements Group13Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Group13FactoryImpl() {
+	public ActorFactoryImpl() {
 		super();
 	}
 
@@ -56,9 +56,9 @@ public class Group13FactoryImpl extends EFactoryImpl implements Group13Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Group13Package.USER: return createUser();
-			case Group13Package.RECEPTIONIST: return createReceptionist();
-			case Group13Package.ADMINISTRATOR: return createAdministrator();
+			case ActorPackage.USER: return createUser();
+			case ActorPackage.RECEPTIONIST: return createReceptionist();
+			case ActorPackage.ADMINISTRATOR: return createAdministrator();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -99,8 +99,8 @@ public class Group13FactoryImpl extends EFactoryImpl implements Group13Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Group13Package getGroup13Package() {
-		return (Group13Package)getEPackage();
+	public ActorPackage getActorPackage() {
+		return (ActorPackage)getEPackage();
 	}
 
 	/**
@@ -110,8 +110,8 @@ public class Group13FactoryImpl extends EFactoryImpl implements Group13Factory {
 	 * @generated
 	 */
 	@Deprecated
-	public static Group13Package getPackage() {
-		return Group13Package.eINSTANCE;
+	public static ActorPackage getPackage() {
+		return ActorPackage.eINSTANCE;
 	}
 
-} //Group13FactoryImpl
+} //ActorFactoryImpl

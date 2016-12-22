@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13.impl;
+package se.chalmers.cse.mdsd1617.group13.actor.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import se.chalmers.cse.mdsd1617.group13.Group13Package;
-import se.chalmers.cse.mdsd1617.group13.Receptionist;
+import se.chalmers.cse.mdsd1617.group13.actor.ActorPackage;
+import se.chalmers.cse.mdsd1617.group13.actor.Receptionist;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
@@ -23,8 +23,8 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.impl.ReceptionistImpl#getIreceptionistprovides <em>Ireceptionistprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.impl.ReceptionistImpl#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.impl.ReceptionistImpl#getIreceptionistprovides <em>Ireceptionistprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.impl.ReceptionistImpl#getIhotelcustomerprovides <em>Ihotelcustomerprovides</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Group13Package.Literals.RECEPTIONIST;
+		return ActorPackage.Literals.RECEPTIONIST;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 			ireceptionistprovides = (IHotelReceptionistProvides)eResolveProxy(oldIreceptionistprovides);
 			if (ireceptionistprovides != oldIreceptionistprovides) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES, oldIreceptionistprovides, ireceptionistprovides));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActorPackage.RECEPTIONIST__IRECEPTIONISTPROVIDES, oldIreceptionistprovides, ireceptionistprovides));
 			}
 		}
 		return ireceptionistprovides;
@@ -104,7 +104,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 		IHotelReceptionistProvides oldIreceptionistprovides = ireceptionistprovides;
 		ireceptionistprovides = newIreceptionistprovides;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES, oldIreceptionistprovides, ireceptionistprovides));
+			eNotify(new ENotificationImpl(this, Notification.SET, ActorPackage.RECEPTIONIST__IRECEPTIONISTPROVIDES, oldIreceptionistprovides, ireceptionistprovides));
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 			ihotelcustomerprovides = (IHotelCustomerProvides)eResolveProxy(oldIhotelcustomerprovides);
 			if (ihotelcustomerprovides != oldIhotelcustomerprovides) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES, oldIhotelcustomerprovides, ihotelcustomerprovides));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActorPackage.RECEPTIONIST__IHOTELCUSTOMERPROVIDES, oldIhotelcustomerprovides, ihotelcustomerprovides));
 			}
 		}
 		return ihotelcustomerprovides;
@@ -142,7 +142,7 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 		IHotelCustomerProvides oldIhotelcustomerprovides = ihotelcustomerprovides;
 		ihotelcustomerprovides = newIhotelcustomerprovides;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES, oldIhotelcustomerprovides, ihotelcustomerprovides));
+			eNotify(new ENotificationImpl(this, Notification.SET, ActorPackage.RECEPTIONIST__IHOTELCUSTOMERPROVIDES, oldIhotelcustomerprovides, ihotelcustomerprovides));
 	}
 
 	/**
@@ -153,10 +153,10 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES:
+			case ActorPackage.RECEPTIONIST__IRECEPTIONISTPROVIDES:
 				if (resolve) return getIreceptionistprovides();
 				return basicGetIreceptionistprovides();
-			case Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
+			case ActorPackage.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
 				if (resolve) return getIhotelcustomerprovides();
 				return basicGetIhotelcustomerprovides();
 		}
@@ -171,10 +171,10 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES:
+			case ActorPackage.RECEPTIONIST__IRECEPTIONISTPROVIDES:
 				setIreceptionistprovides((IHotelReceptionistProvides)newValue);
 				return;
-			case Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
+			case ActorPackage.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
 				setIhotelcustomerprovides((IHotelCustomerProvides)newValue);
 				return;
 		}
@@ -189,10 +189,10 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES:
+			case ActorPackage.RECEPTIONIST__IRECEPTIONISTPROVIDES:
 				setIreceptionistprovides((IHotelReceptionistProvides)null);
 				return;
-			case Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
+			case ActorPackage.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
 				setIhotelcustomerprovides((IHotelCustomerProvides)null);
 				return;
 		}
@@ -207,9 +207,9 @@ public class ReceptionistImpl extends UserImpl implements Receptionist {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Group13Package.RECEPTIONIST__IRECEPTIONISTPROVIDES:
+			case ActorPackage.RECEPTIONIST__IRECEPTIONISTPROVIDES:
 				return ireceptionistprovides != null;
-			case Group13Package.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
+			case ActorPackage.RECEPTIONIST__IHOTELCUSTOMERPROVIDES:
 				return ihotelcustomerprovides != null;
 		}
 		return super.eIsSet(featureID);

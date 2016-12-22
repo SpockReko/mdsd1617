@@ -1,6 +1,6 @@
 /**
  */
-package se.chalmers.cse.mdsd1617.group13;
+package se.chalmers.cse.mdsd1617.group13.actor;
 
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelAdministratorProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides;
@@ -14,11 +14,11 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelStartupProvides;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.Administrator#getIadministratorprovides <em>Iadministratorprovides</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.Administrator#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIadministratorprovides <em>Iadministratorprovides</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}</li>
  * </ul>
  *
- * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getAdministrator()
+ * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#getAdministrator()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface Administrator extends User {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Iadministratorprovides</em>' reference.
 	 * @see #setIadministratorprovides(IHotelAdministratorProvides)
-	 * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getAdministrator_Iadministratorprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#getAdministrator_Iadministratorprovides()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	IHotelAdministratorProvides getIadministratorprovides();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.Administrator#getIadministratorprovides <em>Iadministratorprovides</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIadministratorprovides <em>Iadministratorprovides</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Iadministratorprovides</em>' reference.
@@ -59,14 +59,14 @@ public interface Administrator extends User {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ihotelstartupprovides</em>' reference.
 	 * @see #setIhotelstartupprovides(IHotelStartupProvides)
-	 * @see se.chalmers.cse.mdsd1617.group13.Group13Package#getAdministrator_Ihotelstartupprovides()
+	 * @see se.chalmers.cse.mdsd1617.group13.actor.ActorPackage#getAdministrator_Ihotelstartupprovides()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	IHotelStartupProvides getIhotelstartupprovides();
 
 	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.Administrator#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}' reference.
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.actor.Administrator#getIhotelstartupprovides <em>Ihotelstartupprovides</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ihotelstartupprovides</em>' reference.
