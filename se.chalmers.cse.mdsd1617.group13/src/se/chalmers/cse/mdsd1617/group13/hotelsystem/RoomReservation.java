@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getEndDate <em>End Date</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getRoom <em>Room</em>}</li>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckInDate <em>Check In Date</em>}</li>
+ *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckOuDate <em>Check Ou Date</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation()
@@ -173,6 +174,32 @@ public interface RoomReservation extends EObject {
 	 * @generated
 	 */
 	void setCheckInDate(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Check Ou Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Check Ou Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Check Ou Date</em>' attribute.
+	 * @see #setCheckOuDate(String)
+	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getRoomReservation_CheckOuDate()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	String getCheckOuDate();
+
+	/**
+	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation#getCheckOuDate <em>Check Ou Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Check Ou Date</em>' attribute.
+	 * @see #getCheckOuDate()
+	 * @generated
+	 */
+	void setCheckOuDate(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

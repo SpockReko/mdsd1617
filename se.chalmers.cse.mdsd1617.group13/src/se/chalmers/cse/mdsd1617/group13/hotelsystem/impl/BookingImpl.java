@@ -400,13 +400,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public double checkOut() {
 		double price = 0;
-		for(RoomReservation roomReservation : this.roomReservations) {
+		for(RoomReservation roomReservation : this.getRoomReservations()) {
 			price += roomReservation.checkOut(nrOfNights());
 		}
 		Bill bill = new BillImpl();
-		bill.setBillID(this.bookingId);
+		bill.setBillID(this.getBookingId());
 		bill.setPrice(price);
-		bills.add(bill);
+		this.getBills().add(bill);
 		return price;
 	}
 
@@ -466,8 +466,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public double getBookingPrice() {
-		for(Bill bill : bills) {
-			if(bill.getBillID() == this.bookingId) {
+		for(Bill bill : this.getBills()) {
+			if(bill.getBillID() == this.getBookingId()) {
 				return bill.getPrice();
 			}
 		}
@@ -494,6 +494,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public boolean isFree(int roomId, String bStartDate, String bEndDate) {
+		if(Integer.parseInt(bStartDate) > Integer.parseInt(bEndDate)){
+			return false;
+		}
 		for(RoomReservation r : roomReservations){
 			if(r.getRoomId() == roomId){
 				if(Integer.parseInt(bStartDate) > Integer.parseInt(r.getEndDate()) 
@@ -504,17 +507,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			}
 		}
 		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean CheckedInDate(String indexDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -544,7 +536,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				Bill bill = new BillImpl();
 				bill.setPrice(price);
 				bill.setBillID(this.bookingId + roomNumber);
-				bills.add(bill);
+				getBills().add(bill);
 				return price;
 			}
 		} 
@@ -710,8 +702,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getRoomPrice((Integer)arguments.get(0));
 			case HotelsystemPackage.BOOKING___IS_FREE__INT_STRING_STRING:
 				return isFree((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-			case HotelsystemPackage.BOOKING___CHECKED_IN_DATE__STRING:
-				return CheckedInDate((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING___ADD_EXTRA__ROOMEXTRA_INT:
 				return addExtra((RoomExtra)arguments.get(0), (Integer)arguments.get(1));
 			case HotelsystemPackage.BOOKING___CHECK_OUT_ROOM__INT:

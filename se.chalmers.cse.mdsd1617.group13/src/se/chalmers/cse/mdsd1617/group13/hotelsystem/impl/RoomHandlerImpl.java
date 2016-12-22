@@ -63,7 +63,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	protected RoomHandlerImpl() {
 		super();
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,7 +106,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public EList<RoomType> getAllRoomTypes(int nrOfBeds) {
 		EList<RoomType> result = new BasicEList<RoomType>();
 		for (RoomType type : roomTypes){
-			if(type.getNumBeds() == nrOfBeds){
+			if(type.getNumBeds() >= nrOfBeds){
 					result.add(type);
 			}
 		}
@@ -122,27 +122,12 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public EList<Integer> getFreeRooms() {
 		EList<Integer> freeRoomNbrs = new BasicEList<Integer>();
 		for(Room room : rooms){
-			if(!(room.isOccupied() && room.isBlocked())){
+			if(!(room.isOccupied() || room.isBlocked())){
 				int roomNumber = room.getRoomNumber();
 				freeRoomNbrs.add(roomNumber);
 			}
 		}
 		return freeRoomNbrs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public int countFreeRoom(RoomType roomType) {
-		int nbrOfFreeRooms = 0;
-		for(Room room : rooms){
-			if(room.getRoomtype().equals(roomType)){
-				nbrOfFreeRooms++;
-			}
-		}
-		return nbrOfFreeRooms;
 	}
 
 	/**
@@ -169,14 +154,14 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public boolean removeRoomType(String roomTypeDescription) {
 		for(Room room : rooms){
 			RoomType roomType = room.getRoomtype();
-			String description = roomType.getDescription();
+			String description = roomType.getName();
 			if(description.equals(roomTypeDescription)){
 				room.setRoomtype(null); //Throw exception or return false?
 			}
 		}
 		RoomType roomType = null;
 		for(RoomType type : roomTypes){
-			String description = type.getDescription();
+			String description = type.getName();
 			if(roomTypeDescription.equals(description)){
 				roomType = type;
 				break;
@@ -197,10 +182,12 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 */
 	public boolean changeRoomType(int roomNumber, String roomType) {
 		Room room = getRoom(roomNumber); 
-		if(room != null){
-			room.setRoomtype(getRoomType(roomType));
+		RoomType rt = getRoomType(roomType);
+		if(room != null && rt != null){
+			room.setRoomtype(rt);
 			return true;
 		}
+		
 		return false;
 	}
 
@@ -212,7 +199,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	public boolean addRoom(int roomNumber, String roomType) {
 		Room room = getRoom(roomNumber);
 		RoomType thisRoomType = getRoomType(roomType);
-		if(thisRoomType == null || room != null) {
+		if(thisRoomType == null || room != null || roomNumber < 1) {
 			return false;
 		}
 		room = new RoomImpl();
@@ -225,12 +212,16 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeRoom(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Room room = getRoom(roomNumber);
+		if(room != null && !room.isOccupied()){
+			rooms.remove(room);
+			return true;
+		}
+		
+		return false;
 	}
 
 	/**
@@ -239,16 +230,16 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated NOT
 	 */
 	public boolean blockRoom(int roomNumber) {
-		boolean roomIsBlocked = false;
+		if(rooms == null || rooms.isEmpty()) {
+			return false;
+		}
 		for (Room room: rooms){
-			if (room.getRoomNumber() == roomNumber){
-				room.isBlocked();
-				roomIsBlocked = true;
-			} else {
-				roomIsBlocked = false;
+			if (room.getRoomNumber() == roomNumber && !room.isOccupied()){
+				room.setBlocked(true);
+				return true;
 			}
 		}
-		return roomIsBlocked;
+		return false;
 	}
 
 	/**
@@ -289,10 +280,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 
 		roomTypes = new BasicEList<RoomType>(); 
 		rooms = new BasicEList<Room>();
-		addRoomType("Default", 1, 1, "None");
+		addRoomType("Default", 1000, 2, "None");
 
 		for(int i = 0; i < numberOfRooms; i++){ //create all rooms
-			addRoom(i, roomTypes.get(0).getName());
+			addRoom(i+1, roomTypes.get(0).getName());
 		}
 	}
 
@@ -308,6 +299,20 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 			}
 		}
 
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public Room getFreeRoomByType(String roomType) {
+		for(Room room : rooms) {
+			if(room.getRoomtype().getName().equals(roomType) && !room.isOccupied() && !room.isBlocked()) {
+				return room;
+			}
+		}
 		return null;
 	}
 
@@ -461,6 +466,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				return getAllRoomsByType((RoomType)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___GET_ROOM_TYPE__STRING:
 				return getRoomType((String)arguments.get(0));
+			case HotelsystemPackage.ROOM_HANDLER___GET_FREE_ROOM_BY_TYPE__STRING:
+				return getFreeRoomByType((String)arguments.get(0));
 			case HotelsystemPackage.ROOM_HANDLER___ADD_ROOM_TYPE__STRING_DOUBLE_INT_STRING:
 				return addRoomType((String)arguments.get(0), (Double)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case HotelsystemPackage.ROOM_HANDLER___EDIT_ROOM_TYPE__STRING_DOUBLE_INT_STRING:

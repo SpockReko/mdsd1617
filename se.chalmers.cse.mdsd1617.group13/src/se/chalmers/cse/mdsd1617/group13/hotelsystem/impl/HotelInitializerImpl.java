@@ -11,9 +11,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemFactory;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 
@@ -26,7 +25,6 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl#getRoomHandler <em>Room Handler</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelInitializerImpl#getBookingHandler <em>Booking Handler</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,16 +39,6 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected RoomHandler roomHandler;
-
-	/**
-	 * The cached value of the '{@link #getBookingHandler() <em>Booking Handler</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBookingHandler()
-	 * @generated
-	 * @ordered
-	 */
-	protected BookingHandler bookingHandler;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,9 +65,9 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	public void startup(int numRooms) {
-		roomHandler = new RoomHandlerImpl();
+		HotelsystemFactory factory = new HotelsystemFactoryImpl();
+		roomHandler = factory.createRoomHandler();
 		roomHandler.initialize(numRooms);
-		bookingHandler = new BookingHandlerImpl();
 	}
 
 	/**
@@ -125,53 +113,12 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingHandler getBookingHandler() {
-		if (bookingHandler != null && bookingHandler.eIsProxy()) {
-			InternalEObject oldBookingHandler = (InternalEObject)bookingHandler;
-			bookingHandler = (BookingHandler)eResolveProxy(oldBookingHandler);
-			if (bookingHandler != oldBookingHandler) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HotelsystemPackage.HOTEL_INITIALIZER__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
-			}
-		}
-		return bookingHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingHandler basicGetBookingHandler() {
-		return bookingHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBookingHandler(BookingHandler newBookingHandler) {
-		BookingHandler oldBookingHandler = bookingHandler;
-		bookingHandler = newBookingHandler;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HotelsystemPackage.HOTEL_INITIALIZER__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				if (resolve) return getRoomHandler();
 				return basicGetRoomHandler();
-			case HotelsystemPackage.HOTEL_INITIALIZER__BOOKING_HANDLER:
-				if (resolve) return getBookingHandler();
-				return basicGetBookingHandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -186,9 +133,6 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				setRoomHandler((RoomHandler)newValue);
-				return;
-			case HotelsystemPackage.HOTEL_INITIALIZER__BOOKING_HANDLER:
-				setBookingHandler((BookingHandler)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -205,9 +149,6 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				setRoomHandler((RoomHandler)null);
 				return;
-			case HotelsystemPackage.HOTEL_INITIALIZER__BOOKING_HANDLER:
-				setBookingHandler((BookingHandler)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -222,8 +163,6 @@ public class HotelInitializerImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case HotelsystemPackage.HOTEL_INITIALIZER__ROOM_HANDLER:
 				return roomHandler != null;
-			case HotelsystemPackage.HOTEL_INITIALIZER__BOOKING_HANDLER:
-				return bookingHandler != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -12,7 +12,6 @@ package se.chalmers.cse.mdsd1617.group13.hotelsystem;
  * </p>
  * <ul>
  *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getRoomHandler <em>Room Handler</em>}</li>
- *   <li>{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getBookingHandler <em>Booking Handler</em>}</li>
  * </ul>
  *
  * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer()
@@ -45,31 +44,5 @@ public interface HotelInitializer extends IHotelStartupProvides {
 	 * @generated
 	 */
 	void setRoomHandler(RoomHandler value);
-
-	/**
-	 * Returns the value of the '<em><b>Booking Handler</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Booking Handler</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking Handler</em>' reference.
-	 * @see #setBookingHandler(BookingHandler)
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage#getHotelInitializer_BookingHandler()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	BookingHandler getBookingHandler();
-
-	/**
-	 * Sets the value of the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer#getBookingHandler <em>Booking Handler</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Booking Handler</em>' reference.
-	 * @see #getBookingHandler()
-	 * @generated
-	 */
-	void setBookingHandler(BookingHandler value);
 
 } // HotelInitializer
