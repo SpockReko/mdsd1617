@@ -50,10 +50,10 @@ public interface IHotelAdministratorProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false"
+	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false"
 	 * @generated
 	 */
-	boolean addRoom(int roomNumber, String roomTypeDescription);
+	boolean addRoom(int roomNumber, String roomTypeName);
 
 	/**
 	 * <!-- begin-user-doc -->

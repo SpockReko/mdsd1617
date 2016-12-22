@@ -31,6 +31,7 @@ public class ReceptionistBookingTests {
 
 	static Receptionist receptionist = new ActorFactoryImpl().createReceptionist();
 	static Administrator admin = new ActorFactoryImpl().createAdministrator();
+
 	//static BankAdministratorImpl bankAdmin = new BankAdministratorImpl();
 	static HotelInitializer hotelInitializer = new HotelsystemFactoryImpl().createHotelInitializer();
 	static BookingHandler bookingHandler = new HotelsystemFactoryImpl().createBookingHandler();
@@ -38,7 +39,7 @@ public class ReceptionistBookingTests {
 	static PaymentHandler paymentHandler = new HotelsystemFactoryImpl().createPaymentHandler();
 	private static int booking3Roomnbr;
 
-	//this happens when the class is created and @Before happens every time a test is run
+	//this happens when the class is created
 	@BeforeClass
 	public static void setUpClass() throws Exception{
 		admin.setIhotelstartupprovides(hotelInitializer);

@@ -626,7 +626,7 @@
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_t9bh0Kn6Eeaqs-4dkG4NMQ" name="roomNumber">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_4-VDcKn6Eeaqs-4dkG4NMQ" name="roomTypeDescription">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_4-VDcKn6Eeaqs-4dkG4NMQ" name="roomTypeName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_7AGt8Kn6Eeaqs-4dkG4NMQ" name="return" direction="return">
