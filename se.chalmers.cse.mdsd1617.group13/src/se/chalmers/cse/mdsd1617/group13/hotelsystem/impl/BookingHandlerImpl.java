@@ -712,7 +712,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public boolean confirmBooking(int bookingID) {
 		Booking booking = getBookingById(bookingID);
-		if(booking == null){
+		if(booking == null || booking.isConfirmed()){
 			return false;
 		}
 		EList<RoomReservation> reservations = booking.getRoomReservations();

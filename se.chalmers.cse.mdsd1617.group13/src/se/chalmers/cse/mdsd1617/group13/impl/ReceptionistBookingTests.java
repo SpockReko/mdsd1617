@@ -21,6 +21,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.Room;
 
 public class ReceptionistBookingTests {
 
@@ -138,10 +139,38 @@ public class ReceptionistBookingTests {
 	}
 */
 	
+	//Test for UC 2.1.1 Make a booking
+	@Test
+	public void testMakeBooking(){
+		//Searching for free rooms is tested in testGetFreeRooms
+		int bookingNbr = bookingHandler.initiateBooking("testFirstName", "testEndName", "20161216", "20170102");
+		bookingHandler.addRoomTypeToBooking(bookingNbr, "Default", 4);
+		bookingHandler.confirmBooking(bookingNbr);
+		assertFalse(bookingHandler.confirmBooking(bookingNbr)); //Cannot confirm twice
+		EList<Booking> allBookings = bookingHandler.getBookings();
+		Booking bookedBooking = null;
+		//Find booking object with correct ID
+		for(Booking booking : allBookings){
+			if(booking.getBookingId() == bookingNbr){
+				bookedBooking = booking;
+			}
+		}
+		assertFalse(bookedBooking == null); //Booking object has been added to list of bookings
+		assertTrue(bookedBooking.isConfirmed());
+		assertFalse(bookedBooking.isCanceled()); //Booking is not canceled
+		EList<RoomReservation> reservations = bookedBooking.getRoomReservations();
+		for(RoomReservation reservation : reservations){
+			//No rooms has been added to reservation since it is not yet checked in
+			assertTrue(reservation.getRoom() == null);
+			//Reservation dates are same as booking dates
+			assertTrue(reservation.getStartDate() == bookedBooking.getStartDate());
+			assertTrue(reservation.getEndDate() == bookedBooking.getEndDate());
+		}
+	}
+	
 	/*
 	 *  Test for UC 2.1.2 Search for free rooms 
 	 */
-	
 	@Test
 	public void testGetFreeRooms(){
 		EList<FreeRoomTypesDTO> rooms = receptionist.getIhotelcustomerprovides().getFreeRooms(1, "20161216", "20170102");
