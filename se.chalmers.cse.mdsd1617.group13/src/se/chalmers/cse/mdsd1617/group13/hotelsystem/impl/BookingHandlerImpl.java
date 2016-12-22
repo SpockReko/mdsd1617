@@ -288,15 +288,14 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public boolean editBookingTime(int reservationId, String startDate, String endDate) {
-		DateFormat format = new SimpleDateFormat("yyyyMMdd");
-        Date dStartDate;
-        Date dEndDate;
-        try{
-            dStartDate = format.parse(startDate);
-            dEndDate = format.parse(endDate);
-        }catch (ParseException e) {
-            return false;
-        }
+
+        Date dStartDate = Util.parseDate(startDate);
+        Date dEndDate = Util.parseDate(endDate);
+
+        if(dStartDate == null || dEndDate == null) {
+        	return false;
+		}
+
         if(dStartDate.after(dEndDate)){
             return false;
         }
@@ -372,7 +371,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		}
 		for(int i = 0; i < frts.size(); i++){
 			FreeRoomTypesDTO freeRT = frts.get(i);
-			//TODO : we should compare the name instead of the description
+
 			if(freeRT.getRoomTypeDescription().equals(rt.getName()) && freeRT.getNumFreeRooms() >= numberOfRoomsForType){
 				for(int j = 0; j < numberOfRoomsForType; j++){ //should be a method for adding a room to booking?
 					RoomReservation rr = new RoomReservationImpl();
@@ -685,32 +684,34 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public int initiateBooking(String firstName, String startDate, String endDate, String lastName) {
-		if(firstName == null || startDate == null || endDate == null || lastName == null){
-            return -1;
-        }
-        DateFormat format = new SimpleDateFormat("yyyyMMdd");
-        Date dStartDate;
-        Date dEndDate;
-        try{
-            dStartDate = format.parse(startDate);
-            dEndDate = format.parse(endDate);
-        }catch (ParseException e) {
-            return -1;
-        }
-        if(startDate.compareTo(endDate) >= 0){
-            return -1;
-        }
-        Booking booking = new BookingImpl();
-        Customer customer = new CustomerImpl();
-        customer.setFirstName(firstName);
-        customer.setLastName(lastName);
-        booking.setCustomer(customer);
-        booking.setStartDate(startDate);
-        booking.setEndDate(endDate);
-        int currentBookingId = bookings.size()+1;
-        booking.setBookingId(currentBookingId);
-        bookings.add(booking);
-        return currentBookingId;
+		if (firstName == null || startDate == null || endDate == null || lastName == null) {
+			return -1;
+		}
+
+		Date dStartDate = Util.parseDate(startDate);
+		Date dEndDate = Util.parseDate(endDate);
+
+		if (dEndDate == null || dStartDate == null) {
+			return -1;
+		}
+
+		if (startDate.compareTo(endDate) >= 0) {
+			return -1;
+		}
+
+		Booking booking = new BookingImpl();
+		Customer customer = new CustomerImpl();
+		customer.setFirstName(firstName);
+		customer.setLastName(lastName);
+		booking.setCustomer(customer);
+		booking.setStartDate(startDate);
+		booking.setEndDate(endDate);
+
+		int currentBookingId = bookings.size() + 1;
+		booking.setBookingId(currentBookingId);
+		bookings.add(booking);
+
+		return currentBookingId;
 	}
 
 	/**
