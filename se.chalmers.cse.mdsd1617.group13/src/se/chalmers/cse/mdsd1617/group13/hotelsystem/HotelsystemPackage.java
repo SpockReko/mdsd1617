@@ -456,22 +456,13 @@ public interface HotelsystemPackage extends EPackage {
 	int BOOKING_HANDLER___BOOKING_CHECKIN__STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Add Day</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_HANDLER___ADD_DAY__STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 10;
-
-	/**
 	 * The operation id for the '<em>Get Booking By Id</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___GET_BOOKING_BY_ID__INT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 11;
+	int BOOKING_HANDLER___GET_BOOKING_BY_ID__INT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Is Free</em>' operation.
@@ -480,7 +471,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___IS_FREE__INT_STRING_STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 12;
+	int BOOKING_HANDLER___IS_FREE__INT_STRING_STRING = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Booking Handler</em>' class.
@@ -489,7 +480,7 @@ public interface HotelsystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_OPERATION_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 13;
+	int BOOKING_HANDLER_OPERATION_COUNT = IHOTEL_RECEPTIONIST_PROVIDES_OPERATION_COUNT + 12;
 
 	/**
 	 * The meta object id for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingImpl <em>Booking</em>}' class.
@@ -1852,16 +1843,6 @@ public interface HotelsystemPackage extends EPackage {
 	EOperation getBookingHandler__BookingCheckin__String();
 
 	/**
-	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#addDay(java.lang.String) <em>Add Day</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Day</em>' operation.
-	 * @see se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#addDay(java.lang.String)
-	 * @generated
-	 */
-	EOperation getBookingHandler__AddDay__String();
-
-	/**
 	 * Returns the meta object for the '{@link se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler#getBookingById(int) <em>Get Booking By Id</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3090,14 +3071,6 @@ public interface HotelsystemPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_HANDLER___BOOKING_CHECKIN__STRING = eINSTANCE.getBookingHandler__BookingCheckin__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Day</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_HANDLER___ADD_DAY__STRING = eINSTANCE.getBookingHandler__AddDay__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Booking By Id</b></em>' operation.

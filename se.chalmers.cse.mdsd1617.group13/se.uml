@@ -28,14 +28,6 @@
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
                 </ownedParameter>
               </ownedOperation>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_A6VJ4L31EeaPAbmKLAIXGw" name="addDay">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_IN9vkL31EeaPAbmKLAIXGw" name="date">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_KLGKoL31EeaPAbmKLAIXGw" direction="return">
-                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-                </ownedParameter>
-              </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_1by98MBNEeaqMcV8O91AUw" name="getBookingById">
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_5VvD8MBNEeaqMcV8O91AUw" name="bookingId">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>

@@ -866,30 +866,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String addDay(String date) {
-		// translate the date to ints
-		int year = Integer.parseInt(date.substring(0, 4));
-		int month = Integer.parseInt(date.substring(4,6));
-		int day = Integer.parseInt(date.substring(6));
-		// Get, set with our dates and add a day to a Calendar object.
-		Calendar cal = Calendar.getInstance();
-		cal.set(year, month, day);
-		cal.add(Calendar.DATE, 1);
-		// Translate back the dates to Integers
-		year = cal.get(Calendar.YEAR);
-		month = cal.get(Calendar.MONTH);
-		day = cal.get(Calendar.DAY_OF_MONTH);
-		//Translate the new date to String
-		String newDate = "" + year + month + day;
-		return newDate;
-	}
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
 	public Booking getBookingById(int bookingId) {
         for (Booking booking : bookings) {
             if(booking.getBookingId() == bookingId) {
@@ -1093,8 +1069,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return checkInRoom((String)arguments.get(0), (Integer)arguments.get(1));
 			case HotelsystemPackage.BOOKING_HANDLER___BOOKING_CHECKIN__STRING:
 				return bookingCheckin((String)arguments.get(0));
-			case HotelsystemPackage.BOOKING_HANDLER___ADD_DAY__STRING:
-				return addDay((String)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___GET_BOOKING_BY_ID__INT:
 				return getBookingById((Integer)arguments.get(0));
 			case HotelsystemPackage.BOOKING_HANDLER___IS_FREE__INT_STRING_STRING:
