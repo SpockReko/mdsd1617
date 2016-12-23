@@ -842,9 +842,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 		}
 
-
-
-
 		return -1;
 
 	}
