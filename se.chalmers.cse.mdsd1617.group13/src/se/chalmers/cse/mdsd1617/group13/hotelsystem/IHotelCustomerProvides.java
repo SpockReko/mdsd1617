@@ -84,9 +84,9 @@ public interface IHotelCustomerProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false" bookindIdRequired="true" bookindIdOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" bookindIdRequired="true" bookindIdOrdered="false"
 	 * @generated
 	 */
-	int checkInRoom(String roomTypeDescription, int bookindId);
+	int checkInRoom(String roomTypeName, int bookindId);
 
 } // IHotelCustomerProvides

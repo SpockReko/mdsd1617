@@ -733,7 +733,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			return false;
 		}
 		EList<RoomReservation> reservations = booking.getRoomReservations();
-		if(reservations == null || reservations.size() <= 0){
+		if(reservations == null || reservations.isEmpty()){
 			return false;
 		}
 		booking.setConfirmed(true);
@@ -810,9 +810,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 *
 	 * @generated NOT
 	 */
-	public int checkInRoom(String roomTypeDescription, int bookindId) {
+	public int checkInRoom(String roomTypeName, int bookindId) {
 		Booking booking = getBookingById(bookindId);
-		RoomType roomType = roomhandler.getRoomType(roomTypeDescription);
+		RoomType roomType = roomhandler.getRoomType(roomTypeName);
 
 		if (roomType == null || booking == null) { // roomtype or booking not found
 			return -1;
@@ -826,7 +826,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			if (currentRoomReservation.getCheckInDate() == null) { // check in date null => not checkedIn
 				if (currentRoomReservation.getRoomType().getName().equals(roomType.getName())) {
 
-					Room roomToCheckIn = roomhandler.getFreeRoomByType(roomTypeDescription);
+					Room roomToCheckIn = roomhandler.getFreeRoomByType(roomTypeName);
 
 					if (roomToCheckIn == null) {
 						return -1;
