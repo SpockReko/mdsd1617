@@ -571,8 +571,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public EList<RoomReservation> listCheckouts(String startDate, String endDate) {
 		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
 
-		Date sDate = Util.parseDate(startDate);
-		Date eDate = Util.parseDate(endDate);
+		DateFormat df = new SimpleDateFormat("yyyyMMdd");
+		Date sDate = null;
+		Date eDate = null;
+		try {
+			sDate = df.parse(startDate);
+			eDate = df.parse(endDate);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 
 		if (sDate == null || eDate == null) {
 			return roomReservations;
@@ -589,13 +596,21 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 			for (RoomReservation roomReservation : bookingRoomReservations) {
 
-				Date checkouDate = Util.parseDate(roomReservation.getCheckOuDate());
+				Date checkoutDate = null;
+				
+				if (roomReservation.getCheckInDate() != null) {
+					
+					try {
+						checkoutDate = df.parse(roomReservation.getCheckOuDate());
+					} catch (ParseException e) {
+						e.printStackTrace();
+					}
 
-				if (checkouDate.after(sDate) && checkouDate.before(eDate)) {
-					roomReservations.add(roomReservation);
+					if (checkoutDate.after(sDate) && checkoutDate.before(eDate) || checkoutDate.equals(eDate)) {
+						roomReservations.add(roomReservation);
+					}
 				}
 			}
-
 		}
 
 		return roomReservations;
