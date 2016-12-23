@@ -337,6 +337,24 @@ public class ReceptionistBookingTests {
 		
 		assertTrue(bookingHandler.listCheckins(specificDay, specificDay).size() == 1); //emptylist
 	}
+	
+	/*
+	// 2.1.10 List check out for a specific day
+	// Using current date. At the moment there is only 1 test with checkOut with the current date. If there is more, then
+	// we have to change it like in testListCheckOut() with specificDay.
+	@Test
+	public void testListCheckOut() {
+		String currentDate = (new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime());
+		assertTrue(receptionist.getIreceptionistprovides().listCheckouts(currentDate, currentDate).size() == 0); //empty list	
+		
+		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Lage", currentDate, "20170202", "Bror");
+		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
+		receptionist.getIreceptionistprovides().checkIn(bookingId, 5); // Check in a room today.
+		bookingHandler.initiateCheckout(bookingId);
+		
+		assertTrue(bookingHandler.listCheckouts(currentDate, currentDate).size() == 1); //emptylist
+	}
+	*/
 
 	//2.1.13 Add extra cost to rooms
 	@Test

@@ -369,7 +369,10 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 		if(room == null || roomType == null || !room.isOccupied()) {
 			return 0;
 		}
+		
 		room.setOccupied(false);
+		this.setCheckOuDate((new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime()));
+		
 		double price = nrOfNights * roomType.getPricePerNight();
 		for(RoomExtra extra : this.getRoomExtras()) {
 			price += extra.getPrice();

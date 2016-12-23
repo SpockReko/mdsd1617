@@ -551,7 +551,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 						e.printStackTrace();
 					}
 					
-					if (checkInDate.after(sDate) && checkInDate.before(eDate) || checkInDate.equals(eDate)) {
+					if (checkInDate.after(sDate) && checkInDate.before(eDate) && roomReservation.getRoom().isOccupied() || checkInDate.equals(eDate)) {
 						roomReservations.add(roomReservation);
 					}
 				}
@@ -595,18 +595,16 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			EList<RoomReservation> bookingRoomReservations = b.getRoomReservations();
 
 			for (RoomReservation roomReservation : bookingRoomReservations) {
-
 				Date checkoutDate = null;
 				
-				if (roomReservation.getCheckInDate() != null) {
-					
+				if (roomReservation.getCheckOuDate() != null) {
 					try {
 						checkoutDate = df.parse(roomReservation.getCheckOuDate());
 					} catch (ParseException e) {
 						e.printStackTrace();
 					}
 
-					if (checkoutDate.after(sDate) && checkoutDate.before(eDate) || checkoutDate.equals(eDate)) {
+					if (checkoutDate.after(sDate) && checkoutDate.before(eDate) && !roomReservation.getRoom().isOccupied() || checkoutDate.equals(eDate)) {
 						roomReservations.add(roomReservation);
 					}
 				}
