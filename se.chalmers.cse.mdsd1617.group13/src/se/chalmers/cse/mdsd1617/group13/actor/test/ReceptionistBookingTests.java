@@ -342,6 +342,7 @@ public class ReceptionistBookingTests {
 		receptionist.getIhotelcustomerprovides().initiateCheckout(bookingId);
 		
 		assertTrue(bookingId + "",receptionist.getIreceptionistprovides().listCheckouts(specificDay, currentDate).size() == listSizeBefore + 1); 
+		receptionist.getIhotelcustomerprovides().payDuringCheckout("11", "11", 11, 11, "s", "e");
 	}
 	//*/
 
@@ -350,18 +351,17 @@ public class ReceptionistBookingTests {
 	public void testAddExtraCostToRoom(){
 		IHotelReceptionistProvides receptionistProvides = receptionist.getIreceptionistprovides();
 		IHotelCustomerProvides customerProvides = receptionist.getIhotelcustomerprovides(); 
-		
 		// Initiate Booking
 		int bookingId = customerProvides.initiateBooking("booking3Name", "20161220", "20170103", "booking3lastName");
         customerProvides.addRoomToBooking(DEFAULT_ROOM_TYPE_NAME, bookingId);
 		EList<Integer> roomNbrs = receptionistProvides.listFreeRooms(bookingId);
-		int booking3Roomnbr = roomNbrs.get(0);
 		customerProvides.confirmBooking(bookingId);
-		receptionistProvides.checkIn(bookingId,booking3Roomnbr);
-		
+		int roomId = bookingHandler.getBookingById(bookingId).getRoomReservations().get(0).getRoomId(); //TODO: returns -1
+		receptionistProvides.checkIn(bookingId,roomId);
+		//get roomnumber in booking
 		//add extra to room 
-		assertTrue(receptionistProvides.addExtraToRoom(bookingId, booking3Roomnbr, "testExtra", 100));
-		double bookingPrice = customerProvides.initiateCheckout(bookingId);
+		assertTrue(receptionistProvides.addExtraToRoom(bookingId, roomId, "testExtra", 100));
+		double bookingPrice = customerProvides.initiateCheckout(bookingId); //TODO: Return 0 right now!
 		assertTrue(" bookingPrice = " + bookingPrice, bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
 	}
 
