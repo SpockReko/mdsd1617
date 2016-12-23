@@ -437,7 +437,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public boolean isCheckedIn() {
 		for(RoomReservation reservation : roomReservations){
-			if(reservation.getCheckInDate() == null){
+			if(reservation.getCheckInDate() != null){
+				// we consider that if there is at least one RoomReservation checked in, then the booking also.
 				return true;
 			}
 		}
