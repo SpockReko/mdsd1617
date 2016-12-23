@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import se.chalmers.cse.mdsd1617.group13.actor.Administrator;
@@ -14,8 +15,8 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
 
 public class AdministratorTests {
 
-    private Administrator admin;
-    private RoomHandler roomHandler;
+    private static Administrator admin;
+    private static RoomHandler roomHandler;
 
 
     private static final String INVALID_ROOM_TYPE_NAME = "Unexisting room type name";
@@ -26,21 +27,26 @@ public class AdministratorTests {
 
     private static final int NUMBER_OF_ROOMS = 10;
 
-
-    /**
-     * This is run before each test. Each test is independent
-     */
-    @Before
-    public void setUp() {
+    @BeforeClass
+    public static void setUpClass() {
         admin = new ActorFactoryImpl().createAdministrator();
         HotelInitializer hotelInitializer = new HotelsystemFactoryImpl().createHotelInitializer();
         admin.setIhotelstartupprovides(hotelInitializer);
 
+        roomHandler = new HotelsystemFactoryImpl().createRoomHandler();
+        admin.setIadministratorprovides(roomHandler);
+    }
+
+    /**
+     * This is run before each test. Each test is independent so they all start with a clean state.
+     */
+    @Before
+    public void setUp() {
+
         // creation of 10 rooms
         admin.getIhotelstartupprovides().startup(NUMBER_OF_ROOMS);
 
-        roomHandler = new HotelsystemFactoryImpl().createRoomHandler();
-        admin.setIadministratorprovides(roomHandler);
+
         //adding a room type to be tested for editing
         admin.getIadministratorprovides().addRoomType(EXISTING_ROOM_TYPE_NAME, 5000, 1, "Basic");
     }
