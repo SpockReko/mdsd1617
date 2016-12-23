@@ -1,17 +1,15 @@
 package se.chalmers.cse.mdsd1617.group13.actor.test;
 
-import static org.junit.Assert.*;
-
-
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
 import se.chalmers.cse.mdsd1617.group13.actor.Administrator;
 import se.chalmers.cse.mdsd1617.group13.actor.impl.ActorFactoryImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
+
+import static org.junit.Assert.assertEquals;
 
 public class AdministratorTests {
 

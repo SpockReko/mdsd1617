@@ -8,10 +8,9 @@ package se.chalmers.cse.mdsd1617.group13.bankcomponents;
  * A representation of the model object '<em><b>Bank Administrator</b></em>'.
  * <!-- end-user-doc -->
  *
- *
- * @see se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage#getBankAdministrator()
  * @model
  * @generated
+ * @see se.chalmers.cse.mdsd1617.group13.bankcomponents.BankcomponentsPackage#getBankAdministrator()
  */
 public interface BankAdministrator extends IAdministratorProvides {
 } // BankAdministrator
