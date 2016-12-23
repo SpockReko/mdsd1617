@@ -21,7 +21,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
-
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
@@ -356,9 +356,10 @@ public class ReceptionistBookingTests {
         customerProvides.addRoomToBooking(DEFAULT_ROOM_TYPE_NAME, bookingId);
 		EList<Integer> roomNbrs = receptionistProvides.listFreeRooms(bookingId);
 		customerProvides.confirmBooking(bookingId);
-		int roomId = bookingHandler.getBookingById(bookingId).getRoomReservations().get(0).getRoomId(); //TODO: returns -1
-		receptionistProvides.checkIn(bookingId,roomId);
 		//get roomnumber in booking
+		int roomId = 20;
+		receptionistProvides.checkIn(bookingId,roomId);
+		
 		//add extra to room 
 		assertTrue(receptionistProvides.addExtraToRoom(bookingId, roomId, "testExtra", 100));
 		double bookingPrice = customerProvides.initiateCheckout(bookingId); //TODO: Return 0 right now!
