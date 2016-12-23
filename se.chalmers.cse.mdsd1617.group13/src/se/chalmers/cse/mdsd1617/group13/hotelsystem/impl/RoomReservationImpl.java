@@ -357,7 +357,7 @@ public class RoomReservationImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public void checkIn() {
 		room.setOccupied(true);
-		checkInDate = ( new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime() );
+		this.setCheckInDate(( new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime() ));
 	}
 
 	/**

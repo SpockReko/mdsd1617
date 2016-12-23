@@ -358,10 +358,11 @@ public class ReceptionistBookingTests {
 		int booking3Roomnbr = roomNbrs.get(0);
 		customerProvides.confirmBooking(bookingId);
 		receptionistProvides.checkIn(bookingId,booking3Roomnbr);
+		
 		//add extra to room 
 		assertTrue(receptionistProvides.addExtraToRoom(bookingId, booking3Roomnbr, "testExtra", 100));
 		double bookingPrice = customerProvides.initiateCheckout(bookingId);
-		assertTrue(bookingPrice + "", bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
+		assertTrue(" bookingPrice = " + bookingPrice, bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
 	}
 
 	/**
