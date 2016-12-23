@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import se.chalmers.cse.mdsd1617.banking.customerRequires.CustomerRequires;
 import se.chalmers.cse.mdsd1617.group13.bankcomponents.ICustomerProvides;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelsystemPackage;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
@@ -105,7 +106,7 @@ public class PaymentHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public boolean payIfCardValid(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double sum) {
 		try {
-			se.chalmers.cse.mdsd1617.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1617.banking.customerRequires.CustomerRequires.instance();
+			CustomerRequires banking = CustomerRequires.instance();
 	        
 			if (banking.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName)) {
 	            if (banking.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, sum)) {
