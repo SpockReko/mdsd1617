@@ -327,15 +327,16 @@ public class ReceptionistBookingTests {
 	@Test
 	public void testListCheckIn(){
 		String specificDay = "20161213";
+		String today = ( new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime() );
 		assertTrue(receptionist.getIreceptionistprovides().listCheckins(specificDay, specificDay).size() == 0); //empty list	
 		
-		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", specificDay, "20170202", "Bror");
+		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", specificDay, "20600202", "Bror");
 		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
+		receptionist.getIhotelcustomerprovides().confirmBooking(bookingId);
 		receptionist.getIreceptionistprovides().checkIn(bookingId, 5); // Check in a room today.
 		
-		bookingHandler.getBookingById(bookingId).getRoomReservations().get(0).setCheckInDate(specificDay);
-		
-		assertTrue(bookingHandler.listCheckins(specificDay, specificDay).size() == 1); //emptylist
+		assertTrue(receptionist.getIreceptionistprovides().listCheckins(specificDay, today).size() +"",
+				receptionist.getIreceptionistprovides().listCheckins(specificDay, today).size() == 1); //emptylist
 	}
 	
 	/*
