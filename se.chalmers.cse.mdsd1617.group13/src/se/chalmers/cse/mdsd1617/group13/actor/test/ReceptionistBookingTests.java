@@ -48,6 +48,7 @@ public class ReceptionistBookingTests {
 
 		//set up hotel with 20 rooms and 20 roomIds
 		admin.getIhotelstartupprovides().startup(20);
+		admin.setIadministratorprovides(hotelInitializer.getRoomHandler());
 
 		//create a test bank card
 		//AdministratorRequires bankAdmin = AdministratorRequires.instance();
@@ -196,12 +197,16 @@ public class ReceptionistBookingTests {
 	 */
 	@Test
 	public void testGetFreeRooms(){
-		EList<FreeRoomTypesDTO> rooms = receptionist.getIhotelcustomerprovides().getFreeRooms(1, "20161216", "20170102");
+		//creates the BIGROOM!
+		assertTrue(admin.getIadministratorprovides().addRoomType("BigRoom", 8000, 10, "Big Screen TV and a beer fridge"));
+		assertTrue(admin.getIadministratorprovides().addRoom(666, "BigRoom"));
+		EList<FreeRoomTypesDTO> rooms = receptionist.getIhotelcustomerprovides().getFreeRooms(8, "20161216", "20170102");
+		
 		for(FreeRoomTypesDTO type : rooms){
-			assertTrue(type.getNumBeds() == 2); 									// 2 beds in te rooms.
-			assertTrue(type.getNumFreeRooms() + "", type.getNumFreeRooms() <= 20);  //20 rooms in startup, 1 room booked in id 2, 19 room left
-			assertTrue(type.getPricePerNight() == 1000); 							// default price per night
-			assertTrue(type.getRoomTypeDescription() + "",type.getRoomTypeDescription().equals(DEFAULT_ROOM_TYPE_NAME)); //roomtypename
+			assertTrue(type.getNumBeds() == 10); 									// 
+			assertTrue(type.getNumFreeRooms() + "", type.getNumFreeRooms() == 1);  //20 rooms in startup, 1 room booked in id 2, 19 room left
+			assertTrue(type.getPricePerNight() == 8000); 							// default price per night
+			assertTrue(type.getRoomTypeDescription() + "",type.getRoomTypeDescription().equals("BigRoom")); //roomtypename
 		}
 	}
 	
