@@ -151,18 +151,18 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean removeRoomType(String roomTypeDescription) {
+	public boolean removeRoomType(String roomTypeName) {
 		for(Room room : rooms){
 			RoomType roomType = room.getRoomtype();
 			String description = roomType.getName();
-			if(description.equals(roomTypeDescription)){
+			if(description.equals(roomTypeName)){
 				room.setRoomtype(null); //Throw exception or return false?
 			}
 		}
 		RoomType roomType = null;
 		for(RoomType type : roomTypes){
 			String description = type.getName();
-			if(roomTypeDescription.equals(description)){
+			if(roomTypeName.equals(description)){
 				roomType = type;
 				break;
 			}
@@ -180,9 +180,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean changeRoomType(int roomNumber, String roomType) {
+	public boolean changeRoomType(int roomNumber, String roomTypeName) {
 		Room room = getRoom(roomNumber); 
-		RoomType rt = getRoomType(roomType);
+		RoomType rt = getRoomType(roomTypeName);
 		if(room != null && rt != null){
 			room.setRoomtype(rt);
 			return true;
@@ -307,9 +307,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Room getFreeRoomByType(String roomType) {
+	public Room getFreeRoomByType(String roomTypeName) {
 		for(Room room : rooms) {
-			if(room.getRoomtype().getName().equals(roomType) && !room.isOccupied() && !room.isBlocked()) {
+			if(room.getRoomtype().getName().equals(roomTypeName) && !room.isOccupied() && !room.isBlocked()) {
 				return room;
 			}
 		}

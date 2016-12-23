@@ -34,18 +34,18 @@ public interface IHotelAdministratorProvides extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeDescriptionRequired="true" roomTypeDescriptionOrdered="false"
+	 * @model required="true" ordered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false"
 	 * @generated
 	 */
-	boolean removeRoomType(String roomTypeDescription);
+	boolean removeRoomType(String roomTypeName);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model required="true" ordered="false" roomNumberRequired="true" roomNumberOrdered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false"
 	 * @generated
 	 */
-	boolean changeRoomType(int roomNumber, String roomType);
+	boolean changeRoomType(int roomNumber, String roomTypeName);
 
 	/**
 	 * <!-- begin-user-doc -->

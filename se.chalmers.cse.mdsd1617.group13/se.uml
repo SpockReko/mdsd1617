@@ -604,7 +604,7 @@
                 </ownedParameter>
               </ownedOperation>
               <ownedOperation xmi:type="uml:Operation" xmi:id="_sQO1oKn5Eeaqs-4dkG4NMQ" name="removeRoomType">
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_a8C7kKn6Eeaqs-4dkG4NMQ" name="roomTypeDescription">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_a8C7kKn6Eeaqs-4dkG4NMQ" name="roomTypeName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_cuJyYKn6Eeaqs-4dkG4NMQ" name="return" direction="return">
@@ -615,7 +615,7 @@
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_ioBIwKn6Eeaqs-4dkG4NMQ" name="roomNumber">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
                 </ownedParameter>
-                <ownedParameter xmi:type="uml:Parameter" xmi:id="_kVxrEKn6Eeaqs-4dkG4NMQ" name="roomType">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_kVxrEKn6Eeaqs-4dkG4NMQ" name="roomTypeName">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
                 </ownedParameter>
                 <ownedParameter xmi:type="uml:Parameter" xmi:id="_mfJyYKn6Eeaqs-4dkG4NMQ" name="return" direction="return">
