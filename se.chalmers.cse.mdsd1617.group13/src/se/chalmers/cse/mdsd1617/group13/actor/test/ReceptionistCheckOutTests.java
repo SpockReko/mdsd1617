@@ -1,4 +1,4 @@
-package se.chalmers.cse.mdsd1617.group13.actor.test;
+/*package se.chalmers.cse.mdsd1617.group13.actor.test;
 
 import static org.junit.Assert.*;
 
@@ -83,4 +83,4 @@ public class ReceptionistCheckOutTests {
 	
 	
 
-}
+}*/
