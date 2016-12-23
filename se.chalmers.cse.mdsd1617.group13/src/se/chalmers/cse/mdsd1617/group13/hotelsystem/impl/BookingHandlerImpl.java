@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
@@ -515,10 +516,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<RoomReservation> listCheckins(String startDate, String endDate) {
 		EList<RoomReservation> roomReservations = new BasicEList<RoomReservation>();
-
-		Date sDate = Util.parseDate(startDate);
-		Date eDate = Util.parseDate(endDate);
-
+		
+		DateFormat df = new SimpleDateFormat("yyyyMMdd");
+		Date sDate = null;
+		Date eDate = null;
+		try {
+			sDate = df.parse(startDate);
+			eDate = df.parse(endDate);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
 		if(sDate == null || eDate == null) {
 			return roomReservations;
 		}
@@ -534,10 +542,16 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			EList<RoomReservation> bookingRoomReservations = b.getRoomReservations();
 
 			for (RoomReservation roomReservation : bookingRoomReservations) {
-
-				Date checkInDate = Util.parseDate(roomReservation.getCheckInDate());
-				if (checkInDate != null) {
-					if (checkInDate.after(sDate) && checkInDate.before(eDate)) {
+				Date checkInDate = null;
+				
+				if (roomReservation.getCheckInDate() != null) {
+					try {
+						checkInDate = df.parse(roomReservation.getCheckInDate());
+					} catch (ParseException e) {
+						e.printStackTrace();
+					}
+					
+					if (checkInDate.after(sDate) && checkInDate.before(eDate) || checkInDate.equals(eDate)) {
 						roomReservations.add(roomReservation);
 					}
 				}

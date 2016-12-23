@@ -3,6 +3,7 @@ package se.chalmers.cse.mdsd1617.group13.actor.test;
 import static org.junit.Assert.*;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -315,17 +316,20 @@ public class ReceptionistBookingTests {
 	}
 	
 	// 2.1.9 List check ins for a specific day
-	
+	// When a room gets checked in it gets the current date as its checkInDate, and because of there is already
+	// room checkedIn in the tests before this we have to change the checkInDate manually. 
 	@Test
 	public void testListCheckIn(){
-		Date dToday = Calendar.getInstance().getTime();
-		String today = (new SimpleDateFormat( "yyyyMMdd" ) ).format( dToday );
-		assertTrue(receptionist.getIreceptionistprovides().listCheckins(today,today).size() == 0); //empty list		
-		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", today, today, "Fritzon");
-		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 2);
-		//TODO: Problem with how to checkIn a room!
-		EList<RoomReservation> list = receptionist.getIreceptionistprovides().checkIn(bookingId, 2); // Check in a room today.
-		assertTrue(bookingHandler.listCheckins(today,today).size() + "" ,bookingHandler.listCheckins(today,today).size() == 1); //emptylist
+		String specificDay = "20161213";
+		assertTrue(receptionist.getIreceptionistprovides().listCheckins(specificDay, specificDay).size() == 0); //empty list	
+		
+		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", specificDay, "20170202", "Bror");
+		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
+		receptionist.getIreceptionistprovides().checkIn(bookingId, 5); // Check in a room today.
+		
+		bookingHandler.getBookingById(bookingId).getRoomReservations().get(0).setCheckInDate(specificDay);
+		
+		assertTrue(bookingHandler.listCheckins(specificDay, specificDay).size() == 1); //emptylist
 	}
 	
 	//2.1.13 Add extra cost to rooms
