@@ -35,7 +35,6 @@ public class ReceptionistBookingTests {
 
 	// BankAdministratorImpl bankAdmin = new BankAdministratorImpl();
 	private static BookingHandler bookingHandler = new HotelsystemFactoryImpl().createBookingHandler();
-	private static int booking3Roomnbr;
 
 	private static int INVALID_BOOKING_ID = -999;
 	private static String DEFAULT_ROOM_TYPE_NAME ="Default";
@@ -65,18 +64,6 @@ public class ReceptionistBookingTests {
 		receptionist.getIhotelcustomerprovides().addRoomToBooking(DEFAULT_ROOM_TYPE_NAME, 2);
 
 
-		//initiate booking number 3 with booking Id 3
-		BookingHandlerImpl bookingHandler = (BookingHandlerImpl) receptionist.getIhotelcustomerprovides();
-        int booking3 = bookingHandler.initiateBooking("booking3Name", "20161220", "20170103", "booking3lastName");
-
-        bookingHandler.addRoomToBooking(DEFAULT_ROOM_TYPE_NAME, 3);
-		EList<Integer> roomNbrs = bookingHandler.listFreeRooms(3);
-
-		booking3Roomnbr = roomNbrs.get(0);
-
-		bookingHandler.confirmBooking(booking3);
-		bookingHandler.checkIn(booking3,booking3Roomnbr);
-
 	}
 
     /**
@@ -91,9 +78,9 @@ public class ReceptionistBookingTests {
 	
 	@Test
 	public void testInitiateBookingValidParameters() {
-		// fourth booking => id 4 // changed to 5 because, listCheckout test has id 4 //
+		// fourth booking => id 4
 		int expected = receptionist.getIhotelcustomerprovides().initiateBooking("testFirstName4", "20161216", "20170104", "testLastName4");
-		assertEquals(5, expected);
+		assertEquals(4, expected);
 	}
 
 	@Test
@@ -362,9 +349,18 @@ public class ReceptionistBookingTests {
 	@Test
 	public void testAddExtraCostToRoom(){
 		IHotelReceptionistProvides receptionistProvides = receptionist.getIreceptionistprovides();
-		IHotelCustomerProvides customerProvides = receptionist.getIhotelcustomerprovides();
-		assertTrue(receptionistProvides.addExtraToRoom(3, booking3Roomnbr, "testExtra", 100));
-		double bookingPrice = customerProvides.initiateCheckout(3);
+		IHotelCustomerProvides customerProvides = receptionist.getIhotelcustomerprovides(); 
+		
+		// Initiate Booking
+		int bookingId = customerProvides.initiateBooking("booking3Name", "20161220", "20170103", "booking3lastName");
+        customerProvides.addRoomToBooking(DEFAULT_ROOM_TYPE_NAME, bookingId);
+		EList<Integer> roomNbrs = receptionistProvides.listFreeRooms(bookingId);
+		int booking3Roomnbr = roomNbrs.get(0);
+		customerProvides.confirmBooking(bookingId);
+		receptionistProvides.checkIn(bookingId,booking3Roomnbr);
+		//add extra to room 
+		assertTrue(receptionistProvides.addExtraToRoom(bookingId, booking3Roomnbr, "testExtra", 100));
+		double bookingPrice = customerProvides.initiateCheckout(bookingId);
 		assertTrue(bookingPrice + "", bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
 	}
 

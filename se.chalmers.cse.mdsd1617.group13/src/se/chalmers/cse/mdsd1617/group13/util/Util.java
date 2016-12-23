@@ -33,7 +33,7 @@ public class Util {
         try {
             return simpleDateFormat.parse(dateToParse);
         } catch (ParseException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             return null;
         }
     }
