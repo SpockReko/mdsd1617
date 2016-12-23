@@ -1,4 +1,4 @@
-/*package se.chalmers.cse.mdsd1617.group13.actor.test;
+package se.chalmers.cse.mdsd1617.group13.actor.test;
 
 import static org.junit.Assert.*;
 
@@ -12,7 +12,7 @@ import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.PaymentHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
-import se.chalmers.cse.mdsd1617.banking.administratorRequires;
+import se.chalmers.cse.mdsd1617.banking.administratorRequires.*;
 
 import org.junit.BeforeClass;
 
@@ -44,6 +44,8 @@ public class ReceptionistCheckOutTests {
 		receptionist.getIhotelcustomerprovides().initiateBooking("testFirstName1", "20161216", "20170101", "testLastName1");
 		receptionist.getIhotelcustomerprovides().confirmBooking(1);
 		receptionist.getIhotelcustomerprovides().addRoomToBooking("Default", 1);
+		receptionist.getIhotelcustomerprovides().addRoomToBooking("Default", 1);
+		receptionist.getIhotelcustomerprovides().checkInRoom("Default", 1);
 		receptionist.getIhotelcustomerprovides().checkInRoom("Default", 1);
 	
 	}
@@ -51,7 +53,7 @@ public class ReceptionistCheckOutTests {
 	@Test
 	public void testInitiateCheckoutRightBookingId(){
 		double result = receptionist.getIhotelcustomerprovides().initiateCheckout(1);
-		assertEquals(result, 16000, 0);
+		assertEquals(result, 32000, 0);
 	}
 	
 	@Test
@@ -60,9 +62,17 @@ public class ReceptionistCheckOutTests {
 		assertEquals(result, -1, 0);
 	}
 	
+/*	@Test
+	public void testPayRoomDuringCheckOut(){
+		receptionist.getIhotelcustomerprovides().initiateCheckout(1);		
+		boolean result = receptionist.getIhotelcustomerprovides().payRoomDuringCheckout(1, "00000000", "000", 11, 16, "Peter", "Pan");
+		assertEquals(result, true);
+	}*/
+	
 	@Test
 	public void testCheckoutAndPayRightCard(){
-		receptionist.getIhotelcustomerprovides().initiateCheckout(1);		boolean result = receptionist.getIhotelcustomerprovides().payDuringCheckout("00000000", "000", 11, 16, "Peter", "Pan");
+		receptionist.getIhotelcustomerprovides().initiateCheckout(1);		
+		boolean result = receptionist.getIhotelcustomerprovides().payDuringCheckout("00000000", "000", 11, 16, "Peter", "Pan");
 		assertEquals(result, true);
 	}
 	
@@ -72,15 +82,5 @@ public class ReceptionistCheckOutTests {
 		boolean result = receptionist.getIhotelcustomerprovides().payDuringCheckout("00000", "000", 11, 16, "Peter", "Pan");
 		assertEquals(result, false);
 	}
-	
-	@Test
-	public void testCheckoutAndPayInsufficantFunds(){
-		receptionist.getIhotelcustomerprovides().initiateCheckout(1);
-		//the card only have 4000 left in it from the previous successful payment, so this one should return false
-		boolean result = receptionist.getIhotelcustomerprovides().payDuringCheckout("00000000", "000", 11, 16, "Peter", "Pan");
-		assertEquals(result, false);
-	}
-	
-	
 
-}*/
+}
