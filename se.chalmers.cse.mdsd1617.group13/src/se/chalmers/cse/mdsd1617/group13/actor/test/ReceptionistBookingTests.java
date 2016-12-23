@@ -1,30 +1,19 @@
 package se.chalmers.cse.mdsd1617.group13.actor.test;
 
-import static org.junit.Assert.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
-import org.junit.Test;
 import org.junit.Before;
 import org.junit.BeforeClass;
-
+import org.junit.Test;
 import se.chalmers.cse.mdsd1617.group13.actor.Administrator;
 import se.chalmers.cse.mdsd1617.group13.actor.Receptionist;
 import se.chalmers.cse.mdsd1617.group13.actor.impl.ActorFactoryImpl;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.Booking;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.BookingHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.FreeRoomTypesDTO;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.HotelInitializer;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelCustomerProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.IHotelReceptionistProvides;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomHandler;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.RoomReservation;
-import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.BookingHandlerImpl;
+import se.chalmers.cse.mdsd1617.group13.hotelsystem.*;
 import se.chalmers.cse.mdsd1617.group13.hotelsystem.impl.HotelsystemFactoryImpl;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import static org.junit.Assert.*;
 
 
 
@@ -75,7 +64,7 @@ public class ReceptionistBookingTests {
 		//receptionist.getIhotelcustomerprovides().initiateBooking("testFirstName2", "20161216", "20170102", "testLastName2");
 		//receptionist.getIhotelcustomerprovides().initiateBooking("testFirstName3", "20161216", "20170103", "testLastName3");
 	}
-	
+
 	@Test
 	public void testInitiateBookingValidParameters() {
 		// fourth booking => id 4
@@ -190,9 +179,9 @@ public class ReceptionistBookingTests {
 		// Test if we can get the new created room
 		EList<FreeRoomTypesDTO> rooms = receptionist.getIhotelcustomerprovides().getFreeRooms(8, "20161216", "20170102");
 		for(FreeRoomTypesDTO type : rooms){
-			assertTrue(type.getNumBeds() == 10); 									 
-			assertTrue(type.getNumFreeRooms() + "", type.getNumFreeRooms() == 1);  
-			assertTrue(type.getPricePerNight() == 8000); 							
+			assertTrue(type.getNumBeds() == 10);
+			assertTrue(type.getNumFreeRooms() + "", type.getNumFreeRooms() == 1);
+			assertTrue(type.getPricePerNight() == 8000);
 			assertTrue(type.getRoomTypeDescription() + "",type.getRoomTypeDescription().equals("BigRoom"));		}
 	}
 	
@@ -312,13 +301,13 @@ public class ReceptionistBookingTests {
 		assertFalse(receptionist.getIreceptionistprovides().editBookingTime(invalidId, "20170201", "20170202"));
 	}
 
-	// 2.1.9 List check ins for a specific day 
-	// Save the size of checkIn from 20161213 until today, make a booking, checkin and see if the the size is one more 
+	// 2.1.9 List check ins for a specific day
+	// Save the size of checkIn from 20161213 until today, make a booking, checkin and see if the the size is one more
 	@Test
 	public void testListCheckIn(){
 		String specificDay = "20161213";
 		String today = ( new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime() );
-		int listSizeBefore = receptionist.getIreceptionistprovides().listCheckins(specificDay, today).size();	
+		int listSizeBefore = receptionist.getIreceptionistprovides().listCheckins(specificDay, today).size();
 		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", specificDay, "20600202", "Bror");
 		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
 		receptionist.getIhotelcustomerprovides().confirmBooking(bookingId);
@@ -326,7 +315,7 @@ public class ReceptionistBookingTests {
 		int listSizeAfter = receptionist.getIreceptionistprovides().listCheckins(specificDay, today).size();
 		assertTrue(bookingId + "",listSizeAfter == listSizeBefore + 1);
 	}
-	
+
 	// 2.1.10 List check out for a specific day
 	// Using current date. At the moment there is only 1 test with checkOut with the current date. If there is more, then
 	// we have to change it like in testListCheckOut() with specificDay.
@@ -334,14 +323,14 @@ public class ReceptionistBookingTests {
 	public void testListCheckOut() {
 		String specificDay = "20161213";
 		String currentDate = (new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime());
-		int listSizeBefore = receptionist.getIreceptionistprovides().listCheckouts(specificDay, currentDate).size();			
+		int listSizeBefore = receptionist.getIreceptionistprovides().listCheckouts(specificDay, currentDate).size();
 		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Lage", specificDay, "20600202", "Bror");
 		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
 		receptionist.getIhotelcustomerprovides().confirmBooking(bookingId);
 		receptionist.getIreceptionistprovides().checkIn(bookingId, 5); // Check in a room today.
 		receptionist.getIhotelcustomerprovides().initiateCheckout(bookingId);
-		
-		assertTrue(bookingId + "",receptionist.getIreceptionistprovides().listCheckouts(specificDay, currentDate).size() == listSizeBefore + 1); 
+
+		assertTrue(bookingId + "",receptionist.getIreceptionistprovides().listCheckouts(specificDay, currentDate).size() == listSizeBefore + 1);
 		receptionist.getIhotelcustomerprovides().payDuringCheckout("11", "11", 11, 11, "s", "e");
 	}
 	//*/
@@ -350,7 +339,7 @@ public class ReceptionistBookingTests {
 	@Test
 	public void testAddExtraCostToRoom(){
 		IHotelReceptionistProvides receptionistProvides = receptionist.getIreceptionistprovides();
-		IHotelCustomerProvides customerProvides = receptionist.getIhotelcustomerprovides(); 
+		IHotelCustomerProvides customerProvides = receptionist.getIhotelcustomerprovides();
 		// Initiate Booking
 		int bookingId = customerProvides.initiateBooking("booking3Name", "20161220", "20170103", "booking3lastName");
         customerProvides.addRoomToBooking(DEFAULT_ROOM_TYPE_NAME, bookingId);
@@ -359,8 +348,8 @@ public class ReceptionistBookingTests {
 		//get roomnumber in booking
 		int roomId = 20;
 		receptionistProvides.checkIn(bookingId,roomId);
-		
-		//add extra to room 
+
+		//add extra to room
 		assertTrue(receptionistProvides.addExtraToRoom(bookingId, roomId, "testExtra", 100));
 		double bookingPrice = customerProvides.initiateCheckout(bookingId); //TODO: Return 0 right now!
 		assertTrue(" bookingPrice = " + bookingPrice, bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
