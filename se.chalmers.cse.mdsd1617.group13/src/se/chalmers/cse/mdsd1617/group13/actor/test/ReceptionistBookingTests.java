@@ -91,9 +91,9 @@ public class ReceptionistBookingTests {
 	
 	@Test
 	public void testInitiateBookingValidParameters() {
-		// fourth booking => id 4
+		// fourth booking => id 4 // changed to 5 because, listCheckout test has id 4 //
 		int expected = receptionist.getIhotelcustomerprovides().initiateBooking("testFirstName4", "20161216", "20170104", "testLastName4");
-		assertEquals(4, expected);
+		assertEquals(5, expected);
 	}
 
 	@Test
@@ -186,7 +186,7 @@ public class ReceptionistBookingTests {
 			//No rooms has been added to reservation since it is not yet checked in
 			assertTrue(reservation.getRoom() == null);
 			//Reservation dates are same as booking dates
-            // TODO : do not use == to compare string
+            // TODO : do not use == to compare string, use "string".equals("string")
 			assertTrue(reservation.getStartDate() == bookedBooking.getStartDate());
 			assertTrue(reservation.getEndDate() == bookedBooking.getEndDate());
 		}
@@ -198,16 +198,15 @@ public class ReceptionistBookingTests {
 	@Test
 	public void testGetFreeRooms(){
 		//creates the BIGROOM!
-		assertTrue(admin.getIadministratorprovides().addRoomType("BigRoom", 8000, 10, "Big Screen TV and a beer fridge"));
+		assertTrue(admin.getIadministratorprovides().addRoomType("BigRoom", 8000, 10, "Big Screen TV and A Beer Fridge"));
 		assertTrue(admin.getIadministratorprovides().addRoom(666, "BigRoom"));
+		// Test if we can get the new created room
 		EList<FreeRoomTypesDTO> rooms = receptionist.getIhotelcustomerprovides().getFreeRooms(8, "20161216", "20170102");
-		
 		for(FreeRoomTypesDTO type : rooms){
-			assertTrue(type.getNumBeds() == 10); 									// 
-			assertTrue(type.getNumFreeRooms() + "", type.getNumFreeRooms() == 1);  //20 rooms in startup, 1 room booked in id 2, 19 room left
-			assertTrue(type.getPricePerNight() == 8000); 							// default price per night
-			assertTrue(type.getRoomTypeDescription() + "",type.getRoomTypeDescription().equals("BigRoom")); //roomtypename
-		}
+			assertTrue(type.getNumBeds() == 10); 									 
+			assertTrue(type.getNumFreeRooms() + "", type.getNumFreeRooms() == 1);  
+			assertTrue(type.getPricePerNight() == 8000); 							
+			assertTrue(type.getRoomTypeDescription() + "",type.getRoomTypeDescription().equals("BigRoom"));		}
 	}
 	
 	/*
@@ -326,49 +325,47 @@ public class ReceptionistBookingTests {
 		assertFalse(receptionist.getIreceptionistprovides().editBookingTime(invalidId, "20170201", "20170202"));
 	}
 
-	// 2.1.9 List check ins for a specific day
-	// When a room gets checked in it gets the current date as its checkInDate, and because of there is already
-	// room checkedIn in the tests before this we have to change the checkInDate manually. 
+	// 2.1.9 List check ins for a specific day 
+	// Save the size of checkIn from 20161213 until today, make a booking, checkin and see if the the size is one more 
 	@Test
 	public void testListCheckIn(){
 		String specificDay = "20161213";
 		String today = ( new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime() );
 		int listSizeBefore = receptionist.getIreceptionistprovides().listCheckins(specificDay, today).size();	
-		
 		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Stefan", specificDay, "20600202", "Bror");
 		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
 		receptionist.getIhotelcustomerprovides().confirmBooking(bookingId);
 		receptionist.getIreceptionistprovides().checkIn(bookingId, 5); // Check in a room today.
 		int listSizeAfter = receptionist.getIreceptionistprovides().listCheckins(specificDay, today).size();
-		assertTrue(listSizeBefore+1 == listSizeAfter);
+		assertTrue(bookingId + "",listSizeAfter == listSizeBefore + 1);
 	}
 	
-	/*
 	// 2.1.10 List check out for a specific day
 	// Using current date. At the moment there is only 1 test with checkOut with the current date. If there is more, then
 	// we have to change it like in testListCheckOut() with specificDay.
 	@Test
 	public void testListCheckOut() {
+		String specificDay = "20161213";
 		String currentDate = (new SimpleDateFormat( "yyyyMMdd" ) ).format( Calendar.getInstance().getTime());
-		assertTrue(receptionist.getIreceptionistprovides().listCheckouts(currentDate, currentDate).size() == 0); //empty list	
-		
-		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Lage", currentDate, "20170202", "Bror");
+		int listSizeBefore = receptionist.getIreceptionistprovides().listCheckouts(specificDay, currentDate).size();			
+		int bookingId = receptionist.getIhotelcustomerprovides().initiateBooking("Lage", specificDay, "20600202", "Bror");
 		receptionist.getIreceptionistprovides().addRoomTypeToBooking(bookingId, "Default", 1);
+		receptionist.getIhotelcustomerprovides().confirmBooking(bookingId);
 		receptionist.getIreceptionistprovides().checkIn(bookingId, 5); // Check in a room today.
-		bookingHandler.initiateCheckout(bookingId);
+		receptionist.getIhotelcustomerprovides().initiateCheckout(bookingId);
 		
-		assertTrue(bookingHandler.listCheckouts(currentDate, currentDate).size() == 1); //emptylist
+		assertTrue(bookingId + "",receptionist.getIreceptionistprovides().listCheckouts(specificDay, currentDate).size() == listSizeBefore + 1); 
 	}
-	*/
+	//*/
 
 	//2.1.13 Add extra cost to rooms
 	@Test
 	public void testAddExtraCostToRoom(){
 		IHotelReceptionistProvides receptionistProvides = receptionist.getIreceptionistprovides();
 		IHotelCustomerProvides customerProvides = receptionist.getIhotelcustomerprovides();
-		assertTrue(bookingHandler.addExtraToRoom(3, booking3Roomnbr, "testExtra", 100));
+		assertTrue(receptionistProvides.addExtraToRoom(3, booking3Roomnbr, "testExtra", 100));
 		double bookingPrice = customerProvides.initiateCheckout(3);
-		assertTrue(bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
+		assertTrue(bookingPrice + "", bookingPrice == 14100); //14 days * 1000/night + price of testExtra (100)
 	}
 
 	/**
@@ -376,7 +373,7 @@ public class ReceptionistBookingTests {
 	 */
 	@Test
 	public void testCancelBooking() {
-		assertTrue(bookingHandler.cancelBooking(1));
+		assertTrue(receptionist.getIreceptionistprovides().cancelBooking(1));
 	}
 
     /**
@@ -384,6 +381,6 @@ public class ReceptionistBookingTests {
      */
     @Test
     public void testCancelBookingWithCheckedInBooking() {
-        assertFalse(bookingHandler.cancelBooking(3));
+        assertFalse(receptionist.getIreceptionistprovides().cancelBooking(3));
     }
 }
